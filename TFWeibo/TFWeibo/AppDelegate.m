@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "RootTabViewController.h"
 
-//@"566d2cfee0f55a2b5700b5dc"
 @interface AppDelegate ()
 
 @end
@@ -17,7 +17,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+
+    RootTabViewController *rootVc = [[RootTabViewController alloc]init];
+    self.window.rootViewController = rootVc;
     return YES;
 }
 
