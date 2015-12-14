@@ -11,11 +11,8 @@
 //#import "NewFeatureController.h"
 
 @implementation UIWindow (Category)
-
-
 +(void)switchRootViewVC
 {
-    
 #if 0
     BaseTabBarController *tabBar = [[BaseTabBarController alloc]init];
     NewFeatureController *newFeature = [[NewFeatureController alloc]init];

@@ -10,6 +10,7 @@
 
 @implementation UIImage (Category)
 
+
 +(UIImage *)resizeImage:(NSString *)name
 {
     UIImage *image = [UIImage imageNamed:name];
