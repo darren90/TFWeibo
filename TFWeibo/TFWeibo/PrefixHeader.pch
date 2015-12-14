@@ -12,8 +12,53 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
-#import "AppDelegate.h"
+/**********************引入*********************************/
+#import "UIImage+Category.h"
+#import "NSString+Category.h"
+#import "UIView+Extension.h"
+#import "UIBarButtonItem+Extension.h"
+#import "UIWindow+Category.h"
+#import "NSDate+Extension.h"
+#import "NSString+Emoji.h"
+#import "UITextView+Category.h"
+//#import <AFNetworking.h>
+//#import "UIImageView+WebCache.h"
+//#import "MBProgressHUD+MJ.h"
+//#import <MJExtension.h>
+//#import <MJRefresh.h>
+//#import "AccountTool.h"
+//#import "Account.h"
+/*******************************************************/
 
+
+/**********************微博授权相关*********************************/
+#define KWeiboAPPKey        @"638433920"
+#define KWeiboAPPSecret     @"ba2f8bccc5d715e9abbea352f6e52328"
+#define KShareSDKAPPKey     @"adaf1819bfde"
+#define KShareSDKAPPSecret  @"5922f4ca3db97a63e77ae65f13a476a5"
+#define KUrlPrefix          @""
+#define KRedirectUri        @"http://www.baidu.com"
+/**********************微博授权相关*********************************/
+
+//通知
+#define WBEmotionDidSelectNotification @"WBEmotionDidSelectNotification"
+#define WBSelectedemotionKey @"selectedemotion"
+#define WBEmotionDidDeleteNotification @"WBEmotionDidDeleteNotification"
+
+//随机色
+#define KRandomColor     [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0];
+// RGB颜色
+#define KColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+#ifdef DEBUG//调试状态
+#define TFLog(...) NSLog(__VA_ARGS__);
+#else//发布状态
+#define TFLog(...)
+#endif
+
+
+// 通知中心
+#define WBNotificationCenter [NSNotificationCenter defaultCenter]
 
 
 

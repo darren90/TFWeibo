@@ -167,9 +167,9 @@
 		FED4D2031C1D308600CF9E4C /* TFWeibo */ = {
 			isa = PBXGroup;
 			children = (
+				FEFD7CE41C1F071D001B5D30 /* PrefixHeader.pch */,
 				FED4D2071C1D308600CF9E4C /* AppDelegate.h */,
 				FED4D2081C1D308600CF9E4C /* AppDelegate.m */,
-				FEFD7CE41C1F071D001B5D30 /* PrefixHeader.pch */,
 				FED4D20A1C1D308600CF9E4C /* ViewController.h */,
 				FED4D20B1C1D308600CF9E4C /* ViewController.m */,
 				FED4D20D1C1D308600CF9E4C /* Main.storyboard */,
