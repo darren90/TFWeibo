@@ -18,6 +18,7 @@
 		FEFD7CE11C1F05F0001B5D30 /* RDVTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7CDC1C1F05F0001B5D30 /* RDVTabBar.m */; };
 		FEFD7CE21C1F05F0001B5D30 /* RDVTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7CDE1C1F05F0001B5D30 /* RDVTabBarController.m */; };
 		FEFD7CE31C1F05F0001B5D30 /* RDVTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7CE01C1F05F0001B5D30 /* RDVTabBarItem.m */; };
+		FEFD7D061C1F09CA001B5D30 /* RootTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D051C1F09CA001B5D30 /* RootTabViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		FEFD7CDF1C1F05F0001B5D30 /* RDVTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBarItem.h; sourceTree = "<group>"; };
 		FEFD7CE01C1F05F0001B5D30 /* RDVTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVTabBarItem.m; sourceTree = "<group>"; };
 		FEFD7CE41C1F071D001B5D30 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		FEFD7D041C1F09CA001B5D30 /* RootTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabViewController.h; sourceTree = "<group>"; };
+		FEFD7D051C1F09CA001B5D30 /* RootTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,7 @@
 				FED4D20D1C1D308600CF9E4C /* Main.storyboard */,
 				FED4D2101C1D308600CF9E4C /* Assets.xcassets */,
 				FEFD7CD81C1F05F0001B5D30 /* Lib */,
+				FEFD7CE51C1F0977001B5D30 /* Class */,
 				FED4D2041C1D308600CF9E4C /* Supporting Files */,
 			);
 			path = TFWeibo;
@@ -179,6 +183,255 @@
 				FEFD7CE01C1F05F0001B5D30 /* RDVTabBarItem.m */,
 			);
 			path = RDVTabBarController;
+			sourceTree = "<group>";
+		};
+		FEFD7CE51C1F0977001B5D30 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				FEFD7CF21C1F0977001B5D30 /* Main */,
+				FEFD7CE61C1F0977001B5D30 /* Compose */,
+				FEFD7CEA1C1F0977001B5D30 /* Discover */,
+				FEFD7CEE1C1F0977001B5D30 /* Home */,
+				FEFD7CF81C1F0977001B5D30 /* Me */,
+				FEFD7CFC1C1F0977001B5D30 /* Message */,
+				FEFD7D001C1F0977001B5D30 /* OAuth */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		FEFD7CE61C1F0977001B5D30 /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				FEFD7CE71C1F0977001B5D30 /* Controller */,
+				FEFD7CE81C1F0977001B5D30 /* Model */,
+				FEFD7CE91C1F0977001B5D30 /* View */,
+			);
+			path = Compose;
+			sourceTree = "<group>";
+		};
+		FEFD7CE71C1F0977001B5D30 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FEFD7CE81C1F0977001B5D30 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FEFD7CE91C1F0977001B5D30 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FEFD7CEA1C1F0977001B5D30 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				FEFD7CEB1C1F0977001B5D30 /* Controller */,
+				FEFD7CEC1C1F0977001B5D30 /* Model */,
+				FEFD7CED1C1F0977001B5D30 /* View */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		FEFD7CEB1C1F0977001B5D30 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FEFD7CEC1C1F0977001B5D30 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FEFD7CED1C1F0977001B5D30 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FEFD7CEE1C1F0977001B5D30 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FEFD7CEF1C1F0977001B5D30 /* Controller */,
+				FEFD7CF01C1F0977001B5D30 /* Model */,
+				FEFD7CF11C1F0977001B5D30 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FEFD7CEF1C1F0977001B5D30 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FEFD7CF01C1F0977001B5D30 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FEFD7CF11C1F0977001B5D30 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FEFD7CF21C1F0977001B5D30 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FEFD7CF61C1F0977001B5D30 /* Root */,
+				FEFD7CF31C1F0977001B5D30 /* Base */,
+				FEFD7CF41C1F0977001B5D30 /* Controller */,
+				FEFD7CF51C1F0977001B5D30 /* Model */,
+				FEFD7CF71C1F0977001B5D30 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FEFD7CF31C1F0977001B5D30 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		FEFD7CF41C1F0977001B5D30 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FEFD7CF51C1F0977001B5D30 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FEFD7CF61C1F0977001B5D30 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				FEFD7D041C1F09CA001B5D30 /* RootTabViewController.h */,
+				FEFD7D051C1F09CA001B5D30 /* RootTabViewController.m */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		FEFD7CF71C1F0977001B5D30 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FEFD7CF81C1F0977001B5D30 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				FEFD7CF91C1F0977001B5D30 /* Controller */,
+				FEFD7CFA1C1F0977001B5D30 /* Model */,
+				FEFD7CFB1C1F0977001B5D30 /* View */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		FEFD7CF91C1F0977001B5D30 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FEFD7CFA1C1F0977001B5D30 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FEFD7CFB1C1F0977001B5D30 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FEFD7CFC1C1F0977001B5D30 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				FEFD7CFD1C1F0977001B5D30 /* Controller */,
+				FEFD7CFE1C1F0977001B5D30 /* Model */,
+				FEFD7CFF1C1F0977001B5D30 /* View */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		FEFD7CFD1C1F0977001B5D30 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FEFD7CFE1C1F0977001B5D30 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FEFD7CFF1C1F0977001B5D30 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FEFD7D001C1F0977001B5D30 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				FEFD7D011C1F0977001B5D30 /* Controller */,
+				FEFD7D021C1F0977001B5D30 /* Model */,
+				FEFD7D031C1F0977001B5D30 /* View */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		FEFD7D011C1F0977001B5D30 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FEFD7D021C1F0977001B5D30 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FEFD7D031C1F0977001B5D30 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +567,7 @@
 				FED4D20C1C1D308600CF9E4C /* ViewController.m in Sources */,
 				FEFD7CE21C1F05F0001B5D30 /* RDVTabBarController.m in Sources */,
 				FED4D2091C1D308600CF9E4C /* AppDelegate.m in Sources */,
+				FEFD7D061C1F09CA001B5D30 /* RootTabViewController.m in Sources */,
 				FEFD7CE11C1F05F0001B5D30 /* RDVTabBar.m in Sources */,
 				FED4D2061C1D308600CF9E4C /* main.m in Sources */,
 				FEFD7CE31C1F05F0001B5D30 /* RDVTabBarItem.m in Sources */,
