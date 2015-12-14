@@ -20,6 +20,16 @@
 		FEFD7CE21C1F05F0001B5D30 /* RDVTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7CDE1C1F05F0001B5D30 /* RDVTabBarController.m */; };
 		FEFD7CE31C1F05F0001B5D30 /* RDVTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7CE01C1F05F0001B5D30 /* RDVTabBarItem.m */; };
 		FEFD7D061C1F09CA001B5D30 /* RootTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D051C1F09CA001B5D30 /* RootTabViewController.m */; };
+		FEFD7D191C1F0D8B001B5D30 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D081C1F0D8B001B5D30 /* Foundation+Log.m */; };
+		FEFD7D1A1C1F0D8B001B5D30 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D0A1C1F0D8B001B5D30 /* NSDate+Extension.m */; };
+		FEFD7D1B1C1F0D8B001B5D30 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D0C1C1F0D8B001B5D30 /* NSString+Category.m */; };
+		FEFD7D1C1C1F0D8B001B5D30 /* NSString+Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D0E1C1F0D8B001B5D30 /* NSString+Emoji.m */; };
+		FEFD7D1D1C1F0D8B001B5D30 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D101C1F0D8B001B5D30 /* UIBarButtonItem+Extension.m */; };
+		FEFD7D1E1C1F0D8B001B5D30 /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D121C1F0D8B001B5D30 /* UIImage+Category.m */; };
+		FEFD7D1F1C1F0D8B001B5D30 /* UITextView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D141C1F0D8B001B5D30 /* UITextView+Category.m */; };
+		FEFD7D201C1F0D8B001B5D30 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D161C1F0D8B001B5D30 /* UIView+Extension.m */; };
+		FEFD7D211C1F0D8B001B5D30 /* UIWindow+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D181C1F0D8B001B5D30 /* UIWindow+Category.m */; };
+		FEFD7D241C1F0DC6001B5D30 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D231C1F0DC6001B5D30 /* BaseTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +78,25 @@
 		FEFD7CE41C1F071D001B5D30 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		FEFD7D041C1F09CA001B5D30 /* RootTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabViewController.h; sourceTree = "<group>"; };
 		FEFD7D051C1F09CA001B5D30 /* RootTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabViewController.m; sourceTree = "<group>"; };
+		FEFD7D081C1F0D8B001B5D30 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		FEFD7D091C1F0D8B001B5D30 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		FEFD7D0A1C1F0D8B001B5D30 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		FEFD7D0B1C1F0D8B001B5D30 /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
+		FEFD7D0C1C1F0D8B001B5D30 /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
+		FEFD7D0D1C1F0D8B001B5D30 /* NSString+Emoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Emoji.h"; sourceTree = "<group>"; };
+		FEFD7D0E1C1F0D8B001B5D30 /* NSString+Emoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Emoji.m"; sourceTree = "<group>"; };
+		FEFD7D0F1C1F0D8B001B5D30 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		FEFD7D101C1F0D8B001B5D30 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		FEFD7D111C1F0D8B001B5D30 /* UIImage+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
+		FEFD7D121C1F0D8B001B5D30 /* UIImage+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
+		FEFD7D131C1F0D8B001B5D30 /* UITextView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Category.h"; sourceTree = "<group>"; };
+		FEFD7D141C1F0D8B001B5D30 /* UITextView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Category.m"; sourceTree = "<group>"; };
+		FEFD7D151C1F0D8B001B5D30 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		FEFD7D161C1F0D8B001B5D30 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		FEFD7D171C1F0D8B001B5D30 /* UIWindow+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Category.h"; sourceTree = "<group>"; };
+		FEFD7D181C1F0D8B001B5D30 /* UIWindow+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Category.m"; sourceTree = "<group>"; };
+		FEFD7D221C1F0DC6001B5D30 /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
+		FEFD7D231C1F0DC6001B5D30 /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +212,7 @@
 		FEFD7CD81C1F05F0001B5D30 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				FEFD7D071C1F0D8B001B5D30 /* Category */,
 				FEFD7CD91C1F05F0001B5D30 /* Vendor */,
 			);
 			path = Lib;
@@ -331,6 +361,8 @@
 		FEFD7CF31C1F0977001B5D30 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				FEFD7D221C1F0DC6001B5D30 /* BaseTabBarController.h */,
+				FEFD7D231C1F0DC6001B5D30 /* BaseTabBarController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -456,6 +488,30 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FEFD7D071C1F0D8B001B5D30 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				FEFD7D081C1F0D8B001B5D30 /* Foundation+Log.m */,
+				FEFD7D091C1F0D8B001B5D30 /* NSDate+Extension.h */,
+				FEFD7D0A1C1F0D8B001B5D30 /* NSDate+Extension.m */,
+				FEFD7D0B1C1F0D8B001B5D30 /* NSString+Category.h */,
+				FEFD7D0C1C1F0D8B001B5D30 /* NSString+Category.m */,
+				FEFD7D0D1C1F0D8B001B5D30 /* NSString+Emoji.h */,
+				FEFD7D0E1C1F0D8B001B5D30 /* NSString+Emoji.m */,
+				FEFD7D0F1C1F0D8B001B5D30 /* UIBarButtonItem+Extension.h */,
+				FEFD7D101C1F0D8B001B5D30 /* UIBarButtonItem+Extension.m */,
+				FEFD7D111C1F0D8B001B5D30 /* UIImage+Category.h */,
+				FEFD7D121C1F0D8B001B5D30 /* UIImage+Category.m */,
+				FEFD7D131C1F0D8B001B5D30 /* UITextView+Category.h */,
+				FEFD7D141C1F0D8B001B5D30 /* UITextView+Category.m */,
+				FEFD7D151C1F0D8B001B5D30 /* UIView+Extension.h */,
+				FEFD7D161C1F0D8B001B5D30 /* UIView+Extension.m */,
+				FEFD7D171C1F0D8B001B5D30 /* UIWindow+Category.h */,
+				FEFD7D181C1F0D8B001B5D30 /* UIWindow+Category.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -623,13 +679,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEFD7D201C1F0D8B001B5D30 /* UIView+Extension.m in Sources */,
+				FEFD7D1D1C1F0D8B001B5D30 /* UIBarButtonItem+Extension.m in Sources */,
+				FEFD7D1F1C1F0D8B001B5D30 /* UITextView+Category.m in Sources */,
 				FED4D20C1C1D308600CF9E4C /* ViewController.m in Sources */,
 				FEFD7CE21C1F05F0001B5D30 /* RDVTabBarController.m in Sources */,
 				FED4D2091C1D308600CF9E4C /* AppDelegate.m in Sources */,
+				FEFD7D1C1C1F0D8B001B5D30 /* NSString+Emoji.m in Sources */,
+				FEFD7D1B1C1F0D8B001B5D30 /* NSString+Category.m in Sources */,
 				FEFD7D061C1F09CA001B5D30 /* RootTabViewController.m in Sources */,
+				FEFD7D241C1F0DC6001B5D30 /* BaseTabBarController.m in Sources */,
 				FEFD7CE11C1F05F0001B5D30 /* RDVTabBar.m in Sources */,
 				FED4D2061C1D308600CF9E4C /* main.m in Sources */,
 				FEFD7CE31C1F05F0001B5D30 /* RDVTabBarItem.m in Sources */,
+				FEFD7D191C1F0D8B001B5D30 /* Foundation+Log.m in Sources */,
+				FEFD7D211C1F0D8B001B5D30 /* UIWindow+Category.m in Sources */,
+				FEFD7D1A1C1F0D8B001B5D30 /* NSDate+Extension.m in Sources */,
+				FEFD7D1E1C1F0D8B001B5D30 /* UIImage+Category.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
