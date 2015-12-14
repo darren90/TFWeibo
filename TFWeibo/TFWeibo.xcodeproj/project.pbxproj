@@ -15,6 +15,9 @@
 		FED4D2141C1D308600CF9E4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FED4D2121C1D308600CF9E4C /* LaunchScreen.storyboard */; };
 		FED4D21F1C1D308600CF9E4C /* TFWeiboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FED4D21E1C1D308600CF9E4C /* TFWeiboTests.m */; };
 		FED4D22A1C1D308600CF9E4C /* TFWeiboUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FED4D2291C1D308600CF9E4C /* TFWeiboUITests.m */; };
+		FEFD7CE11C1F05F0001B5D30 /* RDVTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7CDC1C1F05F0001B5D30 /* RDVTabBar.m */; };
+		FEFD7CE21C1F05F0001B5D30 /* RDVTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7CDE1C1F05F0001B5D30 /* RDVTabBarController.m */; };
+		FEFD7CE31C1F05F0001B5D30 /* RDVTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7CE01C1F05F0001B5D30 /* RDVTabBarItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		FED4D2251C1D308600CF9E4C /* TFWeiboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFWeiboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED4D2291C1D308600CF9E4C /* TFWeiboUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFWeiboUITests.m; sourceTree = "<group>"; };
 		FED4D22B1C1D308600CF9E4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEFD7CDB1C1F05F0001B5D30 /* RDVTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBar.h; sourceTree = "<group>"; };
+		FEFD7CDC1C1F05F0001B5D30 /* RDVTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVTabBar.m; sourceTree = "<group>"; };
+		FEFD7CDD1C1F05F0001B5D30 /* RDVTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBarController.h; sourceTree = "<group>"; };
+		FEFD7CDE1C1F05F0001B5D30 /* RDVTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVTabBarController.m; sourceTree = "<group>"; };
+		FEFD7CDF1C1F05F0001B5D30 /* RDVTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBarItem.h; sourceTree = "<group>"; };
+		FEFD7CE01C1F05F0001B5D30 /* RDVTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVTabBarItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +116,7 @@
 				FED4D20B1C1D308600CF9E4C /* ViewController.m */,
 				FED4D20D1C1D308600CF9E4C /* Main.storyboard */,
 				FED4D2101C1D308600CF9E4C /* Assets.xcassets */,
-				FED4D2121C1D308600CF9E4C /* LaunchScreen.storyboard */,
-				FED4D2151C1D308600CF9E4C /* Info.plist */,
+				FEFD7CD81C1F05F0001B5D30 /* Lib */,
 				FED4D2041C1D308600CF9E4C /* Supporting Files */,
 			);
 			path = TFWeibo;
@@ -117,6 +125,8 @@
 		FED4D2041C1D308600CF9E4C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FED4D2121C1D308600CF9E4C /* LaunchScreen.storyboard */,
+				FED4D2151C1D308600CF9E4C /* Info.plist */,
 				FED4D2051C1D308600CF9E4C /* main.m */,
 			);
 			name = "Supporting Files";
@@ -138,6 +148,35 @@
 				FED4D22B1C1D308600CF9E4C /* Info.plist */,
 			);
 			path = TFWeiboUITests;
+			sourceTree = "<group>";
+		};
+		FEFD7CD81C1F05F0001B5D30 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				FEFD7CD91C1F05F0001B5D30 /* Vendor */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		FEFD7CD91C1F05F0001B5D30 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				FEFD7CDA1C1F05F0001B5D30 /* RDVTabBarController */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		FEFD7CDA1C1F05F0001B5D30 /* RDVTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				FEFD7CDB1C1F05F0001B5D30 /* RDVTabBar.h */,
+				FEFD7CDC1C1F05F0001B5D30 /* RDVTabBar.m */,
+				FEFD7CDD1C1F05F0001B5D30 /* RDVTabBarController.h */,
+				FEFD7CDE1C1F05F0001B5D30 /* RDVTabBarController.m */,
+				FEFD7CDF1C1F05F0001B5D30 /* RDVTabBarItem.h */,
+				FEFD7CE01C1F05F0001B5D30 /* RDVTabBarItem.m */,
+			);
+			path = RDVTabBarController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,8 +310,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FED4D20C1C1D308600CF9E4C /* ViewController.m in Sources */,
+				FEFD7CE21C1F05F0001B5D30 /* RDVTabBarController.m in Sources */,
 				FED4D2091C1D308600CF9E4C /* AppDelegate.m in Sources */,
+				FEFD7CE11C1F05F0001B5D30 /* RDVTabBar.m in Sources */,
 				FED4D2061C1D308600CF9E4C /* main.m in Sources */,
+				FEFD7CE31C1F05F0001B5D30 /* RDVTabBarItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +540,7 @@
 				FED4D2301C1D308600CF9E4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FED4D2311C1D308600CF9E4C /* Build configuration list for PBXNativeTarget "TFWeiboTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +549,7 @@
 				FED4D2331C1D308600CF9E4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FED4D2341C1D308600CF9E4C /* Build configuration list for PBXNativeTarget "TFWeiboUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +558,7 @@
 				FED4D2361C1D308600CF9E4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
