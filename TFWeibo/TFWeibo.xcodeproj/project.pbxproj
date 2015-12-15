@@ -31,6 +31,7 @@
 		FEFD7D211C1F0D8B001B5D30 /* UIWindow+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D181C1F0D8B001B5D30 /* UIWindow+Category.m */; };
 		FEFD7D241C1F0DC6001B5D30 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D231C1F0DC6001B5D30 /* BaseTabBarController.m */; };
 		FEFD7D271C205276001B5D30 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D261C205276001B5D30 /* BaseNavigationController.m */; };
+		FEFD7D2A1C20DBB6001B5D30 /* OAuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D291C20DBB6001B5D30 /* OAuthController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,8 @@
 		FEFD7D231C1F0DC6001B5D30 /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
 		FEFD7D251C205276001B5D30 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		FEFD7D261C205276001B5D30 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		FEFD7D281C20DBB6001B5D30 /* OAuthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthController.h; sourceTree = "<group>"; };
+		FEFD7D291C20DBB6001B5D30 /* OAuthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -477,6 +480,8 @@
 		FEFD7D011C1F0977001B5D30 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FEFD7D281C20DBB6001B5D30 /* OAuthController.h */,
+				FEFD7D291C20DBB6001B5D30 /* OAuthController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -686,6 +691,7 @@
 			files = (
 				FEFD7D201C1F0D8B001B5D30 /* UIView+Extension.m in Sources */,
 				FEFD7D1D1C1F0D8B001B5D30 /* UIBarButtonItem+Extension.m in Sources */,
+				FEFD7D2A1C20DBB6001B5D30 /* OAuthController.m in Sources */,
 				FEFD7D1F1C1F0D8B001B5D30 /* UITextView+Category.m in Sources */,
 				FED4D20C1C1D308600CF9E4C /* ViewController.m in Sources */,
 				FEFD7CE21C1F05F0001B5D30 /* RDVTabBarController.m in Sources */,
