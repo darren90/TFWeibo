@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>JazzHands.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -39,6 +44,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>TTTAttributedLabel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,17 +72,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>084B2B8D1B6D976EEE947CBACC787585</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>1D31091FF95D7E82453D971F58902376</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>37C6FE9543AFC487CCA56372EAD57BE3</key>
+		<key>1D73132F65B14C1E632ECE8316AD84ED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>26DF860F6F709D3C592FE95E8F4BF3E7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,7 +92,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>541D41E50489E51B1F5B16762E2F5DF8</key>
+		<key>491A2F09CD4EEE964D874726FEE5E466</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5352D432641F0656C90741034E32F31E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,17 +107,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>68FA2B891EBE3DEBFD24F9F7B6328128</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>8667C256B0186B46CE6F76FEE8747ADB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ABCB3498BB5A616EB6D43C588149D186</key>
+		<key>8E2FC157636855F7283B8D0BF7B15B95</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -112,7 +122,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BE85D262AE3F601C023004C3F0767A3A</key>
+		<key>C5936AE46B824680CD7EF76867D71CB1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EBCEEF478483838158A1BD83443E09F4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F1382AC7329F7E9F2E64FD48B60A7EB4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
