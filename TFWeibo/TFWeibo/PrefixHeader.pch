@@ -43,15 +43,14 @@
 //1:腾讯bugly
 #define KBuglyAPPID @"900015120"
 #define KBuglyAPPKey @"Gbw8D1cY86mMw8rB"
-
 //2.友盟
 #define KUmegnAppKey    @"566d2cfee0f55a2b5700b5dc"
 /**********************第三方服务**********************************/
 
 //通知
-#define WBEmotionDidSelectNotification @"WBEmotionDidSelectNotification"
-#define WBSelectedemotionKey @"selectedemotion"
-#define WBEmotionDidDeleteNotification @"WBEmotionDidDeleteNotification"
+//#define WBEmotionDidSelectNotification @"WBEmotionDidSelectNotification"
+//#define WBSelectedemotionKey @"selectedemotion"
+//#define WBEmotionDidDeleteNotification @"WBEmotionDidDeleteNotification"
 
 //随机色
 #define KRandomColor     [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0];
@@ -64,10 +63,8 @@
 #define TFLog(...)
 #endif
 
-
 // 通知中心
-#define WBNotificationCenter [NSNotificationCenter defaultCenter]
-
+#define KNotificationCenter [NSNotificationCenter defaultCenter]
 
 
 #endif /* PrefixHeader_pch */
