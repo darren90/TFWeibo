@@ -32,6 +32,8 @@
 		FEFD7D241C1F0DC6001B5D30 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D231C1F0DC6001B5D30 /* BaseTabBarController.m */; };
 		FEFD7D271C205276001B5D30 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D261C205276001B5D30 /* BaseNavigationController.m */; };
 		FEFD7D2A1C20DBB6001B5D30 /* OAuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D291C20DBB6001B5D30 /* OAuthController.m */; };
+		FEFD7D2D1C20DBF0001B5D30 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D2C1C20DBF0001B5D30 /* HomeController.m */; };
+		FEFD7D301C20DC07001B5D30 /* MessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D2F1C20DC07001B5D30 /* MessageController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,10 @@
 		FEFD7D261C205276001B5D30 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		FEFD7D281C20DBB6001B5D30 /* OAuthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthController.h; sourceTree = "<group>"; };
 		FEFD7D291C20DBB6001B5D30 /* OAuthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthController.m; sourceTree = "<group>"; };
+		FEFD7D2B1C20DBF0001B5D30 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
+		FEFD7D2C1C20DBF0001B5D30 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
+		FEFD7D2E1C20DC07001B5D30 /* MessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageController.h; sourceTree = "<group>"; };
+		FEFD7D2F1C20DC07001B5D30 /* MessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,6 +340,8 @@
 		FEFD7CEF1C1F0977001B5D30 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FEFD7D2B1C20DBF0001B5D30 /* HomeController.h */,
+				FEFD7D2C1C20DBF0001B5D30 /* HomeController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -449,6 +457,8 @@
 		FEFD7CFD1C1F0977001B5D30 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FEFD7D2E1C20DC07001B5D30 /* MessageController.h */,
+				FEFD7D2F1C20DC07001B5D30 /* MessageController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -697,6 +707,7 @@
 				FEFD7CE21C1F05F0001B5D30 /* RDVTabBarController.m in Sources */,
 				FED4D2091C1D308600CF9E4C /* AppDelegate.m in Sources */,
 				FEFD7D1C1C1F0D8B001B5D30 /* NSString+Emoji.m in Sources */,
+				FEFD7D2D1C20DBF0001B5D30 /* HomeController.m in Sources */,
 				FEFD7D1B1C1F0D8B001B5D30 /* NSString+Category.m in Sources */,
 				FEFD7D061C1F09CA001B5D30 /* RootTabViewController.m in Sources */,
 				FEFD7D241C1F0DC6001B5D30 /* BaseTabBarController.m in Sources */,
@@ -708,6 +719,7 @@
 				FEFD7D211C1F0D8B001B5D30 /* UIWindow+Category.m in Sources */,
 				FEFD7D1A1C1F0D8B001B5D30 /* NSDate+Extension.m in Sources */,
 				FEFD7D1E1C1F0D8B001B5D30 /* UIImage+Category.m in Sources */,
+				FEFD7D301C20DC07001B5D30 /* MessageController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
