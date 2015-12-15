@@ -34,6 +34,8 @@
 		FEFD7D2A1C20DBB6001B5D30 /* OAuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D291C20DBB6001B5D30 /* OAuthController.m */; };
 		FEFD7D2D1C20DBF0001B5D30 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D2C1C20DBF0001B5D30 /* HomeController.m */; };
 		FEFD7D301C20DC07001B5D30 /* MessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D2F1C20DC07001B5D30 /* MessageController.m */; };
+		FEFD7D331C20DC37001B5D30 /* DiscoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D321C20DC37001B5D30 /* DiscoverController.m */; };
+		FEFD7D361C20DC53001B5D30 /* ComposeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D351C20DC53001B5D30 /* ComposeController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,10 @@
 		FEFD7D2C1C20DBF0001B5D30 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
 		FEFD7D2E1C20DC07001B5D30 /* MessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageController.h; sourceTree = "<group>"; };
 		FEFD7D2F1C20DC07001B5D30 /* MessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageController.m; sourceTree = "<group>"; };
+		FEFD7D311C20DC37001B5D30 /* DiscoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverController.h; sourceTree = "<group>"; };
+		FEFD7D321C20DC37001B5D30 /* DiscoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverController.m; sourceTree = "<group>"; };
+		FEFD7D341C20DC53001B5D30 /* ComposeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeController.h; sourceTree = "<group>"; };
+		FEFD7D351C20DC53001B5D30 /* ComposeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +284,8 @@
 		FEFD7CE71C1F0977001B5D30 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FEFD7D341C20DC53001B5D30 /* ComposeController.h */,
+				FEFD7D351C20DC53001B5D30 /* ComposeController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -309,6 +317,8 @@
 		FEFD7CEB1C1F0977001B5D30 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FEFD7D311C20DC37001B5D30 /* DiscoverController.h */,
+				FEFD7D321C20DC37001B5D30 /* DiscoverController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -699,6 +709,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEFD7D331C20DC37001B5D30 /* DiscoverController.m in Sources */,
+				FEFD7D361C20DC53001B5D30 /* ComposeController.m in Sources */,
 				FEFD7D201C1F0D8B001B5D30 /* UIView+Extension.m in Sources */,
 				FEFD7D1D1C1F0D8B001B5D30 /* UIBarButtonItem+Extension.m in Sources */,
 				FEFD7D2A1C20DBB6001B5D30 /* OAuthController.m in Sources */,
