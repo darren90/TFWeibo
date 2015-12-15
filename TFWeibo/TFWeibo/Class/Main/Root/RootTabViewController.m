@@ -7,8 +7,9 @@
 //
 
 #import "RootTabViewController.h"
+#import "BaseNavigationController.h"
 
-@interface RootTabViewController ()
+@interface RootTabViewController ()<RDVTabBarControllerDelegate>
 
 @end
 
@@ -17,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self  initViewControllers];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +27,29 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)initViewControllers
+{
+    UITableViewController *home = [[UITableViewController alloc]init];
+    UINavigationController *navHome = [[BaseNavigationController alloc]initWithRootViewController:home];
+    
+    UITableViewController *message = [[UITableViewController alloc]init];
+    UINavigationController *navMessage = [[BaseNavigationController alloc]initWithRootViewController:message];
+    
+    UITableViewController *discover = [[UITableViewController alloc]init];
+    UINavigationController *navDiscover = [[BaseNavigationController alloc]initWithRootViewController:discover];
+    
+    UITableViewController *me = [[UITableViewController alloc]init];
+    UINavigationController *navMe = [[BaseNavigationController alloc]initWithRootViewController:me];
+    
+    [self setViewControllers:@[navHome, navMessage, navDiscover, navMe]];
+    
+    [self customizeTabBarForController];
+    self.delegate = self;
 }
-*/
+
+-(void)customizeTabBarForController
+{
+    
+}
 
 @end
