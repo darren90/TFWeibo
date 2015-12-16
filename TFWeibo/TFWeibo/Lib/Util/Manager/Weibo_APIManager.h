@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "WeiboAPIClient.h"
 
 @interface Weibo_APIManager : NSObject
+
+//OAuth
+- (void)request_OAuth_WithBlock:(void (^)(id data, NSError *error))block;
+
+
 
 @end

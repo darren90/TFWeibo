@@ -10,4 +10,10 @@
 
 @implementation Weibo_APIManager
 
+- (void)request_OAuth_WithBlock:(void (^)(id data, NSError *error))block
+{
+
+}
+
+
 @end
