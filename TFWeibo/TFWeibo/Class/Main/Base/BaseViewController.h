@@ -1,5 +1,5 @@
 //
-//  MeController.h
+//  BaseViewController.h
 //  TFWeibo
 //
 //  Created by Tengfei on 15/12/16.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseViewController.h"
 
-@interface MeController : BaseViewController
+@interface BaseViewController : UIViewController
 
 @end

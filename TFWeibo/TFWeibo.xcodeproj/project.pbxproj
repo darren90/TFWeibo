@@ -37,6 +37,7 @@
 		FEFD7D331C20DC37001B5D30 /* DiscoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D321C20DC37001B5D30 /* DiscoverController.m */; };
 		FEFD7D361C20DC53001B5D30 /* ComposeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D351C20DC53001B5D30 /* ComposeController.m */; };
 		FEFD7D391C21940D001B5D30 /* MeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D381C21940D001B5D30 /* MeController.m */; };
+		FEFD7D3C1C2199B1001B5D30 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D3B1C2199B1001B5D30 /* BaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,8 @@
 		FEFD7D351C20DC53001B5D30 /* ComposeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeController.m; sourceTree = "<group>"; };
 		FEFD7D371C21940D001B5D30 /* MeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeController.h; sourceTree = "<group>"; };
 		FEFD7D381C21940D001B5D30 /* MeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeController.m; sourceTree = "<group>"; };
+		FEFD7D3A1C2199B1001B5D30 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		FEFD7D3B1C2199B1001B5D30 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -392,6 +395,8 @@
 				FEFD7D231C1F0DC6001B5D30 /* BaseTabBarController.m */,
 				FEFD7D251C205276001B5D30 /* BaseNavigationController.h */,
 				FEFD7D261C205276001B5D30 /* BaseNavigationController.m */,
+				FEFD7D3A1C2199B1001B5D30 /* BaseViewController.h */,
+				FEFD7D3B1C2199B1001B5D30 /* BaseViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -725,6 +730,7 @@
 				FEFD7CE21C1F05F0001B5D30 /* RDVTabBarController.m in Sources */,
 				FED4D2091C1D308600CF9E4C /* AppDelegate.m in Sources */,
 				FEFD7D1C1C1F0D8B001B5D30 /* NSString+Emoji.m in Sources */,
+				FEFD7D3C1C2199B1001B5D30 /* BaseViewController.m in Sources */,
 				FEFD7D2D1C20DBF0001B5D30 /* HomeController.m in Sources */,
 				FEFD7D1B1C1F0D8B001B5D30 /* NSString+Category.m in Sources */,
 				FEFD7D061C1F09CA001B5D30 /* RootTabViewController.m in Sources */,
