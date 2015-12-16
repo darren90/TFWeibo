@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RootTabViewController.h"
+#import "OAuthController.h"
 
 @interface AppDelegate ()
 
@@ -21,8 +22,9 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 
+    OAuthController *oauVc = [[OAuthController alloc]init];
     RootTabViewController *rootVc = [[RootTabViewController alloc]init];
-    self.window.rootViewController = rootVc;
+    self.window.rootViewController = oauVc;
     return YES;
 }
 
