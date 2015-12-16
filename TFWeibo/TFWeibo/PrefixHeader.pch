@@ -21,7 +21,9 @@
 #import "NSDate+Extension.h"
 #import "NSString+Emoji.h"
 #import "UITextView+Category.h"
-//#import <AFNetworking.h>
+#import "AFNetworking.h"
+
+#import "NSObject+Common.h"
 //#import "UIImageView+WebCache.h"
 //#import "MBProgressHUD+MJ.h"
 //#import <MJExtension.h>
@@ -62,6 +64,8 @@
 #else//发布状态
 #define TFLog(...)
 #endif
+
+#define DebugLog(s, ...) NSLog(@"%s(%d): %@", __FUNCTION__, __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__])
 
 // 通知中心
 #define KNotificationCenter [NSNotificationCenter defaultCenter]

@@ -57,6 +57,12 @@
 		FEFD7D781C21A1BA001B5D30 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D671C21A1BA001B5D30 /* UIWebView+AFNetworking.m */; };
 		FEFD7D7E1C21A208001B5D30 /* YLGIFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D7B1C21A208001B5D30 /* YLGIFImage.m */; };
 		FEFD7D7F1C21A208001B5D30 /* YLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D7D1C21A208001B5D30 /* YLImageView.m */; };
+		FEFD7D841C21A632001B5D30 /* Weibo_APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D831C21A632001B5D30 /* Weibo_APIManager.m */; };
+		FEFD7D871C21A686001B5D30 /* WeiboAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D861C21A686001B5D30 /* WeiboAPIClient.m */; };
+		FEFD7D8A1C21A77F001B5D30 /* NSObject+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D891C21A77F001B5D30 /* NSObject+Common.m */; };
+		FEFD7D921C21A9B1001B5D30 /* JDStatusBarNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D8D1C21A9B1001B5D30 /* JDStatusBarNotification.m */; };
+		FEFD7D931C21A9B1001B5D30 /* JDStatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D8F1C21A9B1001B5D30 /* JDStatusBarStyle.m */; };
+		FEFD7D941C21A9B1001B5D30 /* JDStatusBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7D911C21A9B1001B5D30 /* JDStatusBarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,6 +186,18 @@
 		FEFD7D7B1C21A208001B5D30 /* YLGIFImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLGIFImage.m; sourceTree = "<group>"; };
 		FEFD7D7C1C21A208001B5D30 /* YLImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLImageView.h; sourceTree = "<group>"; };
 		FEFD7D7D1C21A208001B5D30 /* YLImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLImageView.m; sourceTree = "<group>"; };
+		FEFD7D821C21A632001B5D30 /* Weibo_APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weibo_APIManager.h; sourceTree = "<group>"; };
+		FEFD7D831C21A632001B5D30 /* Weibo_APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weibo_APIManager.m; sourceTree = "<group>"; };
+		FEFD7D851C21A686001B5D30 /* WeiboAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboAPIClient.h; sourceTree = "<group>"; };
+		FEFD7D861C21A686001B5D30 /* WeiboAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboAPIClient.m; sourceTree = "<group>"; };
+		FEFD7D881C21A77F001B5D30 /* NSObject+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Common.h"; sourceTree = "<group>"; };
+		FEFD7D891C21A77F001B5D30 /* NSObject+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Common.m"; sourceTree = "<group>"; };
+		FEFD7D8C1C21A9B1001B5D30 /* JDStatusBarNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDStatusBarNotification.h; sourceTree = "<group>"; };
+		FEFD7D8D1C21A9B1001B5D30 /* JDStatusBarNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDStatusBarNotification.m; sourceTree = "<group>"; };
+		FEFD7D8E1C21A9B1001B5D30 /* JDStatusBarStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDStatusBarStyle.h; sourceTree = "<group>"; };
+		FEFD7D8F1C21A9B1001B5D30 /* JDStatusBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDStatusBarStyle.m; sourceTree = "<group>"; };
+		FEFD7D901C21A9B1001B5D30 /* JDStatusBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDStatusBarView.h; sourceTree = "<group>"; };
+		FEFD7D911C21A9B1001B5D30 /* JDStatusBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDStatusBarView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,6 +313,7 @@
 		FEFD7CD81C1F05F0001B5D30 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				FEFD7D801C21A5E5001B5D30 /* Util */,
 				FEFD7D071C1F0D8B001B5D30 /* Category */,
 				FEFD7CD91C1F05F0001B5D30 /* Vendor */,
 			);
@@ -304,6 +323,7 @@
 		FEFD7CD91C1F05F0001B5D30 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				FEFD7D8B1C21A9B1001B5D30 /* JDStatusBarNotification */,
 				FEFD7D791C21A208001B5D30 /* YLGIFImage */,
 				FEFD7D3D1C21A1BA001B5D30 /* AFNetworking */,
 				FEFD7CDA1C1F05F0001B5D30 /* RDVTabBarController */,
@@ -611,6 +631,8 @@
 				FEFD7D161C1F0D8B001B5D30 /* UIView+Extension.m */,
 				FEFD7D171C1F0D8B001B5D30 /* UIWindow+Category.h */,
 				FEFD7D181C1F0D8B001B5D30 /* UIWindow+Category.m */,
+				FEFD7D881C21A77F001B5D30 /* NSObject+Common.h */,
+				FEFD7D891C21A77F001B5D30 /* NSObject+Common.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -715,6 +737,38 @@
 				FEFD7D7D1C21A208001B5D30 /* YLImageView.m */,
 			);
 			path = YLGIFImage;
+			sourceTree = "<group>";
+		};
+		FEFD7D801C21A5E5001B5D30 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				FEFD7D811C21A5E5001B5D30 /* Manager */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		FEFD7D811C21A5E5001B5D30 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FEFD7D821C21A632001B5D30 /* Weibo_APIManager.h */,
+				FEFD7D831C21A632001B5D30 /* Weibo_APIManager.m */,
+				FEFD7D851C21A686001B5D30 /* WeiboAPIClient.h */,
+				FEFD7D861C21A686001B5D30 /* WeiboAPIClient.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		FEFD7D8B1C21A9B1001B5D30 /* JDStatusBarNotification */ = {
+			isa = PBXGroup;
+			children = (
+				FEFD7D8C1C21A9B1001B5D30 /* JDStatusBarNotification.h */,
+				FEFD7D8D1C21A9B1001B5D30 /* JDStatusBarNotification.m */,
+				FEFD7D8E1C21A9B1001B5D30 /* JDStatusBarStyle.h */,
+				FEFD7D8F1C21A9B1001B5D30 /* JDStatusBarStyle.m */,
+				FEFD7D901C21A9B1001B5D30 /* JDStatusBarView.h */,
+				FEFD7D911C21A9B1001B5D30 /* JDStatusBarView.m */,
+			);
+			path = JDStatusBarNotification;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -898,13 +952,16 @@
 				FEFD7D741C21A1BA001B5D30 /* UIButton+AFNetworking.m in Sources */,
 				FEFD7D1F1C1F0D8B001B5D30 /* UITextView+Category.m in Sources */,
 				FED4D20C1C1D308600CF9E4C /* ViewController.m in Sources */,
+				FEFD7D941C21A9B1001B5D30 /* JDStatusBarView.m in Sources */,
 				FEFD7D691C21A1BA001B5D30 /* AFHTTPRequestOperationManager.m in Sources */,
 				FEFD7D701C21A1BA001B5D30 /* AFURLResponseSerialization.m in Sources */,
 				FEFD7D391C21940D001B5D30 /* MeController.m in Sources */,
 				FEFD7CE21C1F05F0001B5D30 /* RDVTabBarController.m in Sources */,
+				FEFD7D841C21A632001B5D30 /* Weibo_APIManager.m in Sources */,
 				FED4D2091C1D308600CF9E4C /* AppDelegate.m in Sources */,
 				FEFD7D1C1C1F0D8B001B5D30 /* NSString+Emoji.m in Sources */,
 				FEFD7D6C1C21A1BA001B5D30 /* AFURLSessionManager.m in Sources */,
+				FEFD7D871C21A686001B5D30 /* WeiboAPIClient.m in Sources */,
 				FEFD7D3C1C2199B1001B5D30 /* BaseViewController.m in Sources */,
 				FEFD7D711C21A1BA001B5D30 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				FEFD7D6F1C21A1BA001B5D30 /* AFURLRequestSerialization.m in Sources */,
@@ -914,8 +971,11 @@
 				FEFD7D061C1F09CA001B5D30 /* RootTabViewController.m in Sources */,
 				FEFD7D241C1F0DC6001B5D30 /* BaseTabBarController.m in Sources */,
 				FEFD7CE11C1F05F0001B5D30 /* RDVTabBar.m in Sources */,
+				FEFD7D921C21A9B1001B5D30 /* JDStatusBarNotification.m in Sources */,
+				FEFD7D8A1C21A77F001B5D30 /* NSObject+Common.m in Sources */,
 				FED4D2061C1D308600CF9E4C /* main.m in Sources */,
 				FEFD7CE31C1F05F0001B5D30 /* RDVTabBarItem.m in Sources */,
+				FEFD7D931C21A9B1001B5D30 /* JDStatusBarStyle.m in Sources */,
 				FEFD7D731C21A1BA001B5D30 /* UIAlertView+AFNetworking.m in Sources */,
 				FEFD7D191C1F0D8B001B5D30 /* Foundation+Log.m in Sources */,
 				FEFD7D271C205276001B5D30 /* BaseNavigationController.m in Sources */,
