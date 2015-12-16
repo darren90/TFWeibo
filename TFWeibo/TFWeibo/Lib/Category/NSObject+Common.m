@@ -8,7 +8,8 @@
 
 #import "NSObject+Common.h"
 #import "JDStatusBarNotification.h"
-
+#import "AppDelegate.h"
+#import "MBProgressHUD+Add.h"
 
 #define kTestKey @"BaseURLIsTest"
 //测试地址
@@ -17,7 +18,43 @@
 
 @implementation NSObject (Common)
 
-
+#pragma mark Tip M
++ (NSString *)tipFromError:(NSError *)error{
+    if (error && error.userInfo) {
+        NSMutableString *tipStr = [[NSMutableString alloc] init];
+        if ([error.userInfo objectForKey:@"msg"]) {
+            NSArray *msgArray = [[error.userInfo objectForKey:@"msg"] allValues];
+            NSUInteger num = [msgArray count];
+            for (int i = 0; i < num; i++) {
+                NSString *msgStr = [msgArray objectAtIndex:i];
+                if (i+1 < num) {
+                    [tipStr appendString:[NSString stringWithFormat:@"%@\n", msgStr]];
+                }else{
+                    [tipStr appendString:msgStr];
+                }
+            }
+        }else{
+            if ([error.userInfo objectForKey:@"NSLocalizedDescription"]) {
+                tipStr = [error.userInfo objectForKey:@"NSLocalizedDescription"];
+            }else{
+                [tipStr appendFormat:@"ErrorCode%ld", (long)error.code];
+            }
+        }
+        return tipStr;
+    }
+    return nil;
+}
++ (void)showHudTipStr:(NSString *)tipStr{
+    if (tipStr && tipStr.length > 0) {
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:kKeyWindow animated:YES];
+        hud.mode = MBProgressHUDModeText;
+        hud.detailsLabelFont = [UIFont boldSystemFontOfSize:15.0];
+        hud.detailsLabelText = tipStr;
+        hud.margin = 10.f;
+        hud.removeFromSuperViewOnHide = YES;
+        [hud hide:YES afterDelay:1.0];
+    }
+}
 
 + (BOOL)showError:(NSError *)error{
     if ([JDStatusBarNotification isVisible]) {//如果statusBar上面正在显示信息，则不再用hud显示error
@@ -52,6 +89,11 @@
 + (BOOL)baseURLStrIsTest{
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     return [[defaults valueForKey:kTestKey] boolValue];
+}
+
+#pragma mark NetError
+-(id)handleResponse:(id)responseJSON{
+    return [self handleResponse:responseJSON autoShowError:YES];
 }
 -(id)handleResponse:(id)responseJSON autoShowError:(BOOL)autoShowError{
     NSError *error = nil;

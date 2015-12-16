@@ -229,48 +229,48 @@ static dispatch_once_t onceToken;
         DebugLog(@"\n===========response===========\n%@:\n%@", aPath, error);
     }];
 }
-
-- (void)uploadImage:(UIImage *)image path:(NSString *)path name:(NSString *)name
-       successBlock:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
-       failureBlock:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
-      progerssBlock:(void (^)(CGFloat progressValue))progress{
-    
-    NSData *data = UIImageJPEGRepresentation(image, 1.0);
-    if ((float)data.length/1024 > 1000) {
-        data = UIImageJPEGRepresentation(image, 1024*1000.0/(float)data.length);
-    }
-    
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = @"yyyyMMddHHmmss";
-    NSString *str = [formatter stringFromDate:[NSDate date]];
-    NSString *fileName = [NSString stringWithFormat:@"%@_%@.jpg", [Login curLoginUser].global_key, str];
-    DebugLog(@"\nuploadImageSize\n%@ : %.0f", fileName, (float)data.length/1024);
-    
-    AFHTTPRequestOperation *operation = [self POST:path parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-        [formData appendPartWithFileData:data name:name fileName:fileName mimeType:@"image/jpeg"];
-    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        DebugLog(@"Success: %@ ***** %@", operation.responseString, responseObject);
-        id error = [self handleResponse:responseObject];
-        if (error && failure) {
-            failure(operation, error);
-        }else{
-            success(operation, responseObject);
-        }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        DebugLog(@"Error: %@ ***** %@", operation.responseString, error);
-        if (failure) {
-            failure(operation, error);
-        }
-    }];
-    
-    [operation setUploadProgressBlock:^(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite) {
-        CGFloat progressValue = (float)totalBytesWritten/(float)totalBytesExpectedToWrite;
-        if (progress) {
-            progress(progressValue);
-        }
-    }];
-    [operation start];
-}
+//
+//- (void)uploadImage:(UIImage *)image path:(NSString *)path name:(NSString *)name
+//       successBlock:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
+//       failureBlock:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
+//      progerssBlock:(void (^)(CGFloat progressValue))progress{
+//    
+//    NSData *data = UIImageJPEGRepresentation(image, 1.0);
+//    if ((float)data.length/1024 > 1000) {
+//        data = UIImageJPEGRepresentation(image, 1024*1000.0/(float)data.length);
+//    }
+//    
+//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//    formatter.dateFormat = @"yyyyMMddHHmmss";
+//    NSString *str = [formatter stringFromDate:[NSDate date]];
+//    NSString *fileName = [NSString stringWithFormat:@"%@_%@.jpg", [Login curLoginUser].global_key, str];
+//    DebugLog(@"\nuploadImageSize\n%@ : %.0f", fileName, (float)data.length/1024);
+//    
+//    AFHTTPRequestOperation *operation = [self POST:path parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+//        [formData appendPartWithFileData:data name:name fileName:fileName mimeType:@"image/jpeg"];
+//    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        DebugLog(@"Success: %@ ***** %@", operation.responseString, responseObject);
+//        id error = [self handleResponse:responseObject];
+//        if (error && failure) {
+//            failure(operation, error);
+//        }else{
+//            success(operation, responseObject);
+//        }
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        DebugLog(@"Error: %@ ***** %@", operation.responseString, error);
+//        if (failure) {
+//            failure(operation, error);
+//        }
+//    }];
+//    
+//    [operation setUploadProgressBlock:^(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite) {
+//        CGFloat progressValue = (float)totalBytesWritten/(float)totalBytesExpectedToWrite;
+//        if (progress) {
+//            progress(progressValue);
+//        }
+//    }];
+//    [operation start];
+//}
 
 - (void)uploadVoice:(NSString *)file
            withPath:(NSString *)path
