@@ -6,7 +6,8 @@
 
 #import <UIKit/UIKit.h>
 #import "MJPhoto.h"
-#import "HtmlMedia.h"
+#warning - TODO 测试的时候删除
+//#import "HtmlMedia.h"
 #import "BaseViewController.h"
 
 @protocol MJPhotoBrowserDelegate;
@@ -20,5 +21,6 @@
 
 // 显示
 - (void)show;
-+ (void)showHtmlMediaItems:(NSArray *)items originalItem:(HtmlMediaItem *)curItem;
+#warning - TODO 测试的时候删除
+//+ (void)showHtmlMediaItems:(NSArray *)items originalItem:(HtmlMediaItem *)curItem;
 @end

@@ -28,7 +28,8 @@
         self.clipsToBounds = YES;
 		// 图片
 		_imageView = [[YLImageView alloc] init];
-        _imageView.backgroundColor = kColorTableBG;
+        #warning - TODO 测试的时候删除
+//        _imageView.backgroundColor = kColorTableBG;
 		_imageView.contentMode = UIViewContentModeScaleAspectFit;
 		[self addSubview:_imageView];
         
@@ -81,33 +82,34 @@
 #pragma mark 开始加载图片
 - (void)photoStartLoad
 {
-    if (_photo.image) {
-        [_photoLoadingView removeFromSuperview];
-        _imageView.image = _photo.image;
-        self.scrollEnabled = YES;
-    } else {
-        _imageView.image = _photo.placeholder;
-        self.scrollEnabled = NO;
-        // 直接显示进度条
-        [_photoLoadingView showLoading];
-        [self addSubview:_photoLoadingView];
-        
-        ESWeakSelf;
-        ESWeak_(_photoLoadingView);
-        ESWeak_(_imageView);
-        
-        [SDWebImageManager.sharedManager downloadImageWithURL:_photo.url options:SDWebImageRetryFailed| SDWebImageLowPriority| SDWebImageHandleCookies progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-            ESStrong_(_photoLoadingView);
-            if (receivedSize > kMinProgress) {
-                __photoLoadingView.progress = (float)receivedSize/expectedSize;
-            }
-        } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
-            ESStrongSelf;
-            ESStrong_(_imageView);
-            __imageView.image = image;
-            [_self photoDidFinishLoadWithImage:image];
-        }];
-    }
+#warning - TODO 测试的时候删除
+//    if (_photo.image) {
+//        [_photoLoadingView removeFromSuperview];
+//        _imageView.image = _photo.image;
+//        self.scrollEnabled = YES;
+//    } else {
+//        _imageView.image = _photo.placeholder;
+//        self.scrollEnabled = NO;
+//        // 直接显示进度条
+//        [_photoLoadingView showLoading];
+//        [self addSubview:_photoLoadingView];
+//        
+//        ESWeakSelf;
+//        ESWeak_(_photoLoadingView);
+//        ESWeak_(_imageView);
+//        
+//        [SDWebImageManager.sharedManager downloadImageWithURL:_photo.url options:SDWebImageRetryFailed| SDWebImageLowPriority| SDWebImageHandleCookies progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+//            ESStrong_(_photoLoadingView);
+//            if (receivedSize > kMinProgress) {
+//                __photoLoadingView.progress = (float)receivedSize/expectedSize;
+//            }
+//        } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+//            ESStrongSelf;
+//            ESStrong_(_imageView);
+//            __imageView.image = image;
+//            [_self photoDidFinishLoadWithImage:image];
+//        }];
+//    }
 }
 
 #pragma mark 加载完毕
@@ -208,7 +210,8 @@
 
 - (void)dealloc
 {
+#warning - TODO 测试的时候删除
     // 取消请求
-    [_imageView sd_setImageWithURL:[NSURL URLWithString:@"file:///abc"]];
+//    [_imageView sd_setImageWithURL:[NSURL URLWithString:@"file:///abc"]];
 }
 @end

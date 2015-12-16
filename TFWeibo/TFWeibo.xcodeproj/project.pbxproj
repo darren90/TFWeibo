@@ -73,6 +73,7 @@
 		FEFD7DB01C21AAAB001B5D30 /* MJPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7DA41C21AAAB001B5D30 /* MJPhotoView.m */; };
 		FEFD7DB11C21AAAB001B5D30 /* SDWebImageManager+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7DA61C21AAAB001B5D30 /* SDWebImageManager+MJ.m */; };
 		FEFD7DB21C21AAAB001B5D30 /* UIImageView+MJWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7DA81C21AAAB001B5D30 /* UIImageView+MJWebCache.m */; };
+		FEFD7DB51C21AC4B001B5D30 /* UIColor+expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7DB41C21AC4B001B5D30 /* UIColor+expanded.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -227,6 +228,8 @@
 		FEFD7DA61C21AAAB001B5D30 /* SDWebImageManager+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SDWebImageManager+MJ.m"; sourceTree = "<group>"; };
 		FEFD7DA71C21AAAB001B5D30 /* UIImageView+MJWebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MJWebCache.h"; sourceTree = "<group>"; };
 		FEFD7DA81C21AAAB001B5D30 /* UIImageView+MJWebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+MJWebCache.m"; sourceTree = "<group>"; };
+		FEFD7DB31C21AC4B001B5D30 /* UIColor+expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+expanded.h"; sourceTree = "<group>"; };
+		FEFD7DB41C21AC4B001B5D30 /* UIColor+expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+expanded.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -644,6 +647,8 @@
 		FEFD7D071C1F0D8B001B5D30 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				FEFD7DB31C21AC4B001B5D30 /* UIColor+expanded.h */,
+				FEFD7DB41C21AC4B001B5D30 /* UIColor+expanded.m */,
 				FEFD7D081C1F0D8B001B5D30 /* Foundation+Log.m */,
 				FEFD7D091C1F0D8B001B5D30 /* NSDate+Extension.h */,
 				FEFD7D0A1C1F0D8B001B5D30 /* NSDate+Extension.m */,
@@ -1043,6 +1048,7 @@
 				FEFD7D191C1F0D8B001B5D30 /* Foundation+Log.m in Sources */,
 				FEFD7D271C205276001B5D30 /* BaseNavigationController.m in Sources */,
 				FEFD7D211C1F0D8B001B5D30 /* UIWindow+Category.m in Sources */,
+				FEFD7DB51C21AC4B001B5D30 /* UIColor+expanded.m in Sources */,
 				FEFD7D6E1C21A1BA001B5D30 /* AFSecurityPolicy.m in Sources */,
 				FEFD7D1A1C1F0D8B001B5D30 /* NSDate+Extension.m in Sources */,
 				FEFD7D781C21A1BA001B5D30 /* UIWebView+AFNetworking.m in Sources */,
