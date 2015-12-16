@@ -10,6 +10,12 @@
 #import "BaseNavigationController.h"
 #import "RDVTabBarItem.h"
 
+#import "HomeController.h"
+#import "MessageController.h"
+#import "ComposeController.h"
+#import "DiscoverController.h"
+#import "MeController.h"
+
 @interface RootTabViewController ()<RDVTabBarControllerDelegate>
 
 @end
@@ -30,20 +36,20 @@
 
 -(void)initViewControllers
 {
-    UITableViewController *home = [[UITableViewController alloc]init];
+    UIViewController *home = [[HomeController alloc]init];
     UINavigationController *navHome = [[BaseNavigationController alloc]initWithRootViewController:home];
     
-    UITableViewController *message = [[UITableViewController alloc]init];
+    UIViewController *message = [[MessageController alloc]init];
     UINavigationController *navMessage = [[BaseNavigationController alloc]initWithRootViewController:message];
     
-    UITableViewController *compose = [[UITableViewController alloc]init];
+    UIViewController *compose = [[ComposeController alloc]init];
     UINavigationController *navCompose = [[BaseNavigationController alloc]initWithRootViewController:compose];
     
-    UITableViewController *discover = [[UITableViewController alloc]init];
+    UIViewController *discover = [[DiscoverController alloc]init];
     discover.title = @"发现";
     UINavigationController *navDiscover = [[BaseNavigationController alloc]initWithRootViewController:discover];
     
-    UITableViewController *me = [[UITableViewController alloc]init];
+    UIViewController *me = [[MeController alloc]init];
     UINavigationController *navMe = [[BaseNavigationController alloc]initWithRootViewController:me];
     
     [self setViewControllers:@[navHome, navMessage, navCompose,navDiscover, navMe]];
