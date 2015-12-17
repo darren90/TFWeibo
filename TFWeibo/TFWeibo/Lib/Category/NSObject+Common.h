@@ -10,7 +10,7 @@
 
 @interface NSObject (Common)
 
-
++ (id) loadResponseWithPath:(NSString *)requestPath;
 + (BOOL)showError:(NSError *)error;
 + (NSString *)baseURLStr;
 

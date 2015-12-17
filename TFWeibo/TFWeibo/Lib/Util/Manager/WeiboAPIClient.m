@@ -48,7 +48,7 @@ static dispatch_once_t onceToken;
                        andBlock:(void (^)(id data, NSError *error))block{
     [self requestJsonDataWithPath:aPath withParams:params withMethodType:method autoShowError:YES andBlock:block];
 }
-#if 0
+
 - (void)requestJsonDataWithPath:(NSString *)aPath
                      withParams:(NSDictionary*)params
                  withMethodType:(NetworkMethod)method
@@ -144,8 +144,6 @@ static dispatch_once_t onceToken;
     }
     
 }
-
-#endif
 
 -(void)requestJsonDataWithPath:(NSString *)aPath file:(NSDictionary *)file withParams:(NSDictionary *)params withMethodType:(NetworkMethod)method andBlock:(void (^)(id, NSError *))block{
     //log请求数据

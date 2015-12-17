@@ -18,6 +18,20 @@
 
 @implementation NSObject (Common)
 
+
+
+
++ (id) loadResponseWithPath:(NSString *)requestPath{//返回一个NSDictionary类型的json数据
+    User *loginUser = [Login curLoginUser];
+    if (!loginUser) {
+        return nil;
+    }else{
+        requestPath = [NSString stringWithFormat:@"%@_%@", loginUser.global_key, requestPath];
+    }
+    NSString *abslutePath = [NSString stringWithFormat:@"%@/%@.plist", [self pathInCacheDirectory:kPath_ResponseCache], [requestPath md5Str]];
+    return [NSMutableDictionary dictionaryWithContentsOfFile:abslutePath];
+}
+
 #pragma mark Tip M
 + (NSString *)tipFromError:(NSError *)error{
     if (error && error.userInfo) {

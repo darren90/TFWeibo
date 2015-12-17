@@ -30,6 +30,10 @@
 #import "WeiboAPIClient.h"
 #import "Weibo_APIManager.h"
 
+#import "User.h"
+
+
+
 //#import "UIImageView+WebCache.h"
 //#import "MBProgressHUD+MJ.h"
 //#import <MJExtension.h>

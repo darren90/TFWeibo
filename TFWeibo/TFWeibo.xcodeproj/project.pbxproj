@@ -74,6 +74,9 @@
 		FEFD7DB11C21AAAB001B5D30 /* SDWebImageManager+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7DA61C21AAAB001B5D30 /* SDWebImageManager+MJ.m */; };
 		FEFD7DB21C21AAAB001B5D30 /* UIImageView+MJWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7DA81C21AAAB001B5D30 /* UIImageView+MJWebCache.m */; };
 		FEFD7DB51C21AC4B001B5D30 /* UIColor+expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7DB41C21AC4B001B5D30 /* UIColor+expanded.m */; };
+		FEFD7DB81C22F195001B5D30 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7DB71C22F195001B5D30 /* User.m */; };
+		FEFD7DBD1C22F267001B5D30 /* AccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7DBC1C22F267001B5D30 /* AccountTool.m */; };
+		FEFD7DC01C22F294001B5D30 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7DBF1C22F294001B5D30 /* Account.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -230,6 +233,12 @@
 		FEFD7DA81C21AAAB001B5D30 /* UIImageView+MJWebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+MJWebCache.m"; sourceTree = "<group>"; };
 		FEFD7DB31C21AC4B001B5D30 /* UIColor+expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+expanded.h"; sourceTree = "<group>"; };
 		FEFD7DB41C21AC4B001B5D30 /* UIColor+expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+expanded.m"; sourceTree = "<group>"; };
+		FEFD7DB61C22F195001B5D30 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		FEFD7DB71C22F195001B5D30 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		FEFD7DBB1C22F267001B5D30 /* AccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountTool.h; sourceTree = "<group>"; };
+		FEFD7DBC1C22F267001B5D30 /* AccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountTool.m; sourceTree = "<group>"; };
+		FEFD7DBE1C22F294001B5D30 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
+		FEFD7DBF1C22F294001B5D30 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -479,6 +488,8 @@
 		FEFD7CF01C1F0977001B5D30 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FEFD7DB61C22F195001B5D30 /* User.h */,
+				FEFD7DB71C22F195001B5D30 /* User.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -616,6 +627,7 @@
 			children = (
 				FEFD7D011C1F0977001B5D30 /* Controller */,
 				FEFD7D021C1F0977001B5D30 /* Model */,
+				FEFD7DBA1C22F22B001B5D30 /* Tool */,
 				FEFD7D031C1F0977001B5D30 /* View */,
 			);
 			path = OAuth;
@@ -633,6 +645,8 @@
 		FEFD7D021C1F0977001B5D30 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FEFD7DBE1C22F294001B5D30 /* Account.h */,
+				FEFD7DBF1C22F294001B5D30 /* Account.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -832,6 +846,15 @@
 			path = MJPhotoBrowser;
 			sourceTree = "<group>";
 		};
+		FEFD7DBA1C22F22B001B5D30 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				FEFD7DBB1C22F267001B5D30 /* AccountTool.h */,
+				FEFD7DBC1C22F267001B5D30 /* AccountTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1016,6 +1039,7 @@
 				FEFD7D741C21A1BA001B5D30 /* UIButton+AFNetworking.m in Sources */,
 				FEFD7D1F1C1F0D8B001B5D30 /* UITextView+Category.m in Sources */,
 				FED4D20C1C1D308600CF9E4C /* ViewController.m in Sources */,
+				FEFD7DC01C22F294001B5D30 /* Account.m in Sources */,
 				FEFD7D941C21A9B1001B5D30 /* JDStatusBarView.m in Sources */,
 				FEFD7D691C21A1BA001B5D30 /* AFHTTPRequestOperationManager.m in Sources */,
 				FEFD7DB21C21AAAB001B5D30 /* UIImageView+MJWebCache.m in Sources */,
@@ -1040,6 +1064,7 @@
 				FEFD7D921C21A9B1001B5D30 /* JDStatusBarNotification.m in Sources */,
 				FEFD7D8A1C21A77F001B5D30 /* NSObject+Common.m in Sources */,
 				FED4D2061C1D308600CF9E4C /* main.m in Sources */,
+				FEFD7DB81C22F195001B5D30 /* User.m in Sources */,
 				FEFD7CE31C1F05F0001B5D30 /* RDVTabBarItem.m in Sources */,
 				FEFD7D931C21A9B1001B5D30 /* JDStatusBarStyle.m in Sources */,
 				FEFD7DA91C21AAAB001B5D30 /* MBProgressHUD+Add.m in Sources */,
@@ -1056,6 +1081,7 @@
 				FEFD7D1E1C1F0D8B001B5D30 /* UIImage+Category.m in Sources */,
 				FEFD7DAC1C21AAAB001B5D30 /* MJPhotoBrowser.m in Sources */,
 				FEFD7D301C20DC07001B5D30 /* MessageController.m in Sources */,
+				FEFD7DBD1C22F267001B5D30 /* AccountTool.m in Sources */,
 				FEFD7DAE1C21AAAB001B5D30 /* MJPhotoProgressView.m in Sources */,
 				FEFD7D771C21A1BA001B5D30 /* UIRefreshControl+AFNetworking.m in Sources */,
 			);
