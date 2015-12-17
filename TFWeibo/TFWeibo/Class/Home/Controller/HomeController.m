@@ -47,6 +47,15 @@
 - (void)refresh
 {
     double delayInSeconds = 3.0;
+    
+    
+    [[Weibo_APIManager sharedManager] request_UnReadNotificationsWithBlock:^(id data, NSError *error) {
+        if (data) {
+            weakSelf.notificationDict = [NSMutableDictionary dictionaryWithDictionary:data];
+            [weakSelf.myTableView reloadData];
+        }
+    }];
+    
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         [self.myRefreshControl endRefreshing];

@@ -17,4 +17,8 @@
 - (void)request_OAuth_WithParams:(id)params andBlock:(void (^)(id data, NSError *error))block;
 
 
+//weibo statuses/friends_timeline
+- (void)request_Friends_timeline_WithParams:(id)params andBlock:(void (^)(id data, NSError *error))block;
+
+
 @end
