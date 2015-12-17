@@ -73,7 +73,7 @@
         baseURLStr = kBaseUrlStr_Test;
     }else{
         //生产
-        baseURLStr = @"https://coding.net/";
+        baseURLStr = @"https://api.weibo.com/";//@"https://coding.net/";
     }
     //    //staging
     //    baseURLStr = kBaseUrlStr_Test;

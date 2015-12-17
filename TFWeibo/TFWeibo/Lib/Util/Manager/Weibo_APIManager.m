@@ -10,9 +10,11 @@
 
 @implementation Weibo_APIManager
 
-- (void)request_OAuth_WithBlock:(void (^)(id data, NSError *error))block
+//- (void)request_Login_WithParams:(id)params andBlock:(void (^)(id data, NSError *error))block{
+
+- (void)request_OAuth_WithParams:(id)params andBlock:(void (^)(id data, NSError *error))block
 {
-    [[WeiboAPIClient sharedJsonClient] requestJsonDataWithPath:@"api/user/unread-count" withParams:nil withMethodType:Get autoShowError:NO andBlock:^(id data, NSError *error) {
+    [[WeiboAPIClient sharedJsonClient] requestJsonDataWithPath:@"/oauth2/access_token" withParams:params withMethodType:Get autoShowError:NO andBlock:^(id data, NSError *error) {
         if (data) {
 //            [MobClick event:kUmeng_Event_Request_Notification label:@"Tab首页的红点通知"];
             
