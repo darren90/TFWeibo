@@ -42,6 +42,14 @@
 //#import "Account.h"
 /*******************************************************/
 
+
+#define kPath_ImageCache @"ImageCache"
+#define kPath_ResponseCache @"ResponseCache"
+
+
+
+
+
 /**********************微博授权相关*********************************/
 #define KWeiboAPPKey        @"638433920"
 #define KWeiboAPPSecret     @"ba2f8bccc5d715e9abbea352f6e52328"

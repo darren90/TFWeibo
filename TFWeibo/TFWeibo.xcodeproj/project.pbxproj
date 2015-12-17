@@ -799,10 +799,10 @@
 		FEFD7D811C21A5E5001B5D30 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				FEFD7D821C21A632001B5D30 /* Weibo_APIManager.h */,
-				FEFD7D831C21A632001B5D30 /* Weibo_APIManager.m */,
 				FEFD7D851C21A686001B5D30 /* WeiboAPIClient.h */,
 				FEFD7D861C21A686001B5D30 /* WeiboAPIClient.m */,
+				FEFD7D821C21A632001B5D30 /* Weibo_APIManager.h */,
+				FEFD7D831C21A632001B5D30 /* Weibo_APIManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";

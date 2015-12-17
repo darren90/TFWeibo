@@ -19,17 +19,40 @@
 @implementation NSObject (Common)
 
 
-
+//网络请求
++ (BOOL)saveResponseData:(NSDictionary *)data toPath:(NSString *)requestPath{
+//    User *loginUser = [Login curLoginUser];
+//    if (!loginUser) {
+//        return NO;
+//    }else{
+//        requestPath = [NSString stringWithFormat:@"%@_%@", loginUser.global_key, requestPath];
+//    }
+//    if ([self createDirInCache:kPath_ResponseCache]) {
+//        NSString *abslutePath = [NSString stringWithFormat:@"%@/%@.plist", [self pathInCacheDirectory:kPath_ResponseCache], [requestPath md5Str]];
+//        return [data writeToFile:abslutePath atomically:YES];
+//    }else{
+//        return NO;
+//    }
+    return YES;
+}
 
 + (id) loadResponseWithPath:(NSString *)requestPath{//返回一个NSDictionary类型的json数据
-    User *loginUser = [Login curLoginUser];
-    if (!loginUser) {
-        return nil;
-    }else{
-        requestPath = [NSString stringWithFormat:@"%@_%@", loginUser.global_key, requestPath];
-    }
+//    User *loginUser = [Login curLoginUser];
+//    if (!loginUser) {
+//        return nil;
+//    }else{
+//        requestPath = [NSString stringWithFormat:@"%@_%@", loginUser.global_key, requestPath];
+//    }
     NSString *abslutePath = [NSString stringWithFormat:@"%@/%@.plist", [self pathInCacheDirectory:kPath_ResponseCache], [requestPath md5Str]];
     return [NSMutableDictionary dictionaryWithContentsOfFile:abslutePath];
+}
+#pragma mark File M
+//获取fileName的完整地址
++ (NSString* )pathInCacheDirectory:(NSString *)fileName
+{
+    NSArray *cachePaths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *cachePath = [cachePaths objectAtIndex:0];
+    return [cachePath stringByAppendingPathComponent:fileName];
 }
 
 #pragma mark Tip M

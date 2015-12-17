@@ -22,11 +22,11 @@
 
 - (void)request_OAuth_WithParams:(id)params andBlock:(void (^)(id data, NSError *error))block
 {
-    [[WeiboAPIClient sharedJsonClient] requestJsonDataWithPath:@"/oauth2/access_token" withParams:params withMethodType:Get autoShowError:NO andBlock:^(id data, NSError *error) {
+    [[WeiboAPIClient sharedJsonClient] requestJsonDataWithPath:@"/oauth2/access_token" withParams:params withMethodType:Post autoShowError:NO andBlock:^(id data, NSError *error) {
         if (data) {
 //            [MobClick event:kUmeng_Event_Request_Notification label:@"Tab首页的红点通知"];
             
-            id resultData = [data valueForKeyPath:@"data"];
+            id resultData = data;//[data valueForKeyPath:@"data"];
             block(resultData, nil);
         }else{
             block(nil, error);

@@ -10,6 +10,10 @@
 
 @interface NSObject (Common)
 
+
++ (BOOL)saveResponseData:(NSDictionary *)data toPath:(NSString *)requestPath;
++ (void)showHudTipStr:(NSString *)tipStr;
+
 + (id) loadResponseWithPath:(NSString *)requestPath;
 + (BOOL)showError:(NSError *)error;
 + (NSString *)baseURLStr;
