@@ -77,6 +77,7 @@
 		FEFD7DB81C22F195001B5D30 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7DB71C22F195001B5D30 /* User.m */; };
 		FEFD7DBD1C22F267001B5D30 /* AccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7DBC1C22F267001B5D30 /* AccountTool.m */; };
 		FEFD7DC01C22F294001B5D30 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7DBF1C22F294001B5D30 /* Account.m */; };
+		FEFD7DC41C22FB09001B5D30 /* ODRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7DC31C22FB09001B5D30 /* ODRefreshControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -239,6 +240,8 @@
 		FEFD7DBC1C22F267001B5D30 /* AccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountTool.m; sourceTree = "<group>"; };
 		FEFD7DBE1C22F294001B5D30 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
 		FEFD7DBF1C22F294001B5D30 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		FEFD7DC21C22FB09001B5D30 /* ODRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODRefreshControl.h; sourceTree = "<group>"; };
+		FEFD7DC31C22FB09001B5D30 /* ODRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODRefreshControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -364,6 +367,7 @@
 		FEFD7CD91C1F05F0001B5D30 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				FEFD7DC11C22FB09001B5D30 /* ODRefreshControl */,
 				FEFD7D951C21AAAB001B5D30 /* MJPhotoBrowser */,
 				FEFD7D8B1C21A9B1001B5D30 /* JDStatusBarNotification */,
 				FEFD7D791C21A208001B5D30 /* YLGIFImage */,
@@ -855,6 +859,15 @@
 			path = Tool;
 			sourceTree = "<group>";
 		};
+		FEFD7DC11C22FB09001B5D30 /* ODRefreshControl */ = {
+			isa = PBXGroup;
+			children = (
+				FEFD7DC21C22FB09001B5D30 /* ODRefreshControl.h */,
+				FEFD7DC31C22FB09001B5D30 /* ODRefreshControl.m */,
+			);
+			path = ODRefreshControl;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1069,6 +1082,7 @@
 				FEFD7D931C21A9B1001B5D30 /* JDStatusBarStyle.m in Sources */,
 				FEFD7DA91C21AAAB001B5D30 /* MBProgressHUD+Add.m in Sources */,
 				FEFD7D731C21A1BA001B5D30 /* UIAlertView+AFNetworking.m in Sources */,
+				FEFD7DC41C22FB09001B5D30 /* ODRefreshControl.m in Sources */,
 				FEFD7DAD1C21AAAB001B5D30 /* MJPhotoLoadingView.m in Sources */,
 				FEFD7D191C1F0D8B001B5D30 /* Foundation+Log.m in Sources */,
 				FEFD7D271C205276001B5D30 /* BaseNavigationController.m in Sources */,
