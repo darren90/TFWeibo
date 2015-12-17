@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ADD6E5BBD363E6C4DD5D01EB"
+               BlueprintIdentifier = "6D6613DA1B0B4D205C2D8C1C"
                BuildableName = "libevernote-cloud-sdk-ios.a"
                BlueprintName = "evernote-cloud-sdk-ios"
                ReferencedContainer = "container:Pods.xcodeproj">

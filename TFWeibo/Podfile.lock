@@ -2,6 +2,7 @@ PODS:
   - evernote-cloud-sdk-ios (2.0.2)
   - hpple (0.2.0)
   - JazzHands (2.0.0)
+  - Masonry (0.5.3)
   - MBProgressHUD (0.9)
   - pop (1.0.8)
   - POP+MCAnimate (2.0.1):
@@ -38,6 +39,7 @@ DEPENDENCIES:
   - evernote-cloud-sdk-ios (= 2.0.2)
   - hpple (= 0.2.0)
   - JazzHands (= 2.0.0)
+  - Masonry (= 0.5.3)
   - MBProgressHUD (= 0.9)
   - POP+MCAnimate (= 2.0.1)
   - RegexKitLite-NoWarning (= 1.1.0)
@@ -50,6 +52,7 @@ SPEC CHECKSUMS:
   evernote-cloud-sdk-ios: 7a6e5402b837ea79ef0179caff5ffe7b4f235615
   hpple: 3b765f96fc2cd56ad1a49aef6f7be5cb2aa64b57
   JazzHands: 00002e9b1284e7fc1ac6555012e81b8942477242
+  Masonry: 9f515466afe48632562342a40a1c224071a1a022
   MBProgressHUD: d8e7ea388dc1549a42e0d219067cf5f2c898fb66
   pop: bb773ae2c791ca2629de13b347e7a8b450fa6a57
   POP+MCAnimate: a99e209148c602512de487f1160a44bf78572024
