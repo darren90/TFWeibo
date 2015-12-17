@@ -36,7 +36,7 @@
 
 -(void)initViewControllers
 {
-    UIViewController *home = [[HomeController alloc]init];
+    UITableViewController *home = [[HomeController alloc]init];
     UINavigationController *navHome = [[BaseNavigationController alloc]initWithRootViewController:home];
     
     UIViewController *message = [[MessageController alloc]init];

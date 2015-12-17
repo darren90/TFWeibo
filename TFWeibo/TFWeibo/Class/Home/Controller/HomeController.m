@@ -9,7 +9,7 @@
 #import "HomeController.h"
 
 @interface HomeController ()
-
+@property (nonatomic,strong)ODRefreshControl *myRefreshControl;
 @end
 
 @implementation HomeController
@@ -25,8 +25,19 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [self setupNavBar];
+    
+    self.myRefreshControl = [[ODRefreshControl alloc] initInScrollView:self.tableView];
+    [self.myRefreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
 }
 
+- (void)refresh
+{
+    double delayInSeconds = 3.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [self.myRefreshControl endRefreshing];
+    });
+}
 - (void)setupNavBar{
     [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navigationbar_friendsearch"] style:UIBarButtonItemStylePlain target:self action:@selector(friendsearch)] animated:NO];
     [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navigationbar_pop"] style:UIBarButtonItemStylePlain target:self action:@selector(righBarClick)] animated:NO];
