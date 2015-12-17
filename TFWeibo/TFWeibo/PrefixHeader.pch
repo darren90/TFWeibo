@@ -26,6 +26,10 @@
 #import <MobClick.h>
 
 #import "NSObject+Common.h"
+
+#import "WeiboAPIClient.h"
+#import "Weibo_APIManager.h"
+
 //#import "UIImageView+WebCache.h"
 //#import "MBProgressHUD+MJ.h"
 //#import <MJExtension.h>

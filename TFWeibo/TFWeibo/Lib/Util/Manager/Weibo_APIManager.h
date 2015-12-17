@@ -10,6 +10,8 @@
 #import "WeiboAPIClient.h"
 
 @interface Weibo_APIManager : NSObject
++ (instancetype)sharedManager;
+
 
 //OAuth
 - (void)request_OAuth_WithParams:(id)params andBlock:(void (^)(id data, NSError *error))block;

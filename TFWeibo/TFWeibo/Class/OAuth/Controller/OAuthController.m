@@ -63,28 +63,50 @@
 {
     NSString *url = @"https://api.weibo.com/oauth2/access_token";
     
-//    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
-//    mgr.responseSerializer = [AFJSONResponseSerializer serializer];
-//    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-//    dict[@"client_id"] = KWeiboAPPKey;
-//    dict[@"client_secret"] = KWeiboAPPSecret;
-//    dict[@"grant_type"] = @"authorization_code";
-//    dict[@"code"] = code;
-//    dict[@"redirect_uri"] = KRedirectUri;
-//    
-//    [mgr POST:url parameters:dict success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
-//        [MBProgressHUD hideHUD];
-//        
-//        Account *account = [Account accountWithDict:responseObject];
-//        
-//        [AccountTool saveAccount:account];
-//        
-//        [UIWindow switchRootViewVC];
-//        
-//    } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
-//        TFLog(@"faile---:%@",error);
-//        [MBProgressHUD hideHUD];
+    //    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
+    //    mgr.responseSerializer = [AFJSONResponseSerializer serializer];
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    dict[@"client_id"] = KWeiboAPPKey;
+    dict[@"client_secret"] = KWeiboAPPSecret;
+    dict[@"grant_type"] = @"authorization_code";
+    dict[@"code"] = code;
+    dict[@"redirect_uri"] = KRedirectUri;
+    //
+    //    [mgr POST:url parameters:dict success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+    //        [MBProgressHUD hideHUD];
+    //
+    //        Account *account = [Account accountWithDict:responseObject];
+    //
+    //        [AccountTool saveAccount:account];
+    //
+    //        [UIWindow switchRootViewVC];
+    //
+    //    } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
+    //        TFLog(@"faile---:%@",error);
+    //        [MBProgressHUD hideHUD];
+    //    }];
+    [[Weibo_APIManager sharedManager] request_OAuth_WithParams:dict andBlock:^(id data, NSError *error) {
+        NSLog(@"-succ-:%@-eror-:%@",data,error);
+    }];
+    
+//    [[Coding_NetAPIManager sharedManager] request_Login_WithParams:[self.myLogin toParams] andBlock:^(id data, NSError *error) {
+//        weakSelf.loginBtn.enabled = YES;
+//        [weakSelf.activityIndicator stopAnimating];
+//        if (data) {
+//            [Login setPreUserEmail:self.myLogin.email];//记住登录账号
+//            [((AppDelegate *)[UIApplication sharedApplication].delegate) setupTabViewController];
+//        }else{
+//            NSString *global_key = error.userInfo[@"msg"][@"two_factor_auth_code_not_empty"];
+//            if (global_key.length > 0) {
+//                [weakSelf changeUITo2FAWithGK:global_key];
+//            }else{
+//                [NSObject showError:error];
+//                [weakSelf refreshCaptchaNeeded];
+//            }
+//        }
 //    }];
+
+
     
 }
 

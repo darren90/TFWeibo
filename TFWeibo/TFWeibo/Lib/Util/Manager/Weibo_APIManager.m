@@ -10,6 +10,14 @@
 
 @implementation Weibo_APIManager
 
++ (instancetype)sharedManager {
+    static Weibo_APIManager *shared_manager = nil;
+    static dispatch_once_t pred;
+    dispatch_once(&pred, ^{
+        shared_manager = [[self alloc] init];
+    });
+    return shared_manager;
+}
 //- (void)request_Login_WithParams:(id)params andBlock:(void (^)(id data, NSError *error))block{
 
 - (void)request_OAuth_WithParams:(id)params andBlock:(void (^)(id data, NSError *error))block
