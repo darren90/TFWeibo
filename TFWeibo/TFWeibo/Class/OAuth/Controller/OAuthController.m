@@ -87,6 +87,12 @@
     //    }];
     [[Weibo_APIManager sharedManager] request_OAuth_WithParams:dict andBlock:^(id data, NSError *error) {
         NSLog(@"-succ-:%@-eror-:%@",data,error);
+        Account *account = [Account accountWithDict:data];
+        
+        [AccountTool saveAccount:account];
+        
+        [UIWindow switchRootViewVC];
+
     }];
     
 //    [[Coding_NetAPIManager sharedManager] request_Login_WithParams:[self.myLogin toParams] andBlock:^(id data, NSError *error) {

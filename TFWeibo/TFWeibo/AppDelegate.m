@@ -16,15 +16,22 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 
-    OAuthController *oauVc = [[OAuthController alloc]init];
-    RootTabViewController *rootVc = [[RootTabViewController alloc]init];
-    self.window.rootViewController = oauVc;
+//    OAuthController *oauVc = [[OAuthController alloc]init];
+//    RootTabViewController *rootVc = [[RootTabViewController alloc]init];
+//    self.window.rootViewController = oauVc;
+    
+    Account *account = [AccountTool account];
+    if (account) {//以前登陆过
+        [UIWindow switchRootViewVC];
+    }else{
+        self.window.rootViewController = [[OAuthController alloc]init];;
+    }
+
     return YES;
 }
 

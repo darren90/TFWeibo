@@ -31,7 +31,8 @@
 #import "Weibo_APIManager.h"
 
 #import "User.h"
-
+#import "Account.h"
+#import "AccountTool.h"
 
 
 //#import "UIImageView+WebCache.h"

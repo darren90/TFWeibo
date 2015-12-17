@@ -6,7 +6,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TFWeibo/Class/OAuth/Controller/OAuthController.m"
@@ -22,15 +22,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TFWeibo/Class/OAuth/Controller/OAuthController.m"
-            timestampString = "472051422.883067"
+            timestampString = "472053621.777388"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "-accessTokenWithCode:"
             landmarkType = "5">
          </BreakpointContent>
@@ -38,7 +38,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TFWeibo/Lib/Util/Manager/Weibo_APIManager.m"
@@ -51,14 +51,14 @@
             landmarkType = "5">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[Weibo_APIManager request_OAuth_WithParams:andBlock:]"
                   moduleName = "TFWeibo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tengfei/github/TFWeibo/TFWeibo/TFWeibo/Lib/Util/Manager/Weibo_APIManager.m"
-                  timestampString = "472053260.553374"
+                  timestampString = "472053729.365357"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "25"
@@ -66,14 +66,14 @@
                   offsetFromSymbolStart = "77">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__54-[Weibo_APIManager request_OAuth_WithParams:andBlock:]_block_invoke"
                   moduleName = "TFWeibo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tengfei/github/TFWeibo/TFWeibo/TFWeibo/Lib/Util/Manager/Weibo_APIManager.m"
-                  timestampString = "472053260.553689"
+                  timestampString = "472053729.365729"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "25"
@@ -96,6 +96,38 @@
             startingLineNumber = "29"
             endingLineNumber = "29"
             landmarkName = "-request_OAuth_WithParams:andBlock:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TFWeibo/Class/OAuth/Controller/OAuthController.m"
+            timestampString = "472053638.483988"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "-accessTokenWithCode:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TFWeibo/Class/OAuth/Controller/OAuthController.m"
+            timestampString = "472053687.23111"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "-accessTokenWithCode:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
