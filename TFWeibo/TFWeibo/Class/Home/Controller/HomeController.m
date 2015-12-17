@@ -8,7 +8,10 @@
 
 #import "HomeController.h"
 
-@interface HomeController ()
+@interface HomeController ()<UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic,weak)UITableView *tableView ;
+
 @property (nonatomic,strong)ODRefreshControl *myRefreshControl;
 @end
 
@@ -24,10 +27,21 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self addTableView];
     [self setupNavBar];
     
     self.myRefreshControl = [[ODRefreshControl alloc] initInScrollView:self.tableView];
     [self.myRefreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+}
+
+-(void)addTableView
+{
+    UITableView *tableView = [[UITableView alloc]init];
+    [self.view addSubview:tableView];
+    tableView.delegate = self;
+    tableView.dataSource = self;
+    self.tableView = tableView;
+    tableView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 64);//self.view.bounds;
 }
 
 - (void)refresh
