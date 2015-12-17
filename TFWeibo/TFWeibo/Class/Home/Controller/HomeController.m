@@ -96,7 +96,6 @@
     return 20;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     //1,创建cell
     static NSString *ID = @"123";
