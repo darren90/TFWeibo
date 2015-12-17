@@ -34,5 +34,18 @@
     }];
 }
 
+- (void)request_Friends_timeline_WithParams:(id)params andBlock:(void (^)(id data, NSError *error))block
+{
+    [[WeiboAPIClient sharedJsonClient] requestJsonDataWithPath:@"2/statuses/friends_timeline.json" withParams:params withMethodType:Get autoShowError:NO andBlock:^(id data, NSError *error) {
+        if (data) {
+            //            [MobClick event:kUmeng_Event_Request_Notification label:@"Tab首页的红点通知"];
+            
+            id resultData = data;//[data valueForKeyPath:@"data"];
+            block(resultData, nil);
+        }else{
+            block(nil, error);
+        }
+    }];
+}
 
 @end

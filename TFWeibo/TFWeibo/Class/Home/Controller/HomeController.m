@@ -47,12 +47,16 @@
 - (void)refresh
 {
     double delayInSeconds = 3.0;
-    
-    
-    [[Weibo_APIManager sharedManager] request_UnReadNotificationsWithBlock:^(id data, NSError *error) {
+    Account *account = [AccountTool account];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"access_token"] = account.access_token;
+    params[@"count"] = @15;
+    __weak typeof(self) weakSelf = self;
+    [[Weibo_APIManager sharedManager] request_Friends_timeline_WithParams:params andBlock:^(id data, NSError *error) {
         if (data) {
-            weakSelf.notificationDict = [NSMutableDictionary dictionaryWithDictionary:data];
-            [weakSelf.myTableView reloadData];
+            NSLog(@":ddd--:%@",data);
+//            weakSelf.notificationDict = [NSMutableDictionary dictionaryWithDictionary:data];
+//            [weakSelf.myTableView reloadData];
         }
     }];
     
