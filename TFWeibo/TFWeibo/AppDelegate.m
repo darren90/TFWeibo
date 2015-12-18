@@ -31,6 +31,11 @@
     }else{
         self.window.rootViewController = [[OAuthController alloc]init];;
     }
+    
+    [[CrashReporter sharedInstance] installWithAppId:KBuglyAPPID];
+    
+    [self initEverNote];
+    [self umengTrack];//友盟的方法本身是异步执行，所以不需要再异步调用
 
     return YES;
 }
