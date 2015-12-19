@@ -24,6 +24,7 @@
 #import "AFNetworking.h"
 #import "UIColor+expanded.h"
 #import <MobClick.h>
+#import <Bugly/CrashReporter.h>
 
 #import "NSObject+Common.h"
 
