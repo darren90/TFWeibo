@@ -7,6 +7,7 @@
 //
 
 #import "HomeController.h"
+#import "Status.h"
 
 @interface HomeController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -55,6 +56,10 @@
     [[Weibo_APIManager sharedManager] request_Friends_timeline_WithParams:params andBlock:^(id data, NSError *error) {
         if (data) {
             NSLog(@":ddd--:%@",data);
+            NSArray *newStatuses = [Status objectArrayWithKeyValuesArray:data[@"statuses"]];
+            
+            NSLog(@"--status-:%@",newStatuses);
+            
 //            weakSelf.notificationDict = [NSMutableDictionary dictionaryWithDictionary:data];
 //            [weakSelf.myTableView reloadData];
         }
