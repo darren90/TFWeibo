@@ -12,6 +12,7 @@
 #import "UITTTAttributedLabel.h"
 #import "UICustomCollectionView.h"
 #import "UIIconView.h"
+#import "StatusFrame.h"
 
 @interface StatusCell()
 @property (assign, nonatomic) BOOL needTopView;
@@ -133,15 +134,24 @@
     contentLabel.numberOfLines = 0;
 }
 
-
-
-
--(void)setModel:(Status *)model
+-(void)setStatusFModel:(StatusFrame *)statusFModel
 {
-    _model = model;
+    _statusFModel = statusFModel;
+    Status *status = statusFModel.status;
+    User *user = status.user;
     
-    self.textLabel.text = model.text;
+    self.originalView.frame = statusFModel.originalViewF;
+    self.iconView.frame = statusFModel.iconViewF;
 }
+
+
+
+//-(void)setModel:(Status *)model
+//{
+//    _model = model;
+//    
+//    self.textLabel.text = model.text;
+//}
 
 
 

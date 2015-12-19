@@ -9,13 +9,17 @@
 #import "HomeController.h"
 #import "Status.h"
 #import "StatusCell.h"
+#import "StatusFrame.h"
 
 @interface HomeController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,weak)UITableView *tableView ;
 @property (nonatomic,strong)ODRefreshControl *myRefreshControl;
 
-@property (nonatomic,strong)NSMutableArray *dataArray;
+//@property (nonatomic,strong)NSMutableArray *dataArray;
+
+@property (nonatomic,strong)NSMutableArray * statusFrameArray;
+
 
 @end
 
@@ -60,7 +64,16 @@
         if (data) {
             NSLog(@":ddd--:%@",data);
             NSArray *newStatuses = [Status mj_objectArrayWithKeyValuesArray:data[@"statuses"]];
-            [self.dataArray addObjectsFromArray:newStatuses];
+            
+            NSMutableArray *newFrames = [NSMutableArray array];
+            for (Status *status in newStatuses) {
+                StatusFrame *sf = [[StatusFrame alloc]init];
+                sf.status = status;
+                [newFrames addObject:sf];
+            }
+            [self.statusFrameArray addObjectsFromArray:newFrames];
+            
+//            [self.dataArray addObjectsFromArray:newStatuses];
             [self.tableView reloadData];
             NSLog(@"--status-:%@",newStatuses);
         }
@@ -99,16 +112,22 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.dataArray.count;
+    return self.statusFrameArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     //1,创建cell
     StatusCell *cell = [StatusCell cellWithTableView:tableView];
     //2,设置cell的数据
-    Status *model = self.dataArray[indexPath.row];
-    cell.model = model;
+    StatusFrame *model = self.statusFrameArray[indexPath.row];
+    cell.statusFModel = model;
     return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    StatusFrame *model = self.statusFrameArray[indexPath.row];
+    return model.cellH;
 }
 
 
@@ -156,13 +175,21 @@
 }
 */
 
-
--(NSMutableArray *)dataArray
+-(NSMutableArray *)statusFrameArray
 {
-    if (!_dataArray) {
-        _dataArray = [NSMutableArray array];
+    if (!_statusFrameArray) {
+        _statusFrameArray = [NSMutableArray array];
     }
-    return _dataArray;
+    return _statusFrameArray;
 }
+
+
+//-(NSMutableArray *)dataArray
+//{
+//    if (!_dataArray) {
+//        _dataArray = [NSMutableArray array];
+//    }
+//    return _dataArray;
+//}
 
 @end
