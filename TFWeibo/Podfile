@@ -15,6 +15,7 @@ pod 'JazzHands', '2.0.0'
 pod 'Masonry', '0.5.3'  #新特性动画
 #pod 'YYKit', '~> 0.9.7'
 pod 'Bugly','1.4.3'
+pod 'MJExtension', '~> 3.0.7'
 
 #pod 'TPKeyboardAvoiding', '1.2.4'
 #pod 'BlocksKit', '2.2.5'

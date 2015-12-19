@@ -78,6 +78,7 @@
 		FEFD7DBD1C22F267001B5D30 /* AccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7DBC1C22F267001B5D30 /* AccountTool.m */; };
 		FEFD7DC01C22F294001B5D30 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7DBF1C22F294001B5D30 /* Account.m */; };
 		FEFD7DC41C22FB09001B5D30 /* ODRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7DC31C22FB09001B5D30 /* ODRefreshControl.m */; };
+		FEFD7DC71C24E473001B5D30 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7DC61C24E473001B5D30 /* Status.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -242,6 +243,8 @@
 		FEFD7DBF1C22F294001B5D30 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
 		FEFD7DC21C22FB09001B5D30 /* ODRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODRefreshControl.h; sourceTree = "<group>"; };
 		FEFD7DC31C22FB09001B5D30 /* ODRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODRefreshControl.m; sourceTree = "<group>"; };
+		FEFD7DC51C24E473001B5D30 /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
+		FEFD7DC61C24E473001B5D30 /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -494,6 +497,8 @@
 			children = (
 				FEFD7DB61C22F195001B5D30 /* User.h */,
 				FEFD7DB71C22F195001B5D30 /* User.m */,
+				FEFD7DC51C24E473001B5D30 /* Status.h */,
+				FEFD7DC61C24E473001B5D30 /* Status.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1092,6 +1097,7 @@
 				FEFD7D1A1C1F0D8B001B5D30 /* NSDate+Extension.m in Sources */,
 				FEFD7D781C21A1BA001B5D30 /* UIWebView+AFNetworking.m in Sources */,
 				FEFD7DB11C21AAAB001B5D30 /* SDWebImageManager+MJ.m in Sources */,
+				FEFD7DC71C24E473001B5D30 /* Status.m in Sources */,
 				FEFD7D1E1C1F0D8B001B5D30 /* UIImage+Category.m in Sources */,
 				FEFD7DAC1C21AAAB001B5D30 /* MJPhotoBrowser.m in Sources */,
 				FEFD7D301C20DC07001B5D30 /* MessageController.m in Sources */,
