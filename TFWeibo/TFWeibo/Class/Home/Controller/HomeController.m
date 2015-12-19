@@ -8,6 +8,7 @@
 
 #import "HomeController.h"
 #import "Status.h"
+#import "StatusCell.h"
 
 @interface HomeController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -62,9 +63,6 @@
             [self.dataArray addObjectsFromArray:newStatuses];
             [self.tableView reloadData];
             NSLog(@"--status-:%@",newStatuses);
-            
-//            weakSelf.notificationDict = [NSMutableDictionary dictionaryWithDictionary:data];
-//            [weakSelf.myTableView reloadData];
         }
     }];
     
@@ -106,14 +104,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     //1,创建cell
-    static NSString *ID = @"123";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if(cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID ];
-    }
+    StatusCell *cell = [StatusCell cellWithTableView:tableView];
     //2,设置cell的数据
     Status *model = self.dataArray[indexPath.row];
-    cell.textLabel.text = model.text;
+    cell.model = model;
     return cell;
 }
 

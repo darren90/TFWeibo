@@ -79,6 +79,7 @@
 		FEFD7DC01C22F294001B5D30 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7DBF1C22F294001B5D30 /* Account.m */; };
 		FEFD7DC41C22FB09001B5D30 /* ODRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7DC31C22FB09001B5D30 /* ODRefreshControl.m */; };
 		FEFD7DC71C24E473001B5D30 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7DC61C24E473001B5D30 /* Status.m */; };
+		FEFD7DCA1C24F39F001B5D30 /* StatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7DC91C24F39F001B5D30 /* StatusCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -245,6 +246,8 @@
 		FEFD7DC31C22FB09001B5D30 /* ODRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODRefreshControl.m; sourceTree = "<group>"; };
 		FEFD7DC51C24E473001B5D30 /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
 		FEFD7DC61C24E473001B5D30 /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
+		FEFD7DC81C24F39F001B5D30 /* StatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusCell.h; sourceTree = "<group>"; };
+		FEFD7DC91C24F39F001B5D30 /* StatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -506,6 +509,8 @@
 		FEFD7CF11C1F0977001B5D30 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FEFD7DC81C24F39F001B5D30 /* StatusCell.h */,
+				FEFD7DC91C24F39F001B5D30 /* StatusCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1098,6 +1103,7 @@
 				FEFD7D781C21A1BA001B5D30 /* UIWebView+AFNetworking.m in Sources */,
 				FEFD7DB11C21AAAB001B5D30 /* SDWebImageManager+MJ.m in Sources */,
 				FEFD7DC71C24E473001B5D30 /* Status.m in Sources */,
+				FEFD7DCA1C24F39F001B5D30 /* StatusCell.m in Sources */,
 				FEFD7D1E1C1F0D8B001B5D30 /* UIImage+Category.m in Sources */,
 				FEFD7DAC1C21AAAB001B5D30 /* MJPhotoBrowser.m in Sources */,
 				FEFD7D301C20DC07001B5D30 /* MessageController.m in Sources */,

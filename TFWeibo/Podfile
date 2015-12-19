@@ -6,7 +6,7 @@ pod 'evernote-cloud-sdk-ios', '2.0.2'
 pod 'UMengAnalytics', '3.5.10'
 pod 'UMengSocial', '4.2.3'
 pod 'MBProgressHUD', '0.9'
-pod 'TTTAttributedLabel', '1.10.1'
+pod 'TTTAttributedLabel', '1.10.1' #富文本的label，可点击链接
 pod 'RegexKitLite-NoWarning', '1.1.0'
 pod 'hpple', '0.2.0'
 pod 'POP+MCAnimate', '2.0.1'
