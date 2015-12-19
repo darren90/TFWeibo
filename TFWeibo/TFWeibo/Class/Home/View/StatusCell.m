@@ -13,6 +13,7 @@
 #import "UICustomCollectionView.h"
 #import "UIIconView.h"
 #import "StatusFrame.h"
+#import "WBStatusImgsView.h"
 
 @interface StatusCell()
 @property (assign, nonatomic) BOOL needTopView;
@@ -35,7 +36,7 @@
 /** 原创微博-会员图标 */
 @property (nonatomic,weak)UIImageView * vipView;
 /** 原创微博-配图 */
-//@property (nonatomic,weak)WBStatusPhotosView * photosView;
+@property (nonatomic,weak)WBStatusImgsView * photosView;
 /** 昵称 */
 @property (nonatomic,weak)UILabel * nameLabel;
 /** 时间 */
@@ -106,6 +107,9 @@
     vipView.contentMode = UIViewContentModeCenter;
     
     //4:原创微博配图
+    WBStatusImgsView * photoView = [[WBStatusImgsView alloc]init];
+    [originalView addSubview:photoView];
+    self.photosView = photoView;
     
     //5:昵称
     UILabel *nameLabel = [[UILabel alloc]init];
@@ -142,6 +146,74 @@
     
     self.originalView.frame = statusFModel.originalViewF;
     self.iconView.frame = statusFModel.iconViewF;
+    self.iconView.user = user;
+    
+    if (user.isVip) {
+        self.vipView.hidden = NO;
+        
+        self.vipView.frame = statusFModel.vipViewF;
+        self.vipView.image = [UIImage imageNamed:[NSString stringWithFormat:@"common_icon_membership_level%d",user.mbrank]];
+        self.nameLabel.textColor = [UIColor orangeColor];
+    }else{
+        self.vipView.hidden = YES;
+        
+        self.nameLabel.textColor = [UIColor blackColor];
+    }
+    
+    self.photosView.frame = statusFModel.photoViewF;
+    if (status.pic_urls.count) {
+        
+        //        Photo *photo = status.pic_urls[0];
+        self.photosView.photos = status.pic_urls;
+        self.photosView.hidden = NO;
+    }else{
+        self.photosView.hidden = YES;
+    }
+    
+    
+    self.nameLabel.text = user.name;
+    self.nameLabel.frame = statusFModel.nameLabelF;
+    
+    self.timeLabel.text = status.created_at;
+    self.timeLabel.frame = statusFModel.timeLabelF;
+    
+    self.sourceLabel.text = status.source;
+    self.sourceLabel.frame = statusFModel.sourceLabelF;
+    
+    //    self.contentLabel.text = status.text;
+    self.contentLabel.attributedText = status.attributeText;
+    self.contentLabel.frame = statusFModel.contentLabelF;
+    
+    /** 转发微博 */
+    
+//    Status *retWeetSatus = status.retweeted_status;
+//    if (retWeetSatus) {
+//        self.retweetView.hidden = NO;
+//        self.retweetView.frame = statusFModel.retweetViewF;
+// 
+//        self.retweetContentLabel.attributedText = status.retweetAttributeText;
+//        
+//        self.retweetContentLabel.frame = statusFModel.retweetContentLabelF;
+//        
+//        if (retWeetSatus.pic_urls.count) {
+//            self.retweetPhotosView.frame = statusFModel.retweetPhotoViewF;
+//            
+// 
+//            self.self.retweetPhotosView.photos = retWeetSatus.pic_urls;
+// 
+//            self.retweetPhotosView.hidden = NO;
+//        }else{
+//            
+//        }
+//        
+//    }else{
+//        self.retweetView.hidden = YES;
+//    }
+    
+    
+    /** 工具条 */
+//    self.toolBar.frame = statusFModel.toolBarF;
+//    self.toolBar.status = status;
 }
 
 
