@@ -12,8 +12,10 @@
 @interface HomeController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,weak)UITableView *tableView ;
-
 @property (nonatomic,strong)ODRefreshControl *myRefreshControl;
+
+@property (nonatomic,strong)NSMutableArray *dataArray;
+
 @end
 
 @implementation HomeController
@@ -51,13 +53,14 @@
     Account *account = [AccountTool account];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"access_token"] = account.access_token;
-    params[@"count"] = @15;
+    params[@"count"] = @20;
     __weak typeof(self) weakSelf = self;
     [[Weibo_APIManager sharedManager] request_Friends_timeline_WithParams:params andBlock:^(id data, NSError *error) {
         if (data) {
             NSLog(@":ddd--:%@",data);
-            NSArray *newStatuses = [Status objectArrayWithKeyValuesArray:data[@"statuses"]];
-            
+            NSArray *newStatuses = [Status mj_objectArrayWithKeyValuesArray:data[@"statuses"]];
+            [self.dataArray addObjectsFromArray:newStatuses];
+            [self.tableView reloadData];
             NSLog(@"--status-:%@",newStatuses);
             
 //            weakSelf.notificationDict = [NSMutableDictionary dictionaryWithDictionary:data];
@@ -98,7 +101,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return self.dataArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -109,7 +112,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID ];
     }
     //2,设置cell的数据
-    cell.textLabel.text = @"123qweasd";
+    Status *model = self.dataArray[indexPath.row];
+    cell.textLabel.text = model.text;
     return cell;
 }
 
@@ -157,5 +161,14 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+-(NSMutableArray *)dataArray
+{
+    if (!_dataArray) {
+        _dataArray = [NSMutableArray array];
+    }
+    return _dataArray;
+}
 
 @end
