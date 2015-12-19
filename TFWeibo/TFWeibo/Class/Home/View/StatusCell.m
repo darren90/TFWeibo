@@ -216,17 +216,7 @@
 //    self.toolBar.status = status;
 }
 
-
-
-//-(void)setModel:(Status *)model
-//{
-//    _model = model;
-//    
-//    self.textLabel.text = model.text;
-//}
-
-
-
+ 
 - (void)awakeFromNib {
     // Initialization code
 }
