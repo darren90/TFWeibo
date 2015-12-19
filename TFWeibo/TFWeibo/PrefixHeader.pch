@@ -26,7 +26,7 @@
 #import <MobClick.h>
 #import <Bugly/CrashReporter.h>
 #import <MJExtension.h>
-
+#import "UIImageView+WebCache.h"
 #import "NSObject+Common.h"
 
 #import "WeiboAPIClient.h"
@@ -38,7 +38,6 @@
 #import "ODRefreshControl.h"
 
 
-//#import "UIImageView+WebCache.h"
 //#import "MBProgressHUD+MJ.h"
 //#import <MJRefresh.h>
 //#import "AccountTool.h"

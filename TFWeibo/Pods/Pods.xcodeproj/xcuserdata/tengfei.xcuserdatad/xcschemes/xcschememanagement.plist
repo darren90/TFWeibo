@@ -54,11 +54,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SDWebImage.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>TTTAttributedLabel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -82,17 +77,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>03C64468FF8D9783BDCB22AD11AC8165</key>
+		<key>0A9F80F61B6C146C8CA948DB6064588D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0E6327E15AFCB96B4C0FAE2C5D02BF8B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>105254FE2C989BDCA880F8FB4DBAA6FE</key>
+		<key>18AA0F9BE3A3484731A1BCDD66EF5A4A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,17 +92,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>36810D795757BEBBB0129DFB44304D23</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>44FD5A920E308DD5135DF4F2F9EC6BAE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>47C800E42623009B7192B025B3DD25A1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5352D432641F0656C90741034E32F31E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5AD35149A598F6D6B667F3A7266787D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -122,22 +112,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>7799BF001EE278B0E2B3D763EE8D0300</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>8667C256B0186B46CE6F76FEE8747ADB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>90F161304E1EEA81B1A93F7F9F654058</key>
+		<key>8C2528ACF99002148EB6C51E92D68D29</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9514382A8B9D880B97BAC949465157E1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A9833369693432D004870E8921A43A4E</key>
+		<key>A7E48D0512DAC5762BCD24122EAAE629</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -147,12 +137,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BBFD5897403BA24789710EC010C1DA83</key>
+		<key>E351F523D07ACB32140B8F1ACF408E13</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DC941475C1B24A64FC66E71C0FEA468F</key>
+		<key>F015E2C1BD816BB3ACFDC552C94D5BC2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

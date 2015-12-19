@@ -10,7 +10,7 @@ pod 'TTTAttributedLabel', '1.10.1' #富文本的label，可点击链接
 pod 'RegexKitLite-NoWarning', '1.1.0'
 pod 'hpple', '0.2.0'
 pod 'POP+MCAnimate', '2.0.1'
-pod 'SDWebImage', '~>3.7'
+#pod 'SDWebImage', '~>3.7'
 pod 'JazzHands', '2.0.0'
 pod 'Masonry', '0.5.3'  #新特性动画
 #pod 'YYKit', '~> 0.9.7'

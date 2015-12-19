@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1DEDC0EF272974A93D0FE7C1"
+               BlueprintIdentifier = "1CF13E760B594B9841E0E792"
                BuildableName = "libPOP+MCAnimate.a"
                BlueprintName = "POP+MCAnimate"
                ReferencedContainer = "container:Pods.xcodeproj">

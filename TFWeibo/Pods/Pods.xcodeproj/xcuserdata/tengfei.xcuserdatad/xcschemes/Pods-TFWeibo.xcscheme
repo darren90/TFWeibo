@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A5773D8A0F02AE496337C737"
+               BlueprintIdentifier = "C28951D47C7712244F9FDE57"
                BuildableName = "libPods-TFWeibo.a"
                BlueprintName = "Pods-TFWeibo"
                ReferencedContainer = "container:Pods.xcodeproj">
