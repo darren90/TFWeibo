@@ -103,6 +103,7 @@
 		FEFD7E0C1C2508C9001B5D30 /* WBStatusImgsView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7E0B1C2508C9001B5D30 /* WBStatusImgsView.m */; };
 		FEFD7E0F1C250951001B5D30 /* WBStatusImgView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7E0E1C250951001B5D30 /* WBStatusImgView.m */; };
 		FEFD7E121C250970001B5D30 /* ImgModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7E111C250970001B5D30 /* ImgModel.m */; };
+		FEFD7E151C263029001B5D30 /* WBToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7E141C263029001B5D30 /* WBToolBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -318,6 +319,8 @@
 		FEFD7E0E1C250951001B5D30 /* WBStatusImgView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBStatusImgView.m; sourceTree = "<group>"; };
 		FEFD7E101C250970001B5D30 /* ImgModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImgModel.h; sourceTree = "<group>"; };
 		FEFD7E111C250970001B5D30 /* ImgModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImgModel.m; sourceTree = "<group>"; };
+		FEFD7E131C263029001B5D30 /* WBToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBToolBar.h; sourceTree = "<group>"; };
+		FEFD7E141C263029001B5D30 /* WBToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBToolBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -590,6 +593,8 @@
 				FEFD7E0E1C250951001B5D30 /* WBStatusImgView.m */,
 				FEFD7E0A1C2508C9001B5D30 /* WBStatusImgsView.h */,
 				FEFD7E0B1C2508C9001B5D30 /* WBStatusImgsView.m */,
+				FEFD7E131C263029001B5D30 /* WBToolBar.h */,
+				FEFD7E141C263029001B5D30 /* WBToolBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1181,6 +1186,7 @@
 				FEFD7D751C21A1BA001B5D30 /* UIImageView+AFNetworking.m in Sources */,
 				FEFD7D6D1C21A1BA001B5D30 /* AFNetworkReachabilityManager.m in Sources */,
 				FEFD7D681C21A1BA001B5D30 /* AFHTTPRequestOperation.m in Sources */,
+				FEFD7E151C263029001B5D30 /* WBToolBar.m in Sources */,
 				FEFD7D331C20DC37001B5D30 /* DiscoverController.m in Sources */,
 				FEFD7D7E1C21A208001B5D30 /* YLGIFImage.m in Sources */,
 				FEFD7D361C20DC53001B5D30 /* ComposeController.m in Sources */,

@@ -62,9 +62,7 @@
 
 
 /** --------3-工具条--------- */
-//@property (nonatomic,weak)WBToolBar * toolBar;
-
-
+@property (nonatomic,weak)WBToolBar * toolBar;
 
 @end
 
@@ -216,7 +214,7 @@
 //    self.toolBar.status = status;
 }
 
- 
+
 - (void)awakeFromNib {
     // Initialization code
 }
