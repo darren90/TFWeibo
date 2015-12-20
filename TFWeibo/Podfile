@@ -17,12 +17,12 @@ pod 'Masonry', '0.5.3'  #新特性动画
 pod 'Bugly','1.4.3'
 pod 'MJExtension', '~> 3.0.7'
 
-#pod 'TPKeyboardAvoiding', '1.2.4'
-#pod 'BlocksKit', '2.2.5'
+#pod 'TPKeyboardAvoiding', '1.2.4'  #是一个下拉键盘在iOS移动文本字段的通用解决方案
+#pod 'BlocksKit', '2.2.5'       #对Cocoa类的一个扩展，是一个blocks的大杂碎
 #pod 'ReactiveCocoa', '2.3.1'
 #pod 'MMMarkdown', '0.3'    #静态库用于将Markdown转换HTML
 #pod 'NYXImagesKit', '2.3'  # UIImage 图像处理方法，包括 filtering, blurring, enhancing, masking, reflecting, resizing, rotating, saving
-#pod 'UIImage+BlurredFrame', '0.0.4'
+#pod 'UIImage+BlurredFrame', '0.0.4'    #UIImage的封装方法，可以模糊UIImage上的任意区域。
 #pod 'PPiAwesomeButton'     #UIButton 的分类，实现了扁平化设计和额外的方法用来设置图标+文本的样式。
 #pod 'APParallaxHeader'     #UITableView 的分类，实现了一个具有视差效果的头部视图。
 #pod 'SDCAlertView', '2.5.2'    #UIAlertView进行像素到像素的克隆的基础上添加了一个contentView特性
@@ -30,7 +30,6 @@ pod 'MJExtension', '~> 3.0.7'
 #pod 'TMCache', '2.1.0'     #对iOS和OS X对象快速并行的缓存
 #pod 'iVersion', '1.11.4'   #检测更新
 #pod 'SSKeychain', '1.2.3'  #轻量级iOS安全框架
-
 
 
 target 'TFWeibo' do
