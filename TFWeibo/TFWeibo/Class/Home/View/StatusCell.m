@@ -14,6 +14,7 @@
 #import "UIIconView.h"
 #import "StatusFrame.h"
 #import "WBStatusImgsView.h"
+#import "WBToolBar.h"
 
 @interface StatusCell()
 @property (assign, nonatomic) BOOL needTopView;
