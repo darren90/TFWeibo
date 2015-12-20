@@ -211,7 +211,7 @@
     
     
     /** 工具条 */
-//    self.toolBar.frame = statusFModel.toolBarF;
+    self.toolBar.frame = statusFModel.toolBarF;
 //    self.toolBar.status = status;
 }
 
