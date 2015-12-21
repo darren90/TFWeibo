@@ -175,10 +175,8 @@
      self.iconView.frame = CGRectMake(KWBStatusCellBorderW, KWBStatusCellBorderW, iconHW, iconHW);
     
     //3:会员图标
-    UIImageView *vipView = [[UIImageView alloc]init];
-    self.vipView = vipView;
-    vipView.contentMode = UIViewContentModeCenter;
-    [topView addSubview:vipView];
+//    self.vipView = vipView;
+ 
     
     //3.1:昵称
     UILabel *nameLabel = [[UILabel alloc]init];
