@@ -96,6 +96,7 @@
 		FEFD7E151C263029001B5D30 /* WBToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7E141C263029001B5D30 /* WBToolBar.m */; };
 		FEFD7E231C283160001B5D30 /* WBStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7E221C283160001B5D30 /* WBStatusCell.m */; };
 		FEFD7E271C2834B0001B5D30 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7E261C2834B0001B5D30 /* MBProgressHUD+Add.m */; };
+		FEFD7E481C2844CE001B5D30 /* WBStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7E471C2844CE001B5D30 /* WBStatusFrame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -298,6 +299,8 @@
 		FEFD7E221C283160001B5D30 /* WBStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBStatusCell.m; sourceTree = "<group>"; };
 		FEFD7E251C2834B0001B5D30 /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
 		FEFD7E261C2834B0001B5D30 /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
+		FEFD7E461C2844CE001B5D30 /* WBStatusFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBStatusFrame.h; sourceTree = "<group>"; };
+		FEFD7E471C2844CE001B5D30 /* WBStatusFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBStatusFrame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -557,6 +560,8 @@
 				FEFD7E111C250970001B5D30 /* ImgModel.m */,
 				FEFD7E071C250827001B5D30 /* StatusFrame.h */,
 				FEFD7E081C250827001B5D30 /* StatusFrame.m */,
+				FEFD7E461C2844CE001B5D30 /* WBStatusFrame.h */,
+				FEFD7E471C2844CE001B5D30 /* WBStatusFrame.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1185,6 +1190,7 @@
 				FEFD7D761C21A1BA001B5D30 /* UIProgressView+AFNetworking.m in Sources */,
 				FEFD7E0F1C250951001B5D30 /* WBStatusImgView.m in Sources */,
 				FEFD7DFA1C24FB23001B5D30 /* UIImage+WebP.m in Sources */,
+				FEFD7E481C2844CE001B5D30 /* WBStatusFrame.m in Sources */,
 				FEFD7D2D1C20DBF0001B5D30 /* HomeController.m in Sources */,
 				FEFD7DFD1C24FB23001B5D30 /* UIView+WebCacheOperation.m in Sources */,
 				FEFD7DF51C24FB23001B5D30 /* SDWebImageManager.m in Sources */,
