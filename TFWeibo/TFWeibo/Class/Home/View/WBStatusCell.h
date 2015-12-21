@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class WBStatusFrame;
 
 @interface WBStatusCell : UITableViewCell
 +(instancetype)cellWithTableView:(UITableView *)tableView;
+
+@property (nonatomic,strong)WBStatusFrame *statusFrame;
 
 @end

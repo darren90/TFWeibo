@@ -167,53 +167,18 @@
     CGFloat heigh = self.frame.size.height;
     
     //1: 原创微博
-    
-    CGFloat iconHW = 35;
-
-    //2:头像
-     self.iconView.frame = CGRectMake(KWBStatusCellBorderW, KWBStatusCellBorderW, iconHW, iconHW);
-    
-    //3:会员图标
-//    self.vipView = vipView;
- 
-    
-    //3.1:昵称
-    UILabel *nameLabel = [[UILabel alloc]init];
-    self.nameLabel = nameLabel;
-    [topView addSubview:nameLabel];
-    nameLabel.font = [UIFont systemFontOfSize:15];
-    
-    //5:时间
-    UILabel *timeLabel = [[UILabel alloc]init];
-    self.timeLabel = timeLabel;
-    [topView addSubview:timeLabel];
-    timeLabel.textColor = [UIColor orangeColor];
-    timeLabel.font = [UIFont systemFontOfSize:12];
-    
-    //6:来源
-    UILabel *clientLabel = [[UILabel alloc]init];
-    self.clientLabel = clientLabel;
-    [topView addSubview:clientLabel];
-    clientLabel.font = [UIFont systemFontOfSize:12];
-    
-    //7:正文
-    UITTTAttributedLabel *contentLabel = [[UITTTAttributedLabel alloc]init];
-    self.contentLabel = contentLabel;
-    [topView addSubview:contentLabel];
-    
-    //8:配图
-    CGRect rect = CGRectZero;
-    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
-    UICollectionView * photosView = [[UICollectionView alloc]initWithFrame:rect collectionViewLayout:layout];
-    self.photosView = photosView;
-    [topView addSubview:photosView];
-    
-    self.topView.frame = CGRectMake(KWBStatusCellBorderW, KWBStatusCellBorderW, iconHW, iconHW);
-
-    
+       
     //2: 转发微博
     
     //3: 底部工具条
+}
+
+
+//设置模型
+-(void)setStatusFrame:(WBStatusFrame *)statusFrame
+{
+    _statusFrame = statusFrame;
+    
     
 }
 
@@ -226,4 +191,19 @@
     // Configure the view for the selected state
 }
 
+
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
