@@ -7,7 +7,14 @@
 //
 
 #import "WBStatusFrame.h"
+#import "Status.h"
 
 @implementation WBStatusFrame
+
+
+-(void)setStatus:(Status *)status
+{
+    _status = status;
+}
 
 @end

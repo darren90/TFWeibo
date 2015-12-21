@@ -26,7 +26,6 @@
 
 @property (weak, nonatomic) UIView *topView;
 @property (weak, nonatomic) UITapImageView *iconView;
-//@property (strong, nonatomic) UIButton *ownerNameBtn;
 
 @property (nonatomic,weak)UIImageView * vipView;
 
