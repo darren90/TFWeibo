@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TFWeibo/Class/Home/View/StatusCell.m"
-            timestampString = "472190495.409551"
+            timestampString = "472395731.165178"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "-setStatusFModel:"
             landmarkType = "5">
          </BreakpointContent>

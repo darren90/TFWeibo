@@ -104,6 +104,7 @@
 		FEFD7E0F1C250951001B5D30 /* WBStatusImgView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7E0E1C250951001B5D30 /* WBStatusImgView.m */; };
 		FEFD7E121C250970001B5D30 /* ImgModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7E111C250970001B5D30 /* ImgModel.m */; };
 		FEFD7E151C263029001B5D30 /* WBToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7E141C263029001B5D30 /* WBToolBar.m */; };
+		FEFD7E231C283160001B5D30 /* WBStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7E221C283160001B5D30 /* WBStatusCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -321,6 +322,8 @@
 		FEFD7E111C250970001B5D30 /* ImgModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImgModel.m; sourceTree = "<group>"; };
 		FEFD7E131C263029001B5D30 /* WBToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBToolBar.h; sourceTree = "<group>"; };
 		FEFD7E141C263029001B5D30 /* WBToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBToolBar.m; sourceTree = "<group>"; };
+		FEFD7E211C283160001B5D30 /* WBStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBStatusCell.h; sourceTree = "<group>"; };
+		FEFD7E221C283160001B5D30 /* WBStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBStatusCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -595,6 +598,8 @@
 				FEFD7E0B1C2508C9001B5D30 /* WBStatusImgsView.m */,
 				FEFD7E131C263029001B5D30 /* WBToolBar.h */,
 				FEFD7E141C263029001B5D30 /* WBToolBar.m */,
+				FEFD7E211C283160001B5D30 /* WBStatusCell.h */,
+				FEFD7E221C283160001B5D30 /* WBStatusCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1202,6 +1207,7 @@
 				FEFD7D1F1C1F0D8B001B5D30 /* UITextView+Category.m in Sources */,
 				FED4D20C1C1D308600CF9E4C /* ViewController.m in Sources */,
 				FEFD7DFB1C24FB23001B5D30 /* UIImageView+HighlightedWebCache.m in Sources */,
+				FEFD7E231C283160001B5D30 /* WBStatusCell.m in Sources */,
 				FEFD7DC01C22F294001B5D30 /* Account.m in Sources */,
 				FEFD7D941C21A9B1001B5D30 /* JDStatusBarView.m in Sources */,
 				FEFD7D691C21A1BA001B5D30 /* AFHTTPRequestOperationManager.m in Sources */,
