@@ -10,13 +10,14 @@
 #import "Status.h"
 #import "StatusCell.h"
 #import "StatusFrame.h"
+#import "WBStatusCell.h"
 
 @interface HomeController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,weak)UITableView *tableView ;
 @property (nonatomic,strong)ODRefreshControl *myRefreshControl;
 
-//@property (nonatomic,strong)NSMutableArray *dataArray;
+@property (nonatomic,strong)NSMutableArray *dataArray;
 
 @property (nonatomic,strong)NSMutableArray * statusFrameArray;
 
@@ -73,7 +74,7 @@
             }
             [self.statusFrameArray addObjectsFromArray:newFrames];
             
-//            [self.dataArray addObjectsFromArray:newStatuses];
+            [self.dataArray addObjectsFromArray:newStatuses];
             [self.tableView reloadData];
             NSLog(@"--status-:%@",newStatuses);
         }
@@ -112,15 +113,22 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.statusFrameArray.count;
+//    return self.statusFrameArray.count;
+    return self.dataArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     //1,创建cell
-    StatusCell *cell = [StatusCell cellWithTableView:tableView];
+//    StatusCell *cell = [StatusCell cellWithTableView:tableView];
+//    //2,设置cell的数据
+//    StatusFrame *model = self.statusFrameArray[indexPath.row];
+//    cell.statusFModel = model;
+//    return cell;
+    
+    WBStatusCell *cell = [WBStatusCell cellWithTableView:tableView];
     //2,设置cell的数据
-    StatusFrame *model = self.statusFrameArray[indexPath.row];
-    cell.statusFModel = model;
+//    StatusFrame *model = self.dataArray[indexPath.row];
+//    cell.statusFModel = model;
     return cell;
 }
 
@@ -140,12 +148,12 @@
 }
 
 
-//-(NSMutableArray *)dataArray
-//{
-//    if (!_dataArray) {
-//        _dataArray = [NSMutableArray array];
-//    }
-//    return _dataArray;
-//}
+-(NSMutableArray *)dataArray
+{
+    if (!_dataArray) {
+        _dataArray = [NSMutableArray array];
+    }
+    return _dataArray;
+}
 
 @end
