@@ -139,6 +139,7 @@
     //7:正文
     UITTTAttributedLabel *contentLabel = [[UITTTAttributedLabel alloc]init];
     self.contentLabel = contentLabel;
+    contentLabel.font = [UIFont systemFontOfSize:14];
     [topView addSubview:contentLabel];
     
     //8:配图
@@ -181,12 +182,16 @@
     _statusFrame = statusFrame;
     
     Status *status = statusFrame.status;
+    User *user = status.user;
 /** 1-设置frame */
     
     //1: 原创微博
     self.iconView.frame = statusFrame.iconViewF;
     self.vipView.frame = statusFrame.vipViewF;
-    self.nameLabel.frame = statusFrame.vipViewF;
+    self.nameLabel.frame = statusFrame.nameLabelF;
+    self.timeLabel.frame = statusFrame.timeLabelF;
+    self.clientLabel.frame = statusFrame.clientLabelF;
+    self.contentLabel.frame = statusFrame.clientLabelF;
     
     //2: 转发微博
     
@@ -195,7 +200,19 @@
     
 /** 2-设置content */
     //1: 原创微博
-    self.nameLabel.text = status.text;
+    [self.iconView sd_setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:nil];
+    self.nameLabel.text = user.name;
+    if (user.isVip) {
+        self.vipView.hidden = NO;
+        self.vipView.image = [UIImage imageNamed:[NSString stringWithFormat:@"common_icon_membership_level%d",user.mbrank]];
+        self.nameLabel.textColor = [UIColor orangeColor];
+    }else{
+        self.vipView.hidden = YES;
+        self.nameLabel.textColor = [UIColor blackColor];
+    }
+    self.timeLabel.text = status.created_at;
+    self.clientLabel.text = status.source;
+    self.contentLabel.text = status.text;
     
     //2: 转发微博
     

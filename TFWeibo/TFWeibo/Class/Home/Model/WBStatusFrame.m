@@ -42,11 +42,19 @@
     CGSize timeSize = [self sizeWithText:status.created_at font:[UIFont systemFontOfSize:12]];
     self.timeLabelF = CGRectMake(nameX, CGRectGetMaxY(self.nameLabelF)+KWBStatusCellMargin, timeSize.width, timeSize.height);
     
+    CGSize clientSize = [self sizeWithText:status.source font:[UIFont systemFontOfSize:12]];
+    self.clientLabelF = CGRectMake(CGRectGetMaxX(self.timeLabelF)+KWBStatusCellMargin, CGRectGetMinY(self.timeLabelF), clientSize.width, clientSize.height);
     
+    CGFloat contentX = KWBStatusCellMargin;
+    CGFloat contentY = MAX(CGRectGetMaxY(self.iconViewF), CGRectGetMaxY(self.timeLabelF)+KWBStatusCellMargin);
+    CGFloat maxW = cellW - 2*KWBStatusCellMargin;
+    CGSize contentSize = [self sizeWithText:status.text font:[UIFont systemFontOfSize:14] maxW:maxW];
+    self.contentLabelF =  (CGRect){{contentX,contentY},contentSize};
     
      //2: 转发微博
     //3: 底部工具条
-
+    
+    self.cellH = 200;
     
 }
 
