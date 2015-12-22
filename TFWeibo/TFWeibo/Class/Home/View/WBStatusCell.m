@@ -181,6 +181,7 @@
     _statusFrame = statusFrame;
     
     Status *status = statusFrame.status;
+/** 1-设置frame */
     
     //1: 原创微博
     self.iconView.frame = statusFrame.iconViewF;
@@ -191,6 +192,14 @@
     
     //3: 底部工具条
 
+    
+/** 2-设置content */
+    //1: 原创微博
+    self.nameLabel.text = status.text;
+    
+    //2: 转发微博
+    
+    //3: 底部工具条
 }
 
 

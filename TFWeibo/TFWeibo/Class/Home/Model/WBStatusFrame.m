@@ -23,7 +23,8 @@
     
     
     CGFloat cellW = [UIScreen mainScreen].bounds.size.width;
-    
+
+
     //1: 原创微博
     CGFloat iconHW = 35;
     self.iconViewF = CGRectMake(KWBStatusCellMargin, KWBStatusCellMargin, iconHW, iconHW);
@@ -45,6 +46,8 @@
     
      //2: 转发微博
     //3: 底部工具条
+
+    
 }
 
 
