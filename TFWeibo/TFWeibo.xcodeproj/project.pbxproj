@@ -98,6 +98,8 @@
 		FEFD7E271C2834B0001B5D30 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7E261C2834B0001B5D30 /* MBProgressHUD+Add.m */; };
 		FEFD7E481C2844CE001B5D30 /* WBStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7E471C2844CE001B5D30 /* WBStatusFrame.m */; };
 		FEFD7E4B1C29AE1A001B5D30 /* WBStatusPicturesView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7E4A1C29AE1A001B5D30 /* WBStatusPicturesView.m */; };
+		FEFD7E4F1C29B935001B5D30 /* WBStatusPictureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7E4D1C29B935001B5D30 /* WBStatusPictureCell.m */; };
+		FEFD7E501C29B935001B5D30 /* WBStatusPictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEFD7E4E1C29B935001B5D30 /* WBStatusPictureCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -304,6 +306,9 @@
 		FEFD7E471C2844CE001B5D30 /* WBStatusFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBStatusFrame.m; sourceTree = "<group>"; };
 		FEFD7E491C29AE1A001B5D30 /* WBStatusPicturesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBStatusPicturesView.h; sourceTree = "<group>"; };
 		FEFD7E4A1C29AE1A001B5D30 /* WBStatusPicturesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBStatusPicturesView.m; sourceTree = "<group>"; };
+		FEFD7E4C1C29B935001B5D30 /* WBStatusPictureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBStatusPictureCell.h; sourceTree = "<group>"; };
+		FEFD7E4D1C29B935001B5D30 /* WBStatusPictureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBStatusPictureCell.m; sourceTree = "<group>"; };
+		FEFD7E4E1C29B935001B5D30 /* WBStatusPictureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBStatusPictureCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -584,6 +589,9 @@
 				FEFD7E221C283160001B5D30 /* WBStatusCell.m */,
 				FEFD7E491C29AE1A001B5D30 /* WBStatusPicturesView.h */,
 				FEFD7E4A1C29AE1A001B5D30 /* WBStatusPicturesView.m */,
+				FEFD7E4C1C29B935001B5D30 /* WBStatusPictureCell.h */,
+				FEFD7E4D1C29B935001B5D30 /* WBStatusPictureCell.m */,
+				FEFD7E4E1C29B935001B5D30 /* WBStatusPictureCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1094,6 +1102,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FED4D2141C1D308600CF9E4C /* LaunchScreen.storyboard in Resources */,
+				FEFD7E501C29B935001B5D30 /* WBStatusPictureCell.xib in Resources */,
 				FED4D2111C1D308600CF9E4C /* Assets.xcassets in Resources */,
 				FED4D20F1C1D308600CF9E4C /* Main.storyboard in Resources */,
 			);
@@ -1158,6 +1167,7 @@
 				FEFD7D6D1C21A1BA001B5D30 /* AFNetworkReachabilityManager.m in Sources */,
 				FEFD7D681C21A1BA001B5D30 /* AFHTTPRequestOperation.m in Sources */,
 				FEFD7E151C263029001B5D30 /* WBToolBar.m in Sources */,
+				FEFD7E4F1C29B935001B5D30 /* WBStatusPictureCell.m in Sources */,
 				FEFD7D331C20DC37001B5D30 /* DiscoverController.m in Sources */,
 				FEFD7D7E1C21A208001B5D30 /* YLGIFImage.m in Sources */,
 				FEFD7D361C20DC53001B5D30 /* ComposeController.m in Sources */,
