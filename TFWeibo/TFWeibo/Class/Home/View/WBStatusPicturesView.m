@@ -16,6 +16,8 @@
 @interface WBStatusPicturesView ()
 
 
+@property (nonatomic,strong)UICollectionViewFlowLayout *layout;
+
 @property (nonatomic,weak)UICollectionView * waterView;
 
 @end
@@ -25,7 +27,11 @@
 -(instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-        
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
+        self.layout = layout;
+        UICollectionView * waterView = [[UICollectionView alloc]initWithFrame:frame collectionViewLayout:layout];
+        self.waterView = waterView;
+        [self addSubview:waterView];
     }
     return self;
 }
@@ -34,8 +40,14 @@
 -(void)layoutSubviews
 {
     [super layoutSubviews];
+    
+    self.waterView.frame = self.bounds;
+    self.layout.itemSize = CGSizeMake(KStatusPhotoWH, KStatusPhotoWH);
+    self.layout.minimumLineSpacing = 10;
+    self.layout.minimumInteritemSpacing = 10;
+    self.layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
 }
-
+ 
 
 +(CGSize )photosSizeWithCount:(NSInteger)count
 {

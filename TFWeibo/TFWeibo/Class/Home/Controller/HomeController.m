@@ -18,7 +18,7 @@
 @property (nonatomic,weak)UITableView *tableView ;
 @property (nonatomic,strong)ODRefreshControl *myRefreshControl;
 
-@property (nonatomic,strong)NSMutableArray *dataArray;
+//@property (nonatomic,strong)NSMutableArray *dataArray;
 
 @property (nonatomic,strong)NSMutableArray * statusFrameArray;
 
@@ -76,7 +76,7 @@
             }
             [weakSelf.statusFrameArray addObjectsFromArray:newFrames];
             
-            [weakSelf.dataArray addObjectsFromArray:newStatuses];
+//            [weakSelf.dataArray addObjectsFromArray:newStatuses];
             [weakSelf.tableView reloadData];
             NSLog(@"--status-:%@",newStatuses);
         }
@@ -150,12 +150,12 @@
 }
 
 
--(NSMutableArray *)dataArray
-{
-    if (!_dataArray) {
-        _dataArray = [NSMutableArray array];
-    }
-    return _dataArray;
-}
+//-(NSMutableArray *)dataArray
+//{
+//    if (!_dataArray) {
+//        _dataArray = [NSMutableArray array];
+//    }
+//    return _dataArray;
+//}
 
 @end
