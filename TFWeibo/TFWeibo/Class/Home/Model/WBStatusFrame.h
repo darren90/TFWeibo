@@ -14,7 +14,7 @@
 @property (nonatomic,strong)Status *status;
 
 //1: 原创微博
-@property (nonatomic,assign)CGRect topView;
+@property (nonatomic,assign)CGRect topViewF;
 
 @property (nonatomic,assign)CGRect iconViewF;
 

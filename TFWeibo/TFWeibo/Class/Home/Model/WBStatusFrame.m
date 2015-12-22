@@ -9,6 +9,7 @@
 #import "WBStatusFrame.h"
 #import "Status.h"
 #import "User.h"
+#import "WBStatusPicturesView.h"
 
 #define KWBStatusCellMargin 10
 
@@ -51,10 +52,24 @@
     CGSize contentSize = [self sizeWithText:status.text font:[UIFont systemFontOfSize:14] maxW:maxW];
     self.contentLabelF =  (CGRect){{contentX,contentY},contentSize};
     
+    CGFloat topH = 0;
+    if (status.pic_urls.count) {
+        CGSize picSize = [WBStatusPicturesView photosSizeWithCount:status.pic_urls.count];
+        self.photosViewF = CGRectMake(KWBStatusCellMargin, CGRectGetMaxY(self.contentLabelF)+KWBStatusCellMargin, cellW - 2 * KWBStatusCellMargin, picSize.height);
+        
+         topH =  CGRectGetMaxY(self.photosViewF)+KWBStatusCellMargin;
+    }else{
+        topH =  CGRectGetMaxY(self.contentLabelF)+KWBStatusCellMargin;
+    }
+    self.topViewF = CGRectMake(KWBStatusCellMargin, KWBStatusCellMargin, cellW, topH);
+    
      //2: 转发微博
+    
+    
     //3: 底部工具条
     
     self.cellH = 300;
+//    self.cellH = CGRectGetMaxY(self.toolBarF) ;
 }
 
 

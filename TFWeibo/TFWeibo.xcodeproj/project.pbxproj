@@ -97,6 +97,7 @@
 		FEFD7E231C283160001B5D30 /* WBStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7E221C283160001B5D30 /* WBStatusCell.m */; };
 		FEFD7E271C2834B0001B5D30 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7E261C2834B0001B5D30 /* MBProgressHUD+Add.m */; };
 		FEFD7E481C2844CE001B5D30 /* WBStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7E471C2844CE001B5D30 /* WBStatusFrame.m */; };
+		FEFD7E4B1C29AE1A001B5D30 /* WBStatusPicturesView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7E4A1C29AE1A001B5D30 /* WBStatusPicturesView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -301,6 +302,8 @@
 		FEFD7E261C2834B0001B5D30 /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
 		FEFD7E461C2844CE001B5D30 /* WBStatusFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBStatusFrame.h; sourceTree = "<group>"; };
 		FEFD7E471C2844CE001B5D30 /* WBStatusFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBStatusFrame.m; sourceTree = "<group>"; };
+		FEFD7E491C29AE1A001B5D30 /* WBStatusPicturesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBStatusPicturesView.h; sourceTree = "<group>"; };
+		FEFD7E4A1C29AE1A001B5D30 /* WBStatusPicturesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBStatusPicturesView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -579,6 +582,8 @@
 				FEFD7E141C263029001B5D30 /* WBToolBar.m */,
 				FEFD7E211C283160001B5D30 /* WBStatusCell.h */,
 				FEFD7E221C283160001B5D30 /* WBStatusCell.m */,
+				FEFD7E491C29AE1A001B5D30 /* WBStatusPicturesView.h */,
+				FEFD7E4A1C29AE1A001B5D30 /* WBStatusPicturesView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1232,6 +1237,7 @@
 				FEFD7D301C20DC07001B5D30 /* MessageController.m in Sources */,
 				FEFD7DBD1C22F267001B5D30 /* AccountTool.m in Sources */,
 				FEFD7D771C21A1BA001B5D30 /* UIRefreshControl+AFNetworking.m in Sources */,
+				FEFD7E4B1C29AE1A001B5D30 /* WBStatusPicturesView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

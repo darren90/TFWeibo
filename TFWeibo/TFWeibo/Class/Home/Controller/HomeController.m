@@ -42,6 +42,7 @@
     
     self.myRefreshControl = [[ODRefreshControl alloc] initInScrollView:self.tableView];
     [self.myRefreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+    [self refresh];
 }
 
 -(void)addTableView
