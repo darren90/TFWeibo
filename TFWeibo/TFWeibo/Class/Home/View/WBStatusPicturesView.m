@@ -75,8 +75,10 @@
 {
     _pictures = pictures;
     
-    self.dataArray = pictures;
-    [self.waterView reloadData];
+    if (pictures) {
+        self.dataArray = pictures;
+        [self.waterView reloadData];
+    }
 }
 
 
@@ -92,9 +94,7 @@
     return cell;
 }
 
-
-
-
+ 
 
 -(NSArray *)dataArray
 {

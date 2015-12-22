@@ -100,6 +100,7 @@
 		FEFD7E4B1C29AE1A001B5D30 /* WBStatusPicturesView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7E4A1C29AE1A001B5D30 /* WBStatusPicturesView.m */; };
 		FEFD7E4F1C29B935001B5D30 /* WBStatusPictureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7E4D1C29B935001B5D30 /* WBStatusPictureCell.m */; };
 		FEFD7E501C29B935001B5D30 /* WBStatusPictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEFD7E4E1C29B935001B5D30 /* WBStatusPictureCell.xib */; };
+		FEFD7E531C29BC55001B5D30 /* PictureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD7E521C29BC55001B5D30 /* PictureModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -309,6 +310,8 @@
 		FEFD7E4C1C29B935001B5D30 /* WBStatusPictureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBStatusPictureCell.h; sourceTree = "<group>"; };
 		FEFD7E4D1C29B935001B5D30 /* WBStatusPictureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBStatusPictureCell.m; sourceTree = "<group>"; };
 		FEFD7E4E1C29B935001B5D30 /* WBStatusPictureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBStatusPictureCell.xib; sourceTree = "<group>"; };
+		FEFD7E511C29BC55001B5D30 /* PictureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureModel.h; sourceTree = "<group>"; };
+		FEFD7E521C29BC55001B5D30 /* PictureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -566,6 +569,8 @@
 				FEFD7DC61C24E473001B5D30 /* Status.m */,
 				FEFD7E101C250970001B5D30 /* ImgModel.h */,
 				FEFD7E111C250970001B5D30 /* ImgModel.m */,
+				FEFD7E511C29BC55001B5D30 /* PictureModel.h */,
+				FEFD7E521C29BC55001B5D30 /* PictureModel.m */,
 				FEFD7E071C250827001B5D30 /* StatusFrame.h */,
 				FEFD7E081C250827001B5D30 /* StatusFrame.m */,
 				FEFD7E461C2844CE001B5D30 /* WBStatusFrame.h */,
@@ -1232,6 +1237,7 @@
 				FEFD7E031C24FF56001B5D30 /* UIIconView.m in Sources */,
 				FEFD7D211C1F0D8B001B5D30 /* UIWindow+Category.m in Sources */,
 				FEFD7DB51C21AC4B001B5D30 /* UIColor+expanded.m in Sources */,
+				FEFD7E531C29BC55001B5D30 /* PictureModel.m in Sources */,
 				FEFD7D6E1C21A1BA001B5D30 /* AFSecurityPolicy.m in Sources */,
 				FEFD7D1A1C1F0D8B001B5D30 /* NSDate+Extension.m in Sources */,
 				FEFD7E061C250045001B5D30 /* UICustomCollectionView.m in Sources */,

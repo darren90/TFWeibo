@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class PictureModel;
 @interface WBStatusPictureCell : UICollectionViewCell
 
-@property (nonatomic,copy)NSString * pic;
+@property (nonatomic,copy)PictureModel * pic;
 
 
 @end

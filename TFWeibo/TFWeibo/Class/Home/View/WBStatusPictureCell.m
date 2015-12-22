@@ -7,6 +7,7 @@
 //
 
 #import "WBStatusPictureCell.h"
+#import "PictureModel.h"
 
 @interface WBStatusPictureCell ()
 
@@ -20,11 +21,11 @@
     // Initialization code
 }
 
--(void)setPic:(NSString *)pic
+-(void)setPic:(PictureModel *)pic
 {
     _pic = pic;
     
-    [self.picView sd_setImageWithURL:[NSURL URLWithString:pic] placeholderImage:nil];
+    [self.picView sd_setImageWithURL:[NSURL URLWithString:pic.thumbnail_pic] placeholderImage:nil];
 }
 
 

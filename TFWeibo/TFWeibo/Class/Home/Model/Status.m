@@ -10,11 +10,9 @@
 
 @implementation Status
 
-//+(NSDictionary *)objectClassInArray{
-//    return @{
-//             @"pic_urls" : @"Photo"
-//             };
-//}
++(NSDictionary *)objectClassInArray{
+    return @{ @"pic_urls" : @"PictureModel" };
+}
 
 - (void)setSource:(NSString *)source
 {
