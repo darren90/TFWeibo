@@ -10,4 +10,7 @@
 
 @interface WBStatusPictureCell : UICollectionViewCell
 
+@property (nonatomic,copy)NSString * pic;
+
+
 @end

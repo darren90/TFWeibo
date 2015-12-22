@@ -20,4 +20,13 @@
     // Initialization code
 }
 
+-(void)setPic:(NSString *)pic
+{
+    _pic = pic;
+    
+    [self.picView sd_setImageWithURL:[NSURL URLWithString:pic] placeholderImage:nil];
+}
+
+
+
 @end
