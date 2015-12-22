@@ -11,6 +11,7 @@
 #import "StatusCell.h"
 #import "StatusFrame.h"
 #import "WBStatusCell.h"
+#import "WBStatusFrame.h"
 
 @interface HomeController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -68,7 +69,7 @@
             
             NSMutableArray *newFrames = [NSMutableArray array];
             for (Status *status in newStatuses) {
-                StatusFrame *sf = [[StatusFrame alloc]init];
+                WBStatusFrame *sf = [[WBStatusFrame alloc]init];
                 sf.status = status;
                 [newFrames addObject:sf];
             }
@@ -113,8 +114,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    return self.statusFrameArray.count;
-    return self.dataArray.count;
+    return self.statusFrameArray.count;
+//    return self.dataArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -127,14 +128,14 @@
     
     WBStatusCell *cell = [WBStatusCell cellWithTableView:tableView];
     //2,设置cell的数据
-//    StatusFrame *model = self.dataArray[indexPath.row];
-//    cell.statusFModel = model;
+    WBStatusFrame *model = self.self.statusFrameArray[indexPath.row];
+    cell.statusFrame = model;
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    StatusFrame *model = self.statusFrameArray[indexPath.row];
+    WBStatusFrame *model = self.statusFrameArray[indexPath.row];
     return model.cellH;
 }
 

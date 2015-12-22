@@ -15,6 +15,7 @@
 #import "StatusFrame.h"
 #import "WBStatusImgsView.h"
 #import "WBToolBar.h"
+#import "WBStatusFrame.h"
 
 #define KWBStatusCellBorderW 10
 
@@ -163,8 +164,8 @@
 {
     [super layoutSubviews];
     
-    CGFloat width = self.frame.size.width;
-    CGFloat heigh = self.frame.size.height;
+//    CGFloat width = self.frame.size.width;
+//    CGFloat heigh = self.frame.size.height;
     
     //1: 原创微博
        
@@ -179,7 +180,17 @@
 {
     _statusFrame = statusFrame;
     
+    Status *status = statusFrame.status;
     
+    //1: 原创微博
+    self.iconView.frame = statusFrame.iconViewF;
+    self.vipView.frame = statusFrame.vipViewF;
+    self.nameLabel.frame = statusFrame.vipViewF;
+    
+    //2: 转发微博
+    
+    //3: 底部工具条
+
 }
 
 

@@ -33,8 +33,17 @@
     CGSize nameSize = [self sizeWithText:user.name font:[UIFont systemFontOfSize:15]];
     self.nameLabelF = CGRectMake(nameX, nameY, nameSize.width, nameSize.height);
     
-    //2: 转发微博
+   
+    if (user.isVip) {
+        self.vipViewF = CGRectMake(CGRectGetMaxX(self.nameLabelF), nameY, 15, nameSize.height);
+    }
     
+    CGSize timeSize = [self sizeWithText:status.created_at font:[UIFont systemFontOfSize:12]];
+    self.timeLabelF = CGRectMake(nameX, CGRectGetMaxY(self.nameLabelF)+KWBStatusCellMargin, timeSize.width, timeSize.height);
+    
+    
+    
+     //2: 转发微博
     //3: 底部工具条
 }
 
