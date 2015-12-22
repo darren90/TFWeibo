@@ -54,4 +54,23 @@
     return CGSizeMake(photoW, photoH);
 }
 
+
+
+
+-(void)setPictures:(NSArray *)pictures
+{
+    _pictures = pictures;
+    
+    
+}
+
+
+
+
+
 @end
+
+
+
+
+

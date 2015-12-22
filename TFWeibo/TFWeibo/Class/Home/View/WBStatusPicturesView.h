@@ -13,6 +13,6 @@
 +(CGSize )photosSizeWithCount:(NSInteger)count;
 
 
-
+@property (nonatomic,strong)NSArray * pictures;
 
 @end

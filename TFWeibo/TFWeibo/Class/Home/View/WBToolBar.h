@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class Status;
+
 @interface WBToolBar : UIView
+
+
+
+@property (nonatomic,strong)Status * status;
+
 
 @end

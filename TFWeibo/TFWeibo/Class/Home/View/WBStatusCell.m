@@ -208,11 +208,14 @@
     self.timeLabel.frame = statusFrame.timeLabelF;
     self.clientLabel.frame = statusFrame.clientLabelF;
     self.contentLabel.frame = statusFrame.contentLabelF;
-    
+    self.topView.frame = statusFrame.topViewF;
     //2: 转发微博
+    self.retBottomView.frame = statusFrame.retBottomViewF;
+    self.retContentLabel.frame = statusFrame.retContentLabelF;
+    self.retPhotosView.frame = statusFrame.retPhotosViewF;
     
     //3: 底部工具条
-
+    self.toolBar.frame = statusFrame.toolBarF;
     
 /** 2-设置content */
     //1: 原创微博
@@ -229,12 +232,23 @@
     self.timeLabel.text = status.created_at;
     self.clientLabel.text = status.source;
     self.contentLabel.text = status.text;
+    self.photosView.pictures = status.pic_urls;
     
     //2: 转发微博
+    Status *retStatus = status.retweeted_status;
+    if (retStatus) {
+        self.retBottomView.hidden = NO;
+        
+        self.retPhotosView.pictures = retStatus.pic_urls;
+        self.retContentLabel.text = retStatus.text;
+    }else{
+        self.retBottomView.hidden = YES;
+    }
     
     //3: 底部工具条
+    self.toolBar.frame = statusFrame.toolBarF;
+//    self.toolBar.status = status;
 }
-
 
 
 

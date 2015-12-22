@@ -7,9 +7,14 @@
 //
 
 #import "WBToolBar.h"
+#import "Status.h"
 
 @implementation WBToolBar
 
- 
+
+-(void)setStatus:(Status *)status
+{
+    _status = status;
+}
 
 @end
