@@ -140,6 +140,7 @@
     UITTTAttributedLabel *contentLabel = [[UITTTAttributedLabel alloc]init];
     self.contentLabel = contentLabel;
     contentLabel.font = [UIFont systemFontOfSize:14];
+    contentLabel.numberOfLines = 0;
     [topView addSubview:contentLabel];
     
     //8:配图
@@ -191,7 +192,7 @@
     self.nameLabel.frame = statusFrame.nameLabelF;
     self.timeLabel.frame = statusFrame.timeLabelF;
     self.clientLabel.frame = statusFrame.clientLabelF;
-    self.contentLabel.frame = statusFrame.clientLabelF;
+    self.contentLabel.frame = statusFrame.contentLabelF;
     
     //2: 转发微博
     
