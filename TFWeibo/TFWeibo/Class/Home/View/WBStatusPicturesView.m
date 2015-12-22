@@ -26,6 +26,7 @@
 -(instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
+        self.backgroundColor = [UIColor whiteColor];
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
         self.layout = layout;
         UICollectionView * waterView = [[UICollectionView alloc]initWithFrame:frame collectionViewLayout:layout];
@@ -34,6 +35,7 @@
         [waterView registerNib:[UINib nibWithNibName:@"WBStatusPictureCell" bundle:nil] forCellWithReuseIdentifier:@"WBStatusPicture"];
         waterView.dataSource = self;
         waterView.delegate = self;
+        waterView.backgroundColor = [UIColor whiteColor];
     }
     return self;
 }

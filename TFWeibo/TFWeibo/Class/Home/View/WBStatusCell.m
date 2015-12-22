@@ -208,6 +208,7 @@
     self.timeLabel.frame = statusFrame.timeLabelF;
     self.clientLabel.frame = statusFrame.clientLabelF;
     self.contentLabel.frame = statusFrame.contentLabelF;
+    self.photosView.frame = statusFrame.photosViewF;
     self.topView.frame = statusFrame.topViewF;
     //2: 转发微博
     self.retBottomView.frame = statusFrame.retBottomViewF;
