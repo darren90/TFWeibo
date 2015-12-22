@@ -16,6 +16,7 @@
 #import "WBStatusImgsView.h"
 #import "WBToolBar.h"
 #import "WBStatusFrame.h"
+#import "WBStatusPicturesView.h"
 
 #define KWBStatusCellBorderW 10
 
@@ -38,7 +39,7 @@
 
 @property (weak, nonatomic) UITTTAttributedLabel *contentLabel;
 
-@property (nonatomic,weak)UICollectionView * photosView;
+@property (nonatomic,weak)WBStatusPicturesView * photosView;
 
 
 /**
@@ -49,7 +50,7 @@
 
 @property (weak, nonatomic) UITTTAttributedLabel *retContentLabel;
 
-@property (nonatomic,weak)UICollectionView * retPhotosView;
+@property (nonatomic,weak)WBStatusPicturesView * retPhotosView;
 
 
 /**
@@ -144,21 +145,35 @@
     [topView addSubview:contentLabel];
     
     //8:配图
-    CGRect rect = CGRectZero;
-    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
-    UICollectionView * photosView = [[UICollectionView alloc]initWithFrame:rect collectionViewLayout:layout];
+//    CGRect rect = CGRectZero;
+//    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
+    WBStatusPicturesView * photosView = [[WBStatusPicturesView alloc]init];
     self.photosView = photosView;
     [topView addSubview:photosView];
 }
 //2: 转发微博
 -(void)initRetWeet
 {
+    UIView * retBottomView = [[UIView alloc]init];
+    self.retBottomView = retBottomView;
+    [self.contentView addSubview:retBottomView];
     
+    UITTTAttributedLabel *retContentLabel = [[UITTTAttributedLabel alloc]init];
+    self.retContentLabel = retContentLabel;
+    [retBottomView addSubview:retContentLabel];
+    retContentLabel.font = [UIFont systemFontOfSize:14];
+    retContentLabel.numberOfLines = 0;
+
+    WBStatusPicturesView * retPhotosView = [[WBStatusPicturesView alloc]init];
+    self.retPhotosView = retPhotosView;
+    [retBottomView addSubview:retPhotosView];
 }
 //3: 底部工具条
 -(void)initToolBar
 {
-    
+    WBToolBar * toolBar = [[WBToolBar alloc]init];
+    self.toolBar = toolBar;
+    [self.contentView addSubview:toolBar];
 }
 
 

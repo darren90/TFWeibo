@@ -74,10 +74,10 @@
                 sf.status = status;
                 [newFrames addObject:sf];
             }
-            [self.statusFrameArray addObjectsFromArray:newFrames];
+            [weakSelf.statusFrameArray addObjectsFromArray:newFrames];
             
-            [self.dataArray addObjectsFromArray:newStatuses];
-            [self.tableView reloadData];
+            [weakSelf.dataArray addObjectsFromArray:newStatuses];
+            [weakSelf.tableView reloadData];
             NSLog(@"--status-:%@",newStatuses);
         }
     }];
