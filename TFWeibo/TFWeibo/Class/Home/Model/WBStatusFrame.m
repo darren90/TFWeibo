@@ -64,12 +64,40 @@
     self.topViewF = CGRectMake(KWBStatusCellMargin, KWBStatusCellMargin, cellW, topH);
     
      //2: 转发微博
+    CGFloat toolBarY = 0;
     
+    Status *retStatus = status.retweeted_status;
+    if (retStatus) {
+        
+        NSString *retContent = [NSString stringWithFormat:@"@%@ : %@",retStatus.user.name,retStatus.text];
+        CGSize retweetContentSize = [self sizeWithText:retContent font:[UIFont systemFontOfSize:14] maxW:maxW];
+        
+        self.retContentLabelF = CGRectMake(KWBStatusCellMargin, KWBStatusCellMargin, retweetContentSize.width, retweetContentSize.height);
+        
+        CGFloat retBottomH = 0;
+        if (retStatus.pic_urls) {
+            CGFloat photoX= contentX;
+            CGFloat photoY = CGRectGetMaxY(self.retContentLabelF)+KWBStatusCellMargin;
+            CGSize photoSize = [WBStatusPicturesView photosSizeWithCount:retStatus.pic_urls.count];
+            self.retPhotosViewF = CGRectMake(photoX, photoY, photoSize.width, photoSize.height);
+            
+            retBottomH = CGRectGetMaxY(self.retPhotosViewF)+KWBStatusCellMargin;;
+        }else{
+            retBottomH = CGRectGetMaxY(self.retContentLabelF)+KWBStatusCellMargin;;
+        }
+        
+        CGFloat retweetY = CGRectGetMaxY(self.topViewF);
+        self.retBottomViewF = CGRectMake(0, retweetY, cellW, retBottomH);
+        
+        toolBarY =  CGRectGetMaxY(self.retBottomViewF);
+    }else{
+        toolBarY = CGRectGetMaxY(self.topViewF);
+    }
     
     //3: 底部工具条
+    self.toolBarF = CGRectMake(0, toolBarY, cellW, 35);
     
-    self.cellH = 300;
-//    self.cellH = CGRectGetMaxY(self.toolBarF) ;
+    self.cellH = CGRectGetMaxY(self.toolBarF) ;
 }
 
 
