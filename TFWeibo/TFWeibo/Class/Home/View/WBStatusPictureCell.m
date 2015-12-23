@@ -19,6 +19,8 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.picView.clipsToBounds = YES;
+    self.picView.userInteractionEnabled = YES;
     self.picView.contentMode = UIViewContentModeScaleAspectFill;
 }
 

@@ -8,6 +8,7 @@
 
 #import "WBStatusPicturesView.h"
 #import "WBStatusPictureCell.h"
+#import "MLPictureBrowser.h"
 
 #define KStatusPhotoWH 70
 #define KStatusPhotoMargin 10
@@ -97,6 +98,12 @@
     return cell;
 }
 
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    MLPictureBrowser *picBroser = [[MLPictureBrowser alloc]init];
+    [picBroser showWithPictureURLs:self.dataArray atIndex:indexPath.item];
+}
  
 
 -(NSArray *)dataArray
