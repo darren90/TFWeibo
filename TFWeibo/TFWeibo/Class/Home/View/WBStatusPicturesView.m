@@ -36,6 +36,7 @@
         waterView.dataSource = self;
         waterView.delegate = self;
         waterView.backgroundColor = [UIColor whiteColor];
+        waterView.scrollEnabled = NO;
     }
     return self;
 }
@@ -49,7 +50,7 @@
     self.layout.itemSize = CGSizeMake(KStatusPhotoWH, KStatusPhotoWH);
     self.layout.minimumLineSpacing = 10;
     self.layout.minimumInteritemSpacing = 10;
-    self.layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
+    self.layout.sectionInset = UIEdgeInsetsMake(10, 0, 10, 0);
 }
  
 

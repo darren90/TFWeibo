@@ -19,6 +19,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.picView.contentMode = UIViewContentModeScaleAspectFill;
 }
 
 -(void)setPic:(PictureModel *)pic
