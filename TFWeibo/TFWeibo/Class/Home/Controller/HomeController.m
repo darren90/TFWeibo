@@ -52,6 +52,7 @@
     tableView.delegate = self;
     tableView.dataSource = self;
     self.tableView = tableView;
+    tableView.allowsSelection = NO;
     tableView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 64);//self.view.bounds;
 }
 

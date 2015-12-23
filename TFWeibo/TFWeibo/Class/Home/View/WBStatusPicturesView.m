@@ -11,7 +11,7 @@
 #import "MLPictureBrowser.h"
 #import "PictureModel.h"
 
-#define KStatusPhotoWH 70
+#define KStatusPhotoWH 80
 #define KStatusPhotoMargin 10
 #define KStatusPhotoMaxCol(count) ((count == 4) ? 2 :3)
 
@@ -72,8 +72,6 @@
     
     return CGSizeMake(photoW, photoH);
 }
-
-
 
 
 -(void)setPictures:(NSArray *)pictures

@@ -19,8 +19,12 @@
 #import "WBStatusPicturesView.h"
 
 #define KWBStatusCellBorderW 10
+//链接颜色
+#define kLinkAttributes     @{(__bridge NSString *)kCTUnderlineStyleAttributeName : [NSNumber numberWithBool:NO],(NSString *)kCTForegroundColorAttributeName : (__bridge id)[UIColor colorWithHexString:@"0x3bbd79"].CGColor}
+#define kLinkAttributesActive       @{(NSString *)kCTUnderlineStyleAttributeName : [NSNumber numberWithBool:NO],(NSString *)kCTForegroundColorAttributeName : (__bridge id)[[UIColor colorWithHexString:@"0x1b9d59"] CGColor]}
 
-@interface WBStatusCell ()
+
+@interface WBStatusCell ()<TTTAttributedLabelDelegate>
 
 /**
  *  1：原创微博
@@ -142,6 +146,11 @@
     self.contentLabel = contentLabel;
     contentLabel.font = [UIFont systemFontOfSize:14];
     contentLabel.numberOfLines = 0;
+    contentLabel.textColor = [UIColor colorWithHexString:@"0x222222"];
+    contentLabel.linkAttributes = kLinkAttributes;
+    contentLabel.activeLinkAttributes = kLinkAttributesActive;
+    contentLabel.delegate = self;
+    [self.contentLabel addLongPressForCopy];
     [topView addSubview:contentLabel];
     
     //8:配图
