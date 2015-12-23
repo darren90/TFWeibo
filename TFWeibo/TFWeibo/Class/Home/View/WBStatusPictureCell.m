@@ -26,7 +26,7 @@
 {
     _pic = pic;
     
-    [self.picView sd_setImageWithURL:[NSURL URLWithString:pic.thumbnail_pic] placeholderImage:nil];
+    [self.picView sd_setImageWithURL:[NSURL URLWithString:pic.thumbnail_pic] placeholderImage:[UIImage imageNamed:@"nopic_240x240"]];
 }
 
 
