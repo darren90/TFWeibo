@@ -8,8 +8,6 @@
 
 #import "HomeController.h"
 #import "Status.h"
-#import "StatusCell.h"
-#import "StatusFrame.h"
 #import "WBStatusCell.h"
 #import "WBStatusFrame.h"
 

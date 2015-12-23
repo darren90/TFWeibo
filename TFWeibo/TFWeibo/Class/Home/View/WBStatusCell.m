@@ -12,8 +12,6 @@
 #import "UITTTAttributedLabel.h"
 #import "UICustomCollectionView.h"
 #import "UIIconView.h"
-#import "StatusFrame.h"
-#import "WBStatusImgsView.h"
 #import "WBToolBar.h"
 #import "WBStatusFrame.h"
 #import "WBStatusPicturesView.h"
