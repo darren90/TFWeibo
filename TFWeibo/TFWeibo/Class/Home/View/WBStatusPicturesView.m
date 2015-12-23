@@ -9,6 +9,7 @@
 #import "WBStatusPicturesView.h"
 #import "WBStatusPictureCell.h"
 #import "MLPictureBrowser.h"
+#import "PictureModel.h"
 
 #define KStatusPhotoWH 70
 #define KStatusPhotoMargin 10
@@ -102,7 +103,11 @@
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     MLPictureBrowser *picBroser = [[MLPictureBrowser alloc]init];
-    [picBroser showWithPictureURLs:self.dataArray atIndex:indexPath.item];
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:self.dataArray.count];
+    for (PictureModel *pic in self.dataArray) {
+        [array addObject:pic.thumbnail_pic];
+    }
+    [picBroser showWithPictureURLs:array atIndex:indexPath.item];
 }
  
 
