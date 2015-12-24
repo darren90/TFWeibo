@@ -61,12 +61,6 @@
 
 @property (nonatomic,weak)WBToolBar * toolBar;
 
-
-//@property (weak, nonatomic) UIButton *likeBtn, *commentBtn, *deleteBtn, *shareBtn;
-//@property (weak, nonatomic) UIButton *locaitonBtn;
-//@property (weak, nonatomic) UICollectionView *likeUsersView;
-//@property (weak, nonatomic) UITableView *commentListView;
-//@property (weak, nonatomic) UIImageView *timeClockIconView, *commentOrLikeBeginImgView, *commentOrLikeSplitlineView, *fromPhoneIconView;
 @end
 
 @implementation WBStatusCell
@@ -152,8 +146,6 @@
     [topView addSubview:contentLabel];
     
     //8:配图
-//    CGRect rect = CGRectZero;
-//    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
     WBStatusPicturesView * photosView = [[WBStatusPicturesView alloc]init];
     self.photosView = photosView;
     [topView addSubview:photosView];
