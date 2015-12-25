@@ -41,7 +41,7 @@
                                                                                               self.frame.size.height - label.frame.size.height - 20.f,
                                                                                               label.frame.size.width,
                                                                                               label.frame.size.height)
-                                                                expansionDirection:DirectionLeft];
+                                                                expansionDirection:DirectionUp];
         upMenuView.homeButtonView = label;
         [upMenuView addButtons:[self createDemoButtonArray]];
         
@@ -55,11 +55,13 @@
 {
     [super layoutSubviews];
     
-    self.label.frame = CGRectMake(0.f, 0.f, 40.f, 40.f);
-    self.dingdingAnimationMenu.frame = CGRectMake(self.frame.size.width - self.label.frame.size.width - 20.f,
-                                                  self.frame.size.height - self.label.frame.size.height - 20.f,
-                                                  self.label.frame.size.width,
-                                                  self.label.frame.size.height);
+    CGFloat width = self.frame.size.width;
+    CGFloat height = self.frame.size.height;
+    self.label.frame = CGRectMake(0.f, 0.f, width, height);
+    self.dingdingAnimationMenu.frame = CGRectMake(0,
+                                                  0,
+                                                  height,
+                                                  height);
 }
 
 
