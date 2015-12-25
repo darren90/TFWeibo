@@ -22,9 +22,7 @@
     
     User *user = status.user;
     
-    
     CGFloat cellW = [UIScreen mainScreen].bounds.size.width;
-
 
     //1: 原创微博
     CGFloat iconHW = 35;

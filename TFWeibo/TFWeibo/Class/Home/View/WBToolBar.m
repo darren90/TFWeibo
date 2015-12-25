@@ -9,7 +9,20 @@
 #import "WBToolBar.h"
 #import "Status.h"
 
+@interface WBToolBar()
+
+@end
+
+
 @implementation WBToolBar
+
+-(instancetype)initWithFrame:(CGRect)frame
+{
+    if (self = [super initWithFrame:frame]) {
+        self.backgroundColor = [UIColor grayColor];
+    }
+    return self;
+}
 
 
 -(void)setStatus:(Status *)status
