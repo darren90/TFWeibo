@@ -26,27 +26,27 @@
 //        self.backgroundColor = [UIColor grayColor];
 //        [self dingdingAnimation];
         
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0.f, 0.f, 40.f, 40.f)];
-        self.label = label;
-        
-        label.text = @"Tap";
-        label.textColor = [UIColor whiteColor];
-        label.textAlignment = NSTextAlignmentCenter;
-        label.layer.cornerRadius = label.frame.size.height / 2.f;
-        label.backgroundColor =[UIColor colorWithRed:0.f green:0.f blue:0.f alpha:0.5f];
-        label.clipsToBounds = YES;
-
-        
-        DWBubbleMenuButton *upMenuView = [[DWBubbleMenuButton alloc] initWithFrame:CGRectMake(self.frame.size.width - label.frame.size.width - 20.f,
-                                                                                              self.frame.size.height - label.frame.size.height - 20.f,
-                                                                                              label.frame.size.width,
-                                                                                              label.frame.size.height)
-                                                                expansionDirection:DirectionUp];
-        upMenuView.homeButtonView = label;
-        [upMenuView addButtons:[self createDemoButtonArray]];
-        
-        self.dingdingAnimationMenu = upMenuView;
-        [self addSubview:upMenuView];
+//        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0.f, 0.f, 40.f, 40.f)];
+//        self.label = label;
+//        
+//        label.text = @"Tap";
+//        label.textColor = [UIColor whiteColor];
+//        label.textAlignment = NSTextAlignmentCenter;
+//        label.layer.cornerRadius = label.frame.size.height / 2.f;
+//        label.backgroundColor =[UIColor colorWithRed:0.f green:0.f blue:0.f alpha:0.5f];
+//        label.clipsToBounds = YES;
+//
+//        
+//        DWBubbleMenuButton *upMenuView = [[DWBubbleMenuButton alloc] initWithFrame:CGRectMake(self.frame.size.width - label.frame.size.width - 20.f,
+//                                                                                              self.frame.size.height - label.frame.size.height - 20.f,
+//                                                                                              label.frame.size.width,
+//                                                                                              label.frame.size.height)
+//                                                                expansionDirection:DirectionLeft];
+//        upMenuView.homeButtonView = label;
+//        [upMenuView addButtons:[self createDemoButtonArray]];
+//        
+//        self.dingdingAnimationMenu = upMenuView;
+//        [self addSubview:upMenuView];
     }
     return self;
 }
@@ -55,13 +55,17 @@
 {
     [super layoutSubviews];
     
-    CGFloat width = self.frame.size.width;
-    CGFloat height = self.frame.size.height;
-    self.label.frame = CGRectMake(0.f, 0.f, width, height);
-    self.dingdingAnimationMenu.frame = CGRectMake(0,
-                                                  0,
-                                                  height,
-                                                  height);
+//    CGFloat width = self.frame.size.width;
+//    CGFloat height = self.frame.size.height;
+//    CGFloat animationWH = 30;
+////    self.label.frame = CGRectMake(0, 0.f, height, height);
+//    self.dingdingAnimationMenu.frame = CGRectMake(width - animationWH - 20,
+//                                                  0,
+//                                                  animationWH,
+//                                                  animationWH);
+    
+    [self dingdingAnimation];
+
 }
 
 
@@ -96,7 +100,7 @@
 }
 
 - (UILabel *)createHomeButtonView {
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0.f, 0.f, 40.f, 40.f)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0.f, 0.f, 30.f, 30.f)];
     self.label = label;
     
     label.text = @"Tap";
