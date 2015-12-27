@@ -15,7 +15,6 @@
 
 @implementation WBStatusFrame
 
-
 -(void)setStatus:(Status *)status
 {
     _status = status;
