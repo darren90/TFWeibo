@@ -14,7 +14,6 @@
 @property (nonatomic,copy)NSString * idstr;
 /** 微博信息内容 */
 @property (nonatomic,copy)NSString * text;
-
 /** 微博信息内容 - 属性字符内容（特殊文字会高亮显示，表情） */
 @property (nonatomic,copy) NSAttributedString * attributeText;
 

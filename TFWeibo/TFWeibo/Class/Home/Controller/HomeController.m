@@ -20,7 +20,6 @@
 
 @property (nonatomic,strong)NSMutableArray * statusFrameArray;
 
-
 @end
 
 @implementation HomeController

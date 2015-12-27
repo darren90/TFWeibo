@@ -97,7 +97,6 @@
     self.cellH = CGRectGetMaxY(self.toolBarF) ;
 }
 
-
 - (CGSize)sizeWithText:(NSString *)text font:(UIFont *)font maxW:(CGFloat)maxW
 {
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
