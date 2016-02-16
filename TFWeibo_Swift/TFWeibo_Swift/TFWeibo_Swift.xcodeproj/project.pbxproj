@@ -11,7 +11,6 @@
 		FE7F50891C73624D00DC4017 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7F50881C73624D00DC4017 /* ViewController.swift */; };
 		FE7F508C1C73624D00DC4017 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE7F508A1C73624D00DC4017 /* Main.storyboard */; };
 		FE7F508E1C73624D00DC4017 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE7F508D1C73624D00DC4017 /* Assets.xcassets */; };
-		FE7F50911C73624D00DC4017 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE7F508F1C73624D00DC4017 /* LaunchScreen.storyboard */; };
 		FE7F509C1C73624D00DC4017 /* TFWeibo_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7F509B1C73624D00DC4017 /* TFWeibo_SwiftTests.swift */; };
 		FE7F50A71C73624D00DC4017 /* TFWeibo_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7F50A61C73624D00DC4017 /* TFWeibo_SwiftUITests.swift */; };
 /* End PBXBuildFile section */
@@ -39,7 +38,6 @@
 		FE7F50881C73624D00DC4017 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FE7F508B1C73624D00DC4017 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE7F508D1C73624D00DC4017 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FE7F50901C73624D00DC4017 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE7F50921C73624D00DC4017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE7F50971C73624D00DC4017 /* TFWeibo_SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFWeibo_SwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7F509B1C73624D00DC4017 /* TFWeibo_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFWeibo_SwiftTests.swift; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 				FE7F50881C73624D00DC4017 /* ViewController.swift */,
 				FE7F508A1C73624D00DC4017 /* Main.storyboard */,
 				FE7F508D1C73624D00DC4017 /* Assets.xcassets */,
-				FE7F508F1C73624D00DC4017 /* LaunchScreen.storyboard */,
 				FE7F50921C73624D00DC4017 /* Info.plist */,
 			);
 			path = TFWeibo_Swift;
@@ -229,7 +226,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE7F50911C73624D00DC4017 /* LaunchScreen.storyboard in Resources */,
 				FE7F508E1C73624D00DC4017 /* Assets.xcassets in Resources */,
 				FE7F508C1C73624D00DC4017 /* Main.storyboard in Resources */,
 			);
@@ -299,14 +295,6 @@
 				FE7F508B1C73624D00DC4017 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FE7F508F1C73624D00DC4017 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FE7F50901C73624D00DC4017 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
