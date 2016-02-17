@@ -12,16 +12,38 @@ class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         //设置控制器tabbar的颜色,：在iOS7以前如果设置了tintcolor只会是文字变，图片不会变
         tabBar.tintColor = UIColor.orangeColor()
+        
+        
+        //冲json文件中动态加载tabbar
+        let path = NSBundle.mainBundle().pathForResource("MainVCSettings.json", ofType: nil)
+        if let jsonPath = path{
+            let jsonData = NSData(contentsOfFile: jsonPath)
+            
+            do{//有可能发生异常的代码
+                //try：发成异常，会跳到catch后继续执行
+                //try!:发生异常，直接奔溃
+                let dictArr = try NSJSONSerialization.JSONObjectWithData(jsonData!, options: .MutableContainers)
                 
-        addChildViewController("HomeTableViewController", title: "首页", imageName: "tabbar_home")
-        addChildViewController("MessageTableViewController", title: "消息", imageName: "tabbar_message_center")
-        addChildViewController("DiscoverTableViewController", title: "广场", imageName: "tabbar_discover")
-        addChildViewController("MeTableViewController", title: "我", imageName: "tabbar_profile")
-//        addChildViewController(HomeTableViewController(), title: "首页", imageName: "")
-    }
+                //Swift中，遍历数据，必须明确数组的类型
+                for dict in dictArr as![[String:String]] {
+                    addChildViewController(dict["vcName"]!, title: dict["title"]!, imageName: dict["imageName"]!)
+                }
+                
+            }catch{//发生异常之后会执行的代码
+                print(error)
+
+                addChildViewController("HomeTableViewController", title: "首页", imageName: "tabbar_home")
+                addChildViewController("MessageTableViewController", title: "消息", imageName: "tabbar_message_center")
+                addChildViewController("DiscoverTableViewController", title: "广场", imageName: "tabbar_discover")
+                addChildViewController("MeTableViewController", title: "我", imageName: "tabbar_profile")
+                //        addChildViewController(HomeTableViewController(), title: "首页", imageName: "")
+
+            }
+            
+        }
+   }
     
     /**
      初始化子控制器
