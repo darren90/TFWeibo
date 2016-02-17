@@ -18,6 +18,8 @@
 		FE7F50DA1C736AD400DC4017 /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7F50D91C736AD400DC4017 /* DiscoverTableViewController.swift */; };
 		FE7F50DC1C736AF900DC4017 /* MeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7F50DB1C736AF900DC4017 /* MeTableViewController.swift */; };
 		FE7F50DE1C736B0500DC4017 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7F50DD1C736B0500DC4017 /* MessageTableViewController.swift */; };
+		FE7F50E21C74B9C300DC4017 /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = FE7F50E01C74B9C300DC4017 /* MainVCSettings.json */; };
+		FE7F50E31C74B9C300DC4017 /* NullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7F50E11C74B9C300DC4017 /* NullViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		FE7F50D91C736AD400DC4017 /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
 		FE7F50DB1C736AF900DC4017 /* MeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTableViewController.swift; sourceTree = "<group>"; };
 		FE7F50DD1C736B0500DC4017 /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
+		FE7F50E01C74B9C300DC4017 /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
+		FE7F50E11C74B9C300DC4017 /* NullViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,9 +141,9 @@
 			isa = PBXGroup;
 			children = (
 				FE7F50BF1C736A9F00DC4017 /* Common */,
+				FE7F50C81C736A9F00DC4017 /* Main */,
 				FE7F50C01C736A9F00DC4017 /* Discover */,
 				FE7F50C41C736A9F00DC4017 /* Home */,
-				FE7F50C81C736A9F00DC4017 /* Main */,
 				FE7F50CD1C736A9F00DC4017 /* Me */,
 				FE7F50D11C736A9F00DC4017 /* Message */,
 				FE7F50D51C736A9F00DC4017 /* Tools */,
@@ -221,6 +225,7 @@
 		FE7F50C81C736A9F00DC4017 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				FE7F50DF1C74B9C300DC4017 /* Resource */,
 				FE7F50C91C736A9F00DC4017 /* Controller */,
 				FE7F50CA1C736A9F00DC4017 /* MainTabBarController.swift */,
 				FE7F50CB1C736A9F00DC4017 /* Model */,
@@ -319,6 +324,15 @@
 			children = (
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		FE7F50DF1C74B9C300DC4017 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				FE7F50E01C74B9C300DC4017 /* MainVCSettings.json */,
+				FE7F50E11C74B9C300DC4017 /* NullViewController.swift */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -427,6 +441,7 @@
 			files = (
 				FE7F508E1C73624D00DC4017 /* Assets.xcassets in Resources */,
 				FE7F508C1C73624D00DC4017 /* Main.storyboard in Resources */,
+				FE7F50E21C74B9C300DC4017 /* MainVCSettings.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +471,7 @@
 				FE7F50871C73624D00DC4017 /* AppDelegate.swift in Sources */,
 				FE7F50DA1C736AD400DC4017 /* DiscoverTableViewController.swift in Sources */,
 				FE7F50D61C736A9F00DC4017 /* MainTabBarController.swift in Sources */,
+				FE7F50E31C74B9C300DC4017 /* NullViewController.swift in Sources */,
 				FE7F50DC1C736AF900DC4017 /* MeTableViewController.swift in Sources */,
 				FE7F50DE1C736B0500DC4017 /* MessageTableViewController.swift in Sources */,
 			);
