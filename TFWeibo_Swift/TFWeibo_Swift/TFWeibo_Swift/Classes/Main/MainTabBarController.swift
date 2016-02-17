@@ -13,23 +13,40 @@ class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //设置控制器tabbar的颜色
+        //注意：在iOS7以前如果设置了tintcolor只会是文字变，图片不会变
+        tabBar.tintColor = UIColor.orangeColor()
+                
+        addChildViewController(HomeTableViewController(), title: "首页", imageName: "tabbar_home")
+        addChildViewController(MessageTableViewController(), title: "消息", imageName: "tabbar_message_center")
+        addChildViewController(DiscoverTableViewController(), title: "广场", imageName: "tabbar_discover")
+        addChildViewController(MeTableViewController(), title: "我", imageName: "tabbar_profile")
+//        addChildViewController(HomeTableViewController(), title: "首页", imageName: "")
+
+        
     }
+    
+    /**
+     初始化子控制器
+     
+     :param: childController <#childController description#>
+     :param: title           <#title description#>
+     :param: imageName       <#imageName description#>
+     */
+    private func addChildViewController(childController: UIViewController,title:String,imageName:String) {
+        //1:创建首页
+        childController.tabBarItem.image = UIImage(named: imageName)
+        childController.tabBarItem.selectedImage = UIImage(named: imageName+"_highlighted")
+        childController.title = title
+        let nav = UINavigationController(rootViewController: childController)
+        addChildViewController(nav)
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+ 
 
 }
