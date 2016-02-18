@@ -20,6 +20,8 @@
 		FE7F50DE1C736B0500DC4017 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7F50DD1C736B0500DC4017 /* MessageTableViewController.swift */; };
 		FE7F50E21C74B9C300DC4017 /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = FE7F50E01C74B9C300DC4017 /* MainVCSettings.json */; };
 		FE7F50E31C74B9C300DC4017 /* NullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7F50E11C74B9C300DC4017 /* NullViewController.swift */; };
+		FE7F50E51C75F8F200DC4017 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7F50E41C75F8F200DC4017 /* BaseTableViewController.swift */; };
+		FE7F50E71C75FE0300DC4017 /* NotLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7F50E61C75FE0300DC4017 /* NotLoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,13 +54,15 @@
 		FE7F50A21C73624D00DC4017 /* TFWeibo_SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFWeibo_SwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7F50A61C73624D00DC4017 /* TFWeibo_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFWeibo_SwiftUITests.swift; sourceTree = "<group>"; };
 		FE7F50A81C73624D00DC4017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FE7F50CA1C736A9F00DC4017 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		FE7F50CA1C736A9F00DC4017 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = ../MainTabBarController.swift; sourceTree = "<group>"; };
 		FE7F50D71C736AC600DC4017 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		FE7F50D91C736AD400DC4017 /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
 		FE7F50DB1C736AF900DC4017 /* MeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTableViewController.swift; sourceTree = "<group>"; };
 		FE7F50DD1C736B0500DC4017 /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
 		FE7F50E01C74B9C300DC4017 /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
 		FE7F50E11C74B9C300DC4017 /* NullViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullViewController.swift; sourceTree = "<group>"; };
+		FE7F50E41C75F8F200DC4017 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		FE7F50E61C75FE0300DC4017 /* NotLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotLoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,7 +231,6 @@
 			children = (
 				FE7F50DF1C74B9C300DC4017 /* Resource */,
 				FE7F50C91C736A9F00DC4017 /* Controller */,
-				FE7F50CA1C736A9F00DC4017 /* MainTabBarController.swift */,
 				FE7F50CB1C736A9F00DC4017 /* Model */,
 				FE7F50CC1C736A9F00DC4017 /* View */,
 			);
@@ -237,6 +240,8 @@
 		FE7F50C91C736A9F00DC4017 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FE7F50CA1C736A9F00DC4017 /* MainTabBarController.swift */,
+				FE7F50E41C75F8F200DC4017 /* BaseTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 		FE7F50CC1C736A9F00DC4017 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FE7F50E61C75FE0300DC4017 /* NotLoginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -466,6 +472,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE7F50E71C75FE0300DC4017 /* NotLoginView.swift in Sources */,
+				FE7F50E51C75F8F200DC4017 /* BaseTableViewController.swift in Sources */,
 				FE7F50D81C736AC600DC4017 /* HomeTableViewController.swift in Sources */,
 				FE7F50891C73624D00DC4017 /* ViewController.swift in Sources */,
 				FE7F50871C73624D00DC4017 /* AppDelegate.swift in Sources */,

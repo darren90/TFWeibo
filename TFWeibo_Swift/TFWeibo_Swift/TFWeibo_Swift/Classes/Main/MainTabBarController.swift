@@ -10,6 +10,21 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
 
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+            addComposeBtn()
+    }
+    
+    private func addComposeBtn(){
+        tabBar.addSubview(composeBtn)
+        
+        let w = UIScreen.mainScreen().bounds.size.width / CGFloat((viewControllers?.count)!)
+        let rect = CGRect(x: 0, y: 0, width: w, height: 49)
+        composeBtn.frame = CGRectOffset(rect, w*2, 0)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //设置控制器tabbar的颜色,：在iOS7以前如果设置了tintcolor只会是文字变，图片不会变
@@ -36,6 +51,7 @@ class MainTabBarController: UITabBarController {
 
                 addChildViewController("HomeTableViewController", title: "首页", imageName: "tabbar_home")
                 addChildViewController("MessageTableViewController", title: "消息", imageName: "tabbar_message_center")
+                addChildViewController("NullViewController", title: "", imageName: "")
                 addChildViewController("DiscoverTableViewController", title: "广场", imageName: "tabbar_discover")
                 addChildViewController("MeTableViewController", title: "我", imageName: "tabbar_profile")
                 //        addChildViewController(HomeTableViewController(), title: "首页", imageName: "")
@@ -81,4 +97,26 @@ class MainTabBarController: UITabBarController {
     }
  
 
+    
+    
+    //懒加载精简
+    private lazy var composeBtn:UIButton = {
+        let btn = UIButton()
+        
+        //
+        btn.setImage(UIImage(named: "tabbar_compose_icon_add"), forState: .Normal)
+        btn.setImage(UIImage(named: "tabbar_compose_icon_add_highlighted"), forState: .Highlighted)
+        
+        btn.setBackgroundImage(UIImage(named: "tabbar_compose_button"), forState: .Normal)
+        btn.setBackgroundImage(UIImage(named: "tabbar_compose_button_highlighted"), forState: .Highlighted)
+        btn.addTarget(self, action: "composeBtnDidClick", forControlEvents: .TouchUpInside)
+        
+        return btn
+    }()
+    
+    //“+”按钮被点击
+    //监听按钮点击的方法不能是私有的
+    func composeBtnDidClick(){
+        print(__FUNCTION__)
+    }
 }
