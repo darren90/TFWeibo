@@ -8,20 +8,37 @@
 
 import UIKit
 
-class BaseTableViewController: UITableViewController {
+class BaseTableViewController: UITableViewController,NotLoginViewDelegate {
 
     //保存用户是否登陆
-    var userLogin = false
+    var userLogin = true
+    //保存未登录的界面
+    var notLoginView:NotLoginView?
+    
     
     override func loadView() {
         userLogin ? super.loadView() : initNotLoginView()
     
     }
     
+    //NotLoginView delegate
+    func loginBtnClick() {
+        
+    }
+    //NotLoginView delegate
+    func registerBtnClick() {
+        
+    }
+    
     private func initNotLoginView(){
         let customview = NotLoginView()
         view = customview
-
+        customview.delegate = self
+        notLoginView = customview
+        
+//        navigationController?.navigationBar.tintColor = UIColor.orangeColor()
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: .Plain, target: self, action: "loginBtnClick")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "登陆", style: .Plain, target: self, action: "registerBtnClick")
     }
     
     override func viewDidLoad() {

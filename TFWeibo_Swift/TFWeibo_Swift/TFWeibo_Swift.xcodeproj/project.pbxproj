@@ -22,6 +22,9 @@
 		FE7F50E31C74B9C300DC4017 /* NullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7F50E11C74B9C300DC4017 /* NullViewController.swift */; };
 		FE7F50E51C75F8F200DC4017 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7F50E41C75F8F200DC4017 /* BaseTableViewController.swift */; };
 		FE7F50E71C75FE0300DC4017 /* NotLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7F50E61C75FE0300DC4017 /* NotLoginView.swift */; };
+		FE7F50E91C76068A00DC4017 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7F50E81C76068A00DC4017 /* UIView+AutoLayout.swift */; };
+		FEDC0E7F1C7756F200722C0A /* UIBarButtonItem+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDC0E7E1C7756F200722C0A /* UIBarButtonItem+Category.swift */; };
+		FEDC0E831C7758ED00722C0A /* HomeTitleBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDC0E821C7758ED00722C0A /* HomeTitleBtn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		FE7F50E11C74B9C300DC4017 /* NullViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullViewController.swift; sourceTree = "<group>"; };
 		FE7F50E41C75F8F200DC4017 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		FE7F50E61C75FE0300DC4017 /* NotLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotLoginView.swift; sourceTree = "<group>"; };
+		FE7F50E81C76068A00DC4017 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
+		FEDC0E7E1C7756F200722C0A /* UIBarButtonItem+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Category.swift"; sourceTree = "<group>"; };
+		FEDC0E821C7758ED00722C0A /* HomeTitleBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTitleBtn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +164,7 @@
 		FE7F50BF1C736A9F00DC4017 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				FEDC0E7E1C7756F200722C0A /* UIBarButtonItem+Category.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -222,6 +229,7 @@
 		FE7F50C71C736A9F00DC4017 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FEDC0E821C7758ED00722C0A /* HomeTitleBtn.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -328,6 +336,7 @@
 		FE7F50D51C736A9F00DC4017 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				FE7F50E81C76068A00DC4017 /* UIView+AutoLayout.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -475,12 +484,15 @@
 				FE7F50E71C75FE0300DC4017 /* NotLoginView.swift in Sources */,
 				FE7F50E51C75F8F200DC4017 /* BaseTableViewController.swift in Sources */,
 				FE7F50D81C736AC600DC4017 /* HomeTableViewController.swift in Sources */,
+				FEDC0E831C7758ED00722C0A /* HomeTitleBtn.swift in Sources */,
 				FE7F50891C73624D00DC4017 /* ViewController.swift in Sources */,
 				FE7F50871C73624D00DC4017 /* AppDelegate.swift in Sources */,
 				FE7F50DA1C736AD400DC4017 /* DiscoverTableViewController.swift in Sources */,
 				FE7F50D61C736A9F00DC4017 /* MainTabBarController.swift in Sources */,
 				FE7F50E31C74B9C300DC4017 /* NullViewController.swift in Sources */,
+				FEDC0E7F1C7756F200722C0A /* UIBarButtonItem+Category.swift in Sources */,
 				FE7F50DC1C736AF900DC4017 /* MeTableViewController.swift in Sources */,
+				FE7F50E91C76068A00DC4017 /* UIView+AutoLayout.swift in Sources */,
 				FE7F50DE1C736B0500DC4017 /* MessageTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -700,6 +712,7 @@
 				FE7F50AD1C73624D00DC4017 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE7F50AE1C73624D00DC4017 /* Build configuration list for PBXNativeTarget "TFWeibo_SwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -708,6 +721,7 @@
 				FE7F50B01C73624D00DC4017 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE7F50B11C73624D00DC4017 /* Build configuration list for PBXNativeTarget "TFWeibo_SwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -716,6 +730,7 @@
 				FE7F50B31C73624D00DC4017 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

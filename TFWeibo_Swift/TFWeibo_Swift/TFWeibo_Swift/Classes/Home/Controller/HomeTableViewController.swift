@@ -12,8 +12,51 @@ class HomeTableViewController: BaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.title = "首页";
+        
+        //没有登陆，就设置未登录的界面信息
+        if !userLogin{
+            notLoginView?.setUpInfo(true, imageName: "visitordiscover_feed_image_house", message: "关注一些人，回这里看看有什么惊喜")
+        }else{
+            setupNav()
+        }
+        
+    }
+    
+    
+    // 初始化导航条
+    private func setupNav(){
+        navigationItem.leftBarButtonItem = createNavItem("navigationbar_friendattention", target: self, action: "leftBtnClick")
+        navigationItem.rightBarButtonItem = createNavItem("navigationbar_pop",target: self, action: "rightBtnClick")
+        
+        //初始化标题按钮
+        let titleBtn = HomeTitleBtn()
+        titleBtn.setTitle("飞哥 ", forState: .Normal)
+        titleBtn.setTitleColor(UIColor.darkTextColor(), forState: .Normal)
+        titleBtn.setImage(UIImage(named: "navigationbar_arrow_down"), forState: .Normal)
+        titleBtn.setImage(UIImage(named: "navigationbar_arrow_up"), forState: .Selected)
+        titleBtn.addTarget(self, action: "titleBtnClick:", forControlEvents: .TouchUpInside)
+        titleBtn.sizeToFit()
+        navigationItem.titleView = titleBtn
+    }
+    
+    func titleBtnClick(btn:UIButton){
+        btn.selected = !btn.selected
+    }
+    
+    private func createNavItem(image:String,target:AnyObject?, action: Selector) -> UIBarButtonItem{
+        let rigntBtn = UIButton()
+        rigntBtn.setImage(UIImage(named: image), forState: .Normal)
+        rigntBtn.setImage(UIImage(named: image + "_highlighted"), forState: .Highlighted)
+        rigntBtn.addTarget(target, action: action, forControlEvents: .TouchUpInside)
+        rigntBtn.sizeToFit()
+        return UIBarButtonItem(customView: rigntBtn)
+    }
+    
+    func leftBtnClick(){
+        
+    }
+    func rightBtnClick(){
+        
     }
 
     override func didReceiveMemoryWarning() {
