@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D52684504A11CFDDC45DCBB2 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205C3979525692E89667E539 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		FE2184171C7853DC00F6681C /* Pods.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 205C3979525692E89667E539 /* Pods.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FE7F50871C73624D00DC4017 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7F50861C73624D00DC4017 /* AppDelegate.swift */; };
 		FE7F50891C73624D00DC4017 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7F50881C73624D00DC4017 /* ViewController.swift */; };
 		FE7F508C1C73624D00DC4017 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE7F508A1C73624D00DC4017 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 		FE7F50E51C75F8F200DC4017 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7F50E41C75F8F200DC4017 /* BaseTableViewController.swift */; };
 		FE7F50E71C75FE0300DC4017 /* NotLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7F50E61C75FE0300DC4017 /* NotLoginView.swift */; };
 		FE7F50E91C76068A00DC4017 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7F50E81C76068A00DC4017 /* UIView+AutoLayout.swift */; };
+		FE9B74E91C781D0700467527 /* QRCodeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE9B74E81C781D0700467527 /* QRCodeViewController.storyboard */; };
+		FE9B74EB1C781F7300467527 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9B74EA1C781F7300467527 /* QRCodeViewController.swift */; };
 		FEDC0E7F1C7756F200722C0A /* UIBarButtonItem+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDC0E7E1C7756F200722C0A /* UIBarButtonItem+Category.swift */; };
 		FEDC0E831C7758ED00722C0A /* HomeTitleBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDC0E821C7758ED00722C0A /* HomeTitleBtn.swift */; };
 		FEDC0E861C77FA1000722C0A /* PopoverViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEDC0E851C77FA1000722C0A /* PopoverViewController.storyboard */; };
@@ -47,7 +51,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FE2184161C7853C400F6681C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FE2184171C7853DC00F6681C /* Pods.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		205C3979525692E89667E539 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		321486DE691DC7AB9CEA3006 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		3A95910896791FE6618482B7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FE7F50831C73624D00DC4017 /* TFWeibo_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFWeibo_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7F50861C73624D00DC4017 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE7F50881C73624D00DC4017 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +90,8 @@
 		FE7F50E41C75F8F200DC4017 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		FE7F50E61C75FE0300DC4017 /* NotLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotLoginView.swift; sourceTree = "<group>"; };
 		FE7F50E81C76068A00DC4017 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
+		FE9B74E81C781D0700467527 /* QRCodeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QRCodeViewController.storyboard; sourceTree = "<group>"; };
+		FE9B74EA1C781F7300467527 /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 		FEDC0E7E1C7756F200722C0A /* UIBarButtonItem+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Category.swift"; sourceTree = "<group>"; };
 		FEDC0E821C7758ED00722C0A /* HomeTitleBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTitleBtn.swift; sourceTree = "<group>"; };
 		FEDC0E851C77FA1000722C0A /* PopoverViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PopoverViewController.storyboard; sourceTree = "<group>"; };
@@ -82,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D52684504A11CFDDC45DCBB2 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +125,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34E8EA7A66B1C2C125FDF332 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				205C3979525692E89667E539 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F0E21B76B6BA63467FEA18C9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A95910896791FE6618482B7 /* Pods.debug.xcconfig */,
+				321486DE691DC7AB9CEA3006 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FE7F507A1C73624D00DC4017 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +149,8 @@
 				FE7F509A1C73624D00DC4017 /* TFWeibo_SwiftTests */,
 				FE7F50A51C73624D00DC4017 /* TFWeibo_SwiftUITests */,
 				FE7F50841C73624D00DC4017 /* Products */,
+				F0E21B76B6BA63467FEA18C9 /* Pods */,
+				34E8EA7A66B1C2C125FDF332 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -210,6 +252,7 @@
 		FE7F50C41C736A9F00DC4017 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FE9B74E71C781CED00467527 /* QRCode */,
 				FEDC0E841C77F9E400722C0A /* popover */,
 				FE7F50C51C736A9F00DC4017 /* Controller */,
 				FE7F50C61C736A9F00DC4017 /* Model */,
@@ -357,6 +400,15 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		FE9B74E71C781CED00467527 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				FE9B74E81C781D0700467527 /* QRCodeViewController.storyboard */,
+				FE9B74EA1C781F7300467527 /* QRCodeViewController.swift */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
 		FEDC0E841C77F9E400722C0A /* popover */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,9 +426,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE7F50AB1C73624D00DC4017 /* Build configuration list for PBXNativeTarget "TFWeibo_Swift" */;
 			buildPhases = (
+				C9189920B8A005A618F12CE3 /* Check Pods Manifest.lock */,
 				FE7F507F1C73624D00DC4017 /* Sources */,
 				FE7F50801C73624D00DC4017 /* Frameworks */,
 				FE7F50811C73624D00DC4017 /* Resources */,
+				EE6869C916E0261FD04C1A1C /* Embed Pods Frameworks */,
+				D9F15A63B12636F0ED2E81B1 /* Copy Pods Resources */,
+				FE2184161C7853C400F6681C /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -474,6 +530,7 @@
 				FE7F508E1C73624D00DC4017 /* Assets.xcassets in Resources */,
 				FE7F508C1C73624D00DC4017 /* Main.storyboard in Resources */,
 				FEDC0E861C77FA1000722C0A /* PopoverViewController.storyboard in Resources */,
+				FE9B74E91C781D0700467527 /* QRCodeViewController.storyboard in Resources */,
 				FE7F50E21C74B9C300DC4017 /* MainVCSettings.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +551,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C9189920B8A005A618F12CE3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D9F15A63B12636F0ED2E81B1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE6869C916E0261FD04C1A1C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FE7F507F1C73624D00DC4017 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -501,6 +606,7 @@
 			files = (
 				FE7F50E71C75FE0300DC4017 /* NotLoginView.swift in Sources */,
 				FE7F50E51C75F8F200DC4017 /* BaseTableViewController.swift in Sources */,
+				FE9B74EB1C781F7300467527 /* QRCodeViewController.swift in Sources */,
 				FE7F50D81C736AC600DC4017 /* HomeTableViewController.swift in Sources */,
 				FEDC0E831C7758ED00722C0A /* HomeTitleBtn.swift in Sources */,
 				FE7F50891C73624D00DC4017 /* ViewController.swift in Sources */,
@@ -643,6 +749,7 @@
 		};
 		FE7F50AC1C73624D00DC4017 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A95910896791FE6618482B7 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
@@ -656,6 +763,7 @@
 		};
 		FE7F50AD1C73624D00DC4017 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 321486DE691DC7AB9CEA3006 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";

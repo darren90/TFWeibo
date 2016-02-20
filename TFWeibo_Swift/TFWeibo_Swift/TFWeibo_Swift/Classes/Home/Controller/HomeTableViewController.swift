@@ -68,7 +68,9 @@ class HomeTableViewController: BaseTableViewController {
         
     }
     func rightBtnClick(){
-        
+        let sb = UIStoryboard(name: "QRCodeViewController", bundle: nil)
+        let vc = sb.instantiateInitialViewController()!
+        presentViewController(vc, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -89,7 +91,8 @@ class HomeTableViewController: BaseTableViewController {
     }
  
 }
-
+/// 记录当前是否是展开
+var isPresent: Bool = false
 //遵守的协议
 extension HomeTableViewController:UIViewControllerTransitioningDelegate,UIViewControllerAnimatedTransitioning
 {
@@ -104,6 +107,8 @@ extension HomeTableViewController:UIViewControllerTransitioningDelegate,UIViewCo
     */
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning?
     {
+        isPresent = true
+
         return self
     }
     
@@ -111,6 +116,8 @@ extension HomeTableViewController:UIViewControllerTransitioningDelegate,UIViewCo
     //告诉系统，谁来负责modal转场
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning?
     {
+        isPresent = false
+
         return self
     }
     
@@ -129,12 +136,44 @@ extension HomeTableViewController:UIViewControllerTransitioningDelegate,UIViewCo
 //        let toVc = transitionContext.viewControllerForKey("UITransitionContextToViewControllerKey")
 //        let fromVc = transitionContext.viewControllerForKey("UITransitionContextFromViewControllerKey")
         
-        let toView = transitionContext.viewForKey(UITransitionContextToViewKey)
-        let fromView = transitionContext.viewForKey(UITransitionContextFromViewKey)
-        toView?.transform = CGAffineTransformMakeScale(1.0, 0.0)
-        UIView.animateWithDuration(0.5) { () -> Void in
-            toView?.transform = CGAffineTransformIdentity
+        if isPresent
+        {
+            // 展开
+            print("展开")
+            let toView = transitionContext.viewForKey(UITransitionContextToViewKey)!
+            toView.transform = CGAffineTransformMakeScale(1.0, 0.0);
+            
+            // 注意: 一定要将视图添加到容器上
+            transitionContext.containerView()?.addSubview(toView)
+            
+            // 设置锚点
+            toView.layer.anchorPoint = CGPoint(x: 0.5, y: 0)
+            
+            // 2.执行动画
+            UIView.animateWithDuration(0.5, animations: { () -> Void in
+                // 2.1清空transform
+                toView.transform = CGAffineTransformIdentity
+                }) { (_) -> Void in
+                    // 2.2动画执行完毕, 一定要告诉系统
+                    // 如果不写, 可能导致一些未知错误
+                    transitionContext.completeTransition(true)
+            }
+        }else
+        {
+            // 关闭
+            print("关闭")
+            let fromView = transitionContext.viewForKey(UITransitionContextFromViewKey)
+            
+            UIView.animateWithDuration(0.2, animations: { () -> Void in
+                // 注意:由于CGFloat是不准确的, 所以如果写0.0会没有动画
+                // 压扁
+                fromView?.transform = CGAffineTransformMakeScale(1.0, 0.0)
+                }, completion: { (_) -> Void in
+                    // 如果不写, 可能导致一些未知错误
+                    transitionContext.completeTransition(true)
+            })
         }
+
 
     }
     
