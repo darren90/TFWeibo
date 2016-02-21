@@ -36,6 +36,7 @@
 		FEDC0E8A1C77FEFF00722C0A /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDC0E891C77FEFF00722C0A /* PopoverViewController.swift */; };
 		FEFB25C71C7899EE000079B2 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB25C61C7899EE000079B2 /* UserAccount.swift */; };
 		FEFB25C91C789E7F000079B2 /* APINetTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB25C81C789E7F000079B2 /* APINetTools.swift */; };
+		FEFB25CC1C79F0C7000079B2 /* String+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB25CB1C79F0C7000079B2 /* String+Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		FEDC0E891C77FEFF00722C0A /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		FEFB25C61C7899EE000079B2 /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		FEFB25C81C789E7F000079B2 /* APINetTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APINetTools.swift; sourceTree = "<group>"; };
+		FEFB25CB1C79F0C7000079B2 /* String+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Category.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -431,6 +433,7 @@
 				FE7F50E81C76068A00DC4017 /* UIView+AutoLayout.swift */,
 				FE21841E1C788D7300F6681C /* NetWorkTools.swift */,
 				FEFB25C81C789E7F000079B2 /* APINetTools.swift */,
+				FEFB25CB1C79F0C7000079B2 /* String+Category.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -666,6 +669,7 @@
 				FE7F50DC1C736AF900DC4017 /* MeTableViewController.swift in Sources */,
 				FE21841F1C788D7300F6681C /* NetWorkTools.swift in Sources */,
 				FE7F50E91C76068A00DC4017 /* UIView+AutoLayout.swift in Sources */,
+				FEFB25CC1C79F0C7000079B2 /* String+Category.swift in Sources */,
 				FE7F50DE1C736B0500DC4017 /* MessageTableViewController.swift in Sources */,
 				FEDC0E881C77FDFF00722C0A /* PopoverPresentationController.swift in Sources */,
 			);

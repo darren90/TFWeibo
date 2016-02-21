@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 
 class OAuthViewController: UIViewController {
@@ -68,6 +69,17 @@ extension OAuthViewController:UIWebViewDelegate
         return true
     }
     
+    func webViewDidStartLoad(webView: UIWebView) {
+        SVProgressHUD.showInfoWithStatus("正在加载", maskType: .Black)
+    }
+    
+    func webViewDidFinishLoad(webView: UIWebView) {
+        SVProgressHUD.dismiss()
+    }
+    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
+        SVProgressHUD.dismiss()
+    }
+    
     
     private func loadAccessToken(code :String){
         let url = "oauth2/access_token"
@@ -85,10 +97,14 @@ extension OAuthViewController:UIWebViewDelegate
             print("----ALA--");
             print(json)
             let user = UserAccount(dict: json as! [String : AnyObject])
-            print(user)
+//            print(user)
+            user.saveAccount()
+            
             }) { (error) -> Void in
                 print(error)
         }
+        
+        
 //        NetWorkTools.shareNetWorkTools().POST(url, parameters: params, success: { (_, JSON) -> Void in
 //            print("----AFN--");
 //            print(JSON)

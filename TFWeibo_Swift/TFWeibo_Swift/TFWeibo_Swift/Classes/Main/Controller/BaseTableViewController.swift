@@ -11,7 +11,7 @@ import UIKit
 class BaseTableViewController: UITableViewController,NotLoginViewDelegate {
 
     //保存用户是否登陆
-    var userLogin = false
+    var userLogin = UserAccount.useLogin()
     //保存未登录的界面
     var notLoginView:NotLoginView?
     
@@ -29,7 +29,7 @@ class BaseTableViewController: UITableViewController,NotLoginViewDelegate {
     func registerBtnClick() {
         let vc = OAuthViewController()
         let nav = UINavigationController(rootViewController: vc)
-        presentViewController(nav, animated: true, completion: nil)
+        presentViewController(nav  , animated: true, completion: nil)
     }
     
     private func initNotLoginView(){
