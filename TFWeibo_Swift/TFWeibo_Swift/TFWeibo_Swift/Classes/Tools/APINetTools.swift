@@ -28,18 +28,22 @@ class APINetTools: NSObject {
             Alamofire.request(.GET,urlStr, parameters: paramss).responseJSON { (_, _, result) -> Void in
                 switch result {
                 case let .Success(json):
-                    print(json)
+//                    print(json)
+                    success(json: json)
                 case let .Failure(_, error):
-                    print(error)
+//                    print(error)
+                    fail(error: error)
                 }
             }
         }else{
             Alamofire.request(.GET,urlStr).responseJSON { (_, _, result) -> Void in
                 switch result {
                 case let .Success(json):
-                    print(json)
+//                    print(json)
+                    success(json: json)
                 case let .Failure(_, error):
-                    print(error)
+//                    print(error)
+                     fail(error: error)
                 }
             }
         }
@@ -60,18 +64,22 @@ class APINetTools: NSObject {
             Alamofire.request(.POST,urlStr, parameters: paramss).responseJSON { (_, _, result) -> Void in
                 switch result {
                 case let .Success(json):
-                    print(json)
+//                    print(json)
+                    success(json: json)
                 case let .Failure(_, error):
-                    print(error)
+//                    print(error)
+                     fail(error: error)
                 }
             }
         }else{
             Alamofire.request(.POST,urlStr).responseJSON { (request, response, result) -> Void in
                 switch result {
                 case let .Success(json):
-                    print(json)
+//                    print(json)
+                    success(json: json)
                 case let .Failure(_, error):
-                    print(error)
+//                    print(error)
+                     fail(error: error)
                 }
             }
         }

@@ -15,14 +15,16 @@ class UserAccount: NSObject {
 //        "uid":"12341234"
     
     var access_token:String?
-    var expires_in:String?
+    var expires_in:NSNumber?
     var uid:String?
     
     init(dict:[String:AnyObject]){
-        
+        self.access_token = dict["access_token"] as? String
+        self.expires_in = dict["expires_in"] as? NSNumber
+        self.uid = dict["uid"] as? String
     }
     
     override var description:String{
-        return access_token! + expires_in! + uid!
+        return access_token! + String(expires_in!) + uid!
     }
 }

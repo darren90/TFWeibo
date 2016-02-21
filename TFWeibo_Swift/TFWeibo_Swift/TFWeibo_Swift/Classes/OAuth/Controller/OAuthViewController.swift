@@ -81,19 +81,20 @@ extension OAuthViewController:UIWebViewDelegate
         
         let params = ["client_id":APPKey, "client_secret":APPSecret, "grant_type":"authorization_code", "code":code, "redirect_uri":APPRedirect_Uri]
 
-//        print(params)
         APINetTools.post(url, params: params, success: { (json) -> Void in
             print("----ALA--");
             print(json)
+            let user = UserAccount(dict: json as! [String : AnyObject])
+            print(user)
             }) { (error) -> Void in
                 print(error)
         }
-        NetWorkTools.shareNetWorkTools().POST(url, parameters: params, success: { (_, JSON) -> Void in
-            print("----AFN--");
-            print(JSON)
-        }) { (_, error) -> Void in
-            print(error)
-        }
+//        NetWorkTools.shareNetWorkTools().POST(url, parameters: params, success: { (_, JSON) -> Void in
+//            print("----AFN--");
+//            print(JSON)
+//        }) { (_, error) -> Void in
+//            print(error)
+//        }
     }
 }
 
