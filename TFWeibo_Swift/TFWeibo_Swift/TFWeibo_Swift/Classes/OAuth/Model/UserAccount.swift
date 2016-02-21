@@ -17,4 +17,12 @@ class UserAccount: NSObject {
     var access_token:String?
     var expires_in:String?
     var uid:String?
+    
+    init(dict:[String:AnyObject]){
+        
+    }
+    
+    override var description:String{
+        return access_token! + expires_in! + uid!
+    }
 }
