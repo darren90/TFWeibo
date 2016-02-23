@@ -97,8 +97,8 @@ extension OAuthViewController:UIWebViewDelegate
             print("----ALA--");
             print(json)
             let user = UserAccount(dict: json as! [String : AnyObject])
-//            print(user)
-            user.saveAccount()
+            user.getUserInfo()
+//            user.saveAccount()
             
             }) { (error) -> Void in
                 print(error)

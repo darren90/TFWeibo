@@ -19,9 +19,15 @@ class HomeTableViewController: BaseTableViewController {
         }else{
             setupNav()
         }
+    }
+   
+    
+    func getHomeData(){
+        let user = UserAccount.getAccount()
+        
+        let url = "statuses/friends_timeline"
         
     }
-    
     
     // 初始化导航条
     private func setupNav(){
