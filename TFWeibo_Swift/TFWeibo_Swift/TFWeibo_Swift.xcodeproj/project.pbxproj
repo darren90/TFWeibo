@@ -37,6 +37,7 @@
 		FEFB25C71C7899EE000079B2 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB25C61C7899EE000079B2 /* UserAccount.swift */; };
 		FEFB25C91C789E7F000079B2 /* APINetTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB25C81C789E7F000079B2 /* APINetTools.swift */; };
 		FEFB25CC1C79F0C7000079B2 /* String+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB25CB1C79F0C7000079B2 /* String+Category.swift */; };
+		FEFB25D61C7CA32F000079B2 /* NewFeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB25D51C7CA32F000079B2 /* NewFeatureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		FEFB25C61C7899EE000079B2 /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		FEFB25C81C789E7F000079B2 /* APINetTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APINetTools.swift; sourceTree = "<group>"; };
 		FEFB25CB1C79F0C7000079B2 /* String+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Category.swift"; sourceTree = "<group>"; };
+		FEFB25D51C7CA32F000079B2 /* NewFeatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFeatureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +245,7 @@
 			children = (
 				FE7F50BF1C736A9F00DC4017 /* Common */,
 				FE7F50C81C736A9F00DC4017 /* Main */,
+				FEFB25D11C7CA2F1000079B2 /* NewFeature */,
 				FE2184181C787B7D00F6681C /* OAuth */,
 				FE7F50C41C736A9F00DC4017 /* Home */,
 				FE7F50C01C736A9F00DC4017 /* Discover */,
@@ -466,6 +469,38 @@
 			path = popover;
 			sourceTree = "<group>";
 		};
+		FEFB25D11C7CA2F1000079B2 /* NewFeature */ = {
+			isa = PBXGroup;
+			children = (
+				FEFB25D21C7CA2F1000079B2 /* Controller */,
+				FEFB25D31C7CA2F1000079B2 /* Model */,
+				FEFB25D41C7CA2F1000079B2 /* View */,
+			);
+			path = NewFeature;
+			sourceTree = "<group>";
+		};
+		FEFB25D21C7CA2F1000079B2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FEFB25D51C7CA32F000079B2 /* NewFeatureViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FEFB25D31C7CA2F1000079B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FEFB25D41C7CA2F1000079B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -655,6 +690,7 @@
 				FE7F50E51C75F8F200DC4017 /* BaseTableViewController.swift in Sources */,
 				FE9B74EB1C781F7300467527 /* QRCodeViewController.swift in Sources */,
 				FE21841D1C787B9E00F6681C /* OAuthViewController.swift in Sources */,
+				FEFB25D61C7CA32F000079B2 /* NewFeatureViewController.swift in Sources */,
 				FE7F50D81C736AC600DC4017 /* HomeTableViewController.swift in Sources */,
 				FEFB25C71C7899EE000079B2 /* UserAccount.swift in Sources */,
 				FEFB25C91C789E7F000079B2 /* APINetTools.swift in Sources */,
