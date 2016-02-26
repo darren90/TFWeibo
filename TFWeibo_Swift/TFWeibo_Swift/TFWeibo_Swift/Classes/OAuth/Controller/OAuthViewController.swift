@@ -94,14 +94,21 @@ extension OAuthViewController:UIWebViewDelegate
         let params = ["client_id":APPKey, "client_secret":APPSecret, "grant_type":"authorization_code", "code":code, "redirect_uri":APPRedirect_Uri]
 
         APINetTools.post(url, params: params, success: { (json) -> Void in
-            print("----ALA--");
-            print(json)
+//            print(json)
             let user = UserAccount(dict: json as! [String : AnyObject])
-            user.getUserInfo()
+            user.getUserInfo({ (account, error) -> () in
+                if account != nil {
+                    account!.saveAccount()
+                    // 去欢迎界面
+                    NSNotificationCenter.defaultCenter().postNotificationName(SwitchRootViewControllerKey, object: nil)
+                    return
+                }
+                SVProgressHUD.showInfoWithStatus("网络不给力", maskType: SVProgressHUDMaskType.Black)
+            })
 //            user.saveAccount()
             
             }) { (error) -> Void in
-                print(error)
+//                print(error)
         }
         
         

@@ -8,10 +8,19 @@
 
 import UIKit
 
+let Identifier = "status"
+
 class HomeTableViewController: BaseTableViewController {
 
+    var dataArray:[Status]?{
+        didSet{//设置完毕数据，就刷新表格
+            tableView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: Identifier)
         
         //没有登陆，就设置未登录的界面信息
         if !userLogin{
@@ -19,15 +28,20 @@ class HomeTableViewController: BaseTableViewController {
         }else{
             setupNav()
         }
+        
+        //获取微博数据
+        getStatusData()
     }
-   
     
-    func getHomeData(){
-        let user = UserAccount.getAccount()
-        
-        let url = "statuses/friends_timeline"
-        
+    private func getStatusData(){
+        Status.getStatus { (models, error) -> () in
+            if models != nil {
+                self.dataArray = models
+//                self.tableView.reloadData()
+            }
+        }
     }
+ 
     
     // 初始化导航条
     private func setupNav(){
@@ -84,19 +98,34 @@ class HomeTableViewController: BaseTableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
 
+}
+
+extension HomeTableViewController
+{
+    
+    // MARK: - Table view data source
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return dataArray?.count ?? 0
     }
- 
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(Identifier, forIndexPath: indexPath)
+        let status = dataArray![indexPath.row]
+        cell.textLabel?.text = status.text
+        return cell
+    }
 }
+
+
+
 /// 记录当前是否是展开
 var isPresent: Bool = false
 //遵守的协议

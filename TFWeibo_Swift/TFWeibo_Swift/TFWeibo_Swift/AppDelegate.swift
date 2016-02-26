@@ -8,6 +8,8 @@
 
 import UIKit
 
+let SwitchRootViewControllerKey = "SwitchRootViewControllerKey"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -17,16 +19,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        //注册通知
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "switchRootVC", name: SwitchRootViewControllerKey, object: nil)
+        
         //设置导航条和工具条的主题
         UINavigationBar.appearance().tintColor = UIColor.orangeColor()
         UITabBar.appearance().tintColor = UIColor.orangeColor()
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.backgroundColor = UIColor.whiteColor()
-        window?.rootViewController = NewFeatureViewController();
+        window?.rootViewController = defaultController();
         window?.makeKeyAndVisible()
         
         return true
+    }
+    
+    func switchRootVC(){
+        window?.rootViewController = MainTabBarController()
+    }
+    
+    private func defaultController() -> UIViewController{
+        if UserAccount.useLogin() {
+            return isNewVersion() ? NewFeatureViewController() : WelcomeViewController()
+        }
+        return MainTabBarController()
+    }
+    
+    
+    private func isNewVersion() -> Bool{
+        let key = "CFBundleShortVersionString"
+        let currentVersion = NSBundle.mainBundle().infoDictionary![key] as! String
+        let oldVersion = NSUserDefaults.standardUserDefaults().objectForKey(key) as? String ?? ""
+        if currentVersion == oldVersion{
+            return false
+        }else {
+            //iOS7以后，不用调用同步方法了
+            NSUserDefaults.standardUserDefaults().setObject(currentVersion, forKey: key)
+            return true
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -51,6 +81,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    deinit{
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
 
 }
 

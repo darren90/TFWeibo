@@ -11,6 +11,8 @@
 		FE2184171C7853DC00F6681C /* Pods.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 205C3979525692E89667E539 /* Pods.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FE21841D1C787B9E00F6681C /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE21841C1C787B9E00F6681C /* OAuthViewController.swift */; };
 		FE21841F1C788D7300F6681C /* NetWorkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE21841E1C788D7300F6681C /* NetWorkTools.swift */; };
+		FE4522971C7DEC9600CA8824 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4522961C7DEC9600CA8824 /* WelcomeViewController.swift */; };
+		FE4522991C7E0AB900CA8824 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4522981C7E0AB900CA8824 /* Status.swift */; };
 		FE7F50871C73624D00DC4017 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7F50861C73624D00DC4017 /* AppDelegate.swift */; };
 		FE7F50891C73624D00DC4017 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7F50881C73624D00DC4017 /* ViewController.swift */; };
 		FE7F508C1C73624D00DC4017 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE7F508A1C73624D00DC4017 /* Main.storyboard */; };
@@ -76,6 +78,8 @@
 		3A95910896791FE6618482B7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FE21841C1C787B9E00F6681C /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
 		FE21841E1C788D7300F6681C /* NetWorkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkTools.swift; sourceTree = "<group>"; };
+		FE4522961C7DEC9600CA8824 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		FE4522981C7E0AB900CA8824 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		FE7F50831C73624D00DC4017 /* TFWeibo_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFWeibo_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7F50861C73624D00DC4017 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE7F50881C73624D00DC4017 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -214,9 +218,9 @@
 			children = (
 				FE7F50861C73624D00DC4017 /* AppDelegate.swift */,
 				FE7F50881C73624D00DC4017 /* ViewController.swift */,
-				FE7F50BE1C736A9F00DC4017 /* Classes */,
 				FE7F508A1C73624D00DC4017 /* Main.storyboard */,
 				FE7F508D1C73624D00DC4017 /* Assets.xcassets */,
+				FE7F50BE1C736A9F00DC4017 /* Classes */,
 				FE7F50921C73624D00DC4017 /* Info.plist */,
 			);
 			path = TFWeibo_Swift;
@@ -319,6 +323,7 @@
 		FE7F50C61C736A9F00DC4017 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FE4522981C7E0AB900CA8824 /* Status.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -483,6 +488,7 @@
 			isa = PBXGroup;
 			children = (
 				FEFB25D51C7CA32F000079B2 /* NewFeatureViewController.swift */,
+				FE4522961C7DEC9600CA8824 /* WelcomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -691,11 +697,13 @@
 				FE9B74EB1C781F7300467527 /* QRCodeViewController.swift in Sources */,
 				FE21841D1C787B9E00F6681C /* OAuthViewController.swift in Sources */,
 				FEFB25D61C7CA32F000079B2 /* NewFeatureViewController.swift in Sources */,
+				FE4522971C7DEC9600CA8824 /* WelcomeViewController.swift in Sources */,
 				FE7F50D81C736AC600DC4017 /* HomeTableViewController.swift in Sources */,
 				FEFB25C71C7899EE000079B2 /* UserAccount.swift in Sources */,
 				FEFB25C91C789E7F000079B2 /* APINetTools.swift in Sources */,
 				FEDC0E831C7758ED00722C0A /* HomeTitleBtn.swift in Sources */,
 				FE7F50891C73624D00DC4017 /* ViewController.swift in Sources */,
+				FE4522991C7E0AB900CA8824 /* Status.swift in Sources */,
 				FE7F50871C73624D00DC4017 /* AppDelegate.swift in Sources */,
 				FE7F50DA1C736AD400DC4017 /* DiscoverTableViewController.swift in Sources */,
 				FEDC0E8A1C77FEFF00722C0A /* PopoverViewController.swift in Sources */,

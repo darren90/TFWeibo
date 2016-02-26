@@ -120,7 +120,8 @@ class NewFeatureCell:UICollectionViewCell
     }()
     
     func startBtnDidClick(){
-        print("startBtnDidClick")
+//        print("startBtnDidClick")
+        NSNotificationCenter.defaultCenter().postNotificationName(SwitchRootViewControllerKey, object: nil)
     }
     
 }

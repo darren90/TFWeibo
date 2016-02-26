@@ -82,7 +82,6 @@ class UserAccount: NSObject,NSCoding {
         let path = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, .UserDomainMask, true).last!
         let path1 = path as NSString
         let filePath = path1.stringByAppendingPathComponent("account.plist")
-        print("filePath:\(filePath)")
         
         account = NSKeyedUnarchiver.unarchiveObjectWithFile(filePath) as? UserAccount
         
@@ -111,7 +110,7 @@ class UserAccount: NSObject,NSCoding {
      - parameter aCoder:
      */
      
-    func getUserInfo(){
+    func getUserInfo(finished: (account: UserAccount?, error:NSError?)->()){
         let path = "2/users/show.json"
 //        access_token	true	string	采用OAuth授权方式为必填参数，OAuth授权后获得。
 //        uid	false	int64	需要查询的用户ID。
@@ -128,15 +127,14 @@ class UserAccount: NSObject,NSCoding {
                 self.avatar_large = dict["avatar_large"] as? String
                 // 保存用户信息
                 //                self.saveAccount()
-//                finished(account: self, error: nil)
+                finished(account: self, error: nil)
                 return
             }
-            
-//            finish ed(account: nil, error: nil)
-            
-            
+            finished(account: nil, error: nil)
+
             }) { (error) -> Void in
                 print(error)
+                finished(account: nil, error: nil)
         }
         
     }
@@ -147,10 +145,11 @@ class UserAccount: NSObject,NSCoding {
     //将对象写入到文件中
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(access_token, forKey: "access_token")
-        aCoder.encodeObject(expires_in, forKey: "access_token")
+        aCoder.encodeObject(expires_in, forKey: "expires_in")
         aCoder.encodeObject(uid, forKey: "uid")
         aCoder.encodeObject(expires_date, forKey: "expires_date")
-
+        aCoder.encodeObject(screen_name, forKey: "screen_name")
+        aCoder.encodeObject(avatar_large, forKey: "avatar_large")
     }
     
     //从文件读取对象
@@ -159,6 +158,8 @@ class UserAccount: NSObject,NSCoding {
         expires_in = aDecoder.decodeObjectForKey("expires_in") as? NSNumber
         uid = aDecoder.decodeObjectForKey("uid") as? String
         expires_date = aDecoder.decodeObjectForKey("expires_date") as? NSDate
+        screen_name = aDecoder.decodeObjectForKey("screen_name")  as? String
+        avatar_large = aDecoder.decodeObjectForKey("avatar_large")  as? String
 
     }
 }
