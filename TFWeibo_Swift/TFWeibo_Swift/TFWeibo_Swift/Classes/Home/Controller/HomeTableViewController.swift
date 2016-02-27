@@ -20,7 +20,13 @@ class HomeTableViewController: BaseTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: Identifier)
+        tableView.registerClass(StatusCell.self, forCellReuseIdentifier: Identifier)
+        tableView.rowHeight = 300
+        
+        tableView.separatorStyle = .None
+        //预估行高，并且自动调整尺寸，则会自动调整行高
+//        tableView.estimatedRowHeight = 200
+//        tableView.rowHeight = UITableViewAutomaticDimension
         
         //没有登陆，就设置未登录的界面信息
         if !userLogin{
@@ -93,11 +99,14 @@ class HomeTableViewController: BaseTableViewController {
         presentViewController(vc, animated: true, completion: nil)
     }
 
+ 
+    var rowCache:[Int : CGFloat] = [Int : CGFloat]()
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        rowCache.removeAll()
     }
-
 
 }
 
@@ -117,10 +126,30 @@ extension HomeTableViewController
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(Identifier, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(Identifier, forIndexPath: indexPath) as! StatusCell
         let status = dataArray![indexPath.row]
-        cell.textLabel?.text = status.text
+//        cell.textLabel?.text = status.text
+        cell.status = status
         return cell
+    }
+    
+    //缓存cell的行高,利用字典作为容器，key是微博的id，value是
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        //取出 对应行的模型
+        let status = dataArray![indexPath.row]
+        
+        if let heigh = rowCache[status.id]{
+            return heigh
+        }else{
+            //取出 对应行的cell
+            let cell = tableView.dequeueReusableCellWithIdentifier(Identifier) as! StatusCell
+            //不要使用使用一下方法indexPath，获取，在某些版本会有bug
+            
+            let rowHeight = cell.rowHeight(status)
+            rowCache[status.id] = rowHeight
+            return rowHeight
+        }
+        
     }
 }
 

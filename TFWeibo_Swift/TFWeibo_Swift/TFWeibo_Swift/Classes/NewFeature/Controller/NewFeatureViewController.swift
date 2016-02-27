@@ -8,7 +8,7 @@
 
 import UIKit
 
-private let Identifier = "Identifier"
+private let CellIdentifier = "Identifier"
 
 class NewFeatureViewController: UICollectionViewController {
     private let pageCount = 4
@@ -41,7 +41,7 @@ class NewFeatureViewController: UICollectionViewController {
         super.viewDidLoad()
         
         
-        collectionView?.registerClass(NewFeatureCell.self, forCellWithReuseIdentifier: Identifier)
+        collectionView?.registerClass(NewFeatureCell.self, forCellWithReuseIdentifier: CellIdentifier)
     }
     
     
@@ -51,7 +51,7 @@ class NewFeatureViewController: UICollectionViewController {
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Identifier , forIndexPath: indexPath) as! NewFeatureCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(CellIdentifier , forIndexPath: indexPath) as! NewFeatureCell
 //        cell.backgroundColor = UIColor.brownColor()
         cell.imgeIndex = indexPath.item
         return cell

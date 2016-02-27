@@ -31,6 +31,11 @@
 		FE7F50E91C76068A00DC4017 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7F50E81C76068A00DC4017 /* UIView+AutoLayout.swift */; };
 		FE9B74E91C781D0700467527 /* QRCodeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE9B74E81C781D0700467527 /* QRCodeViewController.storyboard */; };
 		FE9B74EB1C781F7300467527 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9B74EA1C781F7300467527 /* QRCodeViewController.swift */; };
+		FEAF35C31C80943700724344 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF35C21C80943700724344 /* User.swift */; };
+		FEAF35C51C814E1B00724344 /* StatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF35C41C814E1B00724344 /* StatusCell.swift */; };
+		FEB855931C8161D600DAE98F /* UILabel+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB855921C8161D600DAE98F /* UILabel+Category.swift */; };
+		FEB855951C8161EA00DAE98F /* UIButton+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB855941C8161EA00DAE98F /* UIButton+Category.swift */; };
+		FEB855971C818CC600DAE98F /* NSDate+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB855961C818CC600DAE98F /* NSDate+Category.swift */; };
 		FEDC0E7F1C7756F200722C0A /* UIBarButtonItem+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDC0E7E1C7756F200722C0A /* UIBarButtonItem+Category.swift */; };
 		FEDC0E831C7758ED00722C0A /* HomeTitleBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDC0E821C7758ED00722C0A /* HomeTitleBtn.swift */; };
 		FEDC0E861C77FA1000722C0A /* PopoverViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEDC0E851C77FA1000722C0A /* PopoverViewController.storyboard */; };
@@ -104,6 +109,11 @@
 		FE7F50E81C76068A00DC4017 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
 		FE9B74E81C781D0700467527 /* QRCodeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QRCodeViewController.storyboard; sourceTree = "<group>"; };
 		FE9B74EA1C781F7300467527 /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		FEAF35C21C80943700724344 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FEAF35C41C814E1B00724344 /* StatusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusCell.swift; sourceTree = "<group>"; };
+		FEB855921C8161D600DAE98F /* UILabel+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Category.swift"; sourceTree = "<group>"; };
+		FEB855941C8161EA00DAE98F /* UIButton+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Category.swift"; sourceTree = "<group>"; };
+		FEB855961C818CC600DAE98F /* NSDate+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Category.swift"; sourceTree = "<group>"; };
 		FEDC0E7E1C7756F200722C0A /* UIBarButtonItem+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Category.swift"; sourceTree = "<group>"; };
 		FEDC0E821C7758ED00722C0A /* HomeTitleBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTitleBtn.swift; sourceTree = "<group>"; };
 		FEDC0E851C77FA1000722C0A /* PopoverViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PopoverViewController.storyboard; sourceTree = "<group>"; };
@@ -264,6 +274,8 @@
 			isa = PBXGroup;
 			children = (
 				FEDC0E7E1C7756F200722C0A /* UIBarButtonItem+Category.swift */,
+				FEB855921C8161D600DAE98F /* UILabel+Category.swift */,
+				FEB855941C8161EA00DAE98F /* UIButton+Category.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -324,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				FE4522981C7E0AB900CA8824 /* Status.swift */,
+				FEAF35C21C80943700724344 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -332,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				FEDC0E821C7758ED00722C0A /* HomeTitleBtn.swift */,
+				FEAF35C41C814E1B00724344 /* StatusCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -442,6 +456,7 @@
 				FE21841E1C788D7300F6681C /* NetWorkTools.swift */,
 				FEFB25C81C789E7F000079B2 /* APINetTools.swift */,
 				FEFB25CB1C79F0C7000079B2 /* String+Category.swift */,
+				FEB855961C818CC600DAE98F /* NSDate+Category.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -695,21 +710,26 @@
 				FE7F50E71C75FE0300DC4017 /* NotLoginView.swift in Sources */,
 				FE7F50E51C75F8F200DC4017 /* BaseTableViewController.swift in Sources */,
 				FE9B74EB1C781F7300467527 /* QRCodeViewController.swift in Sources */,
+				FEAF35C31C80943700724344 /* User.swift in Sources */,
 				FE21841D1C787B9E00F6681C /* OAuthViewController.swift in Sources */,
 				FEFB25D61C7CA32F000079B2 /* NewFeatureViewController.swift in Sources */,
 				FE4522971C7DEC9600CA8824 /* WelcomeViewController.swift in Sources */,
 				FE7F50D81C736AC600DC4017 /* HomeTableViewController.swift in Sources */,
+				FEB855971C818CC600DAE98F /* NSDate+Category.swift in Sources */,
 				FEFB25C71C7899EE000079B2 /* UserAccount.swift in Sources */,
 				FEFB25C91C789E7F000079B2 /* APINetTools.swift in Sources */,
 				FEDC0E831C7758ED00722C0A /* HomeTitleBtn.swift in Sources */,
 				FE7F50891C73624D00DC4017 /* ViewController.swift in Sources */,
 				FE4522991C7E0AB900CA8824 /* Status.swift in Sources */,
+				FEB855931C8161D600DAE98F /* UILabel+Category.swift in Sources */,
 				FE7F50871C73624D00DC4017 /* AppDelegate.swift in Sources */,
 				FE7F50DA1C736AD400DC4017 /* DiscoverTableViewController.swift in Sources */,
 				FEDC0E8A1C77FEFF00722C0A /* PopoverViewController.swift in Sources */,
 				FE7F50D61C736A9F00DC4017 /* MainTabBarController.swift in Sources */,
 				FE7F50E31C74B9C300DC4017 /* NullViewController.swift in Sources */,
 				FEDC0E7F1C7756F200722C0A /* UIBarButtonItem+Category.swift in Sources */,
+				FEAF35C51C814E1B00724344 /* StatusCell.swift in Sources */,
+				FEB855951C8161EA00DAE98F /* UIButton+Category.swift in Sources */,
 				FE7F50DC1C736AF900DC4017 /* MeTableViewController.swift in Sources */,
 				FE21841F1C788D7300F6681C /* NetWorkTools.swift in Sources */,
 				FE7F50E91C76068A00DC4017 /* UIView+AutoLayout.swift in Sources */,
