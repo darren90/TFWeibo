@@ -57,7 +57,6 @@ class OAuthViewController: UIViewController {
 extension OAuthViewController:UIWebViewDelegate
 {
     func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-//        print(request.URL?.absoluteString)
         if ((request.URL?.absoluteString.containsString("code=")) == true){
             let code = request.URL?.query?.substringFromIndex("code=".endIndex)
             print("code=:\(code!)")
