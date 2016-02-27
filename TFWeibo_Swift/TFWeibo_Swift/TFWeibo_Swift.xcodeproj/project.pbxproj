@@ -36,6 +36,8 @@
 		FEB855931C8161D600DAE98F /* UILabel+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB855921C8161D600DAE98F /* UILabel+Category.swift */; };
 		FEB855951C8161EA00DAE98F /* UIButton+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB855941C8161EA00DAE98F /* UIButton+Category.swift */; };
 		FEB855971C818CC600DAE98F /* NSDate+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB855961C818CC600DAE98F /* NSDate+Category.swift */; };
+		FED036931C81D569005D3250 /* ToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED036921C81D569005D3250 /* ToolBar.swift */; };
+		FED036951C81D5B8005D3250 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED036941C81D5B8005D3250 /* TopView.swift */; };
 		FEDC0E7F1C7756F200722C0A /* UIBarButtonItem+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDC0E7E1C7756F200722C0A /* UIBarButtonItem+Category.swift */; };
 		FEDC0E831C7758ED00722C0A /* HomeTitleBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDC0E821C7758ED00722C0A /* HomeTitleBtn.swift */; };
 		FEDC0E861C77FA1000722C0A /* PopoverViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEDC0E851C77FA1000722C0A /* PopoverViewController.storyboard */; };
@@ -114,6 +116,8 @@
 		FEB855921C8161D600DAE98F /* UILabel+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Category.swift"; sourceTree = "<group>"; };
 		FEB855941C8161EA00DAE98F /* UIButton+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Category.swift"; sourceTree = "<group>"; };
 		FEB855961C818CC600DAE98F /* NSDate+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Category.swift"; sourceTree = "<group>"; };
+		FED036921C81D569005D3250 /* ToolBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolBar.swift; sourceTree = "<group>"; };
+		FED036941C81D5B8005D3250 /* TopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 		FEDC0E7E1C7756F200722C0A /* UIBarButtonItem+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Category.swift"; sourceTree = "<group>"; };
 		FEDC0E821C7758ED00722C0A /* HomeTitleBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTitleBtn.swift; sourceTree = "<group>"; };
 		FEDC0E851C77FA1000722C0A /* PopoverViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PopoverViewController.storyboard; sourceTree = "<group>"; };
@@ -346,6 +350,8 @@
 			children = (
 				FEDC0E821C7758ED00722C0A /* HomeTitleBtn.swift */,
 				FEAF35C41C814E1B00724344 /* StatusCell.swift */,
+				FED036921C81D569005D3250 /* ToolBar.swift */,
+				FED036941C81D5B8005D3250 /* TopView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -710,6 +716,7 @@
 				FE7F50E71C75FE0300DC4017 /* NotLoginView.swift in Sources */,
 				FE7F50E51C75F8F200DC4017 /* BaseTableViewController.swift in Sources */,
 				FE9B74EB1C781F7300467527 /* QRCodeViewController.swift in Sources */,
+				FED036951C81D5B8005D3250 /* TopView.swift in Sources */,
 				FEAF35C31C80943700724344 /* User.swift in Sources */,
 				FE21841D1C787B9E00F6681C /* OAuthViewController.swift in Sources */,
 				FEFB25D61C7CA32F000079B2 /* NewFeatureViewController.swift in Sources */,
@@ -734,6 +741,7 @@
 				FE21841F1C788D7300F6681C /* NetWorkTools.swift in Sources */,
 				FE7F50E91C76068A00DC4017 /* UIView+AutoLayout.swift in Sources */,
 				FEFB25CC1C79F0C7000079B2 /* String+Category.swift in Sources */,
+				FED036931C81D569005D3250 /* ToolBar.swift in Sources */,
 				FE7F50DE1C736B0500DC4017 /* MessageTableViewController.swift in Sources */,
 				FEDC0E881C77FDFF00722C0A /* PopoverPresentationController.swift in Sources */,
 			);
