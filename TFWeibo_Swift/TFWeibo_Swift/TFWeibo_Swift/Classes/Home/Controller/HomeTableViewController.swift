@@ -37,12 +37,43 @@ class HomeTableViewController: BaseTableViewController {
         
         //获取微博数据
         getStatusData()
+        
+//        refreshControl = UIRefreshControl()
+//        let refreshView = UIView()
+//        refreshView.backgroundColor = UIColor.brownColor()
+//        refreshView.frame = CGRect(x: 0, y: 0, width: 375, height: 60)
+//        refreshControl?.addSubview(refreshView)
+//        refreshControl?.addTarget(self, action: "getStatusData", forControlEvents: .ValueChanged)
+        
+        refreshControl = RefreshViewControl()
+        refreshControl?.addTarget(self, action: "getStatusData", forControlEvents: .ValueChanged)
     }
     
-    private func getStatusData(){
-        Status.getStatus { (models, error) -> () in
+    
+    //标记，表明上拉还是下拉
+    var pullRefrefshFlag = false
+    
+    func getStatusData(){
+        var since_id = dataArray?.first?.id ?? 0
+        var max_id = 0
+        if pullRefrefshFlag {
+            since_id = 0
+            max_id = dataArray?.last?.id ?? 0
+        }
+        
+        Status.getStatus(since_id,max_id: max_id){ (models, error) -> () in
+            // 接收刷新
+            self.refreshControl?.endRefreshing()
+            
             if models != nil {
-                self.dataArray = models
+                
+                if since_id > 0{//下拉刷新，将获取到的数据，数据进行拼接
+                    self.dataArray = models! + self.dataArray!
+                }else if max_id > 0 {//上拉刷新
+                    self.dataArray = self.dataArray! + models!
+                } else {
+                    self.dataArray = models
+                }
 //                self.tableView.reloadData()
             }
         }
@@ -130,6 +161,14 @@ extension HomeTableViewController
         let status = dataArray![indexPath.row]
 //        cell.textLabel?.text = status.text
         cell.status = status
+        
+        //判断是否滚到了最后一个cell
+        let count = dataArray?.count ?? 0
+        if indexPath.row == (count - 1) {
+//            print("load more more");
+            pullRefrefshFlag = true
+            getStatusData()
+        }
         return cell
     }
     

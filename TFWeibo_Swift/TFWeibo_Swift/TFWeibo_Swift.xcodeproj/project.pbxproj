@@ -13,6 +13,8 @@
 		FE21841F1C788D7300F6681C /* NetWorkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE21841E1C788D7300F6681C /* NetWorkTools.swift */; };
 		FE4522971C7DEC9600CA8824 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4522961C7DEC9600CA8824 /* WelcomeViewController.swift */; };
 		FE4522991C7E0AB900CA8824 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4522981C7E0AB900CA8824 /* Status.swift */; };
+		FE73A33E1C82A37100A74B52 /* RefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE73A33D1C82A37100A74B52 /* RefreshView.xib */; };
+		FE73A3401C82A4DA00A74B52 /* RefreshViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE73A33F1C82A4DA00A74B52 /* RefreshViewControl.swift */; };
 		FE7F50871C73624D00DC4017 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7F50861C73624D00DC4017 /* AppDelegate.swift */; };
 		FE7F50891C73624D00DC4017 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7F50881C73624D00DC4017 /* ViewController.swift */; };
 		FE7F508C1C73624D00DC4017 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE7F508A1C73624D00DC4017 /* Main.storyboard */; };
@@ -89,6 +91,8 @@
 		FE21841E1C788D7300F6681C /* NetWorkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkTools.swift; sourceTree = "<group>"; };
 		FE4522961C7DEC9600CA8824 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		FE4522981C7E0AB900CA8824 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		FE73A33D1C82A37100A74B52 /* RefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RefreshView.xib; sourceTree = "<group>"; };
+		FE73A33F1C82A4DA00A74B52 /* RefreshViewControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshViewControl.swift; sourceTree = "<group>"; };
 		FE7F50831C73624D00DC4017 /* TFWeibo_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFWeibo_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7F50861C73624D00DC4017 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE7F50881C73624D00DC4017 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -358,6 +362,8 @@
 				FED036921C81D569005D3250 /* ToolBar.swift */,
 				FED036941C81D5B8005D3250 /* TopView.swift */,
 				FED036961C81D949005D3250 /* PictureView.swift */,
+				FE73A33D1C82A37100A74B52 /* RefreshView.xib */,
+				FE73A33F1C82A4DA00A74B52 /* RefreshViewControl.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -642,6 +648,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE73A33E1C82A37100A74B52 /* RefreshView.xib in Resources */,
 				FE7F508E1C73624D00DC4017 /* Assets.xcassets in Resources */,
 				FE7F508C1C73624D00DC4017 /* Main.storyboard in Resources */,
 				FEDC0E861C77FA1000722C0A /* PopoverViewController.storyboard in Resources */,
@@ -733,6 +740,7 @@
 				FEB855971C818CC600DAE98F /* NSDate+Category.swift in Sources */,
 				FEFB25C71C7899EE000079B2 /* UserAccount.swift in Sources */,
 				FEFB25C91C789E7F000079B2 /* APINetTools.swift in Sources */,
+				FE73A3401C82A4DA00A74B52 /* RefreshViewControl.swift in Sources */,
 				FEDC0E831C7758ED00722C0A /* HomeTitleBtn.swift in Sources */,
 				FE7F50891C73624D00DC4017 /* ViewController.swift in Sources */,
 				FE4522991C7E0AB900CA8824 /* Status.swift in Sources */,

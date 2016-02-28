@@ -78,7 +78,7 @@ class Status: NSObject {
     }
     
     
-    class func getStatus(finished:(models:[Status]?,error:Any?)->()){
+    class func getStatus(since_id:Int,max_id:Int ,finished:(models:[Status]?,error:Any?)->()){
         let path = "2/statuses/friends_timeline.json"
         
 //        access_token	true	string	采用OAuth授权方式为必填参数，OAuth授权后获得。
@@ -86,7 +86,16 @@ class Status: NSObject {
 //        max_id	false	int64	若指定此参数，则返回ID小于或等于max_id的微博，默认为0。
 //        count	false	int	单页返回的记录条数，最大不超过100，默认为20。
 //        page	false	int	返回结果的页码，默认为1。
-        let params = ["access_token":UserAccount.getAccount()!.access_token!]
+        
+        var params = ["access_token":UserAccount.getAccount()!.access_token!]
+        //下拉刷新
+        if since_id > 0 {
+            params["since_id"] = "\(since_id)"
+        }
+        
+        if max_id > 0 {
+             params["max_id"] = "\(max_id - 1)"
+        }
         
         APINetTools.get(path, params: params, success: { (json) -> Void in
 //            print(json)
@@ -104,6 +113,12 @@ class Status: NSObject {
     
     
     class func cacheStatusImages(list:[Status],finished:(models:[Status]?,error:Any?)->()){
+        
+        if list.count == 0 {
+            finished(models: list, error: nil)
+            return
+        }
+        
         //创建一个组
         let group = dispatch_group_create()
         
