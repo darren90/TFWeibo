@@ -37,10 +37,10 @@ class StatusCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         //初始化界面
-        addSubViews()
+        addSelfSubViews()
     }
     
-    private func addSubViews(){
+    func addSelfSubViews(){
         let w = UIScreen.mainScreen().bounds.width
 
         contentView.addSubview(topView)
@@ -82,9 +82,9 @@ class StatusCell: UITableViewCell {
     }
     
     //懒加载，设置子控件
-    private lazy var topView:TopView = TopView()
+    lazy var topView:TopView = TopView()
         
-    private lazy var contentLabel:UILabel = {
+    lazy var contentLabel:UILabel = {
         let label = UILabel()
         label.textColor = UIColor.darkGrayColor()
         label.font = UIFont.systemFontOfSize(15)
@@ -93,10 +93,10 @@ class StatusCell: UITableViewCell {
         return label
     }()
     
-    private lazy var toolBar:ToolBar = ToolBar()
+    lazy var toolBar:ToolBar = ToolBar()
     
     //图片
-    private lazy var pictureView :PictureView = PictureView()
+    lazy var pictureView :PictureView = PictureView()
     
 }
 

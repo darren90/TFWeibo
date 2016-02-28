@@ -20,7 +20,7 @@ class HomeTableViewController: BaseTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.registerClass(StatusCell.self, forCellReuseIdentifier: Identifier)
+        tableView.registerClass(StatusForwardCell.self, forCellReuseIdentifier: Identifier)
         tableView.rowHeight = 300
         
         tableView.separatorStyle = .None

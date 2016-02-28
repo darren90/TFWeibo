@@ -42,10 +42,10 @@ class WelcomeViewController: UIViewController {
         super.viewDidAppear(animated)
         
         bottomCons?.constant = -UIScreen.mainScreen().bounds.height -  bottomCons!.constant
-        print(-UIScreen.mainScreen().bounds.height)
-        print(bottomCons!.constant)
+//        print(-UIScreen.mainScreen().bounds.height)
+//        print(bottomCons!.constant)
         // -736.0 + 586.0 = -150.0
-        print(-UIScreen.mainScreen().bounds.height -  bottomCons!.constant)
+//        print(-UIScreen.mainScreen().bounds.height -  bottomCons!.constant)
         
         // 3.执行动画
         UIView.animateWithDuration(2, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 1, options: UIViewAnimationOptions(rawValue: 0), animations: { () -> Void in
@@ -57,7 +57,7 @@ class WelcomeViewController: UIViewController {
                 UIView.animateWithDuration( 2.0, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 1, options: UIViewAnimationOptions(rawValue: 0), animations: { () -> Void in
                     self.messageLabel.alpha = 1.0
                     }, completion: { (_) -> Void in
-                        print("OK")
+//                        print("OK")
                         //去主页
                         NSNotificationCenter.defaultCenter().postNotificationName(SwitchRootViewControllerKey, object: nil)
                 })

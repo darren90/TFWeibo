@@ -18,7 +18,7 @@ class UserAccount: NSObject,NSCoding {
     var expires_in:NSNumber?{
         didSet{
             expires_date = NSDate(timeIntervalSinceNow: (expires_in?.doubleValue)!)
-            print(expires_date)
+//            print(expires_date)
         }
     }
     

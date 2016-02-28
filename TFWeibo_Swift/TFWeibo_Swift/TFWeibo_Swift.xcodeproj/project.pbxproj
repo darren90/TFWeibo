@@ -39,6 +39,7 @@
 		FED036931C81D569005D3250 /* ToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED036921C81D569005D3250 /* ToolBar.swift */; };
 		FED036951C81D5B8005D3250 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED036941C81D5B8005D3250 /* TopView.swift */; };
 		FED036971C81D949005D3250 /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED036961C81D949005D3250 /* PictureView.swift */; };
+		FED036991C81E377005D3250 /* StatusForwardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED036981C81E377005D3250 /* StatusForwardCell.swift */; };
 		FEDC0E7F1C7756F200722C0A /* UIBarButtonItem+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDC0E7E1C7756F200722C0A /* UIBarButtonItem+Category.swift */; };
 		FEDC0E831C7758ED00722C0A /* HomeTitleBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDC0E821C7758ED00722C0A /* HomeTitleBtn.swift */; };
 		FEDC0E861C77FA1000722C0A /* PopoverViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEDC0E851C77FA1000722C0A /* PopoverViewController.storyboard */; };
@@ -120,6 +121,7 @@
 		FED036921C81D569005D3250 /* ToolBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolBar.swift; sourceTree = "<group>"; };
 		FED036941C81D5B8005D3250 /* TopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 		FED036961C81D949005D3250 /* PictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = "<group>"; };
+		FED036981C81E377005D3250 /* StatusForwardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusForwardCell.swift; sourceTree = "<group>"; };
 		FEDC0E7E1C7756F200722C0A /* UIBarButtonItem+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Category.swift"; sourceTree = "<group>"; };
 		FEDC0E821C7758ED00722C0A /* HomeTitleBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTitleBtn.swift; sourceTree = "<group>"; };
 		FEDC0E851C77FA1000722C0A /* PopoverViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PopoverViewController.storyboard; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 			children = (
 				FEDC0E821C7758ED00722C0A /* HomeTitleBtn.swift */,
 				FEAF35C41C814E1B00724344 /* StatusCell.swift */,
+				FED036981C81E377005D3250 /* StatusForwardCell.swift */,
 				FED036921C81D569005D3250 /* ToolBar.swift */,
 				FED036941C81D5B8005D3250 /* TopView.swift */,
 				FED036961C81D949005D3250 /* PictureView.swift */,
@@ -717,6 +720,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE7F50E71C75FE0300DC4017 /* NotLoginView.swift in Sources */,
+				FED036991C81E377005D3250 /* StatusForwardCell.swift in Sources */,
 				FE7F50E51C75F8F200DC4017 /* BaseTableViewController.swift in Sources */,
 				FE9B74EB1C781F7300467527 /* QRCodeViewController.swift in Sources */,
 				FED036971C81D949005D3250 /* PictureView.swift in Sources */,

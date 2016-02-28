@@ -116,15 +116,7 @@ class QRCodeViewController: UIViewController,UITabBarDelegate {
     }()
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
+   
 
     func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
         //1：修改容器高度
