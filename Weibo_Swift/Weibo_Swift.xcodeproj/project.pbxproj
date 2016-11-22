@@ -19,6 +19,7 @@
 		FE69C50F1DE49A69002AA9E5 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69C50E1DE49A69002AA9E5 /* DiscoverViewController.swift */; };
 		FE69C5111DE49A77002AA9E5 /* MesssageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69C5101DE49A77002AA9E5 /* MesssageViewController.swift */; };
 		FE69C5131DE49A83002AA9E5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69C5121DE49A83002AA9E5 /* ProfileViewController.swift */; };
+		FE69C5161DE4A92A002AA9E5 /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = FE69C5151DE4A92A002AA9E5 /* MainVCSettings.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		FE69C50E1DE49A69002AA9E5 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		FE69C5101DE49A77002AA9E5 /* MesssageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MesssageViewController.swift; sourceTree = "<group>"; };
 		FE69C5121DE49A83002AA9E5 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		FE69C5151DE4A92A002AA9E5 /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				FE69C4DD1DE49463002AA9E5 /* Assets.xcassets */,
 				FE69C5041DE49848002AA9E5 /* Classes */,
 				FE69C4DF1DE49463002AA9E5 /* LaunchScreen.storyboard */,
+				FE69C5141DE4A92A002AA9E5 /* Resource */,
 				FE69C4E21DE49463002AA9E5 /* Info.plist */,
 			);
 			path = Weibo_Swift;
@@ -186,6 +189,14 @@
 				FE69C5121DE49A83002AA9E5 /* ProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		FE69C5141DE4A92A002AA9E5 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				FE69C5151DE4A92A002AA9E5 /* MainVCSettings.json */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +309,7 @@
 			files = (
 				FE69C4E11DE49463002AA9E5 /* LaunchScreen.storyboard in Resources */,
 				FE69C4DE1DE49463002AA9E5 /* Assets.xcassets in Resources */,
+				FE69C5161DE4A92A002AA9E5 /* MainVCSettings.json in Resources */,
 				FE69C4DC1DE49463002AA9E5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -25,21 +25,46 @@ class MainTabBarController: UITabBarController {
         addChildViewController(vc: HomeViewController(), title: "我", imgaeName: "tabbar_profile")
     }
     
+    
     //Swift支持方法的重载
     //方法的重载：方法名相同，---》1：参数类型不同，2：参数的个数不同
     //private 私有的方法，只能在当前文件中访问
-    private func addChildViewController(vc: UIViewController ,title:String,imgaeName:String) {
+    private func addChildViewController(vcName: String ,title:String,imgaeName:String) {
         //根据字符串获取对应的class，在Swift中不能直接使用
         
         //Swift中命名空间的概念
         //
-        let nameSpage = Bundle.main.infoDictionary!["CFBundleExecutable"] as? String
-        guard let childVc = NSClassFromString("HomeViewController") else {
-            print(HomeViewController())
-            print("没有获取到对应的class:\(nameSpage)")
+        guard let nameSpage = Bundle.main.infoDictionary!["CFBundleExecutable"] as? String else {
+            print("没有命名空间")
             return
         }
         
+        guard let childVcClass = NSClassFromString(nameSpage + "." + vcName) else {
+            print("没有获取到对应的class")
+            return
+        }
+        
+        guard let childVcType = childVcClass as? UIViewController.Type else {
+            print("没有得到对应控制器的类型")
+            return
+        }
+        
+        //根据类型创建对应的对象
+        let vc = childVcType.init()
+        
+        //创建子控制器
+        vc.title = title
+        vc.tabBarItem.image = UIImage(named: imgaeName)
+        vc.tabBarItem.selectedImage = UIImage(named: "\(imgaeName)_highlighted")
+        let vcNav = UINavigationController(rootViewController: vc)
+        addChildViewController(vcNav)
+    }
+    
+    //Swift支持方法的重载
+    //方法的重载：方法名相同，---》1：参数类型不同，2：参数的个数不同
+    //private 私有的方法，只能在当前文件中访问
+    private func addChildViewController(vc: UIViewController ,title:String,imgaeName:String) {
+    
         //创建子控制器
         vc.title = title
         vc.tabBarItem.image = UIImage(named: imgaeName)
