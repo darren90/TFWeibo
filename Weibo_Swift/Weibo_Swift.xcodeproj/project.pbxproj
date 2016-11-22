@@ -17,7 +17,7 @@
 		FE69C50B1DE49989002AA9E5 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69C50A1DE49989002AA9E5 /* MainTabBarController.swift */; };
 		FE69C50D1DE49A58002AA9E5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69C50C1DE49A58002AA9E5 /* HomeViewController.swift */; };
 		FE69C50F1DE49A69002AA9E5 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69C50E1DE49A69002AA9E5 /* DiscoverViewController.swift */; };
-		FE69C5111DE49A77002AA9E5 /* MesssageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69C5101DE49A77002AA9E5 /* MesssageViewController.swift */; };
+		FE69C5111DE49A77002AA9E5 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69C5101DE49A77002AA9E5 /* MessageViewController.swift */; };
 		FE69C5131DE49A83002AA9E5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69C5121DE49A83002AA9E5 /* ProfileViewController.swift */; };
 		FE69C5161DE4A92A002AA9E5 /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = FE69C5151DE4A92A002AA9E5 /* MainVCSettings.json */; };
 /* End PBXBuildFile section */
@@ -56,7 +56,7 @@
 		FE69C50A1DE49989002AA9E5 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		FE69C50C1DE49A58002AA9E5 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FE69C50E1DE49A69002AA9E5 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
-		FE69C5101DE49A77002AA9E5 /* MesssageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MesssageViewController.swift; sourceTree = "<group>"; };
+		FE69C5101DE49A77002AA9E5 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		FE69C5121DE49A83002AA9E5 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		FE69C5151DE4A92A002AA9E5 /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,7 +178,7 @@
 		FE69C5081DE49848002AA9E5 /* Message */ = {
 			isa = PBXGroup;
 			children = (
-				FE69C5101DE49A77002AA9E5 /* MesssageViewController.swift */,
+				FE69C5101DE49A77002AA9E5 /* MessageViewController.swift */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -335,7 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE69C5111DE49A77002AA9E5 /* MesssageViewController.swift in Sources */,
+				FE69C5111DE49A77002AA9E5 /* MessageViewController.swift in Sources */,
 				FE69C4D91DE49463002AA9E5 /* ViewController.swift in Sources */,
 				FE69C4D71DE49463002AA9E5 /* AppDelegate.swift in Sources */,
 				FE69C50B1DE49989002AA9E5 /* MainTabBarController.swift in Sources */,

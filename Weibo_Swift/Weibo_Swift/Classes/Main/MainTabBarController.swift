@@ -19,10 +19,54 @@ class MainTabBarController: UITabBarController {
         tabBar.tintColor = UIColor.orange
         
         //创建子控制器
-        addChildViewController(vc: HomeViewController(), title: "首页", imgaeName: "tabbar_home")
-        addChildViewController(vc: MesssageViewController(), title: "消息", imgaeName: "tabbar_message_center")
-        addChildViewController(vc: DiscoverViewController(), title: "发现", imgaeName: "tabbar_discover")
-        addChildViewController(vc: HomeViewController(), title: "我", imgaeName: "tabbar_profile")
+//        addChildViewController(vc: HomeViewController(), title: "首页", imgaeName: "tabbar_home")
+//        addChildViewController(vc: MessageViewController(), title: "消息", imgaeName: "tabbar_message_center")
+//        addChildViewController(vc: DiscoverViewController(), title: "发现", imgaeName: "tabbar_discover")
+//        addChildViewController(vc: HomeViewController(), title: "我", imgaeName: "tabbar_profile")
+        
+        
+        //从json文件中读取控制器
+        guard let jsonPath = Bundle.main.path(forResource: "MainVCSettings.json", ofType: nil) else {
+            print("没有对象的文件路径")
+            return;
+        }
+        
+        //有json，读取json文件中的内容
+        guard let jsonData = NSData(contentsOfFile: jsonPath) else{
+            print("json文件中的数据为空")
+            return
+        }
+        
+        //将数据转成数组
+        guard let anyObj = try? JSONSerialization.jsonObject(with: jsonData as Data, options: .mutableContainers) else{
+            return
+        }
+        
+        guard let dictArray = anyObj as? [[String :AnyObject]] else{
+            return
+        }
+        
+        //遍历字段，获取对应的信息，
+        for dict in dictArray {
+            //获取控制器对应的字符串
+//            print(dict)
+            guard let vcName = dict["vcName"] as? String else{
+                continue
+            }
+            
+            //获取控制器的title
+            guard let title = dict["title"] as? String else{
+                continue
+            }
+            
+            //获取控制器显示的图标
+            guard let imageName = dict["imageName"] as? String else{
+                continue
+            }
+            
+            addChildViewController(vcName: vcName, title: title, imgaeName: imageName)
+        }
+        
     }
     
     
