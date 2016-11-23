@@ -17,22 +17,12 @@ class MainTabBarController: UITabBarController {
         
         //默认的颜色
         tabBar.tintColor = UIColor.orange
-    
-        
-    }
-    
-    
-    
-    
-    
-    
-    func addChidVcWithCodeNOUse() {
         
         //创建子控制器
-        //        addChildViewController(vc: HomeViewController(), title: "首页", imgaeName: "tabbar_home")
-        //        addChildViewController(vc: MessageViewController(), title: "消息", imgaeName: "tabbar_message_center")
-        //        addChildViewController(vc: DiscoverViewController(), title: "发现", imgaeName: "tabbar_discover")
-        //        addChildViewController(vc: HomeViewController(), title: "我", imgaeName: "tabbar_profile")
+//        addChildViewController(vc: HomeViewController(), title: "首页", imgaeName: "tabbar_home")
+//        addChildViewController(vc: MessageViewController(), title: "消息", imgaeName: "tabbar_message_center")
+//        addChildViewController(vc: DiscoverViewController(), title: "发现", imgaeName: "tabbar_discover")
+//        addChildViewController(vc: HomeViewController(), title: "我", imgaeName: "tabbar_profile")
         
         
         //从json文件中读取控制器
@@ -49,8 +39,8 @@ class MainTabBarController: UITabBarController {
         
         //如果调用某一个方法的时候，最后又throws，说明该方法，会抛出异常，如果一个方法会抛出异常，那么需要对该异常就行处理
         /*
-         在Swift中提供了三种的异常处理方式
-         方式一：try方式：程序猿手动处理异常 ，返回的是固定类型,-- 不常用
+            在Swift中提供了三种的异常处理方式
+            方式一：try方式：程序猿手动处理异常 ，返回的是固定类型,-- 不常用
          */
         do {
             try JSONSerialization.jsonObject(with: jsonData as Data, options: .mutableContainers)
@@ -59,15 +49,15 @@ class MainTabBarController: UITabBarController {
         }
         
         /*
-         方式二：try？方式，系统帮助我们处理异常，如果出现异常，则返回nil，如果没有异常，则返回对应的对象。 比较常用，返回的是可选类型 -- 比较常用
+            方式二：try？方式，系统帮助我们处理异常，如果出现异常，则返回nil，如果没有异常，则返回对应的对象。 比较常用，返回的是可选类型 -- 比较常用
          */
         
-        try? JSONSerialization.jsonObject(with: jsonData as Data, options: .mutableContainers)
+         try? JSONSerialization.jsonObject(with: jsonData as Data, options: .mutableContainers)
         
         
         /*
-         方式三：try！直接告诉系统，该方法没有异常，但是如果该方法出现了异常，那么长须会报错，--- 不常用
-         */
+            方式三：try！直接告诉系统，该方法没有异常，但是如果该方法出现了异常，那么长须会报错，--- 不常用
+        */
         
         
         //将数据转成数组
@@ -82,7 +72,7 @@ class MainTabBarController: UITabBarController {
         //遍历字段，获取对应的信息，
         for dict in dictArray {
             //获取控制器对应的字符串
-            //            print(dict)
+//            print(dict)
             guard let vcName = dict["vcName"] as? String else{
                 continue
             }
@@ -99,6 +89,7 @@ class MainTabBarController: UITabBarController {
             
             addChildViewController(vcName: vcName, title: title, imgaeName: imageName)
         }
+        
     }
     
     
