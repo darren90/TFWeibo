@@ -10,6 +10,17 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
 
+    //<ARK:-- 懒加载属性
+    lazy var imageNames = ["tabbar_home","tabbar_message_center","","tabbar_discover","tabbar_profile"]
+    
+    lazy var composeBtn:UIButton = UIButton()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setUpImage()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,13 +29,15 @@ class MainTabBarController: UITabBarController {
         //默认的颜色
         tabBar.tintColor = UIColor.orange
     
-        
+       setUpComposeBtn()
     }
     
     
     
     
     
+    
+    //MARK:-- NO Use
     
     func addChidVcWithCodeNOUse() {
         
@@ -166,3 +179,43 @@ class MainTabBarController: UITabBarController {
     */
 
 }
+
+//设置UI界面
+extension MainTabBarController{
+    ///设置发布按钮
+    func setUpComposeBtn()  {
+        //
+        tabBar.addSubview(composeBtn)
+        composeBtn.setBackgroundImage(UIImage(named: "tabbar_compose_button"), for: .normal)
+        composeBtn.setBackgroundImage(UIImage(named: "tabbar_compose_button_highlighted"), for: .highlighted)
+        composeBtn.setImage(UIImage(named: "tabbar_compose_icon_add"), for: .normal)
+        composeBtn.setImage(UIImage(named: "tabbar_compose_icon_add_highlighted"), for: .normal)
+        //自动决定尺寸
+        composeBtn.sizeToFit()
+        composeBtn.center = CGPoint(x: tabBar.center.x, y: tabBar.bounds.size.height * 0.5)
+    }
+    
+    func setUpImage()  {
+        for i in 0..<tabBar.items!.count {
+            //获取item
+            let item = tabBar.items![i]
+            
+            if i == 2 {
+                item.isEnabled = false
+                continue
+            }
+            
+            let imgName = imageNames[i] + "_highlighted"
+            item.selectedImage = UIImage(named: imgName)
+        }
+
+    }
+    
+}
+
+
+
+
+
+
+
