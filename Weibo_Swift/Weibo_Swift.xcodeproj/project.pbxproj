@@ -26,6 +26,9 @@
 		FE69C55A1DE5EEE7002AA9E5 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE69C5591DE5EEE7002AA9E5 /* Profile.storyboard */; };
 		FEC5F7F81DE5F0FA00AEF3D0 /* SendWeibo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEC5F7F61DE5F0FA00AEF3D0 /* SendWeibo.storyboard */; };
 		FEC5F7FC1DE72D9700AEF3D0 /* UIButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC5F7FB1DE72D9700AEF3D0 /* UIButton-Extension.swift */; };
+		FEC5F7FF1DE73FE700AEF3D0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC5F7FE1DE73FE700AEF3D0 /* BaseViewController.swift */; };
+		FEC5F8011DE747A800AEF3D0 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC5F8001DE747A800AEF3D0 /* VisitorView.swift */; };
+		FEC5F8031DE747B000AEF3D0 /* VisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEC5F8021DE747B000AEF3D0 /* VisitorView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		FE69C5591DE5EEE7002AA9E5 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = ../../Profile.storyboard; sourceTree = "<group>"; };
 		FEC5F7F71DE5F0FA00AEF3D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SendWeibo.storyboard; sourceTree = "<group>"; };
 		FEC5F7FB1DE72D9700AEF3D0 /* UIButton-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton-Extension.swift"; sourceTree = "<group>"; };
+		FEC5F7FE1DE73FE700AEF3D0 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		FEC5F8001DE747A800AEF3D0 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
+		FEC5F8021DE747B000AEF3D0 /* VisitorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisitorView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +192,7 @@
 		FE69C5071DE49848002AA9E5 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				FEC5F7FD1DE73FCE00AEF3D0 /* Visitor */,
 				FE69C50A1DE49989002AA9E5 /* MainTabBarController.swift */,
 			);
 			path = Main;
@@ -231,6 +238,16 @@
 				FEC5F7FB1DE72D9700AEF3D0 /* UIButton-Extension.swift */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		FEC5F7FD1DE73FCE00AEF3D0 /* Visitor */ = {
+			isa = PBXGroup;
+			children = (
+				FEC5F7FE1DE73FE700AEF3D0 /* BaseViewController.swift */,
+				FEC5F8001DE747A800AEF3D0 /* VisitorView.swift */,
+				FEC5F8021DE747B000AEF3D0 /* VisitorView.xib */,
+			);
+			path = Visitor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE69C4E11DE49463002AA9E5 /* LaunchScreen.storyboard in Resources */,
+				FEC5F8031DE747B000AEF3D0 /* VisitorView.xib in Resources */,
 				FE69C5531DE5EE6F002AA9E5 /* Home.storyboard in Resources */,
 				FE69C55A1DE5EEE7002AA9E5 /* Profile.storyboard in Resources */,
 				FE69C4DE1DE49463002AA9E5 /* Assets.xcassets in Resources */,
@@ -379,7 +397,9 @@
 				FE69C4D71DE49463002AA9E5 /* AppDelegate.swift in Sources */,
 				FE69C50B1DE49989002AA9E5 /* MainTabBarController.swift in Sources */,
 				FE69C5131DE49A83002AA9E5 /* ProfileViewController.swift in Sources */,
+				FEC5F7FF1DE73FE700AEF3D0 /* BaseViewController.swift in Sources */,
 				FE69C50D1DE49A58002AA9E5 /* HomeViewController.swift in Sources */,
+				FEC5F8011DE747A800AEF3D0 /* VisitorView.swift in Sources */,
 				FE69C50F1DE49A69002AA9E5 /* DiscoverViewController.swift in Sources */,
 				FEC5F7FC1DE72D9700AEF3D0 /* UIButton-Extension.swift in Sources */,
 			);

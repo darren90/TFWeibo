@@ -180,7 +180,17 @@ class MainTabBarController: UITabBarController {
 
 }
 
-//设置UI界面
+
+//保证不同的分类做不同的事情
+
+//MARK: -- 设置事件监听
+extension MainTabBarController{
+    func composeBtnClick(){
+        print("---dfs--")
+    }
+}
+
+//MARK: --设置UI界面
 extension MainTabBarController{
     ///设置发布按钮
     func setUpComposeBtn()  {
@@ -193,6 +203,15 @@ extension MainTabBarController{
         //自动决定尺寸
         composeBtn.sizeToFit()
         composeBtn.center = CGPoint(x: tabBar.center.x, y: tabBar.bounds.size.height * 0.5)
+        
+        //监听事件
+        //Selector的两种写法：1：Selector("composeBtnClick") 2:"composeBtnClick"
+        //事件监听，本质是发送消息，但是发送消息是OC的特性 -- 将方法包装成@SEL指针，---》类中查找方法列表，根据@SEL找到imp指（函数指针） ---》执行函数
+        //如果Swift中将函数声明为private，那么函数就不会添加到方法列表中
+        //在private前面加上@objc，那么该方法一人会被添加到方法列表中
+        //@objc private func composeBtnClick(){  }
+        
+        composeBtn.addTarget(self, action: #selector(MainTabBarController.composeBtnClick), for: .touchUpInside)
     }
     
     func setUpImage()  {
