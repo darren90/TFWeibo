@@ -13,7 +13,7 @@ class MainTabBarController: UITabBarController {
     //<ARK:-- 懒加载属性
     lazy var imageNames = ["tabbar_home","tabbar_message_center","","tabbar_discover","tabbar_profile"]
     
-    lazy var composeBtn:UIButton = UIButton()
+    lazy var composeBtn:UIButton = UIButton(imageName: "tabbar_compose_icon_add", bgImageName: "tabbar_compose_button")//UIButton.creeateButton(imageName: "tabbar_compose_icon_add", bgImageName: "tabbar_compose_button")
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -186,10 +186,10 @@ extension MainTabBarController{
     func setUpComposeBtn()  {
         //
         tabBar.addSubview(composeBtn)
-        composeBtn.setBackgroundImage(UIImage(named: "tabbar_compose_button"), for: .normal)
-        composeBtn.setBackgroundImage(UIImage(named: "tabbar_compose_button_highlighted"), for: .highlighted)
-        composeBtn.setImage(UIImage(named: "tabbar_compose_icon_add"), for: .normal)
-        composeBtn.setImage(UIImage(named: "tabbar_compose_icon_add_highlighted"), for: .normal)
+//        composeBtn.setBackgroundImage(UIImage(named: "tabbar_compose_button"), for: .normal)
+//        composeBtn.setBackgroundImage(UIImage(named: "tabbar_compose_button_highlighted"), for: .highlighted)
+//        composeBtn.setImage(UIImage(named: "tabbar_compose_icon_add"), for: .normal)
+//        composeBtn.setImage(UIImage(named: "tabbar_compose_icon_add_highlighted"), for: .normal)
         //自动决定尺寸
         composeBtn.sizeToFit()
         composeBtn.center = CGPoint(x: tabBar.center.x, y: tabBar.bounds.size.height * 0.5)
