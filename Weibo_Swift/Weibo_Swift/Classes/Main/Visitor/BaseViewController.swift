@@ -15,7 +15,7 @@ class BaseViewController: UITableViewController {
     
     //MARK: -- 定义变量
     
-    var isLogin:Bool = false
+    var isLogin:Bool = true
     
     override func loadView() {
         isLogin ? super.loadView() : setupVisitorView()
@@ -53,6 +53,10 @@ extension BaseViewController{
     func setupVisitorView(){
 //        visitorView.backgroundColor = UIColor.brown
         view = visitorView
+        
+        visitorView.rigisterBtn.addTarget(self, action: #selector(BaseViewController.registerClick), for: .touchUpInside)
+        visitorView.loginBtn.addTarget(self, action: #selector(BaseViewController.loginClick), for: .touchUpInside)
+
     }
     
     // MARK:--
@@ -62,7 +66,6 @@ extension BaseViewController{
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "登陆", style: .plain, target: self, action: #selector(BaseViewController.loginClick))
 
     }
-    
     
     func registerClick()  {
         print("---registerClick---")

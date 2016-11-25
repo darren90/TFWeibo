@@ -19,6 +19,8 @@ class VisitorView: UIView {
     @IBOutlet weak var rotationView: UIImageView!
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var tipLabel: UILabel!
+    @IBOutlet weak var rigisterBtn: UIButton!
+    @IBOutlet weak var loginBtn: UIButton!
     
     
     // MARK:-- 自定义函数
@@ -45,6 +47,8 @@ class VisitorView: UIView {
         
         //核心动画，进入后台，就不执行了
     }
+    
+    
     
 }
 

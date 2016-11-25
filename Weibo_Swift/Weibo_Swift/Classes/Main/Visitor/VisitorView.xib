@@ -78,6 +78,8 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="iconView" destination="fMV-fD-b2p" id="iBf-cS-42w"/>
+                <outlet property="loginBtn" destination="xSQ-nx-LlG" id="nhR-ib-zSc"/>
+                <outlet property="rigisterBtn" destination="G6S-y8-SEP" id="SK4-lR-XeS"/>
                 <outlet property="rotationView" destination="X2E-OS-Ccw" id="Q7l-0B-VU5"/>
                 <outlet property="tipLabel" destination="l37-lF-9eq" id="kDC-Im-inA"/>
             </connections>

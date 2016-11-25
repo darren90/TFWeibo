@@ -29,6 +29,10 @@
 		FEC5F7FF1DE73FE700AEF3D0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC5F7FE1DE73FE700AEF3D0 /* BaseViewController.swift */; };
 		FEC5F8011DE747A800AEF3D0 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC5F8001DE747A800AEF3D0 /* VisitorView.swift */; };
 		FEC5F8031DE747B000AEF3D0 /* VisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEC5F8021DE747B000AEF3D0 /* VisitorView.xib */; };
+		FEC5F8051DE88A1300AEF3D0 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC5F8041DE88A1300AEF3D0 /* UIBarButtonItem-Extension.swift */; };
+		FEC5F8071DE895DD00AEF3D0 /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC5F8061DE895DD00AEF3D0 /* TitleButton.swift */; };
+		FEC5F80D1DE89A4F00AEF3D0 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC5F80B1DE89A4F00AEF3D0 /* PopoverViewController.swift */; };
+		FEC5F80E1DE89A4F00AEF3D0 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEC5F80C1DE89A4F00AEF3D0 /* PopoverViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +57,7 @@
 		FE69C4D61DE49463002AA9E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE69C4D81DE49463002AA9E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FE69C4DB1DE49463002AA9E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FE69C4DD1DE49463002AA9E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Assets.xcassets; sourceTree = "<group>"; };
+		FE69C4DD1DE49463002AA9E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE69C4E01DE49463002AA9E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE69C4E21DE49463002AA9E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE69C4E71DE49463002AA9E5 /* Weibo_SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Weibo_SwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +81,10 @@
 		FEC5F7FE1DE73FE700AEF3D0 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FEC5F8001DE747A800AEF3D0 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		FEC5F8021DE747B000AEF3D0 /* VisitorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisitorView.xib; sourceTree = "<group>"; };
+		FEC5F8041DE88A1300AEF3D0 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
+		FEC5F8061DE895DD00AEF3D0 /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
+		FEC5F80B1DE89A4F00AEF3D0 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
+		FEC5F80C1DE89A4F00AEF3D0 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +138,7 @@
 				FE69C4D61DE49463002AA9E5 /* AppDelegate.swift */,
 				FE69C4D81DE49463002AA9E5 /* ViewController.swift */,
 				FE69C4DA1DE49463002AA9E5 /* Main.storyboard */,
+				FE69C4DD1DE49463002AA9E5 /* Assets.xcassets */,
 				FEC5F7F61DE5F0FA00AEF3D0 /* SendWeibo.storyboard */,
 				FE69C5041DE49848002AA9E5 /* Classes */,
 				FE69C4DF1DE49463002AA9E5 /* LaunchScreen.storyboard */,
@@ -182,9 +191,10 @@
 		FE69C5061DE49848002AA9E5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FEC5F8081DE89A1E00AEF3D0 /* UIPopover */,
 				FE69C5511DE5EE6F002AA9E5 /* Home.storyboard */,
 				FE69C50C1DE49A58002AA9E5 /* HomeViewController.swift */,
-				FE69C4DD1DE49463002AA9E5 /* Assets.xcassets */,
+				FEC5F8061DE895DD00AEF3D0 /* TitleButton.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -236,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				FEC5F7FB1DE72D9700AEF3D0 /* UIButton-Extension.swift */,
+				FEC5F8041DE88A1300AEF3D0 /* UIBarButtonItem-Extension.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -248,6 +259,15 @@
 				FEC5F8021DE747B000AEF3D0 /* VisitorView.xib */,
 			);
 			path = Visitor;
+			sourceTree = "<group>";
+		};
+		FEC5F8081DE89A1E00AEF3D0 /* UIPopover */ = {
+			isa = PBXGroup;
+			children = (
+				FEC5F80B1DE89A4F00AEF3D0 /* PopoverViewController.swift */,
+				FEC5F80C1DE89A4F00AEF3D0 /* PopoverViewController.xib */,
+			);
+			path = UIPopover;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,6 +384,7 @@
 				FE69C55A1DE5EEE7002AA9E5 /* Profile.storyboard in Resources */,
 				FE69C4DE1DE49463002AA9E5 /* Assets.xcassets in Resources */,
 				FE69C5161DE4A92A002AA9E5 /* MainVCSettings.json in Resources */,
+				FEC5F80E1DE89A4F00AEF3D0 /* PopoverViewController.xib in Resources */,
 				FE69C5551DE5EEBB002AA9E5 /* Message.storyboard in Resources */,
 				FE69C5581DE5EECF002AA9E5 /* Discover.storyboard in Resources */,
 				FE69C4DC1DE49463002AA9E5 /* Main.storyboard in Resources */,
@@ -394,6 +415,8 @@
 			files = (
 				FE69C5111DE49A77002AA9E5 /* MessageViewController.swift in Sources */,
 				FE69C4D91DE49463002AA9E5 /* ViewController.swift in Sources */,
+				FEC5F80D1DE89A4F00AEF3D0 /* PopoverViewController.swift in Sources */,
+				FEC5F8051DE88A1300AEF3D0 /* UIBarButtonItem-Extension.swift in Sources */,
 				FE69C4D71DE49463002AA9E5 /* AppDelegate.swift in Sources */,
 				FE69C50B1DE49989002AA9E5 /* MainTabBarController.swift in Sources */,
 				FE69C5131DE49A83002AA9E5 /* ProfileViewController.swift in Sources */,
@@ -401,6 +424,7 @@
 				FE69C50D1DE49A58002AA9E5 /* HomeViewController.swift in Sources */,
 				FEC5F8011DE747A800AEF3D0 /* VisitorView.swift in Sources */,
 				FE69C50F1DE49A69002AA9E5 /* DiscoverViewController.swift in Sources */,
+				FEC5F8071DE895DD00AEF3D0 /* TitleButton.swift in Sources */,
 				FEC5F7FC1DE72D9700AEF3D0 /* UIButton-Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //设置全局的tabbar的默认颜色
         UITabBar.appearance().tintColor = UIColor.orange
         
+        UINavigationBar.appearance().tintColor = UIColor.orange
+        
 //        window = UIWindow(frame: UIScreen.main.bounds)
 //        window?.rootViewController = MainTabBarController()
 //        window?.makeKeyAndVisible()
