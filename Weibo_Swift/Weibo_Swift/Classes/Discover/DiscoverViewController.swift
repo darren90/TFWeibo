@@ -13,10 +13,8 @@ class DiscoverViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
+        visitorView.setUpVisitoryViewInfo(iconName:"visitordiscover_image_message",title:"登陆后，别人评论你的微薄，给你发消息，都会展示在这里")
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {

@@ -53,7 +53,7 @@
 		FE69C4D61DE49463002AA9E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE69C4D81DE49463002AA9E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FE69C4DB1DE49463002AA9E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FE69C4DD1DE49463002AA9E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE69C4DD1DE49463002AA9E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Assets.xcassets; sourceTree = "<group>"; };
 		FE69C4E01DE49463002AA9E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE69C4E21DE49463002AA9E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE69C4E71DE49463002AA9E5 /* Weibo_SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Weibo_SwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,7 +131,6 @@
 				FE69C4D81DE49463002AA9E5 /* ViewController.swift */,
 				FE69C4DA1DE49463002AA9E5 /* Main.storyboard */,
 				FEC5F7F61DE5F0FA00AEF3D0 /* SendWeibo.storyboard */,
-				FE69C4DD1DE49463002AA9E5 /* Assets.xcassets */,
 				FE69C5041DE49848002AA9E5 /* Classes */,
 				FE69C4DF1DE49463002AA9E5 /* LaunchScreen.storyboard */,
 				FE69C5141DE4A92A002AA9E5 /* Resource */,
@@ -185,6 +184,7 @@
 			children = (
 				FE69C5511DE5EE6F002AA9E5 /* Home.storyboard */,
 				FE69C50C1DE49A58002AA9E5 /* HomeViewController.swift */,
+				FE69C4DD1DE49463002AA9E5 /* Assets.xcassets */,
 			);
 			path = Home;
 			sourceTree = "<group>";

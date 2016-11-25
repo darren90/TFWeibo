@@ -24,11 +24,7 @@ class BaseViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        setupNavItems()
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,10 +47,29 @@ class BaseViewController: UITableViewController {
     
 }
 
+
 extension BaseViewController{
+    // MARK:-- 设置访客视图
     func setupVisitorView(){
 //        visitorView.backgroundColor = UIColor.brown
         view = visitorView
+    }
+    
+    // MARK:--
+    
+    func setupNavItems()  {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: .plain, target: self, action: #selector(BaseViewController.registerClick))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "登陆", style: .plain, target: self, action: #selector(BaseViewController.loginClick))
+
+    }
+    
+    
+    func registerClick()  {
+        print("---registerClick---")
+    }
+    
+    func loginClick()  {
+        print("---loginClick---")
     }
 }
 
