@@ -79,7 +79,6 @@ extension HomeViewController {
         //设置modar样式
         //设置为custom样式，底下的控制器，就不被移除，正常情况下，底下的控制器，会被移除
         vc.modalPresentationStyle = .custom
-//        vc.modar
         
         present(vc, animated: true, completion: nil)
     }
