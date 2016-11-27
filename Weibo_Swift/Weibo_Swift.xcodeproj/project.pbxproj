@@ -33,6 +33,7 @@
 		FEC5F8071DE895DD00AEF3D0 /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC5F8061DE895DD00AEF3D0 /* TitleButton.swift */; };
 		FEC5F80D1DE89A4F00AEF3D0 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC5F80B1DE89A4F00AEF3D0 /* PopoverViewController.swift */; };
 		FEC5F80E1DE89A4F00AEF3D0 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEC5F80C1DE89A4F00AEF3D0 /* PopoverViewController.xib */; };
+		FEC5F8101DEA7EA400AEF3D0 /* TFPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC5F80F1DEA7EA400AEF3D0 /* TFPresentationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		FEC5F8061DE895DD00AEF3D0 /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
 		FEC5F80B1DE89A4F00AEF3D0 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		FEC5F80C1DE89A4F00AEF3D0 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
+		FEC5F80F1DEA7EA400AEF3D0 /* TFPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFPresentationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +268,7 @@
 			children = (
 				FEC5F80B1DE89A4F00AEF3D0 /* PopoverViewController.swift */,
 				FEC5F80C1DE89A4F00AEF3D0 /* PopoverViewController.xib */,
+				FEC5F80F1DEA7EA400AEF3D0 /* TFPresentationController.swift */,
 			);
 			path = UIPopover;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				FEC5F80D1DE89A4F00AEF3D0 /* PopoverViewController.swift in Sources */,
 				FEC5F8051DE88A1300AEF3D0 /* UIBarButtonItem-Extension.swift in Sources */,
 				FE69C4D71DE49463002AA9E5 /* AppDelegate.swift in Sources */,
+				FEC5F8101DEA7EA400AEF3D0 /* TFPresentationController.swift in Sources */,
 				FE69C50B1DE49989002AA9E5 /* MainTabBarController.swift in Sources */,
 				FE69C5131DE49A83002AA9E5 /* ProfileViewController.swift in Sources */,
 				FEC5F7FF1DE73FE700AEF3D0 /* BaseViewController.swift in Sources */,

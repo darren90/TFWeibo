@@ -80,10 +80,27 @@ extension HomeViewController {
         //设置为custom样式，底下的控制器，就不被移除，正常情况下，底下的控制器，会被移除
         vc.modalPresentationStyle = .custom
         
+        //自定义转场动画
+        
+        //设置转场代理
+        vc.transitioningDelegate = self;
+        
         present(vc, animated: true, completion: nil)
     }
     
     
+    
+}
+
+//转场代理
+extension HomeViewController: UIViewControllerTransitioningDelegate{
+    
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        
+        
+        
+        return TFPresentationController(presentedViewController: presented, presenting : presenting)
+    }
     
 }
 
