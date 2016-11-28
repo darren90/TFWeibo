@@ -34,6 +34,7 @@
 		FEC5F80D1DE89A4F00AEF3D0 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC5F80B1DE89A4F00AEF3D0 /* PopoverViewController.swift */; };
 		FEC5F80E1DE89A4F00AEF3D0 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEC5F80C1DE89A4F00AEF3D0 /* PopoverViewController.xib */; };
 		FEC5F8101DEA7EA400AEF3D0 /* TFPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC5F80F1DEA7EA400AEF3D0 /* TFPresentationController.swift */; };
+		FEC5F8121DEC7AF100AEF3D0 /* NetWorkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC5F8111DEC7AF100AEF3D0 /* NetWorkTools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		FEC5F80B1DE89A4F00AEF3D0 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		FEC5F80C1DE89A4F00AEF3D0 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
 		FEC5F80F1DEA7EA400AEF3D0 /* TFPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFPresentationController.swift; sourceTree = "<group>"; };
+		FEC5F8111DEC7AF100AEF3D0 /* NetWorkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkTools.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				FEC5F7FA1DE72D7500AEF3D0 /* Category */,
+				FEC5F8111DEC7AF100AEF3D0 /* NetWorkTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				FEC5F80D1DE89A4F00AEF3D0 /* PopoverViewController.swift in Sources */,
 				FEC5F8051DE88A1300AEF3D0 /* UIBarButtonItem-Extension.swift in Sources */,
 				FE69C4D71DE49463002AA9E5 /* AppDelegate.swift in Sources */,
+				FEC5F8121DEC7AF100AEF3D0 /* NetWorkTools.swift in Sources */,
 				FEC5F8101DEA7EA400AEF3D0 /* TFPresentationController.swift in Sources */,
 				FE69C50B1DE49989002AA9E5 /* MainTabBarController.swift in Sources */,
 				FE69C5131DE49A83002AA9E5 /* ProfileViewController.swift in Sources */,
