@@ -15,7 +15,7 @@ class BaseViewController: UITableViewController {
     
     //MARK: -- 定义变量
     
-    var isLogin:Bool = true
+    var isLogin:Bool = false
     
     override func loadView() {
         isLogin ? super.loadView() : setupVisitorView()
@@ -73,6 +73,15 @@ extension BaseViewController{
     
     func loginClick()  {
         print("---loginClick---")
+        
+        //授权
+        let oauthVc = OAuthViewController()
+        
+        //包装导航控制器
+        let oauthNav = UINavigationController(rootViewController: oauthVc)
+        
+        self.navigationController?.present(oauthNav, animated: true, completion: nil)
+        
     }
 }
 

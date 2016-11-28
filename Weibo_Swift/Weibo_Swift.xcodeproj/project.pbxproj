@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE0BBE5A1DEC8C6800ABD840 /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0BBE581DEC8C6800ABD840 /* OAuthViewController.swift */; };
+		FE0BBE5B1DEC8C6800ABD840 /* OAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE0BBE591DEC8C6800ABD840 /* OAuthViewController.xib */; };
+		FE0BBE5D1DEC909200ABD840 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0BBE5C1DEC909200ABD840 /* Common.swift */; };
 		FE69C4D71DE49463002AA9E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69C4D61DE49463002AA9E5 /* AppDelegate.swift */; };
 		FE69C4D91DE49463002AA9E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69C4D81DE49463002AA9E5 /* ViewController.swift */; };
 		FE69C4DC1DE49463002AA9E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE69C4DA1DE49463002AA9E5 /* Main.storyboard */; };
@@ -55,6 +58,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE0BBE581DEC8C6800ABD840 /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
+		FE0BBE591DEC8C6800ABD840 /* OAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthViewController.xib; sourceTree = "<group>"; };
+		FE0BBE5C1DEC909200ABD840 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		FE69C4D31DE49463002AA9E5 /* Weibo_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weibo_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE69C4D61DE49463002AA9E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE69C4D81DE49463002AA9E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +122,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE0BBE571DEC8C5200ABD840 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				FE0BBE581DEC8C6800ABD840 /* OAuthViewController.swift */,
+				FE0BBE591DEC8C6800ABD840 /* OAuthViewController.xib */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
 		FE69C4CA1DE49463002AA9E5 = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +221,7 @@
 		FE69C5071DE49848002AA9E5 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				FE0BBE571DEC8C5200ABD840 /* OAuth */,
 				FEC5F7FD1DE73FCE00AEF3D0 /* Visitor */,
 				FE69C50A1DE49989002AA9E5 /* MainTabBarController.swift */,
 			);
@@ -243,6 +259,7 @@
 			children = (
 				FEC5F7FA1DE72D7500AEF3D0 /* Category */,
 				FEC5F8111DEC7AF100AEF3D0 /* NetWorkTools.swift */,
+				FE0BBE5C1DEC909200ABD840 /* Common.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -388,6 +405,7 @@
 				FEC5F8031DE747B000AEF3D0 /* VisitorView.xib in Resources */,
 				FE69C5531DE5EE6F002AA9E5 /* Home.storyboard in Resources */,
 				FE69C55A1DE5EEE7002AA9E5 /* Profile.storyboard in Resources */,
+				FE0BBE5B1DEC8C6800ABD840 /* OAuthViewController.xib in Resources */,
 				FE69C4DE1DE49463002AA9E5 /* Assets.xcassets in Resources */,
 				FE69C5161DE4A92A002AA9E5 /* MainVCSettings.json in Resources */,
 				FEC5F80E1DE89A4F00AEF3D0 /* PopoverViewController.xib in Resources */,
@@ -419,10 +437,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE0BBE5D1DEC909200ABD840 /* Common.swift in Sources */,
 				FE69C5111DE49A77002AA9E5 /* MessageViewController.swift in Sources */,
 				FE69C4D91DE49463002AA9E5 /* ViewController.swift in Sources */,
 				FEC5F80D1DE89A4F00AEF3D0 /* PopoverViewController.swift in Sources */,
 				FEC5F8051DE88A1300AEF3D0 /* UIBarButtonItem-Extension.swift in Sources */,
+				FE0BBE5A1DEC8C6800ABD840 /* OAuthViewController.swift in Sources */,
 				FE69C4D71DE49463002AA9E5 /* AppDelegate.swift in Sources */,
 				FEC5F8121DEC7AF100AEF3D0 /* NetWorkTools.swift in Sources */,
 				FEC5F8101DEA7EA400AEF3D0 /* TFPresentationController.swift in Sources */,
