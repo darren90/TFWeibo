@@ -10,12 +10,14 @@ import UIKit
 
 class TFPresentationController: UIPresentationController {
 
+    var presentedFrame : CGRect = CGRect(x: 0, y: 0, width: 0, height: 0)
+    
     //重写方法，设置弹出view的大小，位置
     override func containerViewWillLayoutSubviews() {
         super.containerViewWillLayoutSubviews()
         
         //设置弹出view的尺寸
-        presentedView?.frame = CGRect(x: 100, y: 60, width: 180, height: 250)
+        presentedView?.frame = presentedFrame//CGRect(x: 100, y: 60, width: 180, height: 250)
         
         //添加蒙版
         

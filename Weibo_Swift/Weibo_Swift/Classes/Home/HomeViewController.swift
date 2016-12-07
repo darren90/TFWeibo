@@ -10,6 +10,10 @@ import UIKit
 
 class HomeViewController: BaseViewController {
 
+    // MARK:-- 属性
+//    var isPresendted = false
+    lazy var popoverAnimator : PopoverAnimator = PopoverAnimator()
+    
     // MARK:-- 懒加载属性
     lazy var titleBtn:UIButton = TitleButton()
     
@@ -83,69 +87,14 @@ extension HomeViewController {
         //自定义转场动画
         
         //设置转场代理
-        vc.transitioningDelegate = self;
+        vc.transitioningDelegate = popoverAnimator;
+        //封装后，设置弹出view的frame
+        popoverAnimator.presentedFrame = CGRect(x: 100, y: 60, width: 180, height: 250)
         
         present(vc, animated: true, completion: nil)
-    }
-    
-    
+    }    
     
 }
-
-// MARK:-- 自定义转场代理
-extension HomeViewController : UIViewControllerTransitioningDelegate{
-    // MARK:-- 改变弹出view的尺寸
-    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        
-        return TFPresentationController(presentedViewController: presented, presenting : presenting)
-    }
-    
-    // MARK:-- 自定义弹出的动画
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return self
-    }
-    
-}
-
-// MARK:-- 弹出和消失的动画 的 代理 的反复
-extension HomeViewController:UIViewControllerAnimatedTransitioning {
-
-    //动画执行的时间
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 0.5
-    }
-    
-    
- 
-    //获取转场的上下文 ：可以通过转场，获取弹出的view和消失的view
-    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        //获取弹出的view
-        //UITransitionContextFromViewKey
-        //UITransitionContextToViewKey
-        let presentedView2 = transitionContext.view(forKey: UITransitionContextViewKey.to)
-        
-        guard let presentedView = presentedView2 else {
-            return
-        }
-        
-        //2：将弹出的view添加到containView中
-        transitionContext.containerView.addSubview(presentedView)
-        
-        //3：执行动画
-        presentedView.transform = CGAffineTransform(scaleX: 1.0, y: 0.0)
-        presentedView.layer.anchorPoint = CGPoint(x: 0.5, y: 0)//设置动画的锚点
-        UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
-            presentedView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-        }) { (isFininshed:Bool) in
-            //必须告诉上下文，我们的自定义动画，已经完成
-            transitionContext.completeTransition(true)
-        }
-    }
-    
-    
-    
-}
-
 
 
 
