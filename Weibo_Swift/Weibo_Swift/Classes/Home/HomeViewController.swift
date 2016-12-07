@@ -92,8 +92,8 @@ extension HomeViewController {
     
 }
 
-//转场代理
-extension HomeViewController: UIViewControllerTransitioningDelegate{
+// MARK:-- 自定义转场代理
+extension HomeViewController : UIViewControllerTransitioningDelegate{
     // MARK:-- 改变弹出view的尺寸
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         
@@ -107,7 +107,7 @@ extension HomeViewController: UIViewControllerTransitioningDelegate{
     
 }
 
-// MARK:-- 弹出和消失的动画 的 代理
+// MARK:-- 弹出和消失的动画 的 代理 的反复
 extension HomeViewController:UIViewControllerAnimatedTransitioning {
 
     //动画执行的时间
@@ -115,12 +115,18 @@ extension HomeViewController:UIViewControllerAnimatedTransitioning {
         return 0.5
     }
     
+    
+ 
     //获取转场的上下文 ：可以通过转场，获取弹出的view和消失的view
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         //获取弹出的view
         //UITransitionContextFromViewKey
         //UITransitionContextToViewKey
-        let presentedView = transitionContext.view(forKey: UITransitionContextViewKey.to)!
+        let presentedView2 = transitionContext.view(forKey: UITransitionContextViewKey.to)
+        
+        guard let presentedView = presentedView2 else {
+            return
+        }
         
         //2：将弹出的view添加到containView中
         transitionContext.containerView.addSubview(presentedView)
@@ -134,10 +140,11 @@ extension HomeViewController:UIViewControllerAnimatedTransitioning {
             //必须告诉上下文，我们的自定义动画，已经完成
             transitionContext.completeTransition(true)
         }
-        
     }
+    
+    
+    
 }
-
 
 
 

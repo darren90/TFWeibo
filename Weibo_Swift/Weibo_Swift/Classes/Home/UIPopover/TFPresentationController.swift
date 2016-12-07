@@ -10,6 +10,7 @@ import UIKit
 
 class TFPresentationController: UIPresentationController {
 
+    //重写方法，设置弹出view的大小，位置
     override func containerViewWillLayoutSubviews() {
         super.containerViewWillLayoutSubviews()
         
@@ -36,7 +37,7 @@ class TFPresentationController: UIPresentationController {
         coverView.frame = containerView!.bounds
      
         //添加手势
-        let tap = UITapGestureRecognizer(target: self, action: #selector(TFPresentationController.remove))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.remove))
         coverView.addGestureRecognizer(tap)
     }
     
@@ -47,8 +48,10 @@ class TFPresentationController: UIPresentationController {
 }
 
 
+//设置界面相关 -- UI
+extension TFPresentationController {
 
-
+}
 
 
 
