@@ -12,7 +12,12 @@ class HomeViewController: BaseViewController {
 
     // MARK:-- 属性
 //    var isPresendted = false
-    lazy var popoverAnimator : PopoverAnimator = PopoverAnimator()
+    
+    ///注意在闭包中，如果使用当前属性，或者调用方法，也需要调用self
+//    有两个地方需要用到self。1》 如果在一个函数中出现歧意，2》在比保重使用了当前对象的属性和方法也需要加self
+    lazy var popoverAnimator : PopoverAnimator = PopoverAnimator{ [weak self] (isPresendted) -> () in
+        self?.titleBtn.isSelected = isPresendted
+    }
     
     // MARK:-- 懒加载属性
     lazy var titleBtn:UIButton = TitleButton()
@@ -75,7 +80,7 @@ extension HomeViewController {
     
     
     func titleBtnClick(titleBtn:TitleButton){
-        titleBtn.isSelected = !titleBtn.isSelected
+//        titleBtn.isSelected = !titleBtn.isSelected
         
         //自定义专场
         let vc = PopoverViewController()

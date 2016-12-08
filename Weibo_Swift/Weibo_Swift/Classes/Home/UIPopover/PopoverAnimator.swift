@@ -11,6 +11,14 @@ import UIKit
 class PopoverAnimator: NSObject {
     var isPresendted = false
     var presentedFrame : CGRect = CGRect(x: 0, y: 0, width: 0, height: 0)
+    
+    var callBack : ((_ isPresendted : Bool) -> ())?
+    
+    //自定义构造函数
+    //如果自定义了构造函数，但没有对默认的init构造函数，那么自定义的构造函数，会覆盖init的构造函数
+    init(callBack:@escaping (_ isPresendted : Bool) -> ()) {
+        self.callBack = callBack
+    }
 }
 
 
@@ -27,12 +35,14 @@ extension PopoverAnimator : UIViewControllerTransitioningDelegate{
     // MARK:-- 自定义弹出的动画
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         isPresendted = true
+        callBack!(isPresendted)
         return self
     }
     
     // MARK:-- 自定义消失的动画
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         isPresendted = false
+        callBack!(isPresendted)
         return self
     }
     
