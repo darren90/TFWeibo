@@ -18,29 +18,9 @@ class NetWorkTools: AFHTTPSessionManager {
     static let shareInstance  : NetWorkTools = {
         let tools  = NetWorkTools()
         tools.responseSerializer.acceptableContentTypes?.insert("text/html")
+        tools.responseSerializer.acceptableContentTypes?.insert("text/plain")
         return tools
     }()
-    
-    
-    // MARK:-- 封装请求方法
-    
-    //    func request(methodType:RequestType , urlString:String , params : [String : AnyObject]) {
-    //        if methodType == .GET {
-    //            get(urlString, parameters: params, progress: nil, success: { (task : URLSessionDataTask, result : Any?) in
-    //                print(result)
-    //            }) { (task : URLSessionDataTask?,  error:Error) in
-    //                print(error)
-    //            }
-    //
-    //        }else{
-    //            post(urlString, parameters: params, progress: nil, success: { (task : URLSessionDataTask, result : Any?) in
-    //
-    //            }) { (task : URLSessionDataTask?, error : Error) in
-    //
-    //            }
-    //        }
-    //
-    //    }
     
     func request(methodType : RequestType, urlString : String, parameters : [String : AnyObject], finished : @escaping (_ result : Any?, _ error : Error?) -> ()) {
         
@@ -60,7 +40,22 @@ class NetWorkTools: AFHTTPSessionManager {
         } else {
             post(urlString, parameters: parameters, progress: nil, success: successCallBack, failure: failureCallBack)
         }
-        
     }
     
 }
+
+//MARK: --- 请求AccessToken
+extension NetWorkTools {
+
+    func loadAccessToken(code:String,fininshed:@escaping (_ result:[String:AnyObject]?,_ error:NSError?)->()){
+        let parms = ["client_id" : app_key,"client_secret" : app_Secret,"grant_type":"authorization_code","redirect_uri" : redirect_url,"code":code]
+        request(methodType: .POST, urlString: "https://api.weibo.com/oauth2/access_token", parameters: parms as [String : AnyObject]) {(result:Any?, error : Error?) -> () in
+            fininshed(result as! [String : AnyObject]?,error as NSError?)
+        }
+    }
+}
+
+
+
+
+
