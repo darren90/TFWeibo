@@ -18,6 +18,11 @@ class BaseViewController: UITableViewController {
     var isLogin:Bool = false
     
     override func loadView() {
+        //判断是否登陆了
+        var accountPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        accountPath = (accountPath as NSString).appendingPathComponent("account.plist")
+
+        
         isLogin ? super.loadView() : setupVisitorView()
     }
     

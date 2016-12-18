@@ -8,12 +8,13 @@
 
 import UIKit
 
-class UserAccount: NSObject {
+class UserAccount: NSObject ,NSCoding {
 
 //    "access_token": "ACCESS_TOKEN",
 //    "expires_in": 1234,
 //    "remind_in":"798114",
 //    "uid":"12341234"
+    
     ///授权后的Token
     var access_token : String?
     ///过期秒
@@ -51,6 +52,36 @@ class UserAccount: NSObject {
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
         
     }
+    
+    
+    
+    
+    
+    //遵守协议
+    
+    //解档
+    required init?(coder aDecoder: NSCoder) {
+        access_token = aDecoder.decodeObject(forKey: "access_token") as? String
+        uid = aDecoder.decodeObject(forKey: "uid")  as? String
+        expires_date = aDecoder.decodeObject(forKey: "expires_date")  as? NSDate
+        screen_name = aDecoder.decodeObject(forKey: "screen_name")  as? String
+        avatar_large = aDecoder.decodeObject(forKey: "avatar_large")  as? String
+    }
+    
+    //归档
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(access_token, forKey: "access_token")
+        aCoder.encode(uid, forKey: "uid")
+        aCoder.encode(expires_date, forKey: "expires_date")
+        aCoder.encode(screen_name, forKey: "screen_name")
+        aCoder.encode(avatar_large, forKey: "avatar_large")
+    }
+    
+    
+    
+    
+    
+    
     
     
     

@@ -43,6 +43,7 @@ extension OAuthViewController {
 //        print("---fillAccount---")
         //填充密码
         let jsCode = "document.getElementById('userId').value = 'fengtengfei90@163.com';document.getElementById('passwd').value = 'feng90';"
+//        let jsCode = "document.getElementById('userId').value = '1005052145@qq.com';document.getElementById('passwd').value = 'honeyjiayi1314';"
         webView.stringByEvaluatingJavaScript(from: jsCode)
     }
     
@@ -134,7 +135,7 @@ extension OAuthViewController : UIWebViewDelegate {
                 return
             }
             
-            print(result ?? "")
+//            print(result ?? "")
             
             guard let userInfodict = result else {
                 return
@@ -144,7 +145,16 @@ extension OAuthViewController : UIWebViewDelegate {
             account.screen_name = userInfodict["screen_name"] as? String
             account.avatar_large = userInfodict["avatar_large"] as? String
             
-            print(account)
+//            print(account)
+            
+            //保存account对象
+            var accountPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+            print(accountPath)
+            accountPath = (accountPath as NSString).appendingPathComponent("account.plist")
+
+            NSKeyedArchiver.archiveRootObject(account, toFile: accountPath)
+            
+            
         }
     }
 }
