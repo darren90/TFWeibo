@@ -56,6 +56,47 @@ extension NetWorkTools {
 }
 
 
+//MARK: --- 请求用户信息
+extension NetWorkTools {
+    func loadUserInfo(access_token:String,uid:String,fininshed : @escaping ( _ result:[String:AnyObject]?,_ error:NSError?) -> ()) {
+         //获取请求的url
+        let urlStr = "https://api.weibo.com/2/users/show.json"
+        let params = ["access_token" : access_token , "uid" : uid]
+        
+        request(methodType: .GET, urlString: urlStr, parameters: params as [String : AnyObject]) {(result : Any?, error : Error?) -> () in
+            fininshed(result as! [String : AnyObject]?,error as NSError?)
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

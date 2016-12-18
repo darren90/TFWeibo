@@ -17,14 +17,25 @@ class UserAccount: NSObject {
     ///授权后的Token
     var access_token : String?
     ///过期秒
-    var expires_in : TimeInterval = 0.0
+    var expires_in : TimeInterval = 0.0 {
+        didSet {
+            expires_date = NSDate(timeIntervalSinceNow: expires_in)
+        }
+    }
     ///用户秒
     var uid : String?
     
+    ///另外添加的属性 -- 过期时间
+    var expires_date : NSDate?
+    
+    
+    ///再次新加的属性 -- 用户信息
+    var screen_name : String?
+    var avatar_large : String?
     
     ///重写属性
     override var description: String {
-        return dictionaryWithValues(forKeys: ["access_token","expires_in","uid"]).description
+        return dictionaryWithValues(forKeys: ["access_token","expires_date","uid","screen_name","avatar_large"]).description
     }
     
     override init() {

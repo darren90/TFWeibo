@@ -94,6 +94,7 @@ extension OAuthViewController : UIWebViewDelegate {
         return false
     }
     
+    //闭包中调用当前对象的方法需要调用self.
     func loadAccesstoken(code:String) {
         NetWorkTools.shareInstance.loadAccessToken(code: code) { (result : [String : AnyObject]?, error : NSError?) -> () in
             if error != nil {
@@ -108,9 +109,43 @@ extension OAuthViewController : UIWebViewDelegate {
             }
             
             let account = UserAccount(dict: accountDict)
-            print(account)
+//            print(account)
+            
+            //请求用户信息
+            self.loadUserInfo(account: account)
         }
         
+    }
+    
+    ///请求用户信息
+    func loadUserInfo(account:UserAccount){
+        
+        guard let accessToken = account.access_token else {
+            return
+        }
+        
+        guard let uid = account.uid else {
+            return
+        }
+        
+        NetWorkTools.shareInstance.loadUserInfo(access_token: accessToken, uid: uid) {(result : [String : AnyObject]?, error : NSError?) -> () in
+            if error != nil {
+                print(error ?? "")
+                return
+            }
+            
+            print(result ?? "")
+            
+            guard let userInfodict = result else {
+                return
+            }
+            
+            //添加昵称和头像地址
+            account.screen_name = userInfodict["screen_name"] as? String
+            account.avatar_large = userInfodict["avatar_large"] as? String
+            
+            print(account)
+        }
     }
 }
 

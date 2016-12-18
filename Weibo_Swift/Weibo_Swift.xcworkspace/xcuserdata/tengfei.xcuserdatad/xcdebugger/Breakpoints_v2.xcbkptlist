@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Weibo_Swift/Classes/Main/OAuth/OAuthViewController.swift"
-            timestampString = "503513364.017282"
+            timestampString = "503752187.802794"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "loadAccesstoken(code:)"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "loadUserInfo(account:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Weibo_Swift/Classes/Main/OAuth/OAuthViewController.swift"
-            timestampString = "503511797.72622"
+            timestampString = "503753403.669572"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "loadAccesstoken(code:)"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "loadUserInfo(account:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weibo_Swift/Classes/Main/OAuth/OAuthViewController.swift"
+            timestampString = "503753665.731138"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "loadUserInfo(account:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
