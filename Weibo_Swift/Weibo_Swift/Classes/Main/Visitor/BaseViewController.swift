@@ -22,6 +22,15 @@ class BaseViewController: UITableViewController {
         var accountPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
         accountPath = (accountPath as NSString).appendingPathComponent("account.plist")
 
+        let account = NSKeyedUnarchiver.unarchiveObject(withFile: accountPath) as? UserAccount
+        
+        if let account = account {
+            if let expireDate = account.expires_date {
+                isLogin = (expireDate.compare(Date()) == .orderedDescending)
+            }
+            
+            isLogin = true
+        }
         
         isLogin ? super.loadView() : setupVisitorView()
     }
