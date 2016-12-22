@@ -13,6 +13,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var defaultVc : UIViewController? {
+        let isLogin = UserAccountViewModel.shareInstance.isLogin
+        return isLogin ? WellcomeViewController() : UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -22,9 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UINavigationBar.appearance().tintColor = UIColor.orange
         
-//        window = UIWindow(frame: UIScreen.main.bounds)
-//        window?.rootViewController = MainTabBarController()
-//        window?.makeKeyAndVisible()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        window?.rootViewController = defaultVc
+        window?.makeKeyAndVisible()
         return true
     }
 

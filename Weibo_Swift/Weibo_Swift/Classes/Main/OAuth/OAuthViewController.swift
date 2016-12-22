@@ -153,7 +153,16 @@ extension OAuthViewController : UIWebViewDelegate {
             accountPath = (accountPath as NSString).appendingPathComponent("account.plist")
 
             NSKeyedArchiver.archiveRootObject(account, toFile: accountPath)
+
+            //将account对象设置到单例对象中
+            UserAccountViewModel.shareInstance.account = account
             
+            //退出当前控制器
+            self.dismiss(animated: false, completion: {
+                //显示欢迎界面
+                let welVC = WellcomeViewController()
+                UIApplication.shared.keyWindow?.rootViewController = welVC
+            })
             
         }
     }
