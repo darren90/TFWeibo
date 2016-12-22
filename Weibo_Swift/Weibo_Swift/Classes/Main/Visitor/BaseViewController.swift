@@ -15,23 +15,10 @@ class BaseViewController: UITableViewController {
     
     //MARK: -- 定义变量
     
-    var isLogin:Bool = false
+    var isLogin:Bool = UserAccountViewModel.shareInstance.isLogin
     
     override func loadView() {
-        //判断是否登陆了
-        var accountPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
-        accountPath = (accountPath as NSString).appendingPathComponent("account.plist")
-
-        let account = NSKeyedUnarchiver.unarchiveObject(withFile: accountPath) as? UserAccount
-        
-        if let account = account {
-            if let expireDate = account.expires_date {
-                isLogin = (expireDate.compare(Date()) == .orderedDescending)
-            }
-            
-            isLogin = true
-        }
-        
+    
         isLogin ? super.loadView() : setupVisitorView()
     }
     
