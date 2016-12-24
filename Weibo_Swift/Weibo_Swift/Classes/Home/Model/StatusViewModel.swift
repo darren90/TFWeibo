@@ -22,6 +22,7 @@ class StatusViewModel: NSObject {
     var vipImage:UIImage?
     
     var profileUrl:URL? //用户头像
+    var picUrls : [URL] = [URL]() //微博配图
     
     
     // MARK:-- 自定义构造函数
@@ -67,6 +68,16 @@ class StatusViewModel: NSObject {
         let profileUrlStr = status.user?.profile_image_url ?? ""
         profileUrl = URL(string: profileUrlStr)
 
+        //配图数据
+        if let picUrlDicts = status.pic_urls {
+            for picUrlDict in picUrlDicts {
+                guard let picUrlStr = picUrlDict["thumbnail_pic"] else {
+                    continue
+                }
+                
+                picUrls.append(URL(string:picUrlStr)!)
+            }
+        }
     }
 }
 

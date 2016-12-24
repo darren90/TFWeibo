@@ -71,7 +71,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今天天气不错" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nin-nN-0fz" userLabel="content">
-                                            <rect key="frame" x="15" y="65" width="345" height="99"/>
+                                            <rect key="frame" x="15" y="65" width="345" height="52"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="345" id="gz2-o9-HZw"/>
                                             </constraints>
@@ -146,12 +146,50 @@
                                                 <constraint firstItem="QVH-Zj-EEe" firstAttribute="width" secondItem="i64-Zv-IZx" secondAttribute="width" id="ze4-ey-Gh7"/>
                                             </constraints>
                                         </view>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="b29-hq-e3q" customClass="PicCollectionView" customModule="Weibo_Swift" customModuleProvider="target">
+                                            <rect key="frame" x="15" y="127" width="282" height="61"/>
+                                            <color key="backgroundColor" red="0.98894279230000004" green="0.72709803429999997" blue="0.35676033270000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="37" id="QuR-cy-Q31"/>
+                                                <constraint firstAttribute="width" constant="282" id="VcX-zT-Hla"/>
+                                            </constraints>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8Ig-SP-81g">
+                                                <size key="itemSize" width="55" height="63"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="piccell" id="4Fg-wj-jaz" customClass="PicCollectionViewCell" customModule="Weibo_Swift" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="63"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="55" height="63"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lq8-dF-jc3">
+                                                                <rect key="frame" x="0.0" y="0.0" width="55" height="63"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </view>
+                                                    <constraints>
+                                                        <constraint firstItem="lq8-dF-jc3" firstAttribute="leading" secondItem="4Fg-wj-jaz" secondAttribute="leading" id="0Tk-fH-auX"/>
+                                                        <constraint firstAttribute="bottom" secondItem="lq8-dF-jc3" secondAttribute="bottom" id="7Lv-rn-Rps"/>
+                                                        <constraint firstAttribute="trailing" secondItem="lq8-dF-jc3" secondAttribute="trailing" id="hrw-Lc-LEb"/>
+                                                        <constraint firstItem="lq8-dF-jc3" firstAttribute="top" secondItem="4Fg-wj-jaz" secondAttribute="top" id="u3u-jY-GFG"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outlet property="iconView" destination="lq8-dF-jc3" id="7bS-Th-yyI"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                        </collectionView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="O40-XH-67u" firstAttribute="leading" secondItem="tgw-iR-O1G" secondAttribute="trailing" constant="8" id="1JO-T5-U5a"/>
                                         <constraint firstItem="tgw-iR-O1G" firstAttribute="bottom" secondItem="HO5-5E-Jmf" secondAttribute="bottom" id="3Q2-ls-aze"/>
-                                        <constraint firstItem="yAo-jN-EU9" firstAttribute="top" secondItem="nin-nN-0fz" secondAttribute="bottom" constant="10" id="3f5-En-JTv"/>
                                         <constraint firstItem="tgw-iR-O1G" firstAttribute="leading" secondItem="OVF-yr-o3g" secondAttribute="leading" id="4L3-I3-4lJ"/>
+                                        <constraint firstItem="b29-hq-e3q" firstAttribute="top" secondItem="nin-nN-0fz" secondAttribute="bottom" constant="10" id="6jU-zK-epJ"/>
                                         <constraint firstItem="OVF-yr-o3g" firstAttribute="top" secondItem="HO5-5E-Jmf" secondAttribute="top" constant="-2" id="EJZ-FR-XDg"/>
                                         <constraint firstItem="nIl-ay-UZd" firstAttribute="trailing" secondItem="HO5-5E-Jmf" secondAttribute="trailing" id="FaR-uU-OUv"/>
                                         <constraint firstItem="O40-XH-67u" firstAttribute="top" secondItem="tgw-iR-O1G" secondAttribute="top" id="Jdv-kW-jkM"/>
@@ -159,6 +197,7 @@
                                         <constraint firstItem="OVF-yr-o3g" firstAttribute="leading" secondItem="HO5-5E-Jmf" secondAttribute="trailing" constant="30" id="P3y-Oi-tR6"/>
                                         <constraint firstItem="Kle-jS-hhS" firstAttribute="leading" secondItem="OVF-yr-o3g" secondAttribute="trailing" constant="8" id="Qka-OV-hg7"/>
                                         <constraint firstItem="HO5-5E-Jmf" firstAttribute="top" secondItem="VQ6-F1-9GU" secondAttribute="top" constant="10" id="THy-qk-Kxs"/>
+                                        <constraint firstItem="b29-hq-e3q" firstAttribute="leading" secondItem="HO5-5E-Jmf" secondAttribute="leading" id="V6B-bh-NG0"/>
                                         <constraint firstItem="HO5-5E-Jmf" firstAttribute="leading" secondItem="VQ6-F1-9GU" secondAttribute="leading" constant="15" id="XG0-UF-FbO"/>
                                         <constraint firstItem="nin-nN-0fz" firstAttribute="leading" secondItem="HO5-5E-Jmf" secondAttribute="leading" id="Z5x-Rm-lxw"/>
                                         <constraint firstItem="O40-XH-67u" firstAttribute="bottom" secondItem="tgw-iR-O1G" secondAttribute="bottom" id="aDo-mn-aI9"/>
@@ -167,6 +206,7 @@
                                         <constraint firstItem="Kle-jS-hhS" firstAttribute="centerY" secondItem="OVF-yr-o3g" secondAttribute="centerY" id="fcm-Ea-xrv"/>
                                         <constraint firstItem="nIl-ay-UZd" firstAttribute="bottom" secondItem="HO5-5E-Jmf" secondAttribute="bottom" id="phu-dt-SWS"/>
                                         <constraint firstAttribute="trailing" secondItem="yAo-jN-EU9" secondAttribute="trailing" id="qRv-pl-7dS"/>
+                                        <constraint firstItem="yAo-jN-EU9" firstAttribute="top" secondItem="b29-hq-e3q" secondAttribute="bottom" constant="10" id="sH8-NA-Szc"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -174,6 +214,9 @@
                                     <outlet property="contentLabelW" destination="gz2-o9-HZw" id="Gf7-dt-5XS"/>
                                     <outlet property="iconView" destination="HO5-5E-Jmf" id="ra9-mJ-oQE"/>
                                     <outlet property="nickNameLabel" destination="OVF-yr-o3g" id="TEf-aP-X4f"/>
+                                    <outlet property="picView" destination="b29-hq-e3q" id="EUu-uE-Lp3"/>
+                                    <outlet property="picViewH" destination="QuR-cy-Q31" id="y5f-tJ-kwK"/>
+                                    <outlet property="picViewW" destination="VcX-zT-Hla" id="QFj-sA-gC4"/>
                                     <outlet property="sourceLabel" destination="O40-XH-67u" id="hr6-n7-xUT"/>
                                     <outlet property="timeLabel" destination="tgw-iR-O1G" id="E1j-OO-10W"/>
                                     <outlet property="verfiedView" destination="nIl-ay-UZd" id="5GF-rR-Vlz"/>

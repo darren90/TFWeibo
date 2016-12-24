@@ -16,7 +16,7 @@ class BaseViewController: UITableViewController {
     //MARK: -- 定义变量
     
     var isLogin:Bool = UserAccountViewModel.shareInstance.isLogin
-    
+
     override func loadView() {
     
         isLogin ? super.loadView() : setupVisitorView()

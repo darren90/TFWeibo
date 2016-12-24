@@ -42,7 +42,7 @@ class UserAccountViewModel {
     init() {
         
         account = NSKeyedUnarchiver.unarchiveObject(withFile: accountPath) as? UserAccount
- 
+        print("access_token:\(account?.access_token))")
     }
 
     // MARK:-- 判断是否登陆了

@@ -15,7 +15,7 @@ class Status: NSObject {
     var source:String?     ///创建来源
     var text:String?        ///微博正文
     var mid:String?         ///id
-    var pic_urls:[String:String]?  ///微博图片
+    var pic_urls:[[String:String]]?  ///微博图片
     
     var user: User?     ///作者信息
     
