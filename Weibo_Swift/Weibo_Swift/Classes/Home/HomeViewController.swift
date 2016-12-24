@@ -22,6 +22,8 @@ class HomeViewController: BaseViewController {
     // MARK:-- 懒加载属性
     lazy var titleBtn:UIButton = TitleButton()
     
+    lazy var statuses : [Status] = [Status]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,6 +34,9 @@ class HomeViewController: BaseViewController {
         
         //设置导航栏的内容
         setupNavBar()
+        
+        //请求数据
+        loadStatus()
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,18 +44,7 @@ class HomeViewController: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
+   
 }
 
 extension HomeViewController {
@@ -101,9 +95,48 @@ extension HomeViewController {
     
 }
 
+//MARK: -- 请求数据
+extension HomeViewController {
+    func loadStatus() {
+        NetWorkTools.shareInstance.loadStatus{(result,error) -> () in
+            if error != nil {
+                print(error ?? "")
+                return
+            }
+            
+            guard let resultArray = result else {
+                return
+            }
+            
+            //遍历字典
+            for statusDict in resultArray {
+                let status = Status(dict: statusDict)
+                self.statuses.append(status)
+                
+                self.tableView.reloadData()
+            }
+        }
+    }
+}
 
+extension HomeViewController{
+    // MARK: - Table view data source
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 0
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return 0
+    }
 
-
+ 
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+    }
+}
 
 
 
