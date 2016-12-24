@@ -13,6 +13,8 @@
 		FE0654361E0C48350088184B /* WellcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0654341E0C48350088184B /* WellcomeViewController.swift */; };
 		FE0654371E0C48350088184B /* WellcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE0654351E0C48350088184B /* WellcomeViewController.xib */; };
 		FE06543A1E0DFA3F0088184B /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0654391E0DFA3F0088184B /* Status.swift */; };
+		FE0654781E0E0DF10088184B /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0654771E0E0DF10088184B /* NSDate-Extension.swift */; };
+		FE06547A1E0E0FE30088184B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0654791E0E0FE30088184B /* User.swift */; };
 		FE0BBE5A1DEC8C6800ABD840 /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0BBE581DEC8C6800ABD840 /* OAuthViewController.swift */; };
 		FE0BBE5B1DEC8C6800ABD840 /* OAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE0BBE591DEC8C6800ABD840 /* OAuthViewController.xib */; };
 		FE0BBE5D1DEC909200ABD840 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0BBE5C1DEC909200ABD840 /* Common.swift */; };
@@ -73,6 +75,8 @@
 		FE0654341E0C48350088184B /* WellcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WellcomeViewController.swift; sourceTree = "<group>"; };
 		FE0654351E0C48350088184B /* WellcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WellcomeViewController.xib; sourceTree = "<group>"; };
 		FE0654391E0DFA3F0088184B /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		FE0654771E0E0DF10088184B /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
+		FE0654791E0E0FE30088184B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FE0BBE581DEC8C6800ABD840 /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
 		FE0BBE591DEC8C6800ABD840 /* OAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthViewController.xib; sourceTree = "<group>"; };
 		FE0BBE5C1DEC909200ABD840 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				FE0654391E0DFA3F0088184B /* Status.swift */,
+				FE0654791E0E0FE30088184B /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -324,6 +329,7 @@
 		FEC5F7FA1DE72D7500AEF3D0 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				FE0654771E0E0DF10088184B /* NSDate-Extension.swift */,
 				FEC5F7FB1DE72D9700AEF3D0 /* UIButton-Extension.swift */,
 				FEC5F8041DE88A1300AEF3D0 /* UIBarButtonItem-Extension.swift */,
 			);
@@ -549,6 +555,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE0BBE5D1DEC909200ABD840 /* Common.swift in Sources */,
+				FE0654781E0E0DF10088184B /* NSDate-Extension.swift in Sources */,
 				FE69C5111DE49A77002AA9E5 /* MessageViewController.swift in Sources */,
 				FE69C4D91DE49463002AA9E5 /* ViewController.swift in Sources */,
 				FEC5F80D1DE89A4F00AEF3D0 /* PopoverViewController.swift in Sources */,
@@ -567,6 +574,7 @@
 				FE0654321E0AC3C80088184B /* UserAccountViewModel.swift in Sources */,
 				FE69C50D1DE49A58002AA9E5 /* HomeViewController.swift in Sources */,
 				FEC5F8011DE747A800AEF3D0 /* VisitorView.swift in Sources */,
+				FE06547A1E0E0FE30088184B /* User.swift in Sources */,
 				FE69C50F1DE49A69002AA9E5 /* DiscoverViewController.swift in Sources */,
 				FEC5F8071DE895DD00AEF3D0 /* TitleButton.swift in Sources */,
 				FEC5F7FC1DE72D9700AEF3D0 /* UIButton-Extension.swift in Sources */,

@@ -113,8 +113,8 @@ extension HomeViewController {
                 let status = Status(dict: statusDict)
                 self.statuses.append(status)
                 
-                self.tableView.reloadData()
             }
+            self.tableView.reloadData()
         }
     }
 }
@@ -133,9 +133,9 @@ extension HomeViewController{
     }
 
  
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-    }
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        
+//    }
 }
 
 
