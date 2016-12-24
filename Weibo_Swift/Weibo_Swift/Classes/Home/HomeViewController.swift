@@ -22,7 +22,7 @@ class HomeViewController: BaseViewController {
     // MARK:-- 懒加载属性
     lazy var titleBtn:UIButton = TitleButton()
     
-    lazy var statuses : [Status] = [Status]()
+    lazy var viewModels : [StatusViewModel] = [StatusViewModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +37,10 @@ class HomeViewController: BaseViewController {
         
         //请求数据
         loadStatus()
+        
+        //最底部的空间，设置距离底部的间距（autolayout），然后再设置这两个属性，就可以自动计算高度
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 100
     }
 
     override func didReceiveMemoryWarning() {
@@ -111,7 +115,8 @@ extension HomeViewController {
             //遍历字典
             for statusDict in resultArray {
                 let status = Status(dict: statusDict)
-                self.statuses.append(status)
+                let viewMoel = StatusViewModel(status:status)
+                self.viewModels.append(viewMoel)
                 
             }
             self.tableView.reloadData()
@@ -123,19 +128,20 @@ extension HomeViewController{
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return viewModels.count
     }
 
  
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        
-//    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell") as! HomeViewCell
+        let viewModel = viewModels[indexPath.row]
+        cell.viewModel = viewModel
+        return cell
+    }
 }
 
 

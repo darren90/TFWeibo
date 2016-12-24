@@ -15,6 +15,8 @@
 		FE06543A1E0DFA3F0088184B /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0654391E0DFA3F0088184B /* Status.swift */; };
 		FE0654781E0E0DF10088184B /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0654771E0E0DF10088184B /* NSDate-Extension.swift */; };
 		FE06547A1E0E0FE30088184B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0654791E0E0FE30088184B /* User.swift */; };
+		FE06547C1E0E16E10088184B /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE06547B1E0E16E10088184B /* StatusViewModel.swift */; };
+		FE06547E1E0E1F080088184B /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE06547D1E0E1F080088184B /* HomeViewCell.swift */; };
 		FE0BBE5A1DEC8C6800ABD840 /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0BBE581DEC8C6800ABD840 /* OAuthViewController.swift */; };
 		FE0BBE5B1DEC8C6800ABD840 /* OAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE0BBE591DEC8C6800ABD840 /* OAuthViewController.xib */; };
 		FE0BBE5D1DEC909200ABD840 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0BBE5C1DEC909200ABD840 /* Common.swift */; };
@@ -77,6 +79,8 @@
 		FE0654391E0DFA3F0088184B /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		FE0654771E0E0DF10088184B /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
 		FE0654791E0E0FE30088184B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FE06547B1E0E16E10088184B /* StatusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
+		FE06547D1E0E1F080088184B /* HomeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		FE0BBE581DEC8C6800ABD840 /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
 		FE0BBE591DEC8C6800ABD840 /* OAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthViewController.xib; sourceTree = "<group>"; };
 		FE0BBE5C1DEC909200ABD840 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 			children = (
 				FE0654391E0DFA3F0088184B /* Status.swift */,
 				FE0654791E0E0FE30088184B /* User.swift */,
+				FE06547B1E0E16E10088184B /* StatusViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 				FEC5F8081DE89A1E00AEF3D0 /* UIPopover */,
 				FE69C5511DE5EE6F002AA9E5 /* Home.storyboard */,
 				FE69C50C1DE49A58002AA9E5 /* HomeViewController.swift */,
+				FE06547D1E0E1F080088184B /* HomeViewCell.swift */,
 				FEC5F8061DE895DD00AEF3D0 /* TitleButton.swift */,
 			);
 			path = Home;
@@ -575,6 +581,8 @@
 				FE69C50D1DE49A58002AA9E5 /* HomeViewController.swift in Sources */,
 				FEC5F8011DE747A800AEF3D0 /* VisitorView.swift in Sources */,
 				FE06547A1E0E0FE30088184B /* User.swift in Sources */,
+				FE06547E1E0E1F080088184B /* HomeViewCell.swift in Sources */,
+				FE06547C1E0E16E10088184B /* StatusViewModel.swift in Sources */,
 				FE69C50F1DE49A69002AA9E5 /* DiscoverViewController.swift in Sources */,
 				FEC5F8071DE895DD00AEF3D0 /* TitleButton.swift in Sources */,
 				FEC5F7FC1DE72D9700AEF3D0 /* UIButton-Extension.swift in Sources */,
