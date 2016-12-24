@@ -55,7 +55,6 @@ class PicCollectionViewCell: UICollectionViewCell {
             iconView.sd_setImage(with: picUrl, placeholderImage: UIImage(named: "empty_picture"))
         }
     }
-    
 }
 
 

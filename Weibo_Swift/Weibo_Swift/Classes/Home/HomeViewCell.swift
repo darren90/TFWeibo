@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 private let edgeMargin:CGFloat = 15
 private let itemMargin:CGFloat = 10
@@ -83,6 +84,14 @@ extension HomeViewCell {
     func calculatePicViewSize(count:Int) -> CGSize {
         if count == 0 {
             return CGSize(width: 0, height: 0)
+        }
+        
+        if count == 1 {
+            //从内存中取出图片
+            let image = SDWebImageManager.shared().imageCache.imageFromDiskCache(forKey: viewModel?.picUrls.first?.absoluteString)
+        
+            return image?.size
+            CGSize(width: 200, height: 200)
         }
         
         //计算
