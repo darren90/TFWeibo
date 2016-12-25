@@ -68,8 +68,10 @@ class StatusViewModel: NSObject {
         let profileUrlStr = status.user?.profile_image_url ?? ""
         profileUrl = URL(string: profileUrlStr)
 
+        let picUrlDicts = status.pic_urls!.count != 0 ? status.pic_urls : status.retweeted_status?.pic_urls
         //配图数据
-        if let picUrlDicts = status.pic_urls {
+        if let picUrlDicts = picUrlDicts {
+//        if let picUrlDicts = status.pic_urls {
             for picUrlDict in picUrlDicts {
                 guard let picUrlStr = picUrlDict["thumbnail_pic"] else {
                     continue

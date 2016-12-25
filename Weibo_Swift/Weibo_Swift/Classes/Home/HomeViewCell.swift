@@ -28,6 +28,7 @@ class HomeViewCell: UITableViewCell {
     @IBOutlet weak var picView: PicCollectionView!
     
     @IBOutlet weak var retweetContentLavel: UILabel!
+    @IBOutlet weak var retweetBackView: UIView!
     
     
     var viewModel:StatusViewModel?{
@@ -55,11 +56,14 @@ class HomeViewCell: UITableViewCell {
             picView.picUrls = viewModel.picUrls
             
             if viewModel.status?.retweeted_status != nil {
+                //1- 设置转发微博的正文
                 if let screenName = viewModel.status?.retweeted_status?.user?.screen_name ,let retContent = viewModel.status?.retweeted_status?.text  {
                     retweetContentLavel.text = "@" + "\(screenName) : " + retContent
                 }
+                retweetBackView.isHidden = false
             }else{
                 retweetContentLavel.text = nil
+                retweetBackView.isHidden = true
             }
         }
     }

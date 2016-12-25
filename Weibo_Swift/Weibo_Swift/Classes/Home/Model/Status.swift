@@ -20,7 +20,6 @@ class Status: NSObject {
     var retweeted_status:Status? ///微博对应的转发的微博
     
     
-    
     // MARK:-- 自定义构造函数
     init(dict:[String : AnyObject]) {
         super.init()

@@ -79,6 +79,16 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GVx-g5-TkN" userLabel="ret_back">
+                                            <rect key="frame" x="0.0" y="91" width="375" height="83"/>
+                                            <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="今天天气不错" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQn-dz-fwM" userLabel="recontent">
+                                            <rect key="frame" x="15" y="93" width="345" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yAo-jN-EU9" userLabel="toolView">
                                             <rect key="frame" x="0.0" y="174" width="375" height="40"/>
                                             <subviews>
@@ -184,24 +194,21 @@
                                                 </collectionViewCell>
                                             </cells>
                                         </collectionView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="今天天气不错" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQn-dz-fwM" userLabel="recontent">
-                                            <rect key="frame" x="15" y="93" width="345" height="24"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="O40-XH-67u" firstAttribute="leading" secondItem="tgw-iR-O1G" secondAttribute="trailing" constant="8" id="1JO-T5-U5a"/>
                                         <constraint firstItem="tgw-iR-O1G" firstAttribute="bottom" secondItem="HO5-5E-Jmf" secondAttribute="bottom" id="3Q2-ls-aze"/>
                                         <constraint firstItem="tgw-iR-O1G" firstAttribute="leading" secondItem="OVF-yr-o3g" secondAttribute="leading" id="4L3-I3-4lJ"/>
                                         <constraint firstItem="DQn-dz-fwM" firstAttribute="width" secondItem="nin-nN-0fz" secondAttribute="width" id="6Ue-eP-s9r"/>
+                                        <constraint firstItem="yAo-jN-EU9" firstAttribute="top" secondItem="GVx-g5-TkN" secondAttribute="bottom" id="8fr-Zd-xKw"/>
                                         <constraint firstItem="b29-hq-e3q" firstAttribute="top" secondItem="DQn-dz-fwM" secondAttribute="bottom" constant="10" id="9Oz-mD-xxE"/>
+                                        <constraint firstItem="GVx-g5-TkN" firstAttribute="top" secondItem="nin-nN-0fz" secondAttribute="bottom" constant="8" id="A6O-QS-xWa"/>
                                         <constraint firstItem="OVF-yr-o3g" firstAttribute="top" secondItem="HO5-5E-Jmf" secondAttribute="top" constant="-2" id="EJZ-FR-XDg"/>
                                         <constraint firstItem="DQn-dz-fwM" firstAttribute="leading" secondItem="nin-nN-0fz" secondAttribute="leading" id="EvU-32-yde"/>
                                         <constraint firstItem="nIl-ay-UZd" firstAttribute="trailing" secondItem="HO5-5E-Jmf" secondAttribute="trailing" id="FaR-uU-OUv"/>
                                         <constraint firstItem="O40-XH-67u" firstAttribute="top" secondItem="tgw-iR-O1G" secondAttribute="top" id="Jdv-kW-jkM"/>
                                         <constraint firstItem="nin-nN-0fz" firstAttribute="top" secondItem="O40-XH-67u" secondAttribute="bottom" constant="15" id="MSk-FZ-1Wt"/>
+                                        <constraint firstAttribute="trailing" secondItem="GVx-g5-TkN" secondAttribute="trailing" id="Mg4-mQ-9eA"/>
                                         <constraint firstItem="OVF-yr-o3g" firstAttribute="leading" secondItem="HO5-5E-Jmf" secondAttribute="trailing" constant="30" id="P3y-Oi-tR6"/>
                                         <constraint firstItem="Kle-jS-hhS" firstAttribute="leading" secondItem="OVF-yr-o3g" secondAttribute="trailing" constant="8" id="Qka-OV-hg7"/>
                                         <constraint firstItem="HO5-5E-Jmf" firstAttribute="top" secondItem="VQ6-F1-9GU" secondAttribute="top" constant="10" id="THy-qk-Kxs"/>
@@ -216,6 +223,7 @@
                                         <constraint firstAttribute="trailing" secondItem="yAo-jN-EU9" secondAttribute="trailing" id="qRv-pl-7dS"/>
                                         <constraint firstItem="yAo-jN-EU9" firstAttribute="top" secondItem="b29-hq-e3q" secondAttribute="bottom" constant="10" id="sH8-NA-Szc"/>
                                         <constraint firstItem="DQn-dz-fwM" firstAttribute="top" secondItem="nin-nN-0fz" secondAttribute="bottom" constant="10" id="sMi-Yq-Id8"/>
+                                        <constraint firstItem="GVx-g5-TkN" firstAttribute="leading" secondItem="VQ6-F1-9GU" secondAttribute="leading" id="vyb-Wd-Dk8"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -226,6 +234,7 @@
                                     <outlet property="picView" destination="b29-hq-e3q" id="EUu-uE-Lp3"/>
                                     <outlet property="picViewH" destination="QuR-cy-Q31" id="y5f-tJ-kwK"/>
                                     <outlet property="picViewW" destination="VcX-zT-Hla" id="QFj-sA-gC4"/>
+                                    <outlet property="retweetBackView" destination="GVx-g5-TkN" id="Xz2-GB-quZ"/>
                                     <outlet property="retweetContentLavel" destination="DQn-dz-fwM" id="ddG-jz-FMh"/>
                                     <outlet property="sourceLabel" destination="O40-XH-67u" id="hr6-n7-xUT"/>
                                     <outlet property="timeLabel" destination="tgw-iR-O1G" id="E1j-OO-10W"/>
