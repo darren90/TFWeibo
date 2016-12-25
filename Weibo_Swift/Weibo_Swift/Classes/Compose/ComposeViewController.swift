@@ -10,6 +10,7 @@ import UIKit
 
 class ComposeViewController: UIViewController {
     @IBOutlet weak var textView: ComposeTextView!
+    @IBOutlet weak var toolBarBottomCons: NSLayoutConstraint!
 
     lazy var titleView:ComposeTitleView = ComposeTitleView()
     
@@ -27,13 +28,41 @@ class ComposeViewController: UIViewController {
         //设置导航栏
         
         setUpNavBar()
+        
+        //
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillChangeFrame(notice:)), name: .UIKeyboardWillChangeFrame, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    
+    @IBAction func pictPIckAction(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func atAction(_ sender: UIButton) {
+    }
  
+    
+    @IBAction func huatiAction(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func biaoqingAction(_ sender: UIButton) {
+        
+    }
+ 
+    @IBAction func noAction(_ sender: UIButton) {
+        
+    }
+  
 }
 
 //MARK: -- 设置
@@ -55,6 +84,25 @@ extension ComposeViewController {
     func sendWeibo() {
         print("sendWeibo---")
     }
+    
+    func keyboardWillChangeFrame(notice:Notification){
+//        UIKeyboardAnimationDurationUserInfoKey  0.25
+//        UIKeyboardFrameEndUserInfoKey   258
+//        print("notice--:\(notice.userInfo!)")
+        let dutation = notice.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! Double
+//        AnyHashable("UIKeyboardFrameEndUserInfoKey"): NSRect: {{0, 409}, {375, 258}}, 
+        //NSvalue ---
+        let endFrame = (notice.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        let y = endFrame.origin.y
+        let margin = UIScreen.main.bounds.height - y
+        
+        toolBarBottomCons.constant = margin
+        UIView.animate(withDuration: dutation){() -> Void in
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    
 }
 
 
