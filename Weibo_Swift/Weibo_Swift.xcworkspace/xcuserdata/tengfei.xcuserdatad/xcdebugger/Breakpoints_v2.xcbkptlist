@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Weibo_Swift/Classes/Home/HomeViewController.swift"
-            timestampString = "504346046.387235"
+            timestampString = "504349990.12941"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
-            landmarkName = "loadStatus()"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
+            landmarkName = "loadStatus(isNewData:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -44,11 +44,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Weibo_Swift/Classes/Home/HomeViewController.swift"
-            timestampString = "504346129.330129"
+            timestampString = "504349990.12941"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
+            startingLineNumber = "217"
+            endingLineNumber = "217"
             landmarkName = "cacheImages(viewModels:)"
             landmarkType = "7">
          </BreakpointContent>

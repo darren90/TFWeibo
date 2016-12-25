@@ -26,6 +26,8 @@ class HomeViewController: BaseViewController {
     
     lazy var viewModels : [StatusViewModel] = [StatusViewModel]()
     
+    lazy var tipLabel:UILabel = UILabel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -47,6 +49,9 @@ class HomeViewController: BaseViewController {
 //        refreshControl = UIRefreshControl()
         //头部空间
         setUpHeaderView()
+        setUpFooterView()
+        
+        setUpTiplabel()
     }
 
     override func didReceiveMemoryWarning() {
@@ -114,12 +119,53 @@ extension HomeViewController {
         tableView.mj_header.beginRefreshing()
     }
     
+    func setUpFooterView(){
+        tableView.mj_footer = MJRefreshAutoFooter(refreshingTarget: self, refreshingAction: #selector(self.loadMoreStatus))
+    }
+    
+    func setUpTiplabel() {
+        navigationController?.navigationBar.insertSubview(tipLabel, at: 0)
+//        navigationController?.navigationBar.addSubview(tipLabel)
+        tipLabel.frame = CGRect(x: 0, y: 10, width: UIScreen.main.bounds.width, height: 32)
+        tipLabel.backgroundColor = UIColor.orange
+        tipLabel.textColor = UIColor.white.withAlphaComponent(0.6)
+        tipLabel.font = UIFont.systemFont(ofSize: 14)
+        tipLabel.isHidden = true
+        tipLabel.textAlignment = .center
+    }
+    
+    func showTipLabel(count:Int){
+        tipLabel.isHidden = false
+        tipLabel.text = count == 0 ? "没有新数据" : "\(count)条数据"
+        
+        UIView.animate(withDuration: 1.0, animations: {() -> Void in
+           self.tipLabel.frame.origin.y = 44
+        }) {(_) -> Void in
+            UIView.animate(withDuration: 1.0, delay: 0.5, options: [], animations: { 
+                self.tipLabel.frame.origin.y = 10
+            }, completion: { (_) in
+                self.tipLabel.isHidden = true
+            })
+        }
+    }
+    
 }
 
 //MARK: -- 请求数据
 extension HomeViewController {
-    func loadStatus() {
-        NetWorkTools.shareInstance.loadStatus{(result,error) -> () in
+    func loadStatus(isNewData:Bool) {
+        
+        //获取since_id/max_id
+        var since_id = 0
+        var max_id = 0
+        if isNewData {
+            since_id = viewModels.first?.status?.mid ?? 0
+        }else{
+            max_id = viewModels.last?.status?.mid ?? 0
+            max_id = max_id == 0 ? 0 :(max_id - 1)
+        }
+
+        NetWorkTools.shareInstance.loadStatus(since_id:since_id,max_id: max_id) {(result,error) -> () in
             if error != nil {
                 print(error ?? "")
                 return
@@ -129,16 +175,24 @@ extension HomeViewController {
                 return
             }
             
+            var tempViewModel = [StatusViewModel]()
             //遍历字典
             for statusDict in resultArray {
                 let status = Status(dict: statusDict)
                 let viewMoel = StatusViewModel(status:status)
-                self.viewModels.append(viewMoel)
-                
+//                self.viewModels.append(viewMoel)
+                tempViewModel.append(viewMoel)
             }
             
+            if isNewData{
+                self.viewModels = tempViewModel + self.viewModels
+            }else{
+                self.viewModels = self.viewModels + tempViewModel
+            }
+            
+            
             //先缓存图片，获取图片的宽高，在刷新
-            self.cacheImages(viewModels: self.viewModels)
+            self.cacheImages(viewModels: tempViewModel)
 //            self.tableView.reloadData()
         }
     }
@@ -162,12 +216,21 @@ extension HomeViewController {
             //刷新表格
             self.tableView.reloadData()
             self.tableView.mj_header.endRefreshing()
+            self.tableView.mj_footer.endRefreshing()
+            
+            //显示提示Lable
+            self.showTipLabel(count: self.viewModels.count)
         }
     }
     
+    
     func loadNewStatus(){
 //        print("--loadNewStatus--")
-        loadStatus()
+        loadStatus(isNewData: true)
+    }
+    
+    func loadMoreStatus(){
+        loadStatus(isNewData: false)
     }
     
 }
@@ -193,6 +256,20 @@ extension HomeViewController{
     
 }
 
+/* *
+ https://api.weibo.com/2/statuses/update.json
+ 
+ 
+ access_token	true	string	采用OAuth授权方式为必填参数，OAuth授权后获得。
+ status	true	string	要发布的微博文本内容，必须做URLencode，内容不超过140个汉字。
+ visible	false	int	微博的可见性，0：所有人能看，1：仅自己可见，2：密友可见，3：指定分组可见，默认为0。
+ list_id	false	string	微博的保护投递指定分组ID，只有当visible参数为3时生效且必选。
+ lat	false	float	纬度，有效范围：-90.0到+90.0，+表示北纬，默认为0.0。
+ long	false	float	经度，有效范围：-180.0到+180.0，+表示东经，默认为0.0。
+ annotations	false	string	元数据，主要是为了方便第三方应用记录一些适合于自己使用的信息，每条微博可以包含一个或者多个元数据，必须以json字串的形式提交，字串长度不超过512个字符，具体内容可以自定。
+ rip	false	string	开发者上报的操作用户真实IP，形如：211.156.0.1。
+ 注意事项
+ */
 
 
 
