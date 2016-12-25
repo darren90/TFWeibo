@@ -186,7 +186,10 @@ class MainTabBarController: UITabBarController {
 //MARK: -- 设置事件监听
 extension MainTabBarController{
     func composeBtnClick(){
-        print("---dfs--")
+//        print("---dfs--")
+        let composeVc = ComposeViewController()
+        let nav = UINavigationController(rootViewController: composeVc)
+        present(nav, animated: true, completion: nil)
     }
 }
 
