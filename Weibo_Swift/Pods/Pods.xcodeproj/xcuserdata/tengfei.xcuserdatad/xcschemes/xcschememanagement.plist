@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MJRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Weibo_Swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>159F6D75716AF3637459186EE91133C4</key>
+		<key>1ED0147E121E630A722F287E25C83780</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>162D29DB1CC13FAAA700E37C2D74BE7F</key>
+		<key>4709AE13265243CBCF6F711181C4787D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2C0D20C7B70C59F32492977B32FED7C1</key>
+		<key>67D141C036B404AE9C55A2AFBB5ACC6F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6A4AAE290E13CE6079811B7355C9B3F0</key>
+		<key>90C3D9D863C5117DE9EE73EDCEC2435B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E14A62900910444707A5504D25EC98DC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

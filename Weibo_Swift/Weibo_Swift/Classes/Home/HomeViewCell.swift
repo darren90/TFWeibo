@@ -29,6 +29,8 @@ class HomeViewCell: UITableViewCell {
     
     @IBOutlet weak var retweetContentLavel: UILabel!
     @IBOutlet weak var retweetBackView: UIView!
+    @IBOutlet weak var picViewBottonCons: NSLayoutConstraint!
+    @IBOutlet weak var retweetTopCons: NSLayoutConstraint!
     
     
     var viewModel:StatusViewModel?{
@@ -59,11 +61,13 @@ class HomeViewCell: UITableViewCell {
                 //1- 设置转发微博的正文
                 if let screenName = viewModel.status?.retweeted_status?.user?.screen_name ,let retContent = viewModel.status?.retweeted_status?.text  {
                     retweetContentLavel.text = "@" + "\(screenName) : " + retContent
+                    retweetTopCons.constant = 10//转发正文距离顶部的约束
                 }
                 retweetBackView.isHidden = false
             }else{
                 retweetContentLavel.text = nil
                 retweetBackView.isHidden = true
+                retweetTopCons.constant = 0
             }
         }
     }
@@ -97,8 +101,11 @@ class HomeViewCell: UITableViewCell {
 extension HomeViewCell {
     func calculatePicViewSize(count:Int) -> CGSize {
         if count == 0 {
+            picViewBottonCons.constant = 0//配图距离底部的约束
             return CGSize(width: 0, height: 0)
         }
+        
+        picViewBottonCons.constant = 10
         
         let layout = picView.collectionViewLayout as! UICollectionViewFlowLayout
  

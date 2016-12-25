@@ -232,10 +232,12 @@
                                     <outlet property="iconView" destination="HO5-5E-Jmf" id="ra9-mJ-oQE"/>
                                     <outlet property="nickNameLabel" destination="OVF-yr-o3g" id="TEf-aP-X4f"/>
                                     <outlet property="picView" destination="b29-hq-e3q" id="EUu-uE-Lp3"/>
+                                    <outlet property="picViewBottonCons" destination="sH8-NA-Szc" id="zMv-uD-iSX"/>
                                     <outlet property="picViewH" destination="QuR-cy-Q31" id="y5f-tJ-kwK"/>
                                     <outlet property="picViewW" destination="VcX-zT-Hla" id="QFj-sA-gC4"/>
                                     <outlet property="retweetBackView" destination="GVx-g5-TkN" id="Xz2-GB-quZ"/>
                                     <outlet property="retweetContentLavel" destination="DQn-dz-fwM" id="ddG-jz-FMh"/>
+                                    <outlet property="retweetTopCons" destination="sMi-Yq-Id8" id="MsV-en-apz"/>
                                     <outlet property="sourceLabel" destination="O40-XH-67u" id="hr6-n7-xUT"/>
                                     <outlet property="timeLabel" destination="tgw-iR-O1G" id="E1j-OO-10W"/>
                                     <outlet property="verfiedView" destination="nIl-ay-UZd" id="5GF-rR-Vlz"/>

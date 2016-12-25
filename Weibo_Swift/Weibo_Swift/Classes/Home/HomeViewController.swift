@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import MJRefresh
 
 class HomeViewController: BaseViewController {
 
@@ -37,11 +38,15 @@ class HomeViewController: BaseViewController {
         setupNavBar()
         
         //请求数据
-        loadStatus()
+//        loadStatus()
         
         //最底部的空间，设置距离底部的间距（autolayout），然后再设置这两个属性，就可以自动计算高度
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100
+        
+//        refreshControl = UIRefreshControl()
+        //头部空间
+        setUpHeaderView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -96,7 +101,18 @@ extension HomeViewController {
         popoverAnimator.presentedFrame = CGRect(x: 100, y: 60, width: 180, height: 250)
         
         present(vc, animated: true, completion: nil)
-    }    
+    }
+    
+    
+    func setUpHeaderView() {
+        let header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(self.loadNewStatus))
+        //设置属性
+        header?.setTitle("下拉刷新...", for: .idle)
+        header?.setTitle("释放刷新...", for: .pulling)
+        header?.setTitle("加载中...", for: .refreshing)
+        tableView.mj_header = header
+        tableView.mj_header.beginRefreshing()
+    }
     
 }
 
@@ -145,9 +161,15 @@ extension HomeViewController {
             print("down-all-image-OK")
             //刷新表格
             self.tableView.reloadData()
+            self.tableView.mj_header.endRefreshing()
         }
-        
     }
+    
+    func loadNewStatus(){
+//        print("--loadNewStatus--")
+        loadStatus()
+    }
+    
 }
 
 extension HomeViewController{
@@ -168,6 +190,7 @@ extension HomeViewController{
         cell.viewModel = viewModel
         return cell
     }
+    
 }
 
 
