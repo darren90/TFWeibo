@@ -15,9 +15,10 @@ class Status: NSObject {
     var source:String?     ///创建来源
     var text:String?        ///微博正文
     var mid:String?         ///id
-    var pic_urls:[[String:String]]?  ///微博图片
-    
+    var pic_urls:[[String:String]]?  ///微博图片 "retweeted_status"
     var user: User?     ///作者信息
+    var retweeted_status:Status? ///微博对应的转发的微博
+    
     
     
     // MARK:-- 自定义构造函数
@@ -29,6 +30,11 @@ class Status: NSObject {
         ///将用户字典，转成用户模型
         if let userdict = dict["user"] as? [String:AnyObject] {
             user = User(dict:userdict)
+        }
+        
+        //将妆发字典，转成微博模型对象
+        if let retweeted_statusDict = dict["retweeted_status"] as? [String:AnyObject] {
+            retweeted_status = Status(dict: retweeted_statusDict)
         }
     }
     

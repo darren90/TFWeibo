@@ -27,6 +27,8 @@ class HomeViewCell: UITableViewCell {
     @IBOutlet weak var picViewW: NSLayoutConstraint!
     @IBOutlet weak var picView: PicCollectionView!
     
+    @IBOutlet weak var retweetContentLavel: UILabel!
+    
     
     var viewModel:StatusViewModel?{
         didSet {
@@ -51,6 +53,14 @@ class HomeViewCell: UITableViewCell {
             picViewW.constant = picViewSize.width
             
             picView.picUrls = viewModel.picUrls
+            
+            if viewModel.status?.retweeted_status != nil {
+                if let screenName = viewModel.status?.retweeted_status?.user?.screen_name ,let retContent = viewModel.status?.retweeted_status?.text  {
+                    retweetContentLavel.text = "@" + "\(screenName) : " + retContent
+                }
+            }else{
+                retweetContentLavel.text = nil
+            }
         }
     }
 
@@ -60,9 +70,9 @@ class HomeViewCell: UITableViewCell {
         //设置微博正文的宽度约束
         contentLabelW.constant = UIScreen.main.bounds.width - 2 * edgeMargin
         
-        let layout = picView.collectionViewLayout as! UICollectionViewFlowLayout
-        let imageViewWH = (UIScreen.main.bounds.width - 2 * edgeMargin - 2*itemMargin) / 3
-        layout.itemSize = CGSize(width: imageViewWH, height: imageViewWH)
+//        let layout = picView.collectionViewLayout as! UICollectionViewFlowLayout
+//        let imageViewWH = (UIScreen.main.bounds.width - 2 * edgeMargin - 2*itemMargin) / 3
+//        layout.itemSize = CGSize(width: imageViewWH, height: imageViewWH)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -86,16 +96,24 @@ extension HomeViewCell {
             return CGSize(width: 0, height: 0)
         }
         
+        let layout = picView.collectionViewLayout as! UICollectionViewFlowLayout
+ 
         if count == 1 {
             //从内存中取出图片
             let image = SDWebImageManager.shared().imageCache.imageFromDiskCache(forKey: viewModel?.picUrls.first?.absoluteString)
-        
-            return image?.size
-            CGSize(width: 200, height: 200)
+            
+            
+            //设置一张图片的layout的itemSize
+            layout.itemSize = CGSize(width: (image?.size)!.width * 2, height: (image?.size)!.height * 2)
+            return CGSize(width: (image?.size)!.width * 2, height: (image?.size)!.height * 2)
         }
         
         //计算
         let imageViewWH = (UIScreen.main.bounds.width - 2 * edgeMargin - 2*itemMargin) / 3
+        
+        //设置其他张图片layout的itemSize
+        layout.itemSize = CGSize(width: imageViewWH, height: imageViewWH)
+        
         
         if count == 4 {
             let picViewH = imageViewWH * 2 + itemMargin
