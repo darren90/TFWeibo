@@ -25,6 +25,9 @@
 		FE0BBE5A1DEC8C6800ABD840 /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0BBE581DEC8C6800ABD840 /* OAuthViewController.swift */; };
 		FE0BBE5B1DEC8C6800ABD840 /* OAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE0BBE591DEC8C6800ABD840 /* OAuthViewController.xib */; };
 		FE0BBE5D1DEC909200ABD840 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0BBE5C1DEC909200ABD840 /* Common.swift */; };
+		FE2D8E671E1406FD005A625E /* PicPIckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D8E661E1406FD005A625E /* PicPIckView.swift */; };
+		FE2D8E6A1E140B39005A625E /* PicPIckCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D8E681E140B39005A625E /* PicPIckCell.swift */; };
+		FE2D8E6B1E140B39005A625E /* PicPIckCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE2D8E691E140B39005A625E /* PicPIckCell.xib */; };
 		FE5415E21DF85E1600AF28AF /* PopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5415E11DF85E1600AF28AF /* PopoverAnimator.swift */; };
 		FE69C4D71DE49463002AA9E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69C4D61DE49463002AA9E5 /* AppDelegate.swift */; };
 		FE69C4D91DE49463002AA9E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69C4D81DE49463002AA9E5 /* ViewController.swift */; };
@@ -95,6 +98,9 @@
 		FE0BBE581DEC8C6800ABD840 /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
 		FE0BBE591DEC8C6800ABD840 /* OAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthViewController.xib; sourceTree = "<group>"; };
 		FE0BBE5C1DEC909200ABD840 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		FE2D8E661E1406FD005A625E /* PicPIckView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicPIckView.swift; sourceTree = "<group>"; };
+		FE2D8E681E140B39005A625E /* PicPIckCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicPIckCell.swift; sourceTree = "<group>"; };
+		FE2D8E691E140B39005A625E /* PicPIckCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PicPIckCell.xib; sourceTree = "<group>"; };
 		FE5415E11DF85E1600AF28AF /* PopoverAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverAnimator.swift; sourceTree = "<group>"; };
 		FE69C4D31DE49463002AA9E5 /* Weibo_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weibo_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE69C4D61DE49463002AA9E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -198,6 +204,7 @@
 		FE0654EC1E0FC6970088184B /* Compose */ = {
 			isa = PBXGroup;
 			children = (
+				FE2D8E651E1406CF005A625E /* PicturePick */,
 				FE0654ED1E0FC6FC0088184B /* ComposeViewController.swift */,
 				FE0654EE1E0FC6FC0088184B /* ComposeViewController.xib */,
 				FE0654F11E0FC91D0088184B /* ComposeTitleView.swift */,
@@ -215,6 +222,16 @@
 				FE0654311E0AC3C80088184B /* UserAccountViewModel.swift */,
 			);
 			path = OAuth;
+			sourceTree = "<group>";
+		};
+		FE2D8E651E1406CF005A625E /* PicturePick */ = {
+			isa = PBXGroup;
+			children = (
+				FE2D8E661E1406FD005A625E /* PicPIckView.swift */,
+				FE2D8E681E140B39005A625E /* PicPIckCell.swift */,
+				FE2D8E691E140B39005A625E /* PicPIckCell.xib */,
+			);
+			path = PicturePick;
 			sourceTree = "<group>";
 		};
 		FE69C4CA1DE49463002AA9E5 = {
@@ -504,6 +521,7 @@
 				FE69C4E11DE49463002AA9E5 /* LaunchScreen.storyboard in Resources */,
 				FEC5F8031DE747B000AEF3D0 /* VisitorView.xib in Resources */,
 				FE69C5531DE5EE6F002AA9E5 /* Home.storyboard in Resources */,
+				FE2D8E6B1E140B39005A625E /* PicPIckCell.xib in Resources */,
 				FE69C55A1DE5EEE7002AA9E5 /* Profile.storyboard in Resources */,
 				FEE3D3011E0FE1D7000512B5 /* Emoticons.bundle in Resources */,
 				FE0BBE5B1DEC8C6800ABD840 /* OAuthViewController.xib in Resources */,
@@ -603,7 +621,9 @@
 				FEC5F8121DEC7AF100AEF3D0 /* NetWorkTools.swift in Sources */,
 				FEC5F8101DEA7EA400AEF3D0 /* TFPresentationController.swift in Sources */,
 				FE0654F21E0FC91D0088184B /* ComposeTitleView.swift in Sources */,
+				FE2D8E6A1E140B39005A625E /* PicPIckCell.swift in Sources */,
 				FE69C50B1DE49989002AA9E5 /* MainTabBarController.swift in Sources */,
+				FE2D8E671E1406FD005A625E /* PicPIckView.swift in Sources */,
 				FE69C5131DE49A83002AA9E5 /* ProfileViewController.swift in Sources */,
 				FEC5F7FF1DE73FE700AEF3D0 /* BaseViewController.swift in Sources */,
 				FE06543A1E0DFA3F0088184B /* Status.swift in Sources */,

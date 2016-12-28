@@ -127,7 +127,7 @@ extension HomeViewCell {
         
         
         if count == 4 {
-            let picViewH = imageViewWH * 2 + itemMargin
+            let picViewH = imageViewWH * 2 + itemMargin + 1//特殊处理 + 1
             return CGSize(width: picViewH, height: picViewH)
         }
         

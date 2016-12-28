@@ -20,6 +20,9 @@ let app_Secret = "c32345f523348a1ba68146cd0cac1cc6"
 let redirect_url = "http://www.baidu.com"
 
 
+let PicPickAddPhotoNote = "PicPickAddPhotoNote"
+let PicPickRemovePhotoNote = "PicPickRemovePhotoNote"
+
 
 
 

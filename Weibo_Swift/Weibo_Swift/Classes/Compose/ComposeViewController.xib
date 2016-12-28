@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ComposeViewController" customModule="Weibo_Swift" customModuleProvider="target">
             <connections>
+                <outlet property="pickView" destination="gmY-jt-KQ2" id="6Xf-Cv-gns"/>
+                <outlet property="pickViewH" destination="qd5-aq-Ioa" id="FyF-cD-dg0"/>
                 <outlet property="textView" destination="Ast-1C-VxN" id="tkU-Gi-LNo"/>
                 <outlet property="toolBarBottomCons" destination="FVF-iJ-wci" id="8fd-k0-BoR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -99,6 +101,19 @@
                         <barButtonItem title="   " id="LYs-Db-5FB"/>
                     </items>
                 </toolbar>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="gmY-jt-KQ2" customClass="PicPIckView" customModule="Weibo_Swift" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="623" width="375" height="0.0"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" id="qd5-aq-Ioa"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oJO-QW-41F">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -107,8 +122,11 @@
                 <constraint firstItem="eZL-CO-y5n" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="SPR-ip-LxC"/>
                 <constraint firstItem="Ast-1C-VxN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="dFT-Sd-QAs"/>
                 <constraint firstAttribute="bottom" secondItem="Ast-1C-VxN" secondAttribute="bottom" id="ekg-x1-4av"/>
+                <constraint firstAttribute="trailing" secondItem="gmY-jt-KQ2" secondAttribute="trailing" id="h44-1L-Cz2"/>
                 <constraint firstAttribute="trailing" secondItem="Ast-1C-VxN" secondAttribute="trailing" id="mH9-fe-Ofv"/>
                 <constraint firstItem="Ast-1C-VxN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="opf-dj-dyM"/>
+                <constraint firstItem="gmY-jt-KQ2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pHN-rR-iBX"/>
+                <constraint firstItem="eZL-CO-y5n" firstAttribute="top" secondItem="gmY-jt-KQ2" secondAttribute="bottom" id="rXc-FZ-Y4r"/>
             </constraints>
             <point key="canvasLocation" x="53.5" y="57.5"/>
         </view>
