@@ -57,7 +57,6 @@
 		FEC5F80E1DE89A4F00AEF3D0 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEC5F80C1DE89A4F00AEF3D0 /* PopoverViewController.xib */; };
 		FEC5F8101DEA7EA400AEF3D0 /* TFPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC5F80F1DEA7EA400AEF3D0 /* TFPresentationController.swift */; };
 		FEC5F8121DEC7AF100AEF3D0 /* NetWorkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC5F8111DEC7AF100AEF3D0 /* NetWorkTools.swift */; };
-		FEE3D3011E0FE1D7000512B5 /* Emoticons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FEE3D3001E0FE1D7000512B5 /* Emoticons.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,7 +135,6 @@
 		FEC5F80C1DE89A4F00AEF3D0 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
 		FEC5F80F1DEA7EA400AEF3D0 /* TFPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFPresentationController.swift; sourceTree = "<group>"; };
 		FEC5F8111DEC7AF100AEF3D0 /* NetWorkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkTools.swift; sourceTree = "<group>"; };
-		FEE3D3001E0FE1D7000512B5 /* Emoticons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Emoticons.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,7 +357,6 @@
 		FE69C5141DE4A92A002AA9E5 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				FEE3D3001E0FE1D7000512B5 /* Emoticons.bundle */,
 				FE69C5151DE4A92A002AA9E5 /* MainVCSettings.json */,
 			);
 			path = Resource;
@@ -523,7 +520,6 @@
 				FE69C5531DE5EE6F002AA9E5 /* Home.storyboard in Resources */,
 				FE2D8E6B1E140B39005A625E /* PicPIckCell.xib in Resources */,
 				FE69C55A1DE5EEE7002AA9E5 /* Profile.storyboard in Resources */,
-				FEE3D3011E0FE1D7000512B5 /* Emoticons.bundle in Resources */,
 				FE0BBE5B1DEC8C6800ABD840 /* OAuthViewController.xib in Resources */,
 				FE69C4DE1DE49463002AA9E5 /* Assets.xcassets in Resources */,
 				FE0654371E0C48350088184B /* WellcomeViewController.xib in Resources */,
