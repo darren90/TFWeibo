@@ -225,7 +225,6 @@ extension HomeViewController {
     
     
     func loadNewStatus(){
-//        print("--loadNewStatus--")
         loadStatus(isNewData: true)
     }
     
