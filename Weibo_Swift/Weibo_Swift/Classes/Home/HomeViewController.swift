@@ -231,7 +231,8 @@ extension HomeViewController {
     func loadMoreStatus(){
         loadStatus(isNewData: false)
     }
-    
+
+
 }
 
 extension HomeViewController{
