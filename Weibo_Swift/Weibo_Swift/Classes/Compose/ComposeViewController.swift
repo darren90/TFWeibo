@@ -17,6 +17,14 @@ class ComposeViewController: UIViewController {
     lazy var titleView:ComposeTitleView = ComposeTitleView()
     lazy var imags:[UIImage] = [UIImage]()
     
+    
+    lazy var emotionVC:EmotionViewController = EmotionViewController {[weak self] (emoticon) -> () in
+        //        print(emoticon)
+        //        weak.textView.text = "sdf"
+        self!.textView.insetEmotion(emoticon:emoticon)
+        self!.textViewDidChange(self!.textView)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -107,7 +115,7 @@ class ComposeViewController: UIViewController {
         // 1 - 退出键盘
         textView.resignFirstResponder()
         // 2 - 切换键盘
-        textView.inputView = (textView.inputView != nil ? nil : UISwitch())
+        textView.inputView = (textView.inputView != nil ? nil : emotionVC.view)
         // 3 - 弹出新键盘
         textView.becomeFirstResponder()
     }
@@ -134,8 +142,10 @@ extension ComposeViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    // MARK:-- 发送微博
     func sendWeibo() {
-        print("sendWeibo---")
+        print(textView.getEmotionStr())
+//        print("sendWeibo---")
     }
     
     func keyboardWillChangeFrame(notice:Notification){

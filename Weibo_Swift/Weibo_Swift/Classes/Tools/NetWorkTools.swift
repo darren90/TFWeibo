@@ -91,6 +91,51 @@ extension NetWorkTools {
 }
 
 
+//MARK: --- 发送文字微博
+extension NetWorkTools {
+    func sendTextStatus(since_id:Int,max_id:Int,fininshed : @escaping ( _ result:[[String:AnyObject]]?,_ error:NSError?) -> ()) {
+        //获取请求的url
+        let urlStr = "https://api.weibo.com/2/statuses/home_timeline.json"
+        let params = ["access_token" : (UserAccountViewModel.shareInstance.account?.access_token)!,"since_id" : "\(since_id)","max_id" : "\(max_id)"] as [String : String]
+        
+        request(methodType: .GET, urlString: urlStr, parameters: params as [String : AnyObject]) {(result : Any?, error : Error?) -> () in
+            
+            guard let resdic = result as? [String : AnyObject] else{
+                fininshed(nil,error as NSError?)
+                return
+            }
+            
+            //
+            fininshed(resdic["statuses"] as! [[String : AnyObject]]?,error as NSError?)
+        }
+    }
+}
+
+//MARK: --- 发送带有图片的微博
+extension NetWorkTools {
+    func sendStatus(since_id:Int,max_id:Int,fininshed : @escaping ( _ result:[[String:AnyObject]]?,_ error:NSError?) -> ()) {
+        //获取请求的url
+        let urlStr = "https://api.weibo.com/2/statuses/home_timeline.json"
+        let params = ["access_token" : (UserAccountViewModel.shareInstance.account?.access_token)!,"since_id" : "\(since_id)","max_id" : "\(max_id)"] as [String : String]
+        
+        request(methodType: .GET, urlString: urlStr, parameters: params as [String : AnyObject]) {(result : Any?, error : Error?) -> () in
+            
+            guard let resdic = result as? [String : AnyObject] else{
+                fininshed(nil,error as NSError?)
+                return
+            }
+            
+            //
+            fininshed(resdic["statuses"] as! [[String : AnyObject]]?,error as NSError?)
+        }
+    }
+}
+
+
+
+
+
+
 
 
 

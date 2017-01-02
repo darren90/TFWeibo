@@ -28,6 +28,41 @@
 		FE2D8E671E1406FD005A625E /* PicPIckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D8E661E1406FD005A625E /* PicPIckView.swift */; };
 		FE2D8E6A1E140B39005A625E /* PicPIckCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D8E681E140B39005A625E /* PicPIckCell.swift */; };
 		FE2D8E6B1E140B39005A625E /* PicPIckCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE2D8E691E140B39005A625E /* PicPIckCell.xib */; };
+		FE51A2021E1AB8370000B4E4 /* EmojiTextAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE51A1DD1E1AB8370000B4E4 /* EmojiTextAttachment.swift */; };
+		FE51A2031E1AB8370000B4E4 /* Emoticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE51A1DE1E1AB8370000B4E4 /* Emoticon.swift */; };
+		FE51A2041E1AB8370000B4E4 /* EmoticonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE51A1DF1E1AB8370000B4E4 /* EmoticonCell.swift */; };
+		FE51A2051E1AB8370000B4E4 /* EmotionMananger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE51A1E01E1AB8370000B4E4 /* EmotionMananger.swift */; };
+		FE51A2061E1AB8370000B4E4 /* EmotionPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE51A1E11E1AB8370000B4E4 /* EmotionPackage.swift */; };
+		FE51A2071E1AB8370000B4E4 /* EmotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE51A1E21E1AB8370000B4E4 /* EmotionViewController.swift */; };
+		FE51A2081E1AB8370000B4E4 /* compose_emoticonbutton_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51A1E51E1AB8370000B4E4 /* compose_emoticonbutton_background@2x.png */; };
+		FE51A2091E1AB8370000B4E4 /* compose_emoticonbutton_background@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51A1E61E1AB8370000B4E4 /* compose_emoticonbutton_background@3x.png */; };
+		FE51A20A1E1AB8370000B4E4 /* compose_emoticonbutton_background_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51A1E71E1AB8370000B4E4 /* compose_emoticonbutton_background_highlighted@2x.png */; };
+		FE51A20B1E1AB8370000B4E4 /* compose_emoticonbutton_background_highlighted@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51A1E81E1AB8370000B4E4 /* compose_emoticonbutton_background_highlighted@3x.png */; };
+		FE51A20C1E1AB8370000B4E4 /* compose_keyboardbutton_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51A1E91E1AB8370000B4E4 /* compose_keyboardbutton_background@2x.png */; };
+		FE51A20D1E1AB8370000B4E4 /* compose_keyboardbutton_background@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51A1EA1E1AB8370000B4E4 /* compose_keyboardbutton_background@3x.png */; };
+		FE51A20E1E1AB8370000B4E4 /* compose_keyboardbutton_background_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51A1EB1E1AB8370000B4E4 /* compose_keyboardbutton_background_highlighted@2x.png */; };
+		FE51A20F1E1AB8370000B4E4 /* compose_keyboardbutton_background_highlighted@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51A1EC1E1AB8370000B4E4 /* compose_keyboardbutton_background_highlighted@3x.png */; };
+		FE51A2101E1AB8370000B4E4 /* compose_mentionbutton_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51A1ED1E1AB8370000B4E4 /* compose_mentionbutton_background@2x.png */; };
+		FE51A2111E1AB8370000B4E4 /* compose_mentionbutton_background@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51A1EE1E1AB8370000B4E4 /* compose_mentionbutton_background@3x.png */; };
+		FE51A2121E1AB8370000B4E4 /* compose_mentionbutton_background_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51A1EF1E1AB8370000B4E4 /* compose_mentionbutton_background_highlighted@2x.png */; };
+		FE51A2131E1AB8370000B4E4 /* compose_mentionbutton_background_highlighted@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51A1F01E1AB8370000B4E4 /* compose_mentionbutton_background_highlighted@3x.png */; };
+		FE51A2141E1AB8370000B4E4 /* compose_photo_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51A1F11E1AB8370000B4E4 /* compose_photo_close@2x.png */; };
+		FE51A2151E1AB8370000B4E4 /* compose_pic_add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51A1F21E1AB8370000B4E4 /* compose_pic_add@2x.png */; };
+		FE51A2161E1AB8370000B4E4 /* compose_pic_add@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51A1F31E1AB8370000B4E4 /* compose_pic_add@3x.png */; };
+		FE51A2171E1AB8370000B4E4 /* compose_pic_add_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51A1F41E1AB8370000B4E4 /* compose_pic_add_highlighted@2x.png */; };
+		FE51A2181E1AB8370000B4E4 /* compose_pic_add_highlighted@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51A1F51E1AB8370000B4E4 /* compose_pic_add_highlighted@3x.png */; };
+		FE51A2191E1AB8370000B4E4 /* compose_toolbar_picture@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51A1F61E1AB8370000B4E4 /* compose_toolbar_picture@2x.png */; };
+		FE51A21A1E1AB8370000B4E4 /* compose_toolbar_picture@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51A1F71E1AB8370000B4E4 /* compose_toolbar_picture@3x.png */; };
+		FE51A21B1E1AB8370000B4E4 /* compose_toolbar_picture_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51A1F81E1AB8370000B4E4 /* compose_toolbar_picture_highlighted@2x.png */; };
+		FE51A21C1E1AB8370000B4E4 /* compose_toolbar_picture_highlighted@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51A1F91E1AB8370000B4E4 /* compose_toolbar_picture_highlighted@3x.png */; };
+		FE51A21D1E1AB8370000B4E4 /* compose_trendbutton_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51A1FA1E1AB8370000B4E4 /* compose_trendbutton_background@2x.png */; };
+		FE51A21E1E1AB8370000B4E4 /* compose_trendbutton_background@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51A1FB1E1AB8370000B4E4 /* compose_trendbutton_background@3x.png */; };
+		FE51A21F1E1AB8370000B4E4 /* compose_trendbutton_background_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51A1FC1E1AB8370000B4E4 /* compose_trendbutton_background_highlighted@2x.png */; };
+		FE51A2201E1AB8370000B4E4 /* compose_trendbutton_background_highlighted@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51A1FD1E1AB8370000B4E4 /* compose_trendbutton_background_highlighted@3x.png */; };
+		FE51A2211E1AB8370000B4E4 /* compose_emotion_delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51A1FE1E1AB8370000B4E4 /* compose_emotion_delete@2x.png */; };
+		FE51A2221E1AB8370000B4E4 /* compose_emotion_delete@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51A1FF1E1AB8370000B4E4 /* compose_emotion_delete@3x.png */; };
+		FE51A2231E1AB8370000B4E4 /* Emoticons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FE51A2001E1AB8370000B4E4 /* Emoticons.bundle */; };
+		FE51A2241E1AB8370000B4E4 /* UITextView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE51A2011E1AB8370000B4E4 /* UITextView-Extension.swift */; };
 		FE5415E21DF85E1600AF28AF /* PopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5415E11DF85E1600AF28AF /* PopoverAnimator.swift */; };
 		FE69C4D71DE49463002AA9E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69C4D61DE49463002AA9E5 /* AppDelegate.swift */; };
 		FE69C4D91DE49463002AA9E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69C4D81DE49463002AA9E5 /* ViewController.swift */; };
@@ -100,6 +135,41 @@
 		FE2D8E661E1406FD005A625E /* PicPIckView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicPIckView.swift; sourceTree = "<group>"; };
 		FE2D8E681E140B39005A625E /* PicPIckCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicPIckCell.swift; sourceTree = "<group>"; };
 		FE2D8E691E140B39005A625E /* PicPIckCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PicPIckCell.xib; sourceTree = "<group>"; };
+		FE51A1DD1E1AB8370000B4E4 /* EmojiTextAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiTextAttachment.swift; sourceTree = "<group>"; };
+		FE51A1DE1E1AB8370000B4E4 /* Emoticon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emoticon.swift; sourceTree = "<group>"; };
+		FE51A1DF1E1AB8370000B4E4 /* EmoticonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonCell.swift; sourceTree = "<group>"; };
+		FE51A1E01E1AB8370000B4E4 /* EmotionMananger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionMananger.swift; sourceTree = "<group>"; };
+		FE51A1E11E1AB8370000B4E4 /* EmotionPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionPackage.swift; sourceTree = "<group>"; };
+		FE51A1E21E1AB8370000B4E4 /* EmotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionViewController.swift; sourceTree = "<group>"; };
+		FE51A1E51E1AB8370000B4E4 /* compose_emoticonbutton_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_emoticonbutton_background@2x.png"; sourceTree = "<group>"; };
+		FE51A1E61E1AB8370000B4E4 /* compose_emoticonbutton_background@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_emoticonbutton_background@3x.png"; sourceTree = "<group>"; };
+		FE51A1E71E1AB8370000B4E4 /* compose_emoticonbutton_background_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_emoticonbutton_background_highlighted@2x.png"; sourceTree = "<group>"; };
+		FE51A1E81E1AB8370000B4E4 /* compose_emoticonbutton_background_highlighted@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_emoticonbutton_background_highlighted@3x.png"; sourceTree = "<group>"; };
+		FE51A1E91E1AB8370000B4E4 /* compose_keyboardbutton_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_keyboardbutton_background@2x.png"; sourceTree = "<group>"; };
+		FE51A1EA1E1AB8370000B4E4 /* compose_keyboardbutton_background@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_keyboardbutton_background@3x.png"; sourceTree = "<group>"; };
+		FE51A1EB1E1AB8370000B4E4 /* compose_keyboardbutton_background_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_keyboardbutton_background_highlighted@2x.png"; sourceTree = "<group>"; };
+		FE51A1EC1E1AB8370000B4E4 /* compose_keyboardbutton_background_highlighted@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_keyboardbutton_background_highlighted@3x.png"; sourceTree = "<group>"; };
+		FE51A1ED1E1AB8370000B4E4 /* compose_mentionbutton_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_mentionbutton_background@2x.png"; sourceTree = "<group>"; };
+		FE51A1EE1E1AB8370000B4E4 /* compose_mentionbutton_background@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_mentionbutton_background@3x.png"; sourceTree = "<group>"; };
+		FE51A1EF1E1AB8370000B4E4 /* compose_mentionbutton_background_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_mentionbutton_background_highlighted@2x.png"; sourceTree = "<group>"; };
+		FE51A1F01E1AB8370000B4E4 /* compose_mentionbutton_background_highlighted@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_mentionbutton_background_highlighted@3x.png"; sourceTree = "<group>"; };
+		FE51A1F11E1AB8370000B4E4 /* compose_photo_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_photo_close@2x.png"; sourceTree = "<group>"; };
+		FE51A1F21E1AB8370000B4E4 /* compose_pic_add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_pic_add@2x.png"; sourceTree = "<group>"; };
+		FE51A1F31E1AB8370000B4E4 /* compose_pic_add@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_pic_add@3x.png"; sourceTree = "<group>"; };
+		FE51A1F41E1AB8370000B4E4 /* compose_pic_add_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_pic_add_highlighted@2x.png"; sourceTree = "<group>"; };
+		FE51A1F51E1AB8370000B4E4 /* compose_pic_add_highlighted@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_pic_add_highlighted@3x.png"; sourceTree = "<group>"; };
+		FE51A1F61E1AB8370000B4E4 /* compose_toolbar_picture@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_toolbar_picture@2x.png"; sourceTree = "<group>"; };
+		FE51A1F71E1AB8370000B4E4 /* compose_toolbar_picture@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_toolbar_picture@3x.png"; sourceTree = "<group>"; };
+		FE51A1F81E1AB8370000B4E4 /* compose_toolbar_picture_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_toolbar_picture_highlighted@2x.png"; sourceTree = "<group>"; };
+		FE51A1F91E1AB8370000B4E4 /* compose_toolbar_picture_highlighted@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_toolbar_picture_highlighted@3x.png"; sourceTree = "<group>"; };
+		FE51A1FA1E1AB8370000B4E4 /* compose_trendbutton_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_trendbutton_background@2x.png"; sourceTree = "<group>"; };
+		FE51A1FB1E1AB8370000B4E4 /* compose_trendbutton_background@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_trendbutton_background@3x.png"; sourceTree = "<group>"; };
+		FE51A1FC1E1AB8370000B4E4 /* compose_trendbutton_background_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_trendbutton_background_highlighted@2x.png"; sourceTree = "<group>"; };
+		FE51A1FD1E1AB8370000B4E4 /* compose_trendbutton_background_highlighted@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_trendbutton_background_highlighted@3x.png"; sourceTree = "<group>"; };
+		FE51A1FE1E1AB8370000B4E4 /* compose_emotion_delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_emotion_delete@2x.png"; sourceTree = "<group>"; };
+		FE51A1FF1E1AB8370000B4E4 /* compose_emotion_delete@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_emotion_delete@3x.png"; sourceTree = "<group>"; };
+		FE51A2001E1AB8370000B4E4 /* Emoticons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Emoticons.bundle; sourceTree = "<group>"; };
+		FE51A2011E1AB8370000B4E4 /* UITextView-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView-Extension.swift"; sourceTree = "<group>"; };
 		FE5415E11DF85E1600AF28AF /* PopoverAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverAnimator.swift; sourceTree = "<group>"; };
 		FE69C4D31DE49463002AA9E5 /* Weibo_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weibo_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE69C4D61DE49463002AA9E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -230,6 +300,64 @@
 				FE2D8E691E140B39005A625E /* PicPIckCell.xib */,
 			);
 			path = PicturePick;
+			sourceTree = "<group>";
+		};
+		FE51A1DC1E1AB8370000B4E4 /* Emotion */ = {
+			isa = PBXGroup;
+			children = (
+				FE51A1DD1E1AB8370000B4E4 /* EmojiTextAttachment.swift */,
+				FE51A1DE1E1AB8370000B4E4 /* Emoticon.swift */,
+				FE51A1DF1E1AB8370000B4E4 /* EmoticonCell.swift */,
+				FE51A1E01E1AB8370000B4E4 /* EmotionMananger.swift */,
+				FE51A1E11E1AB8370000B4E4 /* EmotionPackage.swift */,
+				FE51A1E21E1AB8370000B4E4 /* EmotionViewController.swift */,
+				FE51A1E31E1AB8370000B4E4 /* res */,
+				FE51A2011E1AB8370000B4E4 /* UITextView-Extension.swift */,
+			);
+			path = Emotion;
+			sourceTree = "<group>";
+		};
+		FE51A1E31E1AB8370000B4E4 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				FE51A1E41E1AB8370000B4E4 /* Compose */,
+				FE51A1FE1E1AB8370000B4E4 /* compose_emotion_delete@2x.png */,
+				FE51A1FF1E1AB8370000B4E4 /* compose_emotion_delete@3x.png */,
+				FE51A2001E1AB8370000B4E4 /* Emoticons.bundle */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		FE51A1E41E1AB8370000B4E4 /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				FE51A1E51E1AB8370000B4E4 /* compose_emoticonbutton_background@2x.png */,
+				FE51A1E61E1AB8370000B4E4 /* compose_emoticonbutton_background@3x.png */,
+				FE51A1E71E1AB8370000B4E4 /* compose_emoticonbutton_background_highlighted@2x.png */,
+				FE51A1E81E1AB8370000B4E4 /* compose_emoticonbutton_background_highlighted@3x.png */,
+				FE51A1E91E1AB8370000B4E4 /* compose_keyboardbutton_background@2x.png */,
+				FE51A1EA1E1AB8370000B4E4 /* compose_keyboardbutton_background@3x.png */,
+				FE51A1EB1E1AB8370000B4E4 /* compose_keyboardbutton_background_highlighted@2x.png */,
+				FE51A1EC1E1AB8370000B4E4 /* compose_keyboardbutton_background_highlighted@3x.png */,
+				FE51A1ED1E1AB8370000B4E4 /* compose_mentionbutton_background@2x.png */,
+				FE51A1EE1E1AB8370000B4E4 /* compose_mentionbutton_background@3x.png */,
+				FE51A1EF1E1AB8370000B4E4 /* compose_mentionbutton_background_highlighted@2x.png */,
+				FE51A1F01E1AB8370000B4E4 /* compose_mentionbutton_background_highlighted@3x.png */,
+				FE51A1F11E1AB8370000B4E4 /* compose_photo_close@2x.png */,
+				FE51A1F21E1AB8370000B4E4 /* compose_pic_add@2x.png */,
+				FE51A1F31E1AB8370000B4E4 /* compose_pic_add@3x.png */,
+				FE51A1F41E1AB8370000B4E4 /* compose_pic_add_highlighted@2x.png */,
+				FE51A1F51E1AB8370000B4E4 /* compose_pic_add_highlighted@3x.png */,
+				FE51A1F61E1AB8370000B4E4 /* compose_toolbar_picture@2x.png */,
+				FE51A1F71E1AB8370000B4E4 /* compose_toolbar_picture@3x.png */,
+				FE51A1F81E1AB8370000B4E4 /* compose_toolbar_picture_highlighted@2x.png */,
+				FE51A1F91E1AB8370000B4E4 /* compose_toolbar_picture_highlighted@3x.png */,
+				FE51A1FA1E1AB8370000B4E4 /* compose_trendbutton_background@2x.png */,
+				FE51A1FB1E1AB8370000B4E4 /* compose_trendbutton_background@3x.png */,
+				FE51A1FC1E1AB8370000B4E4 /* compose_trendbutton_background_highlighted@2x.png */,
+				FE51A1FD1E1AB8370000B4E4 /* compose_trendbutton_background_highlighted@3x.png */,
+			);
+			path = Compose;
 			sourceTree = "<group>";
 		};
 		FE69C4CA1DE49463002AA9E5 = {
@@ -365,6 +493,7 @@
 		FEC5F7F91DE72D5900AEF3D0 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				FE51A1DC1E1AB8370000B4E4 /* Emotion */,
 				FEC5F7FA1DE72D7500AEF3D0 /* Category */,
 				FEC5F8111DEC7AF100AEF3D0 /* NetWorkTools.swift */,
 				FE0BBE5C1DEC909200ABD840 /* Common.swift */,
@@ -517,19 +646,47 @@
 			files = (
 				FE69C4E11DE49463002AA9E5 /* LaunchScreen.storyboard in Resources */,
 				FEC5F8031DE747B000AEF3D0 /* VisitorView.xib in Resources */,
+				FE51A2111E1AB8370000B4E4 /* compose_mentionbutton_background@3x.png in Resources */,
+				FE51A2171E1AB8370000B4E4 /* compose_pic_add_highlighted@2x.png in Resources */,
+				FE51A2141E1AB8370000B4E4 /* compose_photo_close@2x.png in Resources */,
+				FE51A21D1E1AB8370000B4E4 /* compose_trendbutton_background@2x.png in Resources */,
 				FE69C5531DE5EE6F002AA9E5 /* Home.storyboard in Resources */,
+				FE51A20D1E1AB8370000B4E4 /* compose_keyboardbutton_background@3x.png in Resources */,
+				FE51A2131E1AB8370000B4E4 /* compose_mentionbutton_background_highlighted@3x.png in Resources */,
+				FE51A2081E1AB8370000B4E4 /* compose_emoticonbutton_background@2x.png in Resources */,
 				FE2D8E6B1E140B39005A625E /* PicPIckCell.xib in Resources */,
+				FE51A2221E1AB8370000B4E4 /* compose_emotion_delete@3x.png in Resources */,
 				FE69C55A1DE5EEE7002AA9E5 /* Profile.storyboard in Resources */,
+				FE51A2201E1AB8370000B4E4 /* compose_trendbutton_background_highlighted@3x.png in Resources */,
+				FE51A21C1E1AB8370000B4E4 /* compose_toolbar_picture_highlighted@3x.png in Resources */,
 				FE0BBE5B1DEC8C6800ABD840 /* OAuthViewController.xib in Resources */,
+				FE51A20E1E1AB8370000B4E4 /* compose_keyboardbutton_background_highlighted@2x.png in Resources */,
 				FE69C4DE1DE49463002AA9E5 /* Assets.xcassets in Resources */,
 				FE0654371E0C48350088184B /* WellcomeViewController.xib in Resources */,
+				FE51A2121E1AB8370000B4E4 /* compose_mentionbutton_background_highlighted@2x.png in Resources */,
+				FE51A21F1E1AB8370000B4E4 /* compose_trendbutton_background_highlighted@2x.png in Resources */,
+				FE51A20A1E1AB8370000B4E4 /* compose_emoticonbutton_background_highlighted@2x.png in Resources */,
+				FE51A20C1E1AB8370000B4E4 /* compose_keyboardbutton_background@2x.png in Resources */,
 				FE69C5161DE4A92A002AA9E5 /* MainVCSettings.json in Resources */,
+				FE51A20B1E1AB8370000B4E4 /* compose_emoticonbutton_background_highlighted@3x.png in Resources */,
 				FEC5F80E1DE89A4F00AEF3D0 /* PopoverViewController.xib in Resources */,
 				FE69C5551DE5EEBB002AA9E5 /* Message.storyboard in Resources */,
+				FE51A21E1E1AB8370000B4E4 /* compose_trendbutton_background@3x.png in Resources */,
 				FE69C5581DE5EECF002AA9E5 /* Discover.storyboard in Resources */,
+				FE51A21B1E1AB8370000B4E4 /* compose_toolbar_picture_highlighted@2x.png in Resources */,
+				FE51A2151E1AB8370000B4E4 /* compose_pic_add@2x.png in Resources */,
+				FE51A2091E1AB8370000B4E4 /* compose_emoticonbutton_background@3x.png in Resources */,
+				FE51A2191E1AB8370000B4E4 /* compose_toolbar_picture@2x.png in Resources */,
 				FE0654F01E0FC6FC0088184B /* ComposeViewController.xib in Resources */,
+				FE51A21A1E1AB8370000B4E4 /* compose_toolbar_picture@3x.png in Resources */,
+				FE51A20F1E1AB8370000B4E4 /* compose_keyboardbutton_background_highlighted@3x.png in Resources */,
 				FE69C4DC1DE49463002AA9E5 /* Main.storyboard in Resources */,
+				FE51A2161E1AB8370000B4E4 /* compose_pic_add@3x.png in Resources */,
+				FE51A2181E1AB8370000B4E4 /* compose_pic_add_highlighted@3x.png in Resources */,
+				FE51A2101E1AB8370000B4E4 /* compose_mentionbutton_background@2x.png in Resources */,
+				FE51A2211E1AB8370000B4E4 /* compose_emotion_delete@2x.png in Resources */,
 				FEC5F7F81DE5F0FA00AEF3D0 /* SendWeibo.storyboard in Resources */,
+				FE51A2231E1AB8370000B4E4 /* Emoticons.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,18 +760,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE0BBE5D1DEC909200ABD840 /* Common.swift in Sources */,
+				FE51A2061E1AB8370000B4E4 /* EmotionPackage.swift in Sources */,
 				FE0654781E0E0DF10088184B /* NSDate-Extension.swift in Sources */,
 				FE69C5111DE49A77002AA9E5 /* MessageViewController.swift in Sources */,
 				FE69C4D91DE49463002AA9E5 /* ViewController.swift in Sources */,
+				FE51A2051E1AB8370000B4E4 /* EmotionMananger.swift in Sources */,
 				FEC5F80D1DE89A4F00AEF3D0 /* PopoverViewController.swift in Sources */,
+				FE51A2031E1AB8370000B4E4 /* Emoticon.swift in Sources */,
 				FE0654361E0C48350088184B /* WellcomeViewController.swift in Sources */,
 				FE5415E21DF85E1600AF28AF /* PopoverAnimator.swift in Sources */,
 				FE0654301E02FCFF0088184B /* UserAccount.swift in Sources */,
 				FEC5F8051DE88A1300AEF3D0 /* UIBarButtonItem-Extension.swift in Sources */,
 				FE0BBE5A1DEC8C6800ABD840 /* OAuthViewController.swift in Sources */,
 				FE0654F41E0FDAB70088184B /* ComposeTextView.swift in Sources */,
+				FE51A2041E1AB8370000B4E4 /* EmoticonCell.swift in Sources */,
 				FE69C4D71DE49463002AA9E5 /* AppDelegate.swift in Sources */,
 				FEC5F8121DEC7AF100AEF3D0 /* NetWorkTools.swift in Sources */,
+				FE51A2241E1AB8370000B4E4 /* UITextView-Extension.swift in Sources */,
 				FEC5F8101DEA7EA400AEF3D0 /* TFPresentationController.swift in Sources */,
 				FE0654F21E0FC91D0088184B /* ComposeTitleView.swift in Sources */,
 				FE2D8E6A1E140B39005A625E /* PicPIckCell.swift in Sources */,
@@ -626,6 +788,7 @@
 				FE0654321E0AC3C80088184B /* UserAccountViewModel.swift in Sources */,
 				FE69C50D1DE49A58002AA9E5 /* HomeViewController.swift in Sources */,
 				FEC5F8011DE747A800AEF3D0 /* VisitorView.swift in Sources */,
+				FE51A2071E1AB8370000B4E4 /* EmotionViewController.swift in Sources */,
 				FE06547A1E0E0FE30088184B /* User.swift in Sources */,
 				FE06547E1E0E1F080088184B /* HomeViewCell.swift in Sources */,
 				FE06547C1E0E16E10088184B /* StatusViewModel.swift in Sources */,
@@ -633,6 +796,7 @@
 				FEC5F8071DE895DD00AEF3D0 /* TitleButton.swift in Sources */,
 				FE0654801E0E5FDE0088184B /* PicCollectionView.swift in Sources */,
 				FEC5F7FC1DE72D9700AEF3D0 /* UIButton-Extension.swift in Sources */,
+				FE51A2021E1AB8370000B4E4 /* EmojiTextAttachment.swift in Sources */,
 				FE0654EF1E0FC6FC0088184B /* ComposeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
