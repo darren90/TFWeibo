@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ComposeViewController: UIViewController {
     @IBOutlet weak var textView: ComposeTextView!
@@ -146,6 +147,17 @@ extension ComposeViewController {
     func sendWeibo() {
         print(textView.getEmotionStr())
 //        print("sendWeibo---")
+        textView.resignFirstResponder()
+        
+        let statusText = textView.getEmotionStr()
+        NetWorkTools.shareInstance.sendStatus(statusText: statusText) {(isSuccess) -> () in
+            if !isSuccess {
+                SVProgressHUD.showError(withStatus: "发送失败")
+                return
+            }
+            SVProgressHUD.showSuccess(withStatus: "发送成功")
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     func keyboardWillChangeFrame(notice:Notification){
