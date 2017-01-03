@@ -38,6 +38,13 @@ extension PicCollectionView : UICollectionViewDataSource,UICollectionViewDelegat
         cell.picUrl = picUrls[indexPath.item]
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        print(indexPath.item)
+        //获取通知需要传递的参数：
+        let userInfo = ["indexPath":indexPath,"picUrls":picUrls] as [String : Any]
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: ShowPhotoBroserNote), object: nil, userInfo: userInfo)
+    }
 }
 
 

@@ -24,5 +24,8 @@ let PicPickAddPhotoNote = "PicPickAddPhotoNote"
 let PicPickRemovePhotoNote = "PicPickRemovePhotoNote"
 
 
+//照片浏览器的通知
+let ShowPhotoBroserNote = "ShowPhotoBroserNote"
+
 
 

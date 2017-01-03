@@ -27,6 +27,7 @@
 		FE0BBE5D1DEC909200ABD840 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0BBE5C1DEC909200ABD840 /* Common.swift */; };
 		FE1C74591E1BFC790020E541 /* FindEmoticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1C74581E1BFC790020E541 /* FindEmoticon.swift */; };
 		FE1C745C1E1BFFA50020E541 /* HYLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1C745B1E1BFFA50020E541 /* HYLabel.swift */; };
+		FE1C745F1E1C0A320020E541 /* PhotoBrowseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1C745E1E1C0A320020E541 /* PhotoBrowseController.swift */; };
 		FE2D8E671E1406FD005A625E /* PicPIckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D8E661E1406FD005A625E /* PicPIckView.swift */; };
 		FE2D8E6A1E140B39005A625E /* PicPIckCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D8E681E140B39005A625E /* PicPIckCell.swift */; };
 		FE2D8E6B1E140B39005A625E /* PicPIckCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE2D8E691E140B39005A625E /* PicPIckCell.xib */; };
@@ -136,6 +137,7 @@
 		FE0BBE5C1DEC909200ABD840 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		FE1C74581E1BFC790020E541 /* FindEmoticon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindEmoticon.swift; sourceTree = "<group>"; };
 		FE1C745B1E1BFFA50020E541 /* HYLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYLabel.swift; sourceTree = "<group>"; };
+		FE1C745E1E1C0A320020E541 /* PhotoBrowseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowseController.swift; sourceTree = "<group>"; };
 		FE2D8E661E1406FD005A625E /* PicPIckView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicPIckView.swift; sourceTree = "<group>"; };
 		FE2D8E681E140B39005A625E /* PicPIckCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicPIckCell.swift; sourceTree = "<group>"; };
 		FE2D8E691E140B39005A625E /* PicPIckCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PicPIckCell.xib; sourceTree = "<group>"; };
@@ -304,6 +306,14 @@
 			path = HYLabel;
 			sourceTree = "<group>";
 		};
+		FE1C745D1E1C0A0E0020E541 /* PhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				FE1C745E1E1C0A320020E541 /* PhotoBrowseController.swift */,
+			);
+			path = PhotoBrowser;
+			sourceTree = "<group>";
+		};
 		FE2D8E651E1406CF005A625E /* PicturePick */ = {
 			isa = PBXGroup;
 			children = (
@@ -455,6 +465,7 @@
 		FE69C5061DE49848002AA9E5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FE1C745D1E1C0A0E0020E541 /* PhotoBrowser */,
 				FE0654381E0DFA2D0088184B /* Model */,
 				FEC5F8081DE89A1E00AEF3D0 /* UIPopover */,
 				FE69C5511DE5EE6F002AA9E5 /* Home.storyboard */,
@@ -805,6 +816,7 @@
 				FE51A2071E1AB8370000B4E4 /* EmotionViewController.swift in Sources */,
 				FE06547A1E0E0FE30088184B /* User.swift in Sources */,
 				FE06547E1E0E1F080088184B /* HomeViewCell.swift in Sources */,
+				FE1C745F1E1C0A320020E541 /* PhotoBrowseController.swift in Sources */,
 				FE06547C1E0E16E10088184B /* StatusViewModel.swift in Sources */,
 				FE69C50F1DE49A69002AA9E5 /* DiscoverViewController.swift in Sources */,
 				FEC5F8071DE895DD00AEF3D0 /* TitleButton.swift in Sources */,

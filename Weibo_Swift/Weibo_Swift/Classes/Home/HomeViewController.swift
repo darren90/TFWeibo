@@ -52,12 +52,17 @@ class HomeViewController: BaseViewController {
         setUpFooterView()
         
         setUpTiplabel()
+        
+        //照片浏览的通知
+        NotificationCenter.default.addObserver(self, selector: #selector(self.showPhotoBrower(note:)), name: NSNotification.Name(rawValue: ShowPhotoBroserNote), object: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
 
    
 }
@@ -253,6 +258,29 @@ extension HomeViewController{
         return cell
     }
     
+}
+
+
+//箭筒照片浏览器
+extension HomeViewController{
+    //        let userInfo = ["indexPath":indexPath,"picUrls":picUrls] as [String : Any]
+    //        NotificationCenter.default.post(name: NSNotification.Name(rawValue: ShowPhotoBroserNote), object: nil, userInfo: userInfo)
+    func showPhotoBrower(note:Notification){
+//        let userInfo = ["indexPath":indexPath,"picUrls":picUrls] as [String : Any]
+        guard let indexPath = note.userInfo?["indexPath"] as? IndexPath else {
+            return
+        }
+        guard let picUrls = note.userInfo?["picUrls"] as? [URL] else{
+            return
+        }
+    
+        print(picUrls)
+        
+        //以modar的形式弹出控制器
+        let pbVc = PhotoBrowseController(indexPath: indexPath, picUrls: picUrls)
+        present(pbVc, animated: true, completion: nil)
+        
+    }
 }
 
 /* *
