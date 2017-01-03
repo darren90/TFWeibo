@@ -168,8 +168,8 @@ extension ComposeViewController {
 
         }else{
             NetWorkTools.shareInstance.sendStatus(statusText: statusText, isSuccess:fininshCallBack)
-        
         }
+        
     }
     func keyboardWillChangeFrame(notice:Notification){
 //        UIKeyboardAnimationDurationUserInfoKey  0.25

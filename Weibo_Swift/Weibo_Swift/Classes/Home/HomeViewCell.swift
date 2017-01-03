@@ -46,7 +46,8 @@ class HomeViewCell: UITableViewCell {
             vipView.image = viewModel.vipImage
             timeLabel.text = viewModel.createAtText
             sourceLabel.text = viewModel.sourceText
-            contentLabel.text = viewModel.status?.text
+//            contentLabel.text = viewModel.status?.text
+            contentLabel.attributedText = FindEmoticon.shareInstance.findAttrStr(statusText: viewModel.status?.text, font: contentLabel.font)
             
             nickNameLabel.textColor = viewModel.vipImage == nil ? UIColor.black : UIColor.orange
             
@@ -60,7 +61,9 @@ class HomeViewCell: UITableViewCell {
             if viewModel.status?.retweeted_status != nil {
                 //1- 设置转发微博的正文
                 if let screenName = viewModel.status?.retweeted_status?.user?.screen_name ,let retContent = viewModel.status?.retweeted_status?.text  {
-                    retweetContentLavel.text = "@" + "\(screenName) : " + retContent
+                    let retContent = "@" + "\(screenName) : " + retContent
+//                    retweetContentLavel.text = retContent
+                    retweetContentLavel.attributedText = FindEmoticon.shareInstance.findAttrStr(statusText: retContent, font: retweetContentLavel.font)
                     retweetTopCons.constant = 10//转发正文距离顶部的约束
                 }
                 retweetBackView.isHidden = false

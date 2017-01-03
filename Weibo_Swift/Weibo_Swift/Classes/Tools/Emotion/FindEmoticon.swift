@@ -15,7 +15,11 @@ class FindEmoticon: NSObject {
     lazy var manager:EmotionMananger = EmotionMananger()
     
     //查找属性字符串
-    func findAttrStr(statusText:String,font :UIFont) -> NSMutableAttributedString? {
+    func findAttrStr(statusText:String?,font :UIFont) -> NSMutableAttributedString? {
+        
+        guard let statusText = statusText else{
+            return nil
+        }
         
         //@.*?: 匹配到第一个：就结束
         //@.*? 匹配到到最后一个：才结束
