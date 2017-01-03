@@ -112,22 +112,25 @@ extension NetWorkTools {
 
 //MARK: --- 发送带有图片的微博
 extension NetWorkTools {
-    func sendImgStatus(since_id:Int,max_id:Int,fininshed : @escaping ( _ result:[[String:AnyObject]]?,_ error:NSError?) -> ()) {
+    func sendStatus(statusText:String,image:UIImage,isSuccess : @escaping ( _ isSuccess:Bool) -> ()) {
         //获取请求的url
-        let urlStr = "https://upload.api.weibo.com/2/statuses/upload.jsonn"
-        let params = ["access_token" : (UserAccountViewModel.shareInstance.account?.access_token)!,"since_id" : "\(since_id)","max_id" : "\(max_id)"] as [String : String]
+        let urlStr = "https://api.weibo.com/2/statuses/upload.json"
+        let params = ["access_token" : (UserAccountViewModel.shareInstance.account?.access_token)!,"status" : statusText] as [String : String]
         
-        request(methodType: .GET, urlString: urlStr, parameters: params as [String : AnyObject]) {(result : Any?, error : Error?) -> () in
+        
+        post(urlStr, parameters: params, constructingBodyWith: {(formateData:AFMultipartFormData) -> Void in
             
-            guard let resdic = result as? [String : AnyObject] else{
-                fininshed(nil,error as NSError?)
-                return
+            if let imageData = UIImageJPEGRepresentation(image, 0.5){
+                formateData.appendPart(withFileData: imageData, name: "pic", fileName: "qingqing.png", mimeType: "image/png")
             }
             
-            //
-            fininshed(resdic["statuses"] as! [[String : AnyObject]]?,error as NSError?)
+            }, progress: nil, success: {(_, _) -> Void in
+                  isSuccess(true)
+            }){(_, error) -> Void in
+                print("上传失败:\(error)")
+                  isSuccess(false)
+            }
         }
-    }
 }
 
 

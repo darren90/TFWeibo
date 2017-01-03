@@ -149,8 +149,11 @@ extension ComposeViewController {
 //        print("sendWeibo---")
         textView.resignFirstResponder()
         
+        //微博内容
         let statusText = textView.getEmotionStr()
-        NetWorkTools.shareInstance.sendStatus(statusText: statusText) {(isSuccess) -> () in
+        
+        //定义回调闭包
+        let fininshCallBack =  {(isSuccess:Bool) -> () in
             if !isSuccess {
                 SVProgressHUD.showError(withStatus: "发送失败")
                 return
@@ -158,8 +161,16 @@ extension ComposeViewController {
             SVProgressHUD.showSuccess(withStatus: "发送成功")
             self.dismiss(animated: true, completion: nil)
         }
+        
+        //获取用户的图片
+        if let image = imags.first {
+            NetWorkTools.shareInstance.sendStatus(statusText: statusText, image: image, isSuccess: fininshCallBack)
+
+        }else{
+            NetWorkTools.shareInstance.sendStatus(statusText: statusText, isSuccess:fininshCallBack)
+        
+        }
     }
-    
     func keyboardWillChangeFrame(notice:Notification){
 //        UIKeyboardAnimationDurationUserInfoKey  0.25
 //        UIKeyboardFrameEndUserInfoKey   258

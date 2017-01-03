@@ -25,6 +25,7 @@
 		FE0BBE5A1DEC8C6800ABD840 /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0BBE581DEC8C6800ABD840 /* OAuthViewController.swift */; };
 		FE0BBE5B1DEC8C6800ABD840 /* OAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE0BBE591DEC8C6800ABD840 /* OAuthViewController.xib */; };
 		FE0BBE5D1DEC909200ABD840 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0BBE5C1DEC909200ABD840 /* Common.swift */; };
+		FE1C74591E1BFC790020E541 /* FindEmoticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1C74581E1BFC790020E541 /* FindEmoticon.swift */; };
 		FE2D8E671E1406FD005A625E /* PicPIckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D8E661E1406FD005A625E /* PicPIckView.swift */; };
 		FE2D8E6A1E140B39005A625E /* PicPIckCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D8E681E140B39005A625E /* PicPIckCell.swift */; };
 		FE2D8E6B1E140B39005A625E /* PicPIckCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE2D8E691E140B39005A625E /* PicPIckCell.xib */; };
@@ -132,6 +133,7 @@
 		FE0BBE581DEC8C6800ABD840 /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
 		FE0BBE591DEC8C6800ABD840 /* OAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthViewController.xib; sourceTree = "<group>"; };
 		FE0BBE5C1DEC909200ABD840 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		FE1C74581E1BFC790020E541 /* FindEmoticon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindEmoticon.swift; sourceTree = "<group>"; };
 		FE2D8E661E1406FD005A625E /* PicPIckView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicPIckView.swift; sourceTree = "<group>"; };
 		FE2D8E681E140B39005A625E /* PicPIckCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicPIckCell.swift; sourceTree = "<group>"; };
 		FE2D8E691E140B39005A625E /* PicPIckCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PicPIckCell.xib; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 				FE51A1E01E1AB8370000B4E4 /* EmotionMananger.swift */,
 				FE51A1E11E1AB8370000B4E4 /* EmotionPackage.swift */,
 				FE51A1E21E1AB8370000B4E4 /* EmotionViewController.swift */,
+				FE1C74581E1BFC790020E541 /* FindEmoticon.swift */,
 				FE51A1E31E1AB8370000B4E4 /* res */,
 				FE51A2011E1AB8370000B4E4 /* UITextView-Extension.swift */,
 			);
@@ -795,6 +798,7 @@
 				FE69C50F1DE49A69002AA9E5 /* DiscoverViewController.swift in Sources */,
 				FEC5F8071DE895DD00AEF3D0 /* TitleButton.swift in Sources */,
 				FE0654801E0E5FDE0088184B /* PicCollectionView.swift in Sources */,
+				FE1C74591E1BFC790020E541 /* FindEmoticon.swift in Sources */,
 				FEC5F7FC1DE72D9700AEF3D0 /* UIButton-Extension.swift in Sources */,
 				FE51A2021E1AB8370000B4E4 /* EmojiTextAttachment.swift in Sources */,
 				FE0654EF1E0FC6FC0088184B /* ComposeViewController.swift in Sources */,
