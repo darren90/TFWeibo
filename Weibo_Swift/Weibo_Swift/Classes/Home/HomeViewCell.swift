@@ -21,13 +21,13 @@ class HomeViewCell: UITableViewCell {
     @IBOutlet weak var vipView: UIImageView!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var sourceLabel: UILabel!
-    @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var contentLabel: HYLabel!
     
     @IBOutlet weak var picViewH: NSLayoutConstraint!
     @IBOutlet weak var picViewW: NSLayoutConstraint!
     @IBOutlet weak var picView: PicCollectionView!
     
-    @IBOutlet weak var retweetContentLavel: UILabel!
+    @IBOutlet weak var retweetContentLavel: HYLabel!
     @IBOutlet weak var retweetBackView: UIView!
     @IBOutlet weak var picViewBottonCons: NSLayoutConstraint!
     @IBOutlet weak var retweetTopCons: NSLayoutConstraint!
@@ -84,6 +84,24 @@ class HomeViewCell: UITableViewCell {
 //        let layout = picView.collectionViewLayout as! UICollectionViewFlowLayout
 //        let imageViewWH = (UIScreen.main.bounds.width - 2 * edgeMargin - 2*itemMargin) / 3
 //        layout.itemSize = CGSize(width: imageViewWH, height: imageViewWH)
+        
+        
+        contentLabel.userTapHandler = { (label, user, range) in
+            print(user)
+            print(range)
+        }
+        
+        // 监听链接的点击
+        contentLabel.linkTapHandler = { (label, link, range) in
+            print(link)
+            print(range)
+        }
+        
+        // 监听话题的点击
+        contentLabel.topicTapHandler = { (label, topic, range) in
+            print(topic)
+            print(range)
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
