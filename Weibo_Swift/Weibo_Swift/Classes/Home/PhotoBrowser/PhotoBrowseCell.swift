@@ -9,6 +9,10 @@
 import UIKit
 import SDWebImage
 
+protocol PhotoBrowseCellDelegate:NSObjectProtocol {
+    func imgaeViewClick()
+}
+
 class PhotoBrowseCell: UICollectionViewCell {
     
     var picUrl:URL? {
@@ -17,6 +21,7 @@ class PhotoBrowseCell: UICollectionViewCell {
         }
     }
     
+    var delegate : PhotoBrowseCellDelegate?
     
     lazy var scrollView = UIScrollView()
     lazy var iconView = UIImageView()
@@ -39,10 +44,16 @@ class PhotoBrowseCell: UICollectionViewCell {
         progressView.center = CGPoint(x: UIScreen.main.bounds.width*0.5, y: UIScreen.main.bounds.height * 0.5)
         progressView.isHidden = true
         progressView.backgroundColor = UIColor.clear
-        scrollView.frame = contentView.bounds
+        scrollView.frame = CGRect(x: 0, y: 0, width: contentView.bounds.width-kPhotoMargin, height: contentView.bounds.height)
         
+        iconView.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.disSlef))
+        iconView.addGestureRecognizer(tap)
     }
     
+    func disSlef(){
+        
+    }
     
     
     required init?(coder aDecoder: NSCoder) {

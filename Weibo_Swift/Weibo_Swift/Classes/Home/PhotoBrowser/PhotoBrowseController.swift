@@ -9,6 +9,7 @@
 import UIKit
 
 private let KPhotoCell = "KPhotoCell"
+let kPhotoMargin:CGFloat = 10
 
 class PhotoBrowseController: UIViewController {
     // MARK:-- 定义属性
@@ -39,6 +40,9 @@ class PhotoBrowseController: UIViewController {
         view.backgroundColor = UIColor.cyan
         
         setUpUI()
+        
+        //滚动到对应的位置
+        collectionView.scrollToItem(at: indexPath, at: .left, animated: false)
 
     }
 
@@ -59,7 +63,7 @@ extension PhotoBrowseController{
         view.addSubview(saveBtn)
         
 //        collectionView
-        collectionView.frame = view.bounds
+        collectionView.frame = CGRect(x: 0, y: 0, width: view.bounds.width + kPhotoMargin, height: view.bounds.height)
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(PhotoBrowseCell.self, forCellWithReuseIdentifier: KPhotoCell)
