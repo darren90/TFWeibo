@@ -1,0 +1,52 @@
+PODS:
+  - Alamofire (4.0.1)
+  - MJRefresh (3.1.12)
+  - SnapKit (3.1.2)
+  - SVProgressHUD (2.1.2)
+  - UMengAnalytics (4.1.10)
+  - UMengUShare/Core (6.2.0):
+    - UMengUShare/Network
+  - UMengUShare/Network (6.2.0)
+  - UMengUShare/Social/QQ (6.2.0):
+    - UMengUShare/Core
+  - UMengUShare/Social/Sina (6.2.0):
+    - UMengUShare/Core
+  - UMengUShare/Social/WeChat (6.2.0):
+    - UMengUShare/Core
+  - UMengUShare/UI (6.2.0):
+    - UMengUShare/Core
+  - YYCache (1.0.4)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
+  - YYWebImage (1.0.5):
+    - YYCache
+    - YYImage
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0.0)
+  - MJRefresh
+  - SnapKit
+  - SVProgressHUD
+  - UMengAnalytics
+  - UMengUShare/Social/QQ
+  - UMengUShare/Social/Sina
+  - UMengUShare/Social/WeChat
+  - UMengUShare/UI
+  - YYImage
+  - YYWebImage
+
+SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  UMengAnalytics: 40585031b7eb085534c68a951b394731e7166257
+  UMengUShare: 700415220ee9df4051d27d8a31fb1286a8f3b4e6
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
+  YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
+
+PODFILE CHECKSUM: dae74f643c61f383a08b6a2322daf580d90e733d
+
+COCOAPODS: 1.1.1

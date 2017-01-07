@@ -1,0 +1,25 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'WeiboCient' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+pod 'SnapKit'
+pod 'SVProgressHUD'
+pod 'MJRefresh'
+pod 'YYWebImage'
+pod 'YYImage'
+pod 'Alamofire', '~> 4.0.0'
+
+    # 集成新浪微博 + 微信 + QQ
+    pod 'UMengUShare/UI'
+    pod 'UMengUShare/Social/Sina'
+    pod 'UMengUShare/Social/WeChat'
+    pod 'UMengUShare/Social/QQ'
+
+	 # 友盟统计
+    pod 'UMengAnalytics'
+
+
+end
