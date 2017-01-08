@@ -171,8 +171,25 @@ class PhotoBrowseCollectionLayout : UICollectionViewFlowLayout {
 
 }
 
+//mark： --- animateDismiss协议
+extension PhotoBrowseController : PhotoAnimatorDismissdDelegate{
+    func indexPathForDismiss() -> IndexPath{
+        //获取当前正在显示的indexpath
+        let cell = collectionView.visibleCells.first!
+        return collectionView.indexPath(for: cell)!
+    }
 
+    func imageViewForDismiss() -> UIImageView {
+        let imageView = UIImageView()
+        let cell = collectionView.visibleCells.first as! PhotoBrowseCell
+        imageView.frame = cell.iconView.frame
+        imageView.image = cell.iconView.image
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        return imageView
+    }
 
+}
 
 
 

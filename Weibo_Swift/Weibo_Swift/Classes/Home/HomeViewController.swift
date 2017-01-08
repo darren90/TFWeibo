@@ -287,6 +287,7 @@ extension HomeViewController{
         //这只modar样式  cusmtom,这样后面的东西不会被隐藏
         pbVc.modalPresentationStyle = .custom
         pbVc.transitioningDelegate = photoBrowserAnimator
+        photoBrowserAnimator.dismissDelegate = pbVc
         present(pbVc, animated: true, completion: nil)
         
     }
