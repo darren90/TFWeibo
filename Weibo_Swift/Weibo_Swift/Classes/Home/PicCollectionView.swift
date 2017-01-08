@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class PicCollectionView: UICollectionView {
 
@@ -43,10 +44,50 @@ extension PicCollectionView : UICollectionViewDataSource,UICollectionViewDelegat
 //        print(indexPath.item)
         //获取通知需要传递的参数：
         let userInfo = ["indexPath":indexPath,"picUrls":picUrls] as [String : Any]
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: ShowPhotoBroserNote), object: nil, userInfo: userInfo)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: ShowPhotoBroserNote), object: self, userInfo: userInfo)
     }
 }
 
+
+extension PicCollectionView : PhotoAnimatorPresentedDelegate {
+    func startRect(indexPath:IndexPath) -> CGRect{
+        let cell = self.cellForItem(at: indexPath)!
+        
+        //获取cell的frame
+        //直接可以转化为相对于window的frame
+        let startFrame = self.convert(cell.frame, to: UIApplication.shared.keyWindow)
+        return startFrame
+    }
+    
+    func endRect(indexPath:IndexPath) -> CGRect{
+        //获取该位置的image对象
+        let picUrl = picUrls[indexPath.item]
+        let image = SDWebImageManager.shared().imageCache.imageFromDiskCache(forKey: picUrl.absoluteString)
+        
+        //计算结束后的frame
+        let w = UIScreen.main.bounds.width
+        let h = w / (image?.size.width)! * (image?.size.height)!
+        var y:CGFloat = 0
+        if h > UIScreen.main.bounds.height {
+            y = 0
+        }else{
+            y = (UIScreen.main.bounds.height - h)*0.5
+        }
+        return CGRect(x: 0, y: y, width: w, height: h)
+    }
+    
+    func imageView(indexPath:IndexPath) -> UIImageView{
+        //1,创建imageView =
+        let imageView = UIImageView()
+        let picUrl = picUrls[indexPath.item]
+        let image = SDWebImageManager.shared().imageCache.imageFromDiskCache(forKey: picUrl.absoluteString)
+        
+        imageView.image = image
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        return imageView
+    }
+}
 
 class PicCollectionViewCell: UICollectionViewCell {
     

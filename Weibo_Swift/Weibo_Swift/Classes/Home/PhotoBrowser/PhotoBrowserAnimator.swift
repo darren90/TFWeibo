@@ -8,9 +8,23 @@
 
 import UIKit
 
+//面向协议开发，，
+
+protocol PhotoAnimatorPresentedDelegate : NSObjectProtocol {
+    func startRect(indexPath:IndexPath) -> CGRect
+    func endRect(indexPath:IndexPath) -> CGRect
+    func imageView(indexPath:IndexPath) -> UIImageView
+}
+
+
 class PhotoBrowserAnimator: NSObject {
     var isPresented:Bool = false
+    
+    var presentedDelegate:PhotoAnimatorPresentedDelegate?
+    var indexPath : IndexPath?
 }
+
+
 
 
 extension PhotoBrowserAnimator : UIViewControllerTransitioningDelegate{
@@ -38,19 +52,34 @@ extension PhotoBrowserAnimator : UIViewControllerAnimatedTransitioning{
     }
     
     func animateForPresentedView(using transitionContext: UIViewControllerContextTransitioning){
+        guard let presentedDelegate = presentedDelegate,let indexPath = indexPath else{
+            return
+        }
+        
         //1:取出弹出的view
         let prensentedView = transitionContext.view(forKey: .to)!
         
         //2.将prensentedView添加到containView中
         transitionContext.containerView.addSubview(prensentedView)
         
+        ///获取执行动画的imageView
+        let startRect = presentedDelegate.startRect(indexPath: indexPath)
+        
+        let imageView = presentedDelegate.imageView(indexPath: indexPath)
+        imageView.frame = startRect
+        transitionContext.containerView.addSubview(imageView)
+        
         //3,执行动画
         prensentedView.alpha = 0.0
+        transitionContext.containerView.backgroundColor = UIColor.black
         
         UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {() -> Void in
-        prensentedView.alpha = 1.0
+            imageView.frame = presentedDelegate.endRect(indexPath: indexPath)
         }) {(_) -> Void in
-        transitionContext.completeTransition(true)
+            imageView.removeFromSuperview()
+            transitionContext.containerView.backgroundColor = UIColor.clear
+            prensentedView.alpha = 1.0
+            transitionContext.completeTransition(true)
         }
     }
     

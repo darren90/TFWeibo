@@ -274,8 +274,13 @@ extension HomeViewController{
         guard let picUrls = note.userInfo?["picUrls"] as? [URL] else{
             return
         }
+        
+        let object = note.object as! PicCollectionView
+        //设置动画代理
+        photoBrowserAnimator.presentedDelegate = object
+        photoBrowserAnimator.indexPath = indexPath
     
-        print(picUrls)
+//        print(picUrls)
         
         //以modar的形式弹出控制器
         let pbVc = PhotoBrowseController(indexPath: indexPath, picUrls: picUrls)
