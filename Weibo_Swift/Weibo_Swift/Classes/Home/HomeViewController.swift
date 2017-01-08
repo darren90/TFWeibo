@@ -27,6 +27,7 @@ class HomeViewController: BaseViewController {
     lazy var viewModels : [StatusViewModel] = [StatusViewModel]()
     
     lazy var tipLabel:UILabel = UILabel()
+    lazy var photoBrowserAnimator : PhotoBrowserAnimator = PhotoBrowserAnimator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -278,6 +279,9 @@ extension HomeViewController{
         
         //以modar的形式弹出控制器
         let pbVc = PhotoBrowseController(indexPath: indexPath, picUrls: picUrls)
+        //这只modar样式  cusmtom,这样后面的东西不会被隐藏
+        pbVc.modalPresentationStyle = .custom
+        pbVc.transitioningDelegate = photoBrowserAnimator
         present(pbVc, animated: true, completion: nil)
         
     }

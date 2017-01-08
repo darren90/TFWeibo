@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 private let KPhotoCell = "KPhotoCell"
 let kPhotoMargin:CGFloat = 10
@@ -98,9 +99,28 @@ extension PhotoBrowseController{
     func closeAction(){
         dismiss(animated: true, completion: nil)
     }
-    
+    // MARK:-- 保存图片
     func saveAction(){
+        //1 - 获取正在显示的image
+         let cell = collectionView.visibleCells.first as! PhotoBrowseCell
+        guard let image = cell.iconView.image else{
+            return
+        }
         
+        UIImageWriteToSavedPhotosAlbum(image, self, #selector(self.saveImagei(image:error:contentInfo:)), nil)
+    }
+    
+//      - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo;
+//    void * --> AnyObject
+    func saveImagei(image:UIImage,error:NSError?, contentInfo:AnyObject){
+        var showInfo = ""
+        if error != nil {
+            showInfo = "保存失败"
+        }else{
+            showInfo = "保存成功"
+        }
+        
+        SVProgressHUD.showInfo(withStatus: showInfo)
     }
     
 }
@@ -116,6 +136,7 @@ extension PhotoBrowseController:UICollectionViewDataSource,UICollectionViewDeleg
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KPhotoCell, for: indexPath) as! PhotoBrowseCell
 //        cell.backgroundColor = indexPath.item % 2 == 0 ? UIColor.brown : UIColor.cyan
         cell.picUrl = picUrls[indexPath.item]
+        cell.delegate = self
         return cell
     }
     
@@ -125,6 +146,12 @@ extension PhotoBrowseController:UICollectionViewDataSource,UICollectionViewDeleg
     
 }
 
+
+extension PhotoBrowseController : PhotoBrowseCellDelegate {
+    func imgaeViewClick() {
+        closeAction()
+    }
+}
 
 
 class PhotoBrowseCollectionLayout : UICollectionViewFlowLayout {

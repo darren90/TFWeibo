@@ -52,7 +52,7 @@ class PhotoBrowseCell: UICollectionViewCell {
     }
     
     func disSlef(){
-        
+        delegate?.imgaeViewClick()
     }
     
     
